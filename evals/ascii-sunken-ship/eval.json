@@ -1,0 +1,24 @@
+{
+  "id": "ascii-sunken-ship",
+  "title": "Sunken ship",
+  "description": "An ASCII scene of a sunken ship in a shallow sea. Compare composition, detail, and atmosphere.",
+  "kind": "static-artifacts",
+  "format": "text",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "constraints": {
+    "asciiOnly": true
+  },
+  "limits": {
+    "maxTurns": 20,
+    "maxWallMs": 600000,
+    "maxArtifactBytes": 20000,
+    "maxFiles": 1
+  },
+  "tags": [
+    "ASCII art",
+    "Viewer judged"
+  ]
+}

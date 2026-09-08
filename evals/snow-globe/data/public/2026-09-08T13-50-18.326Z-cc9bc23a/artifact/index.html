@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Snow Globe &mdash; Mount Serene</title>
+<style>
+  :root{ --ink:#e8eef8; --muted:#8ea0bd; }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    background:radial-gradient(1200px 800px at 50% 8%, #1b2440 0%, #101728 45%, #070a12 100%);
+    color:var(--ink);
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    overflow:hidden;
+    -webkit-user-select:none;user-select:none;
+    touch-action:none;
+  }
+  #stage{position:fixed;inset:0;display:block;cursor:grab;}
+  #stage:active{cursor:grabbing;}
+  header{
+    position:fixed;left:0;right:0;top:0;padding:18px 22px;
+    pointer-events:none;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  }
+  h1{
+    margin:0;font-size:15px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
+    color:#dbe6fa;
+  }
+  h1 span{display:block;font-size:11px;letter-spacing:.34em;color:var(--muted);margin-top:6px;font-weight:500;}
+  .hint{
+    font-size:11px;letter-spacing:.14em;color:var(--muted);text-align:right;line-height:1.7;text-transform:uppercase;
+  }
+  #panel{
+    position:fixed;left:50%;bottom:20px;transform:translateX(-50%);
+    display:flex;gap:10px;align-items:center;
+    background:rgba(16,22,38,.62);
+    border:1px solid rgba(150,180,230,.16);
+    border-radius:999px;padding:8px 10px;
+    backdrop-filter:blur(8px);
+  }
+  button{
+    font:inherit;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:#cfdcf3;background:rgba(255,255,255,.05);
+    border:1px solid rgba(160,190,240,.2);
+    padding:9px 16px;border-radius:999px;cursor:pointer;
+    transition:background .18s ease,color .18s ease,border-color .18s ease;
+  }
+  button:hover{background:rgba(150,190,255,.18);border-color:rgba(180,210,255,.42);color:#fff;}
+  button:active{transform:translateY(1px);}
+  button.on{background:rgba(150,190,255,.24);color:#fff;border-color:rgba(190,220,255,.55);}
+  @media (max-width:560px){ .hint{display:none;} h1{font-size:13px;} button{padding:9px 12px;} }
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<header>
+  <h1>Mount Serene<span>Snow Globe No. 7</span></h1>
+  <div class="hint">Drag to turn &middot; Tap or flick to shake<br>Scroll to zoom</div>
+</header>
+<div id="panel">
+  <button id="shakeBtn">Shake</button>
+  <button id="spinBtn" class="on">Auto-spin</button>
+  <button id="viewBtn">Reset view</button>
+</div>
+<script>
+(function(){
+"use strict";
+
+var canvas = document.getElementById("stage");
+var ctx = canvas.getContext("2d");
+var W = 0, H = 0, DPR = 1;
+
+function resize(){
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = Math.round(W * DPR);
+  canvas.height = Math.round(H * DPR);
+  canvas.style.width = W + "px";
+  canvas.style.height = H + "px";
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+}
+window.addEventListener("resize", resize);
+resize();
+
+/* ---------- deterministic helpers ---------- */
+function hash(n){ var s = Math.sin(n * 127.1) * 43758.5453; return s - Math.floor(s); }
+function ridge(a, seed){
+  return 0.90 + 0.20*Math.sin(3*a + seed) + 0.11*Math.sin(5*a + seed*1.7)
+              + 0.07*Math.sin(9*a + seed*2.3) + 0.04*Math.sin(13*a + seed*3.1);
+}
+
+/* ---------- scene geometry (model space, globe radius 1) ---------- */
+var GLOBE_R = 1.0;
+var FLOOR_Y = -0.52;
+var FLOOR_R = Math.sqrt(Math.max(0.02, 1 - FLOOR_Y*FLOOR_Y)) * 0.985;
+var EXP = 1.22, POW = 0.88;
+
+var tris = [];
+var peaks = [];
+
+function addTri(p0,p1,p2,col){ tris.push({a:p0,b:p1,c:p2,r:col[0],g:col[1],b:col[2]}); }
+function mixc(c1,c2,t){
+  return [c1[0]+(c2[0]-c1[0])*t, c1[1]+(c2[1]-c1[1])*t, c1[2]+(c2[2]-c1[2])*t];
+}
+
+function groundHeight(x,z){
+  var d = Math.sqrt(x*x+z*z);
+  return FLOOR_Y + 0.035*Math.sin(x*5.1+1.3)*Math.cos(z*4.4-0.7) - 0.05*Math.max(0, d-0.55);
+}
+
+/* height of the whole landscape (ground + peaks) */
+function terrainHeight(x,z){
+  var y = groundHeight(x,z);
+  for(var i=0;i<peaks.length;i++){
+    var P = peaks[i];
+    var dx = x-P.cx, dz = z-P.cz;
+    var r = Math.sqrt(dx*dx+dz*dz);
+    var a = Math.atan2(dz,dx);
+    var R = P.baseR * ridge(a, P.seed);
+    if(r < R){
+      var t = 1 - Math.pow(r/R, 1/EXP);
+      var py = P.baseY + P.h*Math.pow(t,POW) + P.h*0.05*Math.sin(4*a+P.seed)*t*(1-t);
+      if(py > y) y = py;
+    }
+  }
+  return y;
+}
+
+function buildGround(){
+  var seg = 34, rings = 4;
+  var snow = [238,244,253], snowFar = [208,222,246];
+  function p(r,a){ var x=r*Math.cos(a), z=r*Math.sin(a); return [x, groundHeight(x,z), z]; }
+  for(var j=0;j<rings;j++){
+    var r0 = FLOOR_R*(j/rings), r1 = FLOOR_R*((j+1)/rings);
+    for(var i=0;i<seg;i++){
+      var a0 = i/seg*Math.PI*2, a1 = (i+1)/seg*Math.PI*2;
+      var v00=p(r0,a0), v10=p(r1,a0), v11=p(r1,a1), v01=p(r0,a1);
+      var col = mixc(snow, snowFar, (j+1)/rings*0.55 + 0.12*hash(i*3.1+j));
+      addTri(v00,v10,v11,col);
+      addTri(v00,v11,v01,col);
+    }
+  }
+}
+
+function buildPeak(cx,cz,baseR,height,seed,snowFrac,rockTint,seg,rings){
+  var baseY = groundHeight(cx,cz) - 0.02;
+  peaks.push({cx:cx, cz:cz, baseR:baseR, h:height, seed:seed, baseY:baseY});
+  function vert(i,j){
+    var a = i/seg*Math.PI*2;
+    var t = j/rings;
+    var rr = baseR * ridge(a,seed) * Math.pow(1-t, EXP);
+    var x = cx + rr*Math.cos(a);
+    var z = cz + rr*Math.sin(a);
+    var y = baseY + height*Math.pow(t,POW) + height*0.05*Math.sin(4*a+seed)*t*(1-t);
+    if(j===rings){ x = cx + baseR*0.02*Math.cos(seed); z = cz + baseR*0.02*Math.sin(seed); }
+    return [x,y,z];
+  }
+  var snowLine = baseY + height*snowFrac;
+  var rockDark = [54,50,58], rockLight = rockTint || [124,116,124];
+  var snowCol = [249,252,255], snowShade = [210,224,244];
+  for(var j=0;j<rings;j++){
+    for(var i=0;i<seg;i++){
+      var v00=vert(i,j), v10=vert(i,j+1), v11=vert(i+1,j+1), v01=vert(i+1,j);
+      var faces = [[v00,v10,v11],[v00,v11,v01]];
+      for(var k=0;k<2;k++){
+        var tq = faces[k];
+        var my = (tq[0][1]+tq[1][1]+tq[2][1])/3;
+        var a = ((i+0.5)/seg)*Math.PI*2;
+        var wob = 0.06*Math.sin(7*a+seed*2.0) + 0.035*hash(i*7.7+j*3.3+seed);
+        var col;
+        if(my > snowLine + wob*height){
+          col = mixc(snowShade, snowCol, 0.35 + 0.65*hash(i*2.7+j*5.1+seed));
+        }else{
+          var v = hash(i*4.3+j*1.9+seed*11);
+          col = mixc(rockDark, rockLight, 0.22 + 0.78*v);
+          if(hash(i*9.1+j*2.2+seed*5) > 0.76) col = mixc(col,[220,230,244],0.45);
+        }
+        addTri(tq[0],tq[1],tq[2],col);
+      }
+    }
+  }
+}
+
+function buildTree(cx,cz,scale,seed){
+  var by = terrainHeight(cx,cz) - 0.012;
+  var trunk = [58,42,34];
+  var seg = 6;
+  var tr = 0.012*scale, th = 0.07*scale;
+  var i;
+  for(i=0;i<5;i++){
+    var a0=i/5*Math.PI*2, a1=(i+1)/5*Math.PI*2;
+    addTri([cx+tr*Math.cos(a0),by,cz+tr*Math.sin(a0)],
+           [cx+tr*Math.cos(a1),by,cz+tr*Math.sin(a1)],
+           [cx,by+th,cz], trunk);
+  }
+  var layers = 3;
+  for(var L=0;L<layers;L++){
+    var fr = L/layers;
+    var y0 = by + th + 0.095*scale*L;
+    var y1 = y0 + 0.17*scale;
+    var rad = 0.082*scale*(1-fr*0.40);
+    var green = mixc([22,58,48],[46,92,70], hash(seed+L*3.7));
+    for(var i2=0;i2<seg;i2++){
+      var b0=i2/seg*Math.PI*2 + seed, b1=(i2+1)/seg*Math.PI*2 + seed;
+      var p0=[cx+rad*Math.cos(b0), y0, cz+rad*Math.sin(b0)];
+      var p1=[cx+rad*Math.cos(b1), y0, cz+rad*Math.sin(b1)];
+      var tip=[cx, y1, cz];
+      var snowy = hash(seed*3+L*11+i2*5) > 0.55;
+      addTri(p0,p1,tip, snowy ? mixc(green,[242,248,255],0.6) : green);
+    }
+  }
+}
+
+function buildPond(cx,cz,rad){
+  var seg=16;
+  var ice=[146,192,222], ice2=[200,228,244];
+  var gy = groundHeight(cx,cz)+0.005;
+  for(var i=0;i<seg;i++){
+    var a0=i/seg*Math.PI*2, a1=(i+1)/seg*Math.PI*2;
+    var r0 = rad*(0.9+0.16*Math.sin(3*a0)), r1 = rad*(0.9+0.16*Math.sin(3*a1));
+    var p0=[cx+r0*Math.cos(a0), gy, cz+r0*Math.sin(a0)];
+    var p1=[cx+r1*Math.cos(a1), gy, cz+r1*Math.sin(a1)];
+    addTri([cx,gy,cz], p0, p1, mixc(ice,ice2,hash(i*2.3)));
+  }
+}
+
+function buildScene(){
+  tris.length = 0; peaks.length = 0;
+  buildGround();
+  buildPeak(0.02,-0.04, 0.58, 0.95, 1.7, 0.46, [128,118,126], 24, 8);
+  buildPeak(-0.40, 0.26, 0.28, 0.48, 4.9, 0.52, [108,100,112], 14, 6);
+  buildPeak(0.44, 0.30, 0.23, 0.34, 9.3, 0.58, [116,106,116], 14, 6);
+  buildPond(0.06, 0.62, 0.11);
+  var spots = [
+    [-0.66,-0.22,0.95],[0.62,-0.32,0.85],[-0.34,0.66,1.00],[0.44,0.64,0.80],
+    [-0.70,0.16,0.85],[0.70,0.10,0.72],[-0.12,0.76,0.90],[0.22,-0.68,0.78],
+    [-0.48,-0.54,0.72],[0.70,-0.08,0.66],[-0.56,0.44,0.70],[0.30,0.70,0.62],
+    [-0.24,-0.72,0.60]
+  ];
+  for(var i=0;i<spots.length;i++){
+    buildTree(spots[i][0], spots[i][1], spots[i][2], i*2.3+0.7);
+  }
+}
+buildScene();
+
+/* ---------- snow particles ---------- */
+var FLAKES = 270;
+var flakes = [];
+function resetFlake(f, anywhere){
+  var a = Math.random()*Math.PI*2;
+  var y = anywhere ? (FLOOR_Y + 0.10 + Math.random()*(0.86-FLOOR_Y)) : (0.28 + Math.random()*0.56);
+  var maxr = Math.sqrt(Math.max(0.01, 0.90*0.90 - y*y));
+  var r = Math.min(Math.pow(Math.random(),0.5)*0.9, maxr);
+  f.x = r*Math.cos(a); f.z = r*Math.sin(a); f.y = y;
+  f.vx = 0; f.vy = -0.02 - Math.random()*0.05; f.vz = 0;
+  f.s = 0.5 + Math.random()*0.9;
+  f.ph = Math.random()*Math.PI*2;
+  f.sw = 0.5 + Math.random();
+}
+for(var fi=0;fi<FLAKES;fi++){ var nf={}; resetFlake(nf,true); flakes.push(nf); }
+
+var shakeE = 0;
+function shake(power){
+  var k = (power === undefined) ? 1.0 : power;
+  shakeE = Math.min(1.6, shakeE + k);
+  for(var i=0;i<flakes.length;i++){
+    var f = flakes[i];
+    f.vx += (Math.random()-0.5)*0.55*k;
+    f.vy += (Math.random()-0.2)*0.50*k;
+    f.vz += (Math.random()-0.5)*0.55*k;
+  }
+}
+
+function stepFlakes(dt){
+  var swirl = shakeE;
+  for(var i=0;i<flakes.length;i++){
+    var f = flakes[i];
+    f.ph += dt*f.sw*1.6;
+    f.vy -= 0.20*dt;
+    f.vx += (Math.cos(f.ph)*0.05 + (Math.random()-0.5)*swirl*1.8) * dt;
+    f.vz += (Math.sin(f.ph*0.8)*0.05 + (Math.random()-0.5)*swirl*1.8) * dt;
+    f.vy += ((Math.random()-0.45)*swirl*1.8) * dt;
+    var drag = Math.exp(-1.35*dt);
+    f.vx*=drag; f.vy*=drag; f.vz*=drag;
+    f.x += f.vx*dt; f.y += f.vy*dt; f.z += f.vz*dt;
+
+    var d = Math.sqrt(f.x*f.x + f.y*f.y + f.z*f.z);
+    var lim = 0.93;
+    if(d > lim){
+      var s = lim/d;
+      f.x*=s; f.y*=s; f.z*=s;
+      var dot = (f.vx*f.x + f.vy*f.y + f.vz*f.z)/(lim*lim);
+      f.vx -= dot*f.x*1.4; f.vy -= dot*f.y*1.4; f.vz -= dot*f.z*1.4;
+    }
+    var gh = terrainHeight(f.x,f.z);
+    if(f.y < gh + 0.006){
+      if(shakeE > 0.06){
+        f.y = gh + 0.008;
+        f.vy = Math.abs(f.vy)*0.35 + shakeE*0.18;
+      }else{
+        resetFlake(f,false);
+      }
+    }
+  }
+  shakeE *= Math.pow(0.30, dt);
+  if(shakeE < 0.004) shakeE = 0;
+}
+
+/* ---------- camera / interaction ---------- */
+var yaw = 0.5, pitch = 0.16, dist = 3.35;
+var targetDist = 3.35;
+var yawVel = 0;
+var autoSpin = true;
+var dragging = false, lastX=0, lastY=0, lastT=0, moved=0;
+
+canvas.addEventListener("pointerdown", function(e){
+  dragging = true; moved = 0;
+  lastX = e.clientX; lastY = e.clientY; lastT = performance.now();
+  if(canvas.setPointerCapture){ try{ canvas.setPointerCapture(e.pointerId); }catch(err){} }
+});
+canvas.addEventListener("pointermove", function(e){
+  if(!dragging) return;
+  var dx = e.clientX - lastX, dy = e.clientY - lastY;
+  lastX = e.clientX; lastY = e.clientY;
+  var now = performance.now();
+  var dt = Math.max(8, now - lastT); lastT = now;
+  yaw += dx * 0.0075;
+  pitch += dy * 0.0055;
+  pitch = Math.max(-0.55, Math.min(0.85, pitch));
+  yawVel = (dx * 0.0075) / (dt/1000) * 0.05;
+  moved += Math.abs(dx) + Math.abs(dy);
+  var speed = Math.sqrt(dx*dx+dy*dy)/(dt/1000);
+  if(speed > 1400) shake(Math.min(0.5, speed/5000));
+});
+function endDrag(){ dragging = false; }
+canvas.addEventListener("pointerup", function(){
+  if(dragging && moved < 6) shake(1.0);
+  endDrag();
+});
+canvas.addEventListener("pointercancel", endDrag);
+
+canvas.addEventListener("wheel", function(e){
+  e.preventDefault();
+  targetDist = Math.max(2.2, Math.min(5.2, targetDist + e.deltaY*0.0022));
+},{passive:false});
+
+document.getElementById("shakeBtn").addEventListener("click", function(){ shake(1.2); });
+var spinBtn = document.getElementById("spinBtn");
+spinBtn.addEventListener("click", function(){
+  autoSpin = !autoSpin;
+  if(autoSpin) spinBtn.classList.add("on"); else spinBtn.classList.remove("on");
+});
+document.getElementById("viewBtn").addEventListener("click", function(){
+  yaw = 0.5; pitch = 0.16; targetDist = 3.35; yawVel = 0;
+});
+window.addEventListener("keydown", function(e){
+  if(e.code === "Space" || e.key === " "){ e.preventDefault(); shake(1.2); }
+});
+
+/* ---------- render ---------- */
+var LIGHT = (function(){
+  var v = [-0.48, 0.76, 0.44];
+  var m = Math.sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
+  return [v[0]/m, v[1]/m, v[2]/m];
+})();
+
+var order = [];
+var buf = new Float32Array(0);
+var tmpA=[0,0,0], tmpB=[0,0,0], tmpC=[0,0,0], tmpP=[0,0,0];
+var cyaw=1, syaw=0, cpit=1, spit=0;
+
+function xform(p, out){
+  var x = p[0]*cyaw + p[2]*syaw;
+  var z = -p[0]*syaw + p[2]*cyaw;
+  var y = p[1]*cpit - z*spit;
+  var z2 = p[1]*spit + z*cpit;
+  out[0]=x; out[1]=y; out[2]=z2;
+}
+
+function sortCmp(A,B){ return buf[B*8+6] - buf[A*8+6]; }
+
+/* flakes are split in two passes so the ones behind the mountain
+   are correctly hidden by it */
+function drawFlakes(cx, cy, focal, front){
+  ctx.fillStyle = "#ffffff";
+  ctx.globalAlpha = front ? 0.95 : 0.6;
+  for(var s=0;s<flakes.length;s++){
+    var fl = flakes[s];
+    tmpP[0]=fl.x; tmpP[1]=fl.y; tmpP[2]=fl.z;
+    xform(tmpP, tmpP);
+    if((tmpP[2] > 0) !== front) continue;
+    var sc = focal/(dist - tmpP[2]);
+    var rad = Math.max(0.7, fl.s * 0.0072 * sc);
+    ctx.beginPath();
+    ctx.arc(cx + tmpP[0]*sc, cy - tmpP[1]*sc, rad, 0, Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+
+function draw(dt){
+  var cx = W/2, cy = H*0.46;
+  var focal = Math.min(W*0.95, H*1.05) * 0.46;
+
+  dist += (targetDist - dist) * Math.min(1, dt*6);
+  if(!dragging){
+    if(autoSpin) yaw += 0.16*dt;
+    yaw += yawVel*dt*3;
+    yawVel *= Math.pow(0.06, dt);
+  }
+
+  if(shakeE > 0.01){
+    var t0 = performance.now()/1000;
+    cx += Math.sin(t0*38)*shakeE*7;
+    cy += Math.cos(t0*31)*shakeE*4.5;
+  }
+
+  cyaw = Math.cos(yaw); syaw = Math.sin(yaw);
+  cpit = Math.cos(pitch); spit = Math.sin(pitch);
+
+  var Rs = focal * GLOBE_R / Math.sqrt(Math.max(0.001, dist*dist - GLOBE_R*GLOBE_R));
+
+  ctx.clearRect(0,0,W,H);
+
+  var bg = ctx.createRadialGradient(W*0.5, H*0.30, 10, W*0.5, H*0.5, Math.max(W,H)*0.8);
+  bg.addColorStop(0,"rgba(70,96,150,0.42)");
+  bg.addColorStop(0.5,"rgba(24,34,60,0.22)");
+  bg.addColorStop(1,"rgba(4,7,14,0)");
+  ctx.fillStyle = bg;
+  ctx.fillRect(0,0,W,H);
+  drawOutsideDust();
+
+  /* ---------- inside the glass ---------- */
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, cy, Rs, 0, Math.PI*2);
+  ctx.clip();
+
+  var sky = ctx.createLinearGradient(cx, cy-Rs, cx, cy+Rs);
+  sky.addColorStop(0.00,"#20325a");
+  sky.addColorStop(0.34,"#4d6390");
+  sky.addColorStop(0.62,"#9aa8c4");
+  sky.addColorStop(0.82,"#d7c9c4");
+  sky.addColorStop(1.00,"#f0e3d8");
+  ctx.fillStyle = sky;
+  ctx.fillRect(cx-Rs, cy-Rs, Rs*2, Rs*2);
+
+  var sun = ctx.createRadialGradient(cx-Rs*0.42, cy-Rs*0.30, 2, cx-Rs*0.42, cy-Rs*0.30, Rs*1.05);
+  sun.addColorStop(0,"rgba(255,239,216,0.85)");
+  sun.addColorStop(0.22,"rgba(255,225,197,0.30)");
+  sun.addColorStop(1,"rgba(255,220,190,0)");
+  ctx.fillStyle = sun;
+  ctx.fillRect(cx-Rs, cy-Rs, Rs*2, Rs*2);
+
+  drawFlakes(cx, cy, focal, false);
+
+  var n = tris.length;
+  if(buf.length < n*8) buf = new Float32Array(n*8);
+  if(order.length !== n){ order = new Array(n); for(var q=0;q<n;q++) order[q]=q; }
+
+  for(var i=0;i<n;i++){
+    var T = tris[i];
+    xform(T.a,tmpA); xform(T.b,tmpB); xform(T.c,tmpC);
+    var za = dist - tmpA[2], zb = dist - tmpB[2], zc = dist - tmpC[2];
+    var sa = focal/za, sb = focal/zb, sc = focal/zc;
+    var o = i*8;
+    buf[o]   = cx + tmpA[0]*sa; buf[o+1] = cy - tmpA[1]*sa;
+    buf[o+2] = cx + tmpB[0]*sb; buf[o+3] = cy - tmpB[1]*sb;
+    buf[o+4] = cx + tmpC[0]*sc; buf[o+5] = cy - tmpC[1]*sc;
+    buf[o+6] = (za+zb+zc)/3;
+    var ux=tmpB[0]-tmpA[0], uy=tmpB[1]-tmpA[1], uz=tmpB[2]-tmpA[2];
+    var vx=tmpC[0]-tmpA[0], vy=tmpC[1]-tmpA[1], vz=tmpC[2]-tmpA[2];
+    var nx=uy*vz-uz*vy, ny=uz*vx-ux*vz, nz=ux*vy-uy*vx;
+    var nl = Math.sqrt(nx*nx+ny*ny+nz*nz) || 1;
+    var dl = Math.abs((nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl);
+    var rim = Math.abs(nz/nl);
+    buf[o+7] = 0.40 + 0.62*dl + 0.08*rim;
+  }
+
+  order.sort(sortCmp);
+
+  var fogR=178, fogG=192, fogB=216;
+  for(var k=0;k<n;k++){
+    var idx = order[k];
+    var o2 = idx*8;
+    var T2 = tris[idx];
+    var lit = buf[o2+7];
+    var fog = Math.max(0, Math.min(0.42, (buf[o2+6] - (dist - 0.7)) * 0.30));
+    var r = T2.r*lit, g = T2.g*lit, b = T2.b*lit;
+    if(lit < 0.85){ b += (0.85-lit)*48; r -= (0.85-lit)*12; }
+    r += (fogR-r)*fog; g += (fogG-g)*fog; b += (fogB-b)*fog;
+    r = r<0?0:(r>255?255:r); g = g<0?0:(g>255?255:g); b = b<0?0:(b>255?255:b);
+    var col = "rgb("+(r|0)+","+(g|0)+","+(b|0)+")";
+    ctx.beginPath();
+    ctx.moveTo(buf[o2], buf[o2+1]);
+    ctx.lineTo(buf[o2+2], buf[o2+3]);
+    ctx.lineTo(buf[o2+4], buf[o2+5]);
+    ctx.closePath();
+    ctx.fillStyle = col;
+    ctx.strokeStyle = col;
+    ctx.lineWidth = 0.7;
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  drawFlakes(cx, cy, focal, true);
+
+  var haze = ctx.createLinearGradient(cx, cy+Rs*0.25, cx, cy+Rs);
+  haze.addColorStop(0,"rgba(226,236,250,0)");
+  haze.addColorStop(1,"rgba(226,236,250,0.42)");
+  ctx.fillStyle = haze;
+  ctx.fillRect(cx-Rs, cy, Rs*2, Rs);
+
+  ctx.restore();
+
+  drawGlass(cx, cy, Rs);
+  drawBase(cx, cy, Rs);
+}
+
+function drawGlass(cx, cy, R){
+  var edge = ctx.createRadialGradient(cx, cy, R*0.62, cx, cy, R);
+  edge.addColorStop(0,"rgba(150,190,255,0)");
+  edge.addColorStop(0.72,"rgba(120,165,225,0.10)");
+  edge.addColorStop(0.94,"rgba(60,95,155,0.36)");
+  edge.addColorStop(1,"rgba(20,40,80,0.6)");
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.fillStyle = edge; ctx.fill();
+
+  var sheen = ctx.createLinearGradient(cx-R*0.9, cy-R*0.95, cx+R*0.6, cy+R*0.9);
+  sheen.addColorStop(0,"rgba(255,255,255,0.24)");
+  sheen.addColorStop(0.35,"rgba(255,255,255,0.05)");
+  sheen.addColorStop(0.62,"rgba(255,255,255,0)");
+  sheen.addColorStop(1,"rgba(190,215,255,0.13)");
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.fillStyle = sheen; ctx.fill();
+
+  ctx.save();
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.clip();
+  ctx.globalCompositeOperation = "lighter";
+  ctx.save();
+  ctx.translate(cx - R*0.44, cy - R*0.50);
+  ctx.rotate(-0.6);
+  var g1 = ctx.createRadialGradient(0,0,1, 0,0, R*0.30);
+  g1.addColorStop(0,"rgba(255,255,255,0.55)");
+  g1.addColorStop(1,"rgba(255,255,255,0)");
+  ctx.fillStyle = g1;
+  ctx.beginPath(); ctx.ellipse(0,0,R*0.30,R*0.15,0,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+  ctx.save();
+  ctx.translate(cx + R*0.50, cy + R*0.42);
+  ctx.rotate(-0.7);
+  var g2 = ctx.createRadialGradient(0,0,1, 0,0, R*0.22);
+  g2.addColorStop(0,"rgba(200,225,255,0.28)");
+  g2.addColorStop(1,"rgba(200,225,255,0)");
+  ctx.fillStyle = g2;
+  ctx.beginPath(); ctx.ellipse(0,0,R*0.22,R*0.08,0,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+  ctx.globalCompositeOperation = "source-over";
+  ctx.restore();
+
+  ctx.beginPath(); ctx.arc(cx,cy,R-0.5,0,Math.PI*2);
+  ctx.strokeStyle = "rgba(206,228,255,0.5)"; ctx.lineWidth = 1.4; ctx.stroke();
+  ctx.beginPath(); ctx.arc(cx,cy,R*0.985,Math.PI*0.88,Math.PI*1.6);
+  ctx.strokeStyle = "rgba(255,255,255,0.7)"; ctx.lineWidth = 2.2; ctx.stroke();
+}
+
+function drawBase(cx, cy, R){
+  var topY = cy + R*0.80;
+  var topRx = R*0.66, topRy = R*0.15;
+  var botY = topY + R*0.36;
+  var botRx = R*0.86, botRy = R*0.19;
+
+  var shadow = ctx.createRadialGradient(cx, botY+R*0.08, 2, cx, botY+R*0.08, R*1.4);
+  shadow.addColorStop(0,"rgba(0,0,0,0.55)");
+  shadow.addColorStop(0.45,"rgba(0,0,0,0.22)");
+  shadow.addColorStop(1,"rgba(0,0,0,0)");
+  ctx.save();
+  ctx.translate(cx, botY+R*0.10);
+  ctx.scale(1, 0.22);
+  ctx.translate(-cx, -(botY+R*0.10));
+  ctx.fillStyle = shadow;
+  ctx.beginPath(); ctx.arc(cx, botY+R*0.10, R*1.4, 0, Math.PI*2); ctx.fill();
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.ellipse(cx, topY, topRx, topRy, 0, Math.PI, 0, true);
+  ctx.lineTo(cx+botRx, botY);
+  ctx.ellipse(cx, botY, botRx, botRy, 0, 0, Math.PI, false);
+  ctx.lineTo(cx-topRx, topY);
+  ctx.closePath();
+  var wood = ctx.createLinearGradient(cx-botRx, 0, cx+botRx, 0);
+  wood.addColorStop(0,"#241813");
+  wood.addColorStop(0.22,"#5a3a29");
+  wood.addColorStop(0.44,"#8a5c3f");
+  wood.addColorStop(0.62,"#6b4530");
+  wood.addColorStop(0.86,"#37241a");
+  wood.addColorStop(1,"#1d120d");
+  ctx.fillStyle = wood; ctx.fill();
+
+  ctx.beginPath();
+  ctx.ellipse(cx, topY, topRx, topRy, 0, 0, Math.PI*2);
+  var collar = ctx.createLinearGradient(cx-topRx,0,cx+topRx,0);
+  collar.addColorStop(0,"#2a1c15");
+  collar.addColorStop(0.4,"#7d5238");
+  collar.addColorStop(1,"#241812");
+  ctx.fillStyle = collar; ctx.fill();
+  ctx.strokeStyle = "rgba(255,215,170,0.22)"; ctx.lineWidth = 1; ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(cx-topRx*1.02, topY + R*0.10);
+  ctx.bezierCurveTo(cx-topRx*0.6, topY + R*0.16, cx+topRx*0.6, topY + R*0.16, cx+topRx*1.02, topY + R*0.10);
+  ctx.strokeStyle = "rgba(214,178,110,0.5)";
+  ctx.lineWidth = Math.max(1.2, R*0.017);
+  ctx.stroke();
+
+  ctx.save();
+  ctx.font = "600 " + Math.max(7, R*0.082) + "px 'Avenir Next', 'Segoe UI', Helvetica, Arial, sans-serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  var label = "MOUNT SERENE  \u00B7  3842 M";
+  ctx.fillStyle = "rgba(0,0,0,0.45)";
+  ctx.fillText(label, cx, topY + R*0.235 + 1);
+  ctx.fillStyle = "rgba(232,206,158,0.78)";
+  ctx.fillText(label, cx, topY + R*0.235);
+  ctx.restore();
+}
+
+var dust = [];
+for(var d0=0; d0<60; d0++){
+  dust.push({x:Math.random(), y:Math.random(), s:0.4+Math.random()*1.4,
+             v:0.008+Math.random()*0.03, ph:Math.random()*6.28});
+}
+function drawOutsideDust(){
+  var t = performance.now()/1000;
+  ctx.fillStyle = "#cfe0ff";
+  for(var i=0;i<dust.length;i++){
+    var p = dust[i];
+    var y = (p.y + t*p.v*0.35) % 1;
+    var x = (p.x + Math.sin(t*0.25 + p.ph)*0.012 + 1) % 1;
+    ctx.globalAlpha = 0.10 + 0.16*(0.5+0.5*Math.sin(t*0.9+p.ph));
+    ctx.beginPath();
+    ctx.arc(x*W, y*H, p.s, 0, Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+
+var last = performance.now();
+function frame(now){
+  var dt = Math.min(0.05, (now - last)/1000);
+  last = now;
+  stepFlakes(dt);
+  draw(dt);
+  requestAnimationFrame(frame);
+}
+shake(0.9);
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

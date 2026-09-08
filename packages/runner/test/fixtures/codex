@@ -5,6 +5,11 @@
 // Exits without a message when the prompt is exactly "DIE", simulating a
 // failed turn.
 import { readFileSync } from 'node:fs';
+if (process.argv.includes('--version')) { process.stdout.write('fixture-cli 1\n'); process.exit(0); }
+function submissionReply(prompt) {
+  if (process.env.VIBEVAL_FIXTURE_SUBMISSION === 'text') return JSON.stringify({ action: 'submit', content: '  |\n__|__\n\\___/' });
+  return JSON.stringify(prompt.includes('Begin your work.') ? { action: 'write_file', path: 'index.html', content: '<html><body>fixture page</body></html>' } : { action: 'submit' });
+}
 
 const args = process.argv.slice(2);
 const resumed = args[1] === 'resume' ? args[2] : null;
@@ -33,7 +38,7 @@ emit({
   item: {
     id: 'item_0',
     type: 'agent_message',
-    text: prompt === 'GENERATE_TEST_PAGE' ? (instructions.includes('# Response Format:') ? 'Unexpected command protocol' : '<html><body>Test page</body></html>') : `command_format:${instructions.includes('# Response Format:')}\nthread:${resumed ?? 'new'}\nweb_search:${webSearch}\ntold_about_search:${instructions.includes('You have web search available')}\nreceived:${prompt.split('\n')[0]}\nCOMMAND: LOOK`,
+    text: process.env.VIBEVAL_FIXTURE_SUBMISSION ? submissionReply(prompt) : prompt === 'GENERATE_TEST_PAGE' ? (instructions.includes('# Response Format:') ? 'Unexpected command protocol' : '<html><body>Test page</body></html>') : `command_format:${instructions.includes('# Response Format:')}\nthread:${resumed ?? 'new'}\nweb_search:${webSearch}\ntold_about_search:${instructions.includes('You have web search available')}\nreceived:${prompt.split('\n')[0]}\nCOMMAND: LOOK`,
   },
 });
 emit({

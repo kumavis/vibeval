@@ -12,6 +12,8 @@ Run commands from the repo root with `npm run eval:zork -- ...`, or run `npm run
 
 Scores are peak scores, not final scores. The leaderboard averages completed runs with numeric scores, groups by provider and recorded model label, and keeps `+web` configurations separate. Trials normally share seed numbers and a 300-move budget; the viewer shows each run's recorded move count. Transcripts preserve retained event order, including any restarts. Regenerate summaries with the reporting tool when adding or repairing runs, then regenerate public data:
 
+The viewer uses each trial's score sparkline as its selector. The main chart shows observed score over active elapsed time; pointing or dragging on the chart scrubs a single transcript display to the nearest command. Arrow keys step through commands, Page Up/Down jump ten commands, and Home/End jump to either end. Probe observations appear as dots; the step line carries the last observed value until the next probe and preserves score drops. Time gaps between interrupted attempts and their resume markers are excluded. Before the first probe, the score remains unknown. Mean/peak figures in the model rail are summaries, not the chart's instantaneous score.
+
 ```sh
 npm run eval:report -- data/raw/<batch>
 # From the monorepo root:

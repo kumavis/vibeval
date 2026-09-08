@@ -1,0 +1,1410 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-29-58.621Z-c42e7da7",
+      "evalId": "snow-globe",
+      "trial": 1,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:29:58.622Z",
+      "finishedAt": "2026-09-08T13:34:26.273Z",
+      "wallMs": 267651,
+      "turns": {
+        "harness": 9,
+        "drafts": 1,
+        "submissions": 2,
+        "providerRequests": 9,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 8901
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-29-58.621Z-c42e7da7/artifact/index.html",
+        "note": "Interactive 3D snow globe with snow-capped peak, 300 falling snowflake particles, mouse-controlled 3D rotation using custom vector math, glass sphere with gradient shading and shine effects, depth-based particle rendering, smooth 60fps animation. Pure vanilla JavaScript, no external dependencies.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 8901,
+            "sha256": "8bf88cb9c44c18231a361a34ec27a1c71db364ae723828196bb8c11516ba5400"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 9,
+        "requests": 9,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 18,
+        "inputTokens": 659,
+        "outputTokens": 31845,
+        "cacheReadTokens": 189737,
+        "cacheWriteTokens": 33040,
+        "thinkingTokens": 11164,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 247152
+        },
+        "costUsd": 0.24593369999999998,
+        "apiMs": 267320,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.24593369999999998,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-29-58.621Z-c42e7da7/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-29-59.560Z-37918faf",
+      "evalId": "snow-globe",
+      "trial": 1,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:29:59.561Z",
+      "finishedAt": "2026-09-08T13:33:32.390Z",
+      "wallMs": 212829,
+      "turns": {
+        "harness": 4,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9121
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-29-59.560Z-37918faf/artifact/index.html",
+        "note": "Reviewed the self-contained HTML/CSS/JS implementation and verified the packaging check passes. The experience includes a responsive snow globe scene with a snow-capped peak, animated snowfall, drag-to-orbit interaction, shake animation, pause/resume control, and no external dependencies or network requests.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9121,
+            "sha256": "b3c3f450671f7a03b797e2403bd38fd8ae9a768fa50cc004b57b1b6035d57725"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 212474,
+        "outputTokens": 10421,
+        "cacheReadTokens": 175360,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 678,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.023435199999999996,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-29-59.560Z-37918faf/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-06.765Z-2006e469",
+      "evalId": "snow-globe",
+      "trial": 1,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:30:06.766Z",
+      "finishedAt": "2026-09-08T13:31:16.582Z",
+      "wallMs": 69816,
+      "turns": {
+        "harness": 3,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 3,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 7641
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-30-06.765Z-2006e469/artifact/index.html",
+        "note": "Built and reviewed a self-contained responsive snow-globe experience with a snow-capped alpine peak, dimensional glass and wooden base, animated falling snow, drag-to-rotate scene interaction, and a shake control. Packaging checks pass with no external dependencies.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 7641,
+            "sha256": "5c2fe47c96ed4911190c710ee11b1d35237602d164cfbadaceab69d51188e17d"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 3,
+        "requests": 3,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 52233,
+        "outputTokens": 2956,
+        "cacheReadTokens": 43264,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 163,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0620628,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-30-06.765Z-2006e469/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-31-16.628Z-048f480d",
+      "evalId": "snow-globe",
+      "trial": 2,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:31:16.628Z",
+      "finishedAt": "2026-09-08T13:32:35.647Z",
+      "wallMs": 79019,
+      "turns": {
+        "harness": 4,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 7956
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-31-16.628Z-048f480d/artifact/index.html",
+        "note": "Verified the single-file static app passes packaging checks. It provides a responsive, self-contained snow globe with a snow-capped mountain scene, animated snowfall, drag-based 3D tilt interaction, reset control, and an accessible shake-snow interaction; it uses no external assets, dependencies, or network calls.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 7956,
+            "sha256": "a398166a7d1bd6fad5f12aa8ed2d61237aa06c4a1196d917ab5ee49710c357ed"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 76255,
+        "outputTokens": 3180,
+        "cacheReadTokens": 64512,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 270,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0745484,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-31-16.628Z-048f480d/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-32-35.695Z-1f4cd1df",
+      "evalId": "snow-globe",
+      "trial": 3,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:32:35.695Z",
+      "finishedAt": "2026-09-08T13:33:50.010Z",
+      "wallMs": 74315,
+      "turns": {
+        "harness": 3,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 3,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 8723
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-32-35.695Z-1f4cd1df/artifact/index.html",
+        "note": "Created a polished single-file static snow-globe experience with a snow-capped alpine peak, layered atmospheric scene, drifting snow, wooden base, responsive sizing, and pointer/touch drag interaction for 3D rotation. Packaging checks pass with no external dependencies.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 8723,
+            "sha256": "a24b191495e8e4b16903f3b2a3be78fce50a8ecd64121457a2447cc81fd196e0"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 3,
+        "requests": 3,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 50906,
+        "outputTokens": 3290,
+        "cacheReadTokens": 42240,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 104,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.06526,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-32-35.695Z-1f4cd1df/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-33-32.437Z-0ac4bec0",
+      "evalId": "snow-globe",
+      "trial": 2,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:33:32.437Z",
+      "finishedAt": "2026-09-08T13:37:56.674Z",
+      "wallMs": 264237,
+      "turns": {
+        "harness": 5,
+        "drafts": 2,
+        "submissions": 1,
+        "providerRequests": 5,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9599
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-33-32.437Z-0ac4bec0/artifact/index.html",
+        "note": "Reviewed the static HTML/CSS/JS, removed stray patch markers, confirmed the file is self-contained and valid, and checked packaging successfully. The globe includes animated snowfall, drag rotation, scroll tilt, shake, pause/resume, rotation controls, reset, responsive layout, and an illustrated snow-capped peak scene.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9599,
+            "sha256": "0b7c7a4e0d776e36134b316f62fb3cee1889cd9b7bfebf88dd4583a96c412539"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 5,
+        "requests": 5,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 334592,
+        "outputTokens": 11891,
+        "cacheReadTokens": 276736,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 1016,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.03137512,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-33-32.437Z-0ac4bec0/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-34-26.334Z-d38ea17b",
+      "evalId": "snow-globe",
+      "trial": 2,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:34:26.335Z",
+      "finishedAt": "2026-09-08T13:38:38.996Z",
+      "wallMs": 252661,
+      "turns": {
+        "harness": 12,
+        "drafts": 2,
+        "submissions": 2,
+        "providerRequests": 12,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 5574
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-34-26.334Z-d38ea17b/artifact/index.html",
+        "note": "Interactive 3D snow globe with snow-capped mountain, 400 falling snow particles, rotating canvas-based rendering, mouse drag controls, and no external dependencies",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 5574,
+            "sha256": "317cfb0de42787b94125ae2b031ab10ad7bfd7eaa5224d6f33f468b08cf903f3"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 12,
+        "requests": 12,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 24,
+        "inputTokens": 689,
+        "outputTokens": 29142,
+        "cacheReadTokens": 227185,
+        "cacheWriteTokens": 30660,
+        "thinkingTokens": 13903,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 274925
+        },
+        "costUsd": 0.23143349999999996,
+        "apiMs": 252513,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.23143349999999996,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-34-26.334Z-d38ea17b/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-37-56.734Z-8075f84b",
+      "evalId": "snow-globe",
+      "trial": 3,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:37:56.734Z",
+      "finishedAt": "2026-09-08T13:40:59.754Z",
+      "wallMs": 183020,
+      "turns": {
+        "harness": 4,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9580
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-37-56.734Z-8075f84b/artifact/index.html",
+        "note": "Reviewed the self-contained implementation and verified the harness check passes. The app includes a responsive alpine snow-globe scene, animated snowfall, drag-based parallax/orientation, reset and snowfall controls, and no external dependencies or network requests.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 9580,
+            "sha256": "31553ac4d0201378e01c68b3fe05482f3e4c002002e4761b44056f2ddd1c0819"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 193121,
+        "outputTokens": 8086,
+        "cacheReadTokens": 152320,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 591,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0209098,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-37-56.734Z-8075f84b/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-38-39.100Z-517e6753",
+      "evalId": "snow-globe",
+      "trial": 3,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:38:39.100Z",
+      "finishedAt": "2026-09-08T13:40:42.931Z",
+      "wallMs": 123831,
+      "turns": {
+        "harness": 8,
+        "drafts": 1,
+        "submissions": 2,
+        "providerRequests": 8,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 13033
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-38-39.100Z-517e6753/artifact/index.html",
+        "note": "3D interactive snow globe webapp with animated snow particles, rotating snow-capped mountain peak, mouse drag rotation, scroll zoom, and glass reflections. Single self-contained HTML file using Canvas 2D with custom 3D vector math and depth-sorted rendering. No external dependencies or network calls.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 13033,
+            "sha256": "5ad706c38b96942fd0238a5aa704ed02cb5e70ff934d3830508219d9a113de65"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 8,
+        "requests": 8,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 16,
+        "inputTokens": 649,
+        "outputTokens": 13934,
+        "cacheReadTokens": 64987,
+        "cacheWriteTokens": 15037,
+        "thinkingTokens": 4172,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 87699
+        },
+        "costUsd": 0.1078877,
+        "apiMs": 123435,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.1078877,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-38-39.100Z-517e6753/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-50-18.713Z-2959a5ea",
+      "evalId": "snow-globe",
+      "trial": 1,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "30f60dc8cd72cd82f8735f940ba58f07a7a48d592db051350deb45dc34c9fd0e",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:50:18.714Z",
+      "finishedAt": "2026-09-08T13:53:25.048Z",
+      "wallMs": 186334,
+      "turns": {
+        "harness": 3,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 3,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 13092
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-50-18.713Z-2959a5ea/artifact/index.html",
+        "note": "Validated the self-contained package and reviewed the responsive layout, canvas rendering, snowfall animation, glass highlights, mountain parallax, pointer-drag rotation, Shake and Reset controls, and live local-time detail. The result is a polished, dependency-free interactive snow globe experience in a single index.html.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 13092,
+            "sha256": "30f48e614b4fcda7907618bd3a2c95141b2f689259ba2514004de95712a27373"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 3,
+        "requests": 3,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 55240,
+        "outputTokens": 5287,
+        "cacheReadTokens": 45312,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 343,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.1635768,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-50-18.713Z-2959a5ea/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-50-18.326Z-cc9bc23a",
+      "evalId": "snow-globe",
+      "trial": 1,
+      "format": "files",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "30f60dc8cd72cd82f8735f940ba58f07a7a48d592db051350deb45dc34c9fd0e",
+        "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-opus-5",
+        "resolved": "claude-opus-5",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "write_file",
+          "read_file",
+          "list_files",
+          "check",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 60,
+          "maxWallMs": 1800000,
+          "maxArtifactBytes": 2000000,
+          "maxFiles": 32
+        }
+      },
+      "startedAt": "2026-09-08T13:50:18.327Z",
+      "finishedAt": "2026-09-08T14:03:22.038Z",
+      "wallMs": 783711,
+      "turns": {
+        "harness": 10,
+        "drafts": 3,
+        "submissions": 1,
+        "providerRequests": 10,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 22702
+          }
+        ],
+        "checks": [
+          "file budget",
+          "HTML entry",
+          "static HTML/CSS references"
+        ],
+        "notChecked": [
+          "visual quality",
+          "JavaScript behavior",
+          "dynamic network requests"
+        ]
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "website",
+        "entry": "2026-09-08T13-50-18.326Z-cc9bc23a/artifact/index.html",
+        "note": "Single self-contained index.html: a canvas 2D software 3D renderer (perspective projection, painter's-algorithm depth sort, per-face lighting + distance fog) draws a faceted snow-capped peak with two secondary summits, an undulating snowfield, a frozen tarn and snow-dusted conifers placed on the analytic terrain height. 270 snow particles simulate gravity, drag, swirl and sphere/terrain collisions; they render in two depth passes so flakes behind the mountain are occluded. Interaction: drag to orbit (yaw + clamped pitch with inertia), flick or tap to shake (also Shake button and spacebar), wheel to zoom, auto-spin toggle and reset view. Glass shell is rendered with edge refraction darkening, sheen, specular highlights and rim; wooden pedestal with engraved plate and cast shadow. Verified logic by review (in-place transform safety, geometry inside globe radius, sorting/occlusion order, resize/DPR handling) and packaging via check: no external assets, no network, classic script, no storage.",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 22702,
+            "sha256": "ed5ec124e07caa20fa1669964abb23c89116795943156262f3d06ed4c9bbd6ae"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 10,
+        "requests": 10,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 19,
+        "inputTokens": 20,
+        "outputTokens": 82624,
+        "cacheReadTokens": 537206,
+        "cacheWriteTokens": 112138,
+        "thinkingTokens": 10852,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 140,
+          "claude-opus-5": 579916
+        },
+        "costUsd": 3.456679,
+        "apiMs": 781937,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-opus-5",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 3.456679,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-50-18.326Z-cc9bc23a/events.json"
+    }
+  ]
+}

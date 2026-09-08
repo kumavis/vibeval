@@ -17,10 +17,12 @@ import {
 
 const TURN_TIMEOUT_MS = 5 * 60 * 1000;
 
-export function createClaudeCliProvider({ systemPrompt, responseFormat = 'commands' }) {
-  const model = process.env.CLAUDE_CLI_MODEL;
+export function createClaudeCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS }) {
+  const model = requestedModel ?? process.env.CLAUDE_CLI_MODEL;
+  const effort = requestedEffort ?? process.env.CLAUDE_CLI_EFFORT;
   const system = systemPrompt + (responseFormat === 'commands' ? TEXT_PROTOCOL_APPENDIX : '');
   const history = [];
+  let disposed = false;
   // Cumulative usage across all turns, from the CLI's result events. costUsd
   // is the CLI's own estimate at API list prices. Token counts are per-turn
   // in result events and are summed; cost and api time are cumulative per
@@ -30,6 +32,10 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
   let apiMsFromDeadProcesses = 0;
   const usage = {
     turns: 0,
+    requests: 0,
+    retries: 0,
+    costReported: false,
+    assistantMessages: 0,
     inputTokens: 0,
     outputTokens: 0,
     cacheReadTokens: 0,
@@ -94,6 +100,7 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
         '--system-prompt',
         system,
         ...(model ? ['--model', model] : []),
+        ...(effort ? ['--effort', effort] : []),
       ],
       { stdio: ['pipe', 'pipe', 'pipe'], cwd: tmpdir() },
     );
@@ -115,7 +122,9 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
       } catch {
         return;
       }
+      if (event.type === 'assistant') usage.assistantMessages += 1;
       if (event.type !== 'result') return;
+      if (Number.isFinite(event.num_turns)) usage.lastSessionModelTurns = event.num_turns;
       if (event.usage) {
         usage.turns += 1;
         usage.inputTokens += event.usage.input_tokens ?? 0;
@@ -130,6 +139,7 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
           (usage.modelOutputTokens[id] ?? 0) + (stats.outputTokens ?? 0);
       }
       if (event.total_cost_usd !== undefined) {
+        usage.costReported = true;
         usage.costUsd = costFromDeadProcesses + event.total_cost_usd;
       }
       if (event.duration_api_ms !== undefined) {
@@ -148,12 +158,14 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
     });
 
     child.on('error', (err) => {
+      if (child !== spawned) return;
       child = null;
       settle('reject', err);
     });
     const spawned = child;
     child.on('exit', (code) => {
       children.delete(spawned);
+      if (child !== spawned) return;
       child = null;
       costFromDeadProcesses = usage.costUsd;
       apiMsFromDeadProcesses = usage.apiMs;
@@ -177,7 +189,7 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
           child = null;
           settle('reject', new Error('claude CLI turn timed out'));
           killChild(stuck);
-        }, TURN_TIMEOUT_MS),
+        }, turnTimeoutMs),
       };
       child.stdin.write(
         JSON.stringify({
@@ -215,6 +227,8 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
 
     // Raw responses support single-file art, games, and simulations.
     async requestText(gameOutputs) {
+      if (disposed) throw new Error('Provider disposed');
+      usage.requests += 1;
       const prompt =
         gameOutputs.join('\n') ||
         (responseFormat === 'commands' ? 'Please submit your next command with a COMMAND: line.' : 'Please respond.');
@@ -228,9 +242,13 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
           needsReplay ? withTranscript(history, prompt) : prompt,
         );
       } catch (err) {
+        if (disposed) throw err;
+        usage.retries += 1;
         // Process died, or returned an error while still alive — kill it and
         // restart, replaying the shadow transcript.
         console.warn(`claude CLI process failed (${err.message}), restarting.`);
+        costFromDeadProcesses = usage.costUsd;
+        apiMsFromDeadProcesses = usage.apiMs;
         killChild(child);
         child = null;
         raw = await sendTurn(withTranscript(history, prompt));
@@ -247,6 +265,8 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
 
     // Kill every CLI process so the parent can exit cleanly.
     dispose() {
+      disposed = true;
+      settle('reject', new Error('Provider disposed'));
       child = null;
       for (const proc of children) killChild(proc);
       children.clear();

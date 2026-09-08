@@ -1,0 +1,20 @@
+               ~~~~~~ WATER SURFACE ~~~~~~
+              ~    shallow sea water     ~
+             ~                            ~
+            ~                              ~
+           ~                                ~
+          ~        ______________        ~
+         ~        |    [CARGO]   |       ~
+        ~         |    {DECK}    |      ~
+       ~          |  [  MAST  ]  |     ~
+      ~           |______________|    ~
+     ~          /     HULL      \   ~
+    ~          | [=============] |  ~
+   ~           |    SUNKEN       | ~
+  ~            | SHIP - TILTED   | ~
+ ~             |_______________|~
+~             / broken timber \~
+~            . . . . . . . . . ~
+~           . SANDY SEABED . . ~
+~ ~  ROCKS AND DEBRIS ON FLOOR  ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

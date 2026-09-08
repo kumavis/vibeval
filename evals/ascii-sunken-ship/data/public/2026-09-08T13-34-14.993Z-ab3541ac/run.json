@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T13-34-14.993Z-ab3541ac",
+  "evalId": "ascii-sunken-ship",
+  "trial": 3,
+  "format": "text",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v1",
+    "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+    "dirty": true,
+    "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+    "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+    "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "claude-cli",
+    "requested": "claude-haiku-4-5-20251001",
+    "resolved": "claude-haiku-4-5-20251001",
+    "resolutionBasis": "provider-reported",
+    "cliVersion": "2.1.263 (Claude Code)"
+  },
+  "settings": {
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "draft",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 20,
+      "maxWallMs": 600000,
+      "maxArtifactBytes": 20000,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-08T13:34:14.993Z",
+  "finishedAt": "2026-09-08T13:35:03.727Z",
+  "wallMs": 48734,
+  "turns": {
+    "harness": 5,
+    "drafts": 3,
+    "submissions": 1,
+    "providerRequests": 5,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "text",
+    "entry": "result.txt",
+    "note": "Complete ASCII art showing a sunken ship in shallow water with clear water surface, tilted vessel, cargo/deck/mast structure, broken timbers, and detailed seafloor. Uses only ASCII characters (no emojis) as requested.",
+    "files": [
+      {
+        "path": "result.txt",
+        "bytes": 785,
+        "sha256": "4482923b8d633b5c13259d59a6d87b3c65d56b85cfeb37e678515e9330b3d04a"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 5,
+    "requests": 5,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 10,
+    "inputTokens": 7506,
+    "outputTokens": 4536,
+    "cacheReadTokens": 4227,
+    "cacheWriteTokens": 4750,
+    "thinkingTokens": 3148,
+    "modelOutputTokens": {
+      "claude-haiku-4-5-20251001": 18029
+    },
+    "costUsd": 0.04109669999999999,
+    "apiMs": 48531,
+    "lastSessionModelTurns": 1,
+    "resolvedModel": "claude-haiku-4-5-20251001",
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.04109669999999999,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  }
+}

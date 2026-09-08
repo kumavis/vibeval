@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T13-50-16.891Z-bd9fc4f8",
+  "evalId": "ascii-sunken-ship",
+  "trial": 1,
+  "format": "text",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v1",
+    "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+    "dirty": true,
+    "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+    "evalSha256": "0f1fd1e62d5cede4f7021ed9a3f7f5453e3d2443787a9c128a7c73c46f0f48b2",
+    "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "codex-cli",
+    "requested": "gpt-5.6-sol",
+    "resolved": null,
+    "resolutionBasis": "not-reported",
+    "cliVersion": "codex-cli 0.152.0"
+  },
+  "settings": {
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "draft",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 20,
+      "maxWallMs": 600000,
+      "maxArtifactBytes": 20000,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-08T13:50:16.892Z",
+  "finishedAt": "2026-09-08T13:50:50.888Z",
+  "wallMs": 33996,
+  "turns": {
+    "harness": 2,
+    "drafts": 1,
+    "submissions": 1,
+    "providerRequests": 2,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "text",
+    "entry": "result.txt",
+    "note": "The finished ASCII scene clearly depicts a sunken, tilted ship in shallow water, with a visible sun, waterline, fish, sand, and nearby seabed; it contains no emojis.",
+    "files": [
+      {
+        "path": "result.txt",
+        "bytes": 638,
+        "sha256": "0642c458e78b144582ad6ce389771c58564f8457fe285057e4b0233cd8579800"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 2,
+    "requests": 2,
+    "retries": 0,
+    "costReported": false,
+    "assistantMessages": 0,
+    "inputTokens": 29682,
+    "outputTokens": 656,
+    "cacheReadTokens": 25472,
+    "cacheWriteTokens": 0,
+    "thinkingTokens": 124,
+    "costUsd": null,
+    "apiMs": 0,
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.040148800000000005,
+    "basis": "api-equivalent-estimate",
+    "currency": "USD",
+    "subscriptionCharge": false,
+    "model": "gpt-5.6-sol",
+    "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+    "pricing": {
+      "asOf": "2026-09-07",
+      "source": "https://developers.openai.com/api/docs/models/compare",
+      "rates": {
+        "input": 4,
+        "cachedInput": 0.4,
+        "cacheWrite": 5,
+        "output": 20
+      }
+    },
+    "assumptions": [
+      "Reasoning tokens are included in output, not billed twice",
+      "No tier or long-context surcharge",
+      "Not subscription spend"
+    ]
+  }
+}

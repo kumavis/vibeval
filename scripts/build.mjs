@@ -2,6 +2,8 @@ import { cp, mkdir, readdir, readFile, rm, writeFile, lstat } from 'node:fs/prom
 import { resolve, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
+import { defineEval } from '../packages/runner/src/formats.js';
+
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export async function readCatalog(base = root) {
   const catalog = [];
@@ -12,6 +14,7 @@ export async function readCatalog(base = root) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.id) || manifest.id !== entry.name) throw new Error(`Invalid eval id: ${entry.name}`);
     for (const key of ['title', 'description', 'kind']) if (typeof manifest[key] !== 'string' || !manifest[key].trim()) throw new Error(`${entry.name}: missing ${key}`);
     if (!['interactive', 'static-artifacts'].includes(manifest.kind)) throw new Error(`${entry.name}: unknown kind`);
+    if (manifest.format) defineEval(manifest);
     await lstat(join(directory, 'viewer/index.html'));
     catalog.push({ ...manifest, url: `evals/${manifest.id}/` });
   }
@@ -44,6 +47,10 @@ export async function build(base = root) {
     const dest = join(out, 'evals', item.id);
     await copyPublic(join(source, 'viewer'), dest);
     await copyPublic(join(source, 'data/public'), join(dest, 'data'));
+    if (['text', 'files'].includes(item.format)) {
+      const prompt = await readFile(join(source, 'prompt.txt'), 'utf8');
+      await writeFile(join(dest, 'data/eval-context.json'), JSON.stringify({ prompt }));
+    }
     await writeFile(join(dest, 'eval.json'), JSON.stringify(item, null, 2));
   }
   await writeFile(join(out, 'catalog.json'), JSON.stringify(catalog, null, 2));

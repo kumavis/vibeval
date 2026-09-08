@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T13-50-18.326Z-cc9bc23a",
+  "evalId": "snow-globe",
+  "trial": 1,
+  "format": "files",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v1",
+    "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+    "dirty": true,
+    "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+    "evalSha256": "30f60dc8cd72cd82f8735f940ba58f07a7a48d592db051350deb45dc34c9fd0e",
+    "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "claude-cli",
+    "requested": "claude-opus-5",
+    "resolved": "claude-opus-5",
+    "resolutionBasis": "provider-reported",
+    "cliVersion": "2.1.263 (Claude Code)"
+  },
+  "settings": {
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "write_file",
+      "read_file",
+      "list_files",
+      "check",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 60,
+      "maxWallMs": 1800000,
+      "maxArtifactBytes": 2000000,
+      "maxFiles": 32
+    }
+  },
+  "startedAt": "2026-09-08T13:50:18.327Z",
+  "finishedAt": "2026-09-08T14:03:22.038Z",
+  "wallMs": 783711,
+  "turns": {
+    "harness": 10,
+    "drafts": 3,
+    "submissions": 1,
+    "providerRequests": 10,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 22702
+      }
+    ],
+    "checks": [
+      "file budget",
+      "HTML entry",
+      "static HTML/CSS references"
+    ],
+    "notChecked": [
+      "visual quality",
+      "JavaScript behavior",
+      "dynamic network requests"
+    ]
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "website",
+    "entry": "index.html",
+    "note": "Single self-contained index.html: a canvas 2D software 3D renderer (perspective projection, painter's-algorithm depth sort, per-face lighting + distance fog) draws a faceted snow-capped peak with two secondary summits, an undulating snowfield, a frozen tarn and snow-dusted conifers placed on the analytic terrain height. 270 snow particles simulate gravity, drag, swirl and sphere/terrain collisions; they render in two depth passes so flakes behind the mountain are occluded. Interaction: drag to orbit (yaw + clamped pitch with inertia), flick or tap to shake (also Shake button and spacebar), wheel to zoom, auto-spin toggle and reset view. Glass shell is rendered with edge refraction darkening, sheen, specular highlights and rim; wooden pedestal with engraved plate and cast shadow. Verified logic by review (in-place transform safety, geometry inside globe radius, sorting/occlusion order, resize/DPR handling) and packaging via check: no external assets, no network, classic script, no storage.",
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 22702,
+        "sha256": "ed5ec124e07caa20fa1669964abb23c89116795943156262f3d06ed4c9bbd6ae"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 10,
+    "requests": 10,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 19,
+    "inputTokens": 20,
+    "outputTokens": 82624,
+    "cacheReadTokens": 537206,
+    "cacheWriteTokens": 112138,
+    "thinkingTokens": 10852,
+    "modelOutputTokens": {
+      "claude-haiku-4-5-20251001": 140,
+      "claude-opus-5": 579916
+    },
+    "costUsd": 3.456679,
+    "apiMs": 781937,
+    "lastSessionModelTurns": 1,
+    "resolvedModel": "claude-opus-5",
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 3.456679,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  }
+}

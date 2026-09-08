@@ -1,0 +1,23 @@
+{
+  "id": "snow-globe",
+  "title": "Snow globe",
+  "description": "A 3D interactive snow globe with a snow-capped peak. Compare the scene and how it feels to explore.",
+  "kind": "static-artifacts",
+  "format": "files",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "constraints": {},
+  "limits": {
+    "maxTurns": 60,
+    "maxWallMs": 1800000,
+    "maxArtifactBytes": 2000000,
+    "maxFiles": 32
+  },
+  "tags": [
+    "Creative coding",
+    "Viewer judged"
+  ],
+  "entry": "index.html"
+}

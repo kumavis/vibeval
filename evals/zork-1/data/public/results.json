@@ -17,7 +17,126 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-fable-5-1-300/run-2026-09-07T07-23-35.719Z-claude-fable-5-1-t1.jsonl",
-      "transcript": "transcripts/run-001.json"
+      "transcript": "transcripts/run-001.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 3128,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 17659,
+          "score": 10
+        },
+        {
+          "command": 16,
+          "activeMs": 38996,
+          "score": 35
+        },
+        {
+          "command": 19,
+          "activeMs": 46920,
+          "score": 40
+        },
+        {
+          "command": 23,
+          "activeMs": 57280,
+          "score": 50
+        },
+        {
+          "command": 50,
+          "activeMs": 150014,
+          "score": 55
+        },
+        {
+          "command": 75,
+          "activeMs": 215238,
+          "score": 69
+        },
+        {
+          "command": 84,
+          "activeMs": 239010,
+          "score": 73
+        },
+        {
+          "command": 112,
+          "activeMs": 343165,
+          "score": 83
+        },
+        {
+          "command": 121,
+          "activeMs": 365746,
+          "score": 89
+        },
+        {
+          "command": 122,
+          "activeMs": 368287,
+          "score": 94
+        },
+        {
+          "command": 140,
+          "activeMs": 424002,
+          "score": 104
+        },
+        {
+          "command": 151,
+          "activeMs": 453291,
+          "score": 119
+        },
+        {
+          "command": 157,
+          "activeMs": 469577,
+          "score": 124
+        },
+        {
+          "command": 217,
+          "activeMs": 651003,
+          "score": 139
+        },
+        {
+          "command": 224,
+          "activeMs": 673673,
+          "score": 144
+        },
+        {
+          "command": 239,
+          "activeMs": 720966,
+          "score": 148
+        },
+        {
+          "command": 248,
+          "activeMs": 748359,
+          "score": 159
+        },
+        {
+          "command": 249,
+          "activeMs": 751831,
+          "score": 164
+        },
+        {
+          "command": 252,
+          "activeMs": 761075,
+          "score": 189
+        },
+        {
+          "command": 253,
+          "activeMs": 765422,
+          "score": 199
+        },
+        {
+          "command": 257,
+          "activeMs": 776524,
+          "score": 204
+        },
+        {
+          "command": 259,
+          "activeMs": 794855,
+          "score": 198
+        }
+      ],
+      "durationMs": 919920,
+      "commandCount": 298
     },
     {
       "id": "run-002",
@@ -34,7 +153,91 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-fable-5-1-300/run-2026-09-07T07-51-08.224Z-claude-fable-5-1-t2.jsonl",
-      "transcript": "transcripts/run-002.json"
+      "transcript": "transcripts/run-002.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 4324,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 23596,
+          "score": 10
+        },
+        {
+          "command": 16,
+          "activeMs": 48296,
+          "score": 35
+        },
+        {
+          "command": 25,
+          "activeMs": 93196,
+          "score": 45
+        },
+        {
+          "command": 35,
+          "activeMs": 122404,
+          "score": 50
+        },
+        {
+          "command": 46,
+          "activeMs": 169228,
+          "score": 55
+        },
+        {
+          "command": 54,
+          "activeMs": 193212,
+          "score": 69
+        },
+        {
+          "command": 100,
+          "activeMs": 409856,
+          "score": 79
+        },
+        {
+          "command": 112,
+          "activeMs": 475276,
+          "score": 89
+        },
+        {
+          "command": 116,
+          "activeMs": 493348,
+          "score": 93
+        },
+        {
+          "command": 122,
+          "activeMs": 520516,
+          "score": 99
+        },
+        {
+          "command": 128,
+          "activeMs": 548993,
+          "score": 104
+        },
+        {
+          "command": 134,
+          "activeMs": 576712,
+          "score": 109
+        },
+        {
+          "command": 144,
+          "activeMs": 612712,
+          "score": 124
+        },
+        {
+          "command": 166,
+          "activeMs": 721466,
+          "score": 149
+        },
+        {
+          "command": 252,
+          "activeMs": 1087625,
+          "score": 139
+        }
+      ],
+      "durationMs": 1120631,
+      "commandCount": 258
     },
     {
       "id": "run-003",
@@ -51,7 +254,211 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-fable-5-1-300/run-2026-09-07T08-09-49.052Z-claude-fable-5-1-t3.jsonl",
-      "transcript": "transcripts/run-003.json"
+      "transcript": "transcripts/run-003.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 3239,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 18071,
+          "score": 10
+        },
+        {
+          "command": 16,
+          "activeMs": 41235,
+          "score": 35
+        },
+        {
+          "command": 20,
+          "activeMs": 52917,
+          "score": 40
+        },
+        {
+          "command": 24,
+          "activeMs": 63982,
+          "score": 50
+        },
+        {
+          "command": 65,
+          "activeMs": 180008,
+          "score": 65
+        },
+        {
+          "command": 75,
+          "activeMs": 253972,
+          "score": 69
+        },
+        {
+          "command": 86,
+          "activeMs": 284460,
+          "score": 74
+        },
+        {
+          "command": 90,
+          "activeMs": 312361,
+          "score": 79
+        },
+        {
+          "command": 105,
+          "activeMs": 359754,
+          "score": 89
+        },
+        {
+          "command": 116,
+          "activeMs": 390647,
+          "score": 94
+        },
+        {
+          "command": 117,
+          "activeMs": 393325,
+          "score": 99
+        },
+        {
+          "command": 118,
+          "activeMs": 396032,
+          "score": 104
+        },
+        {
+          "command": 133,
+          "activeMs": 439684,
+          "score": 118
+        },
+        {
+          "command": 140,
+          "activeMs": 460859,
+          "score": 122
+        },
+        {
+          "command": 162,
+          "activeMs": 524496,
+          "score": 132
+        },
+        {
+          "command": 177,
+          "activeMs": 569354,
+          "score": 142
+        },
+        {
+          "command": 186,
+          "activeMs": 594104,
+          "score": 157
+        },
+        {
+          "command": 187,
+          "activeMs": 596902,
+          "score": 167
+        },
+        {
+          "command": 188,
+          "activeMs": 599412,
+          "score": 173
+        },
+        {
+          "command": 194,
+          "activeMs": 617733,
+          "score": 178
+        },
+        {
+          "command": 205,
+          "activeMs": 655404,
+          "score": 203
+        },
+        {
+          "command": 212,
+          "activeMs": 678122,
+          "score": 213
+        },
+        {
+          "command": 221,
+          "activeMs": 704245,
+          "score": 218
+        },
+        {
+          "command": 222,
+          "activeMs": 708440,
+          "score": 224
+        },
+        {
+          "command": 223,
+          "activeMs": 711411,
+          "score": 229
+        },
+        {
+          "command": 224,
+          "activeMs": 714214,
+          "score": 240
+        },
+        {
+          "command": 225,
+          "activeMs": 716956,
+          "score": 245
+        },
+        {
+          "command": 233,
+          "activeMs": 738573,
+          "score": 250
+        },
+        {
+          "command": 239,
+          "activeMs": 755330,
+          "score": 251
+        },
+        {
+          "command": 244,
+          "activeMs": 768135,
+          "score": 252
+        },
+        {
+          "command": 245,
+          "activeMs": 770836,
+          "score": 256
+        },
+        {
+          "command": 249,
+          "activeMs": 789650,
+          "score": 260
+        },
+        {
+          "command": 259,
+          "activeMs": 824423,
+          "score": 266
+        },
+        {
+          "command": 260,
+          "activeMs": 836727,
+          "score": 260
+        },
+        {
+          "command": 269,
+          "activeMs": 865829,
+          "score": 270
+        },
+        {
+          "command": 280,
+          "activeMs": 896936,
+          "score": 275
+        },
+        {
+          "command": 294,
+          "activeMs": 936422,
+          "score": 285
+        },
+        {
+          "command": 295,
+          "activeMs": 939306,
+          "score": 290
+        },
+        {
+          "command": 296,
+          "activeMs": 941713,
+          "score": 296
+        }
+      ],
+      "durationMs": 963843,
+      "commandCount": 302
     },
     {
       "id": "run-004",
@@ -68,7 +475,26 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-haiku-4-5-20251001-300/run-2026-08-26T02-46-26.160Z-claude-haiku-4-5-20251001-t1.jsonl",
-      "transcript": "transcripts/run-004.json"
+      "transcript": "transcripts/run-004.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 7204,
+          "score": 0
+        },
+        {
+          "command": 16,
+          "activeMs": 39799,
+          "score": 5
+        },
+        {
+          "command": 25,
+          "activeMs": 58155,
+          "score": 15
+        }
+      ],
+      "durationMs": 809085,
+      "commandCount": 314
     },
     {
       "id": "run-005",
@@ -85,7 +511,41 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-haiku-4-5-20251001-300/run-2026-08-26T02-59-56.047Z-claude-haiku-4-5-20251001-t2.jsonl",
-      "transcript": "transcripts/run-005.json"
+      "transcript": "transcripts/run-005.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 7386,
+          "score": 0
+        },
+        {
+          "command": 18,
+          "activeMs": 38441,
+          "score": 10
+        },
+        {
+          "command": 96,
+          "activeMs": 215113,
+          "score": 15
+        },
+        {
+          "command": 149,
+          "activeMs": 340949,
+          "score": 40
+        },
+        {
+          "command": 162,
+          "activeMs": 378709,
+          "score": 45
+        },
+        {
+          "command": 256,
+          "activeMs": 632973,
+          "score": 49
+        }
+      ],
+      "durationMs": 810108,
+      "commandCount": 315
     },
     {
       "id": "run-006",
@@ -102,7 +562,56 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-haiku-4-5-20251001-300/run-2026-08-27T05-25-07.200Z-claude-haiku-4-5-20251001-t3.jsonl",
-      "transcript": "transcripts/run-006.json"
+      "transcript": "transcripts/run-006.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 6770,
+          "score": 0
+        },
+        {
+          "command": 14,
+          "activeMs": 30513,
+          "score": 5
+        },
+        {
+          "command": 21,
+          "activeMs": 44710,
+          "score": 15
+        },
+        {
+          "command": 31,
+          "activeMs": 67630,
+          "score": 40
+        },
+        {
+          "command": 49,
+          "activeMs": 108018,
+          "score": 30
+        },
+        {
+          "command": 66,
+          "activeMs": 146135,
+          "score": 34
+        },
+        {
+          "command": 96,
+          "activeMs": 237226,
+          "score": 24
+        },
+        {
+          "command": 158,
+          "activeMs": 389301,
+          "score": 29
+        },
+        {
+          "command": 278,
+          "activeMs": 708665,
+          "score": 39
+        }
+      ],
+      "durationMs": 838283,
+      "commandCount": 333
     },
     {
       "id": "run-007",
@@ -119,7 +628,106 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-opus-5-300/run-2026-08-27T06-08-40.327Z-claude-opus-5-t1.jsonl",
-      "transcript": "transcripts/run-007.json"
+      "transcript": "transcripts/run-007.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 6729,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 19384,
+          "score": 10
+        },
+        {
+          "command": 12,
+          "activeMs": 35962,
+          "score": 35
+        },
+        {
+          "command": 18,
+          "activeMs": 60771,
+          "score": 39
+        },
+        {
+          "command": 27,
+          "activeMs": 85284,
+          "score": 45
+        },
+        {
+          "command": 37,
+          "activeMs": 122146,
+          "score": 50
+        },
+        {
+          "command": 54,
+          "activeMs": 253557,
+          "score": 64
+        },
+        {
+          "command": 63,
+          "activeMs": 277265,
+          "score": 74
+        },
+        {
+          "command": 67,
+          "activeMs": 289018,
+          "score": 78
+        },
+        {
+          "command": 74,
+          "activeMs": 309413,
+          "score": 93
+        },
+        {
+          "command": 75,
+          "activeMs": 312273,
+          "score": 99
+        },
+        {
+          "command": 76,
+          "activeMs": 315389,
+          "score": 93
+        },
+        {
+          "command": 85,
+          "activeMs": 342794,
+          "score": 103
+        },
+        {
+          "command": 93,
+          "activeMs": 365236,
+          "score": 113
+        },
+        {
+          "command": 94,
+          "activeMs": 367726,
+          "score": 119
+        },
+        {
+          "command": 227,
+          "activeMs": 1372664,
+          "score": 124
+        },
+        {
+          "command": 244,
+          "activeMs": 1426288,
+          "score": 139
+        },
+        {
+          "command": 258,
+          "activeMs": 1483810,
+          "score": 144
+        },
+        {
+          "command": 301,
+          "activeMs": 2146336,
+          "score": 134
+        }
+      ],
+      "durationMs": 2191969,
+      "commandCount": 310
     },
     {
       "id": "run-008",
@@ -136,7 +744,71 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-opus-5-300/run-2026-09-01T23-50-05.090Z-claude-opus-5-t2.jsonl",
-      "transcript": "transcripts/run-008.json"
+      "transcript": "transcripts/run-008.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 4016,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 12613,
+          "score": 10
+        },
+        {
+          "command": 14,
+          "activeMs": 27862,
+          "score": 35
+        },
+        {
+          "command": 18,
+          "activeMs": 36125,
+          "score": 40
+        },
+        {
+          "command": 22,
+          "activeMs": 50486,
+          "score": 50
+        },
+        {
+          "command": 35,
+          "activeMs": 90353,
+          "score": 60
+        },
+        {
+          "command": 46,
+          "activeMs": 110212,
+          "score": 65
+        },
+        {
+          "command": 47,
+          "activeMs": 112197,
+          "score": 70
+        },
+        {
+          "command": 64,
+          "activeMs": 150014,
+          "score": 84
+        },
+        {
+          "command": 80,
+          "activeMs": 190170,
+          "score": 89
+        },
+        {
+          "command": 110,
+          "activeMs": 319174,
+          "score": 94
+        },
+        {
+          "command": 165,
+          "activeMs": 852847,
+          "score": 84
+        }
+      ],
+      "durationMs": 1476167,
+      "commandCount": 310
     },
     {
       "id": "run-009",
@@ -153,7 +825,66 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-opus-5-300/run-2026-09-02T00-14-41.439Z-claude-opus-5-t3.jsonl",
-      "transcript": "transcripts/run-009.json"
+      "transcript": "transcripts/run-009.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 4261,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 11102,
+          "score": 10
+        },
+        {
+          "command": 13,
+          "activeMs": 23860,
+          "score": 35
+        },
+        {
+          "command": 17,
+          "activeMs": 31908,
+          "score": 40
+        },
+        {
+          "command": 21,
+          "activeMs": 42713,
+          "score": 50
+        },
+        {
+          "command": 45,
+          "activeMs": 109572,
+          "score": 54
+        },
+        {
+          "command": 133,
+          "activeMs": 904408,
+          "score": 65
+        },
+        {
+          "command": 134,
+          "activeMs": 906322,
+          "score": 70
+        },
+        {
+          "command": 157,
+          "activeMs": 961386,
+          "score": 84
+        },
+        {
+          "command": 176,
+          "activeMs": 1040350,
+          "score": 88
+        },
+        {
+          "command": 303,
+          "activeMs": 2745513,
+          "score": 98
+        }
+      ],
+      "durationMs": 2803357,
+      "commandCount": 309
     },
     {
       "id": "run-010",
@@ -170,7 +901,61 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-sonnet-5-300/run-2026-08-26T04-47-33.867Z-claude-sonnet-5-t1.jsonl",
-      "transcript": "transcripts/run-010.json"
+      "transcript": "transcripts/run-010.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 6007,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 17675,
+          "score": 10
+        },
+        {
+          "command": 18,
+          "activeMs": 50505,
+          "score": 35
+        },
+        {
+          "command": 22,
+          "activeMs": 64393,
+          "score": 40
+        },
+        {
+          "command": 27,
+          "activeMs": 79673,
+          "score": 50
+        },
+        {
+          "command": 86,
+          "activeMs": 269312,
+          "score": 65
+        },
+        {
+          "command": 131,
+          "activeMs": 481154,
+          "score": 75
+        },
+        {
+          "command": 199,
+          "activeMs": 781484,
+          "score": 79
+        },
+        {
+          "command": 235,
+          "activeMs": 898716,
+          "score": 85
+        },
+        {
+          "command": 278,
+          "activeMs": 1038804,
+          "score": 95
+        }
+      ],
+      "durationMs": 1139751,
+      "commandCount": 307
     },
     {
       "id": "run-011",
@@ -187,7 +972,56 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-sonnet-5-300/run-2026-08-26T06-26-44.854Z-claude-sonnet-5-t2.jsonl",
-      "transcript": "transcripts/run-011.json"
+      "transcript": "transcripts/run-011.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 7014,
+          "score": 0
+        },
+        {
+          "command": 9,
+          "activeMs": 25782,
+          "score": 10
+        },
+        {
+          "command": 20,
+          "activeMs": 54206,
+          "score": 35
+        },
+        {
+          "command": 25,
+          "activeMs": 69784,
+          "score": 40
+        },
+        {
+          "command": 30,
+          "activeMs": 83218,
+          "score": 50
+        },
+        {
+          "command": 63,
+          "activeMs": 185907,
+          "score": 54
+        },
+        {
+          "command": 76,
+          "activeMs": 242316,
+          "score": 60
+        },
+        {
+          "command": 130,
+          "activeMs": 439443,
+          "score": 75
+        },
+        {
+          "command": 187,
+          "activeMs": 668647,
+          "score": 65
+        }
+      ],
+      "durationMs": 1119766,
+      "commandCount": 306
     },
     {
       "id": "run-012",
@@ -204,7 +1038,51 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-claude-sonnet-5-300/run-2026-08-27T05-03-52.874Z-claude-sonnet-5-t3.jsonl",
-      "transcript": "transcripts/run-012.json"
+      "transcript": "transcripts/run-012.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 6655,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 19133,
+          "score": 10
+        },
+        {
+          "command": 16,
+          "activeMs": 43574,
+          "score": 35
+        },
+        {
+          "command": 21,
+          "activeMs": 60772,
+          "score": 40
+        },
+        {
+          "command": 26,
+          "activeMs": 75335,
+          "score": 50
+        },
+        {
+          "command": 73,
+          "activeMs": 234482,
+          "score": 65
+        },
+        {
+          "command": 174,
+          "activeMs": 590523,
+          "score": 69
+        },
+        {
+          "command": 186,
+          "activeMs": 636706,
+          "score": 59
+        }
+      ],
+      "durationMs": 1274060,
+      "commandCount": 306
     },
     {
       "id": "run-013",
@@ -221,7 +1099,46 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-300/run-2026-09-02T01-23-52.398Z-gpt-5.6-luna-t1.jsonl",
-      "transcript": "transcripts/run-013.json"
+      "transcript": "transcripts/run-013.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 9463,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 31740,
+          "score": 5
+        },
+        {
+          "command": 18,
+          "activeMs": 97242,
+          "score": 15
+        },
+        {
+          "command": 27,
+          "activeMs": 144779,
+          "score": 40
+        },
+        {
+          "command": 28,
+          "activeMs": 150577,
+          "score": 30
+        },
+        {
+          "command": 53,
+          "activeMs": 292323,
+          "score": 35
+        },
+        {
+          "command": 176,
+          "activeMs": 1092140,
+          "score": 39
+        }
+      ],
+      "durationMs": 2187713,
+      "commandCount": 317
     },
     {
       "id": "run-014",
@@ -238,7 +1155,41 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-300/run-2026-09-02T03-48-08.153Z-gpt-5.6-luna-t2.jsonl",
-      "transcript": "transcripts/run-014.json"
+      "transcript": "transcripts/run-014.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 10579,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 30202,
+          "score": 10
+        },
+        {
+          "command": 14,
+          "activeMs": 70245,
+          "score": 35
+        },
+        {
+          "command": 15,
+          "activeMs": 75102,
+          "score": 25
+        },
+        {
+          "command": 32,
+          "activeMs": 162198,
+          "score": 29
+        },
+        {
+          "command": 104,
+          "activeMs": 622022,
+          "score": 34
+        }
+      ],
+      "durationMs": 2173557,
+      "commandCount": 319
     },
     {
       "id": "run-015",
@@ -255,7 +1206,51 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-300/run-2026-09-02T04-24-21.892Z-gpt-5.6-luna-t3.jsonl",
-      "transcript": "transcripts/run-015.json"
+      "transcript": "transcripts/run-015.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 11649,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 35302,
+          "score": 5
+        },
+        {
+          "command": 16,
+          "activeMs": 77420,
+          "score": 15
+        },
+        {
+          "command": 25,
+          "activeMs": 119056,
+          "score": 40
+        },
+        {
+          "command": 28,
+          "activeMs": 134626,
+          "score": 44
+        },
+        {
+          "command": 39,
+          "activeMs": 196266,
+          "score": 49
+        },
+        {
+          "command": 114,
+          "activeMs": 642272,
+          "score": 39
+        },
+        {
+          "command": 210,
+          "activeMs": 1288843,
+          "score": 49
+        }
+      ],
+      "durationMs": 2156489,
+      "commandCount": 318
     },
     {
       "id": "run-016",
@@ -272,7 +1267,96 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-web-300/run-2026-09-02T23-42-23.645Z-gpt-5.6-luna+web-t1.jsonl",
-      "transcript": "transcripts/run-016.json"
+      "transcript": "transcripts/run-016.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 8863,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 29733,
+          "score": 5
+        },
+        {
+          "command": 15,
+          "activeMs": 72812,
+          "score": 15
+        },
+        {
+          "command": 20,
+          "activeMs": 101633,
+          "score": 40
+        },
+        {
+          "command": 27,
+          "activeMs": 143542,
+          "score": 44
+        },
+        {
+          "command": 31,
+          "activeMs": 165532,
+          "score": 34
+        },
+        {
+          "command": 43,
+          "activeMs": 229340,
+          "score": 24
+        },
+        {
+          "command": 59,
+          "activeMs": 313618,
+          "score": 29
+        },
+        {
+          "command": 230,
+          "activeMs": 1607553,
+          "score": 54
+        },
+        {
+          "command": 233,
+          "activeMs": 1629418,
+          "score": 0
+        },
+        {
+          "command": 237,
+          "activeMs": 1655922,
+          "score": 5
+        },
+        {
+          "command": 242,
+          "activeMs": 1696743,
+          "score": 15
+        },
+        {
+          "command": 248,
+          "activeMs": 1742969,
+          "score": 40
+        },
+        {
+          "command": 251,
+          "activeMs": 1762615,
+          "score": 44
+        },
+        {
+          "command": 265,
+          "activeMs": 1858122,
+          "score": 50
+        },
+        {
+          "command": 289,
+          "activeMs": 2037520,
+          "score": 75
+        },
+        {
+          "command": 291,
+          "activeMs": 2051326,
+          "score": 65
+        }
+      ],
+      "durationMs": 2253505,
+      "commandCount": 316
     },
     {
       "id": "run-017",
@@ -289,7 +1373,116 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-web-300/run-2026-09-03T00-19-57.335Z-gpt-5.6-luna+web-t2.jsonl",
-      "transcript": "transcripts/run-017.json"
+      "transcript": "transcripts/run-017.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 8358,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 33879,
+          "score": 5
+        },
+        {
+          "command": 16,
+          "activeMs": 79419,
+          "score": 15
+        },
+        {
+          "command": 25,
+          "activeMs": 126331,
+          "score": 40
+        },
+        {
+          "command": 47,
+          "activeMs": 255393,
+          "score": 30
+        },
+        {
+          "command": 65,
+          "activeMs": 368398,
+          "score": 20
+        },
+        {
+          "command": 98,
+          "activeMs": 596044,
+          "score": 30
+        },
+        {
+          "command": 104,
+          "activeMs": 630245,
+          "score": 55
+        },
+        {
+          "command": 107,
+          "activeMs": 649263,
+          "score": 0
+        },
+        {
+          "command": 111,
+          "activeMs": 670269,
+          "score": 5
+        },
+        {
+          "command": 116,
+          "activeMs": 697264,
+          "score": 15
+        },
+        {
+          "command": 127,
+          "activeMs": 772058,
+          "score": 40
+        },
+        {
+          "command": 131,
+          "activeMs": 798420,
+          "score": 44
+        },
+        {
+          "command": 150,
+          "activeMs": 918552,
+          "score": 50
+        },
+        {
+          "command": 161,
+          "activeMs": 994974,
+          "score": 75
+        },
+        {
+          "command": 162,
+          "activeMs": 1001667,
+          "score": 65
+        },
+        {
+          "command": 189,
+          "activeMs": 1199718,
+          "score": 75
+        },
+        {
+          "command": 193,
+          "activeMs": 1229253,
+          "score": 85
+        },
+        {
+          "command": 194,
+          "activeMs": 1236398,
+          "score": 91
+        },
+        {
+          "command": 195,
+          "activeMs": 1243281,
+          "score": 95
+        },
+        {
+          "command": 215,
+          "activeMs": 1398021,
+          "score": 100
+        }
+      ],
+      "durationMs": 2095756,
+      "commandCount": 305
     },
     {
       "id": "run-018",
@@ -306,7 +1499,101 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-luna-web-300/run-2026-09-03T00-54-53.280Z-gpt-5.6-luna+web-t3.jsonl",
-      "transcript": "transcripts/run-018.json"
+      "transcript": "transcripts/run-018.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 9909,
+          "score": 0
+        },
+        {
+          "command": 13,
+          "activeMs": 63206,
+          "score": 10
+        },
+        {
+          "command": 20,
+          "activeMs": 103738,
+          "score": 35
+        },
+        {
+          "command": 34,
+          "activeMs": 199099,
+          "score": 45
+        },
+        {
+          "command": 36,
+          "activeMs": 209460,
+          "score": 35
+        },
+        {
+          "command": 51,
+          "activeMs": 293528,
+          "score": 40
+        },
+        {
+          "command": 62,
+          "activeMs": 359509,
+          "score": 44
+        },
+        {
+          "command": 88,
+          "activeMs": 517076,
+          "score": 58
+        },
+        {
+          "command": 95,
+          "activeMs": 561465,
+          "score": 62
+        },
+        {
+          "command": 131,
+          "activeMs": 864001,
+          "score": 52
+        },
+        {
+          "command": 169,
+          "activeMs": 1128859,
+          "score": 62
+        },
+        {
+          "command": 214,
+          "activeMs": 1468765,
+          "score": 67
+        },
+        {
+          "command": 224,
+          "activeMs": 1538302,
+          "score": 72
+        },
+        {
+          "command": 274,
+          "activeMs": 1949603,
+          "score": 0
+        },
+        {
+          "command": 278,
+          "activeMs": 1981500,
+          "score": 5
+        },
+        {
+          "command": 284,
+          "activeMs": 2025910,
+          "score": 15
+        },
+        {
+          "command": 300,
+          "activeMs": 2151670,
+          "score": 40
+        },
+        {
+          "command": 301,
+          "activeMs": 2159430,
+          "score": 30
+        }
+      ],
+      "durationMs": 2240636,
+      "commandCount": 311
     },
     {
       "id": "run-019",
@@ -323,7 +1610,91 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-sol-300/run-2026-09-01T23-49-02.212Z-gpt-5.6-sol-t1.jsonl",
-      "transcript": "transcripts/run-019.json"
+      "transcript": "transcripts/run-019.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 9154,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 29680,
+          "score": 10
+        },
+        {
+          "command": 15,
+          "activeMs": 78498,
+          "score": 35
+        },
+        {
+          "command": 18,
+          "activeMs": 94709,
+          "score": 40
+        },
+        {
+          "command": 29,
+          "activeMs": 159818,
+          "score": 44
+        },
+        {
+          "command": 52,
+          "activeMs": 595448,
+          "score": 54
+        },
+        {
+          "command": 59,
+          "activeMs": 635403,
+          "score": 79
+        },
+        {
+          "command": 62,
+          "activeMs": 950929,
+          "score": 69
+        },
+        {
+          "command": 86,
+          "activeMs": 1092946,
+          "score": 74
+        },
+        {
+          "command": 112,
+          "activeMs": 1602379,
+          "score": 79
+        },
+        {
+          "command": 127,
+          "activeMs": 1688130,
+          "score": 74
+        },
+        {
+          "command": 174,
+          "activeMs": 1988437,
+          "score": 64
+        },
+        {
+          "command": 227,
+          "activeMs": 2906585,
+          "score": 78
+        },
+        {
+          "command": 280,
+          "activeMs": 3660518,
+          "score": 88
+        },
+        {
+          "command": 298,
+          "activeMs": 3773647,
+          "score": 98
+        },
+        {
+          "command": 299,
+          "activeMs": 3782314,
+          "score": 104
+        }
+      ],
+      "durationMs": 3813859,
+      "commandCount": 304
     },
     {
       "id": "run-020",
@@ -340,7 +1711,101 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-sol-300/run-2026-09-02T01-17-33.716Z-gpt-5.6-sol-t2.jsonl",
-      "transcript": "transcripts/run-020.json"
+      "transcript": "transcripts/run-020.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 11766,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 34684,
+          "score": 10
+        },
+        {
+          "command": 15,
+          "activeMs": 80557,
+          "score": 35
+        },
+        {
+          "command": 19,
+          "activeMs": 108268,
+          "score": 40
+        },
+        {
+          "command": 26,
+          "activeMs": 370586,
+          "score": 44
+        },
+        {
+          "command": 40,
+          "activeMs": 453148,
+          "score": 50
+        },
+        {
+          "command": 95,
+          "activeMs": 802887,
+          "score": 65
+        },
+        {
+          "command": 114,
+          "activeMs": 932807,
+          "score": 70
+        },
+        {
+          "command": 130,
+          "activeMs": 1041240,
+          "score": 75
+        },
+        {
+          "command": 136,
+          "activeMs": 1072414,
+          "score": 80
+        },
+        {
+          "command": 151,
+          "activeMs": 1191628,
+          "score": 94
+        },
+        {
+          "command": 160,
+          "activeMs": 1549186,
+          "score": 98
+        },
+        {
+          "command": 169,
+          "activeMs": 1599654,
+          "score": 108
+        },
+        {
+          "command": 178,
+          "activeMs": 1647187,
+          "score": 123
+        },
+        {
+          "command": 179,
+          "activeMs": 1652912,
+          "score": 129
+        },
+        {
+          "command": 180,
+          "activeMs": 1659017,
+          "score": 123
+        },
+        {
+          "command": 230,
+          "activeMs": 2333555,
+          "score": 113
+        },
+        {
+          "command": 254,
+          "activeMs": 2485040,
+          "score": 103
+        }
+      ],
+      "durationMs": 3201794,
+      "commandCount": 305
     },
     {
       "id": "run-021",
@@ -357,7 +1822,101 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-sol-300/run-2026-09-02T02-11-18.605Z-gpt-5.6-sol-t3.jsonl",
-      "transcript": "transcripts/run-021.json"
+      "transcript": "transcripts/run-021.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 12263,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 31601,
+          "score": 10
+        },
+        {
+          "command": 15,
+          "activeMs": 80737,
+          "score": 35
+        },
+        {
+          "command": 19,
+          "activeMs": 108572,
+          "score": 40
+        },
+        {
+          "command": 23,
+          "activeMs": 142244,
+          "score": 50
+        },
+        {
+          "command": 104,
+          "activeMs": 655743,
+          "score": 55
+        },
+        {
+          "command": 106,
+          "activeMs": 667693,
+          "score": 60
+        },
+        {
+          "command": 126,
+          "activeMs": 1123121,
+          "score": 50
+        },
+        {
+          "command": 159,
+          "activeMs": 1638710,
+          "score": 54
+        },
+        {
+          "command": 180,
+          "activeMs": 1762627,
+          "score": 58
+        },
+        {
+          "command": 191,
+          "activeMs": 1944455,
+          "score": 64
+        },
+        {
+          "command": 200,
+          "activeMs": 2002911,
+          "score": 75
+        },
+        {
+          "command": 229,
+          "activeMs": 2559680,
+          "score": 64
+        },
+        {
+          "command": 243,
+          "activeMs": 2715266,
+          "score": 69
+        },
+        {
+          "command": 251,
+          "activeMs": 3107068,
+          "score": 80
+        },
+        {
+          "command": 273,
+          "activeMs": 3222318,
+          "score": 90
+        },
+        {
+          "command": 279,
+          "activeMs": 3560146,
+          "score": 115
+        },
+        {
+          "command": 287,
+          "activeMs": 3612568,
+          "score": 105
+        }
+      ],
+      "durationMs": 3674198,
+      "commandCount": 298
     },
     {
       "id": "run-022",
@@ -374,7 +1933,81 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-300/run-2026-09-02T01-23-55.302Z-gpt-5.6-terra-t1.jsonl",
-      "transcript": "transcripts/run-022.json"
+      "transcript": "transcripts/run-022.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 9415,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 31075,
+          "score": 5
+        },
+        {
+          "command": 11,
+          "activeMs": 57468,
+          "score": 15
+        },
+        {
+          "command": 27,
+          "activeMs": 145670,
+          "score": 40
+        },
+        {
+          "command": 33,
+          "activeMs": 180755,
+          "score": 30
+        },
+        {
+          "command": 74,
+          "activeMs": 439837,
+          "score": 35
+        },
+        {
+          "command": 141,
+          "activeMs": 875972,
+          "score": 45
+        },
+        {
+          "command": 169,
+          "activeMs": 1065997,
+          "score": 35
+        },
+        {
+          "command": 216,
+          "activeMs": 1402594,
+          "score": 0
+        },
+        {
+          "command": 220,
+          "activeMs": 1430152,
+          "score": 5
+        },
+        {
+          "command": 225,
+          "activeMs": 1465565,
+          "score": 15
+        },
+        {
+          "command": 239,
+          "activeMs": 1567559,
+          "score": 40
+        },
+        {
+          "command": 244,
+          "activeMs": 1603384,
+          "score": 45
+        },
+        {
+          "command": 252,
+          "activeMs": 1666531,
+          "score": 55
+        }
+      ],
+      "durationMs": 2229063,
+      "commandCount": 308
     },
     {
       "id": "run-023",
@@ -391,7 +2024,91 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-300/run-2026-09-02T02-01-04.478Z-gpt-5.6-terra-t2.jsonl",
-      "transcript": "transcripts/run-023.json"
+      "transcript": "transcripts/run-023.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 10471,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 31884,
+          "score": 5
+        },
+        {
+          "command": 11,
+          "activeMs": 61931,
+          "score": 15
+        },
+        {
+          "command": 19,
+          "activeMs": 105131,
+          "score": 40
+        },
+        {
+          "command": 24,
+          "activeMs": 137966,
+          "score": 45
+        },
+        {
+          "command": 114,
+          "activeMs": 728283,
+          "score": 35
+        },
+        {
+          "command": 134,
+          "activeMs": 866945,
+          "score": 25
+        },
+        {
+          "command": 149,
+          "activeMs": 984758,
+          "score": 0
+        },
+        {
+          "command": 153,
+          "activeMs": 1008928,
+          "score": 5
+        },
+        {
+          "command": 158,
+          "activeMs": 1040544,
+          "score": 15
+        },
+        {
+          "command": 174,
+          "activeMs": 1163949,
+          "score": 40
+        },
+        {
+          "command": 200,
+          "activeMs": 1369683,
+          "score": 50
+        },
+        {
+          "command": 207,
+          "activeMs": 1420568,
+          "score": 40
+        },
+        {
+          "command": 220,
+          "activeMs": 1521538,
+          "score": 44
+        },
+        {
+          "command": 257,
+          "activeMs": 1828782,
+          "score": 50
+        },
+        {
+          "command": 288,
+          "activeMs": 2113996,
+          "score": 40
+        }
+      ],
+      "durationMs": 2275641,
+      "commandCount": 308
     },
     {
       "id": "run-024",
@@ -408,7 +2125,96 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-300/run-2026-09-02T02-39-00.308Z-gpt-5.6-terra-t3.jsonl",
-      "transcript": "transcripts/run-024.json"
+      "transcript": "transcripts/run-024.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 9231,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 28575,
+          "score": 10
+        },
+        {
+          "command": 26,
+          "activeMs": 128373,
+          "score": 35
+        },
+        {
+          "command": 32,
+          "activeMs": 161547,
+          "score": 40
+        },
+        {
+          "command": 95,
+          "activeMs": 555369,
+          "score": 50
+        },
+        {
+          "command": 107,
+          "activeMs": 630304,
+          "score": 54
+        },
+        {
+          "command": 126,
+          "activeMs": 751358,
+          "score": 44
+        },
+        {
+          "command": 130,
+          "activeMs": 774799,
+          "score": 49
+        },
+        {
+          "command": 139,
+          "activeMs": 829691,
+          "score": 54
+        },
+        {
+          "command": 143,
+          "activeMs": 860525,
+          "score": 44
+        },
+        {
+          "command": 155,
+          "activeMs": 951499,
+          "score": 0
+        },
+        {
+          "command": 159,
+          "activeMs": 975998,
+          "score": 10
+        },
+        {
+          "command": 167,
+          "activeMs": 1024562,
+          "score": 35
+        },
+        {
+          "command": 171,
+          "activeMs": 1060306,
+          "score": 39
+        },
+        {
+          "command": 181,
+          "activeMs": 1128631,
+          "score": 44
+        },
+        {
+          "command": 207,
+          "activeMs": 1319638,
+          "score": 54
+        },
+        {
+          "command": 318,
+          "activeMs": 2198126,
+          "score": 59
+        }
+      ],
+      "durationMs": 2241362,
+      "commandCount": 324
     },
     {
       "id": "run-025",
@@ -425,7 +2231,66 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-web-300/run-2026-09-02T23-42-21.940Z-gpt-5.6-terra+web-t1.jsonl",
-      "transcript": "transcripts/run-025.json"
+      "transcript": "transcripts/run-025.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 8765,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 32736,
+          "score": 10
+        },
+        {
+          "command": 14,
+          "activeMs": 74857,
+          "score": 35
+        },
+        {
+          "command": 18,
+          "activeMs": 96328,
+          "score": 40
+        },
+        {
+          "command": 33,
+          "activeMs": 183254,
+          "score": 50
+        },
+        {
+          "command": 61,
+          "activeMs": 351186,
+          "score": 54
+        },
+        {
+          "command": 93,
+          "activeMs": 557398,
+          "score": 59
+        },
+        {
+          "command": 103,
+          "activeMs": 626094,
+          "score": 64
+        },
+        {
+          "command": 160,
+          "activeMs": 1010794,
+          "score": 78
+        },
+        {
+          "command": 168,
+          "activeMs": 1076296,
+          "score": 88
+        },
+        {
+          "command": 186,
+          "activeMs": 1223351,
+          "score": 92
+        }
+      ],
+      "durationMs": 2291695,
+      "commandCount": 319
     },
     {
       "id": "run-026",
@@ -442,7 +2307,66 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-web-300/run-2026-09-03T01-45-10.499Z-gpt-5.6-terra+web-t3.jsonl",
-      "transcript": "transcripts/run-026.json"
+      "transcript": "transcripts/run-026.json",
+      "samples": [
+        {
+          "command": 2,
+          "activeMs": 10512,
+          "score": 0
+        },
+        {
+          "command": 7,
+          "activeMs": 40873,
+          "score": 10
+        },
+        {
+          "command": 16,
+          "activeMs": 89684,
+          "score": 35
+        },
+        {
+          "command": 20,
+          "activeMs": 111981,
+          "score": 40
+        },
+        {
+          "command": 72,
+          "activeMs": 434124,
+          "score": 50
+        },
+        {
+          "command": 90,
+          "activeMs": 552563,
+          "score": 54
+        },
+        {
+          "command": 108,
+          "activeMs": 667339,
+          "score": 59
+        },
+        {
+          "command": 117,
+          "activeMs": 727747,
+          "score": 64
+        },
+        {
+          "command": 254,
+          "activeMs": 1831212,
+          "score": 74
+        },
+        {
+          "command": 310,
+          "activeMs": 2358959,
+          "score": 99
+        },
+        {
+          "command": 311,
+          "activeMs": 2366197,
+          "score": 89
+        }
+      ],
+      "durationMs": 2374354,
+      "commandCount": 312
     },
     {
       "id": "run-027",
@@ -459,7 +2383,71 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-5.6-terra-web-300/run-2026-09-03T02-29-13.439Z-gpt-5.6-terra+web-t2.jsonl",
-      "transcript": "transcripts/run-027.json"
+      "transcript": "transcripts/run-027.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 4737,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 32860,
+          "score": 10
+        },
+        {
+          "command": 14,
+          "activeMs": 71928,
+          "score": 35
+        },
+        {
+          "command": 20,
+          "activeMs": 101242,
+          "score": 40
+        },
+        {
+          "command": 62,
+          "activeMs": 352521,
+          "score": 30
+        },
+        {
+          "command": 66,
+          "activeMs": 372948,
+          "score": 35
+        },
+        {
+          "command": 75,
+          "activeMs": 419615,
+          "score": 40
+        },
+        {
+          "command": 114,
+          "activeMs": 669914,
+          "score": 44
+        },
+        {
+          "command": 147,
+          "activeMs": 896849,
+          "score": 58
+        },
+        {
+          "command": 279,
+          "activeMs": 1905967,
+          "score": 68
+        },
+        {
+          "command": 286,
+          "activeMs": 1965351,
+          "score": 83
+        },
+        {
+          "command": 295,
+          "activeMs": 2038967,
+          "score": 87
+        }
+      ],
+      "durationMs": 2212744,
+      "commandCount": 315
     },
     {
       "id": "run-028",
@@ -476,7 +2464,126 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-6-astra-300/run-2026-09-07T04-22-55.085Z-gpt-6-astra-t1.jsonl",
-      "transcript": "transcripts/run-028.json"
+      "transcript": "transcripts/run-028.json",
+      "samples": [
+        {
+          "command": 6,
+          "activeMs": 100769,
+          "score": 10
+        },
+        {
+          "command": 19,
+          "activeMs": 174899,
+          "score": 35
+        },
+        {
+          "command": 22,
+          "activeMs": 192731,
+          "score": 40
+        },
+        {
+          "command": 28,
+          "activeMs": 229019,
+          "score": 54
+        },
+        {
+          "command": 42,
+          "activeMs": 317523,
+          "score": 58
+        },
+        {
+          "command": 52,
+          "activeMs": 378237,
+          "score": 68
+        },
+        {
+          "command": 63,
+          "activeMs": 445826,
+          "score": 83
+        },
+        {
+          "command": 64,
+          "activeMs": 455017,
+          "score": 89
+        },
+        {
+          "command": 70,
+          "activeMs": 489279,
+          "score": 94
+        },
+        {
+          "command": 86,
+          "activeMs": 598131,
+          "score": 104
+        },
+        {
+          "command": 111,
+          "activeMs": 780312,
+          "score": 109
+        },
+        {
+          "command": 149,
+          "activeMs": 1052940,
+          "score": 124
+        },
+        {
+          "command": 155,
+          "activeMs": 1092207,
+          "score": 128
+        },
+        {
+          "command": 165,
+          "activeMs": 1167533,
+          "score": 133
+        },
+        {
+          "command": 166,
+          "activeMs": 1174270,
+          "score": 144
+        },
+        {
+          "command": 167,
+          "activeMs": 1181851,
+          "score": 138
+        },
+        {
+          "command": 176,
+          "activeMs": 1248151,
+          "score": 148
+        },
+        {
+          "command": 187,
+          "activeMs": 1326750,
+          "score": 153
+        },
+        {
+          "command": 202,
+          "activeMs": 1425399,
+          "score": 163
+        },
+        {
+          "command": 203,
+          "activeMs": 1433995,
+          "score": 168
+        },
+        {
+          "command": 204,
+          "activeMs": 1440107,
+          "score": 174
+        },
+        {
+          "command": 205,
+          "activeMs": 1450110,
+          "score": 180
+        },
+        {
+          "command": 263,
+          "activeMs": 1892014,
+          "score": 185
+        }
+      ],
+      "durationMs": 2226613,
+      "commandCount": 301
     },
     {
       "id": "run-029",
@@ -493,7 +2600,156 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-6-astra-300/run-2026-09-07T06-37-13.877Z-gpt-6-astra-t3.jsonl",
-      "transcript": "transcripts/run-029.json"
+      "transcript": "transcripts/run-029.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 18295,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 113250,
+          "score": 10
+        },
+        {
+          "command": 19,
+          "activeMs": 334595,
+          "score": 35
+        },
+        {
+          "command": 23,
+          "activeMs": 368731,
+          "score": 40
+        },
+        {
+          "command": 29,
+          "activeMs": 412427,
+          "score": 54
+        },
+        {
+          "command": 41,
+          "activeMs": 500693,
+          "score": 59
+        },
+        {
+          "command": 49,
+          "activeMs": 559842,
+          "score": 65
+        },
+        {
+          "command": 65,
+          "activeMs": 674927,
+          "score": 75
+        },
+        {
+          "command": 92,
+          "activeMs": 866670,
+          "score": 90
+        },
+        {
+          "command": 99,
+          "activeMs": 918764,
+          "score": 94
+        },
+        {
+          "command": 109,
+          "activeMs": 985326,
+          "score": 99
+        },
+        {
+          "command": 110,
+          "activeMs": 992038,
+          "score": 110
+        },
+        {
+          "command": 111,
+          "activeMs": 1002493,
+          "score": 115
+        },
+        {
+          "command": 115,
+          "activeMs": 1033286,
+          "score": 109
+        },
+        {
+          "command": 120,
+          "activeMs": 1074583,
+          "score": 113
+        },
+        {
+          "command": 126,
+          "activeMs": 1117778,
+          "score": 119
+        },
+        {
+          "command": 142,
+          "activeMs": 1225018,
+          "score": 123
+        },
+        {
+          "command": 153,
+          "activeMs": 1300775,
+          "score": 133
+        },
+        {
+          "command": 163,
+          "activeMs": 1377229,
+          "score": 143
+        },
+        {
+          "command": 176,
+          "activeMs": 1479189,
+          "score": 153
+        },
+        {
+          "command": 188,
+          "activeMs": 1570233,
+          "score": 158
+        },
+        {
+          "command": 204,
+          "activeMs": 1688472,
+          "score": 168
+        },
+        {
+          "command": 205,
+          "activeMs": 1694649,
+          "score": 174
+        },
+        {
+          "command": 206,
+          "activeMs": 1701354,
+          "score": 179
+        },
+        {
+          "command": 222,
+          "activeMs": 1816399,
+          "score": 189
+        },
+        {
+          "command": 232,
+          "activeMs": 1900698,
+          "score": 204
+        },
+        {
+          "command": 255,
+          "activeMs": 2075927,
+          "score": 209
+        },
+        {
+          "command": 259,
+          "activeMs": 2109339,
+          "score": 214
+        },
+        {
+          "command": 301,
+          "activeMs": 2459355,
+          "score": 209
+        }
+      ],
+      "durationMs": 2459355,
+      "commandCount": 301
     },
     {
       "id": "run-030",
@@ -510,7 +2766,136 @@
       "incomplete": false,
       "endReason": null,
       "source": "eval-gpt-6-astra-300/run-2026-09-07T06-37-16.700Z-gpt-6-astra-t2.jsonl",
-      "transcript": "transcripts/run-030.json"
+      "transcript": "transcripts/run-030.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 6241,
+          "score": 0
+        },
+        {
+          "command": 6,
+          "activeMs": 34543,
+          "score": 10
+        },
+        {
+          "command": 19,
+          "activeMs": 118718,
+          "score": 35
+        },
+        {
+          "command": 23,
+          "activeMs": 157361,
+          "score": 40
+        },
+        {
+          "command": 29,
+          "activeMs": 196206,
+          "score": 54
+        },
+        {
+          "command": 43,
+          "activeMs": 292223,
+          "score": 59
+        },
+        {
+          "command": 51,
+          "activeMs": 348370,
+          "score": 65
+        },
+        {
+          "command": 84,
+          "activeMs": 572424,
+          "score": 80
+        },
+        {
+          "command": 89,
+          "activeMs": 607874,
+          "score": 84
+        },
+        {
+          "command": 99,
+          "activeMs": 683666,
+          "score": 94
+        },
+        {
+          "command": 109,
+          "activeMs": 751219,
+          "score": 105
+        },
+        {
+          "command": 110,
+          "activeMs": 757603,
+          "score": 110
+        },
+        {
+          "command": 120,
+          "activeMs": 824359,
+          "score": 114
+        },
+        {
+          "command": 128,
+          "activeMs": 881948,
+          "score": 120
+        },
+        {
+          "command": 139,
+          "activeMs": 962526,
+          "score": 124
+        },
+        {
+          "command": 173,
+          "activeMs": 1224003,
+          "score": 134
+        },
+        {
+          "command": 187,
+          "activeMs": 1323797,
+          "score": 139
+        },
+        {
+          "command": 202,
+          "activeMs": 1440199,
+          "score": 149
+        },
+        {
+          "command": 203,
+          "activeMs": 1447705,
+          "score": 154
+        },
+        {
+          "command": 204,
+          "activeMs": 1454262,
+          "score": 160
+        },
+        {
+          "command": 205,
+          "activeMs": 1464147,
+          "score": 154
+        },
+        {
+          "command": 226,
+          "activeMs": 1629895,
+          "score": 179
+        },
+        {
+          "command": 246,
+          "activeMs": 1779208,
+          "score": 184
+        },
+        {
+          "command": 250,
+          "activeMs": 1821049,
+          "score": 189
+        },
+        {
+          "command": 299,
+          "activeMs": 2220410,
+          "score": 179
+        }
+      ],
+      "durationMs": 2238176,
+      "commandCount": 301
     }
   ]
 }

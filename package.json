@@ -16,6 +16,8 @@
     "dev": "node scripts/serve.mjs",
     "eval:zork": "npm run eval -w @vibeval/zork-1 --",
     "start:zork": "npm run start -w @vibeval/zork-1 --",
-    "data:zork": "node evals/zork-1/scripts/export-data.mjs"
+    "data:zork": "node evals/zork-1/scripts/export-data.mjs",
+    "eval": "node scripts/eval.mjs",
+    "data:publish": "node scripts/publish-run.mjs"
   }
 }

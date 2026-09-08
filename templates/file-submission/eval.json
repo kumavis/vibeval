@@ -1,0 +1,22 @@
+{
+  "id": "replace-me",
+  "title": "Your evaluation",
+  "description": "Describe this evaluation and what to compare.",
+  "kind": "static-artifacts",
+  "format": "files",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "constraints": {},
+  "limits": {
+    "maxTurns": 60,
+    "maxWallMs": 1800000,
+    "maxArtifactBytes": 2000000,
+    "maxFiles": 32
+  },
+  "tags": [
+    "Viewer judged"
+  ],
+  "entry": "index.html"
+}

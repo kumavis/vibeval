@@ -1,5 +1,7 @@
 # Shared runner
 
+For new evals, use the common `runEval()` lifecycle from `@vibeval/runner/evaluate.js` with a definition validated by `defineEval()` from `@vibeval/runner/formats.js`. It supports iterative text and file submissions with numeric or subjective assessment. See [the format contract](../../docs/eval-formats.md) and the root `npm run eval` CLI. `generatePage()` below remains a legacy one-shot helper; it does not implement the submission lifecycle.
+
 Extracted from `kumavis/llm-plays-zork`. The CLI process lifecycle, session replay, usage accounting, and sealed defaults are retained. Zork's command prompt remains unchanged by default.
 
 ```js

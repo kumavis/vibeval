@@ -3,6 +3,22 @@
   "title": "Zork I",
   "description": "One text adventure. 300 moves. Compare exploration, problem solving, and survival across models.",
   "kind": "interactive",
-  "tags": ["Agent", "Text adventure", "Seeded trials"],
-  "metric": "Peak score / 350"
+  "tags": [
+    "Agent",
+    "Text adventure",
+    "Seeded trials"
+  ],
+  "metric": "Peak score / 350",
+  "format": "environment",
+  "assessment": {
+    "type": "numeric",
+    "metrics": [
+      {
+        "id": "maxScore",
+        "label": "Peak score",
+        "direction": "higher",
+        "max": 350
+      }
+    ]
+  }
 }

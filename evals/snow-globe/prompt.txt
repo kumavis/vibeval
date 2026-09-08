@@ -1,0 +1,1 @@
+make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak

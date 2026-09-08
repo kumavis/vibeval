@@ -7,7 +7,9 @@ import { build, root, readCatalog } from '../scripts/build.mjs';
 
 test('Pages build publishes every registered viewer and transcript, without runner or raw data', async () => {
   const catalog = await build();
-  assert.equal(catalog[0].id, 'zork-1');
+  assert.ok(catalog.some(e => e.id === 'zork-1'));
+  assert.ok(catalog.some(e => e.id === 'ascii-sunken-ship'));
+  assert.ok(catalog.some(e => e.id === 'snow-globe'));
   const data = JSON.parse(await readFile(join(root, 'dist/evals/zork-1/data/results.json')));
   assert.ok(data.runs.length >= 30);
   for (const run of data.runs) {

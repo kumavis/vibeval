@@ -40,21 +40,26 @@ const WEB_SEARCH_APPENDIX = `
 - You have web search available. Use it if you think it will help.
 `;
 
-export function createCodexCliProvider({ systemPrompt, responseFormat = 'commands' }) {
-  const model = process.env.CODEX_CLI_MODEL;
-  const effort = process.env.CODEX_CLI_EFFORT;
-  const webSearch = process.env.CODEX_CLI_WEB_SEARCH === 'true';
+export function createCodexCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS }) {
+  const model = requestedModel ?? process.env.CODEX_CLI_MODEL;
+  const effort = requestedEffort ?? process.env.CODEX_CLI_EFFORT;
+  const webSearch = requestedWebSearch ?? (process.env.CODEX_CLI_WEB_SEARCH === 'true');
   const instructions =
     systemPrompt +
     (webSearch ? WEB_SEARCH_APPENDIX : '') +
     (responseFormat === 'commands' ? TEXT_PROTOCOL_APPENDIX : '');
   const history = [];
+  let disposed = false;
 
   // Cumulative usage from turn.completed events. Codex reports tokens only —
   // a ChatGPT-subscription run has no per-call price — so costUsd stays null
   // and the report shows cost as unavailable rather than as $0.
   const usage = {
     turns: 0,
+    requests: 0,
+    retries: 0,
+    costReported: false,
+    assistantMessages: 0,
     inputTokens: 0,
     outputTokens: 0,
     cacheReadTokens: 0,
@@ -127,7 +132,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
       let timer = setTimeout(() => {
         finish('reject', new Error('codex CLI turn timed out'));
         killChild(child);
-      }, TURN_TIMEOUT_MS);
+      }, turnTimeoutMs);
 
       const rl = createInterface({ input: child.stdout });
       rl.on('line', (line) => {
@@ -214,6 +219,8 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
 
     // Raw responses support single-file art, games, and simulations.
     async requestText(gameOutputs) {
+      if (disposed) throw new Error('Provider disposed');
+      usage.requests += 1;
       if (workspace === null) {
         // An empty directory of its own: nothing to read, nothing to keep
         // between turns.
@@ -230,6 +237,8 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
       try {
         raw = await runTurn(needsReplay ? withTranscript(history, prompt) : prompt);
       } catch (err) {
+        if (disposed) throw err;
+        usage.retries += 1;
         console.warn(`codex CLI turn failed (${err.message}), restarting thread.`);
         threadId = null;
         raw = await runTurn(withTranscript(history, prompt));
@@ -245,6 +254,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
     },
 
     dispose() {
+      disposed = true;
       for (const proc of children) killChild(proc);
       children.clear();
     },

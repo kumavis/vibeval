@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T13-50-20.423Z-404ba12a",
+  "evalId": "ascii-sunken-ship",
+  "trial": 1,
+  "format": "text",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v1",
+    "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+    "dirty": true,
+    "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+    "evalSha256": "0f1fd1e62d5cede4f7021ed9a3f7f5453e3d2443787a9c128a7c73c46f0f48b2",
+    "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "claude-cli",
+    "requested": "claude-opus-5",
+    "resolved": "claude-opus-5",
+    "resolutionBasis": "provider-reported",
+    "cliVersion": "2.1.263 (Claude Code)"
+  },
+  "settings": {
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "draft",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 20,
+      "maxWallMs": 600000,
+      "maxArtifactBytes": 20000,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-08T13:50:20.424Z",
+  "finishedAt": "2026-09-08T13:52:16.000Z",
+  "wallMs": 115576,
+  "turns": {
+    "harness": 5,
+    "drafts": 3,
+    "submissions": 1,
+    "providerRequests": 5,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "text",
+    "entry": "result.txt",
+    "note": "Column-checked the hull outline, mast rake, and fallen spar so the wreck lines up; hull rests in the sand with a torn seam, sun and waterline above, fish and bubbles in the shallow water.",
+    "files": [
+      {
+        "path": "result.txt",
+        "bytes": 879,
+        "sha256": "54fdd8aca8d8d88b33e214a3df81658e2cc89dd903c80a412154be6603572140"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 5,
+    "requests": 5,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 10,
+    "inputTokens": 10,
+    "outputTokens": 7720,
+    "cacheReadTokens": 12880,
+    "cacheWriteTokens": 6493,
+    "thinkingTokens": 5302,
+    "modelOutputTokens": {
+      "claude-haiku-4-5-20251001": 65,
+      "claude-opus-5": 23442
+    },
+    "costUsd": 0.26540800000000003,
+    "apiMs": 115691,
+    "lastSessionModelTurns": 1,
+    "resolvedModel": "claude-opus-5",
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.26540800000000003,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  }
+}

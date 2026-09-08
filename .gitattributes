@@ -1,0 +1,2 @@
+# Model submissions are immutable artifacts; preserve their exact bytes.
+evals/**/data/public/**/artifact/** -text -whitespace

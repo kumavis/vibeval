@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Snow Globe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Arial', sans-serif;
+    }
+    
+    #container {
+      text-align: center;
+    }
+    
+    canvas {
+      display: block;
+      margin: 20px auto;
+      cursor: grab;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.2), transparent);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(255,255,255,0.1);
+    }
+    
+    canvas:active {
+      cursor: grabbing;
+    }
+    
+    h1 {
+      color: white;
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
+    }
+    
+    p {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Snow Globe</h1>
+    <canvas id="globe"></canvas>
+    <p>Drag to rotate the globe</p>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('globe');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = 600;
+    canvas.height = 600;
+    
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const globeRadius = 240;
+    
+    class Vec3 {
+      constructor(x = 0, y = 0, z = 0) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+      }
+      
+      rotateX(angle) {
+        const cos = Math.cos(angle);
+        const sin = Math.sin(angle);
+        const y = this.y * cos - this.z * sin;
+        const z = this.y * sin + this.z * cos;
+        return new Vec3(this.x, y, z);
+      }
+      
+      rotateY(angle) {
+        const cos = Math.cos(angle);
+        const sin = Math.sin(angle);
+        const x = this.x * cos + this.z * sin;
+        const z = -this.x * sin + this.z * cos;
+        return new Vec3(x, this.y, z);
+      }
+      
+      project() {
+        const scale = 300 / (300 + this.z);
+        return {
+          x: centerX + this.x * scale,
+          y: centerY + this.y * scale,
+          z: this.z,
+          scale: scale
+        };
+      }
+    }
+    
+    class Snowflake {
+      constructor() {
+        this.reset();
+      }
+      
+      reset() {
+        const angle = Math.random() * Math.PI * 2;
+        const height = (Math.random() - 0.5) * 2;
+        const radius = Math.random() * 150;
+        
+        this.pos = new Vec3(
+          Math.cos(angle) * radius,
+          height * 150,
+          Math.sin(angle) * radius
+        );
+        
+        this.velocity = new Vec3(
+          (Math.random() - 0.5) * 0.3,
+          -Math.random() * 0.5 - 0.2,
+          (Math.random() - 0.5) * 0.3
+        );
+        
+        this.size = Math.random() * 3 + 1;
+        this.baseOpacity = Math.random() * 0.6 + 0.4;
+      }
+      
+      update() {
+        this.pos.x += this.velocity.x;
+        this.pos.y += this.velocity.y;
+        this.pos.z += this.velocity.z;
+        
+        this.velocity.x += (Math.random() - 0.5) * 0.05;
+        this.velocity.z += (Math.random() - 0.5) * 0.05;
+        
+        if (this.pos.y < -160) {
+          this.reset();
+        }
+        
+        const dist = Math.sqrt(this.pos.x ** 2 + this.pos.z ** 2);
+        if (dist > 140) {
+          const angle = Math.atan2(this.pos.z, this.pos.x);
+          this.pos.x = Math.cos(angle) * 130;
+          this.pos.z = Math.sin(angle) * 130;
+          this.velocity.x *= 0.5;
+          this.velocity.z *= 0.5;
+        }
+      }
+    }
+    
+    const particles = [];
+    for (let i = 0; i < 300; i++) {
+      particles.push(new Snowflake());
+    }
+    
+    let rotationX = 0;
+    let rotationY = 0;
+    let targetRotX = 0;
+    let targetRotY = 0;
+    
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left - centerX;
+      const y = e.clientY - rect.top - centerY;
+      
+      targetRotY = (x / canvas.width) * Math.PI * 2;
+      targetRotX = (y / canvas.height) * Math.PI * 2;
+    });
+    
+    const mountainVertices = [];
+    const segments = 24;
+    const mountainBaseRadius = 80;
+    const mountainHeight = 120;
+    
+    for (let i = 0; i <= segments; i++) {
+      const angle = (i / segments) * Math.PI * 2;
+      const x = Math.cos(angle) * mountainBaseRadius;
+      const z = Math.sin(angle) * mountainBaseRadius;
+      mountainVertices.push(new Vec3(x, -80, z));
+    }
+    mountainVertices.push(new Vec3(0, -80 + mountainHeight, 0));
+    
+    function drawGlobe() {
+      rotationX += (targetRotX - rotationX) * 0.08;
+      rotationY += (targetRotY - rotationY) * 0.08;
+      
+      ctx.fillStyle = 'rgba(20, 20, 30, 0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      const globeGradient = ctx.createRadialGradient(
+        centerX - globeRadius * 0.2, centerY - globeRadius * 0.2, 0,
+        centerX, centerY, globeRadius
+      );
+      globeGradient.addColorStop(0, 'rgba(220, 235, 255, 0.35)');
+      globeGradient.addColorStop(0.6, 'rgba(150, 190, 255, 0.25)');
+      globeGradient.addColorStop(1, 'rgba(100, 150, 255, 0.4)');
+      
+      ctx.fillStyle = globeGradient;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, globeRadius, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, globeRadius - 3, 0, Math.PI * 2);
+      ctx.clip();
+      
+      const particleArray = particles.map(flake => {
+        flake.update();
+        const rotated = flake.pos.rotateY(rotationY).rotateX(rotationX);
+        const projected = rotated.project();
+        return { flake, projected, rotated };
+      });
+      
+      particleArray.sort((a, b) => a.rotated.z - b.rotated.z);
+      
+      particleArray.forEach(item => {
+        const projected = item.projected;
+        if (projected.z > -200) {
+          const depth = (projected.z + 200) / 400;
+          ctx.fillStyle = `rgba(255, 255, 255, ${item.flake.baseOpacity * depth * 0.8})`;
+          ctx.beginPath();
+          ctx.arc(projected.x, projected.y, item.flake.size * projected.scale, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      
+      drawMountain();
+      
+      ctx.fillStyle = 'rgba(80, 70, 65, 0.35)';
+      ctx.beginPath();
+      ctx.ellipse(centerX, centerY + 100, 120, 40, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.restore();
+      
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, globeRadius, 0, Math.PI * 2);
+      ctx.stroke();
+      
+      const shineGrad = ctx.createLinearGradient(
+        centerX - globeRadius * 0.7, centerY - globeRadius * 0.7,
+        centerX + globeRadius * 0.3, centerY + globeRadius * 0.3
+      );
+      shineGrad.addColorStop(0, 'rgba(255, 255, 255, 0.2)');
+      shineGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0)');
+      shineGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      
+      ctx.fillStyle = shineGrad;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, globeRadius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    
+    function drawMountain() {
+      const transformedVertices = mountainVertices.map(v => {
+        const rotated = v.rotateY(rotationY).rotateX(rotationX);
+        return rotated.project();
+      });
+      
+      const peakIndex = transformedVertices.length - 1;
+      
+      for (let i = 0; i < segments; i++) {
+        const current = transformedVertices[i];
+        const next = transformedVertices[i + 1];
+        const peak = transformedVertices[peakIndex];
+        
+        const brightness = 0.6 + (i / segments) * 0.4;
+        
+        if (i < segments / 2) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${brightness * 0.9})`;
+        } else {
+          ctx.fillStyle = `rgba(200, 200, 200, ${brightness * 0.7})`;
+        }
+        
+        ctx.beginPath();
+        ctx.moveTo(current.x, current.y);
+        ctx.lineTo(next.x, next.y);
+        ctx.lineTo(peak.x, peak.y);
+        ctx.closePath();
+        ctx.fill();
+        
+        ctx.strokeStyle = 'rgba(200, 200, 200, 0.3)';
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+      
+      ctx.fillStyle = 'rgba(60, 50, 45, 0.8)';
+      ctx.beginPath();
+      ctx.moveTo(transformedVertices[0].x, transformedVertices[0].y);
+      for (let i = 1; i <= segments; i++) {
+        ctx.lineTo(transformedVertices[i].x, transformedVertices[i].y);
+      }
+      ctx.closePath();
+      ctx.fill();
+    }
+    
+    function animate() {
+      drawGlobe();
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  </script>
+</body>
+</html>

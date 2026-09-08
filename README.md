@@ -1,6 +1,8 @@
 # Vibeval
 
-A monorepo of model evaluations. Each eval owns its runner, prompts, results, and static viewer. The gallery discovers eval manifests at build time and links to their viewers. Zork I is the first entry; the artifact template supports comparing art, games, and simulations generated from one prompt.
+A monorepo of model evaluations. Each eval owns its runner, prompts, results, and static viewer. The gallery discovers eval manifests at build time and links to their viewers. Zork I measures game performance; the ASCII sunken ship and interactive snow globe evals let viewers judge creative submissions.
+
+The [common eval formats](docs/eval-formats.md) separate text/files/environment outputs from numeric/viewer judgment. Creative runs support revision and explicit final submission, with provenance, usage, timing, cost estimates, and iteration history.
 
 ```text
 apps/gallery/                Static gallery shell
@@ -23,6 +25,15 @@ npm test
 npm run dev                 # http://127.0.0.1:4173; builds once before serving
 npm run build               # outputs dist/; rebuild after source/data changes
 ```
+
+Run a creative eval with pinned settings:
+
+```sh
+npm run eval -- --eval ascii-sunken-ship --provider codex-cli --model YOUR_MODEL --effort medium
+npm run eval -- --eval snow-globe --provider claude-cli --model YOUR_MODEL --effort high
+```
+
+Each run stays local until `npm run data:publish -- --eval <id> --run <run-directory>`. See the [format contract](docs/eval-formats.md) for model matrices, trials, numeric scorers, publication, and limits.
 
 ## Run Zork
 
@@ -63,9 +74,9 @@ Put the outputs under `data/public/model-a/index.html`, etc. The reusable viewer
 
 ## GitHub Pages
 
-The local repository is initialized on `main`. Create a GitHub repository, add it as `origin`, and push `main`. In its **Settings → Pages**, choose **GitHub Actions** as the source. The included workflow installs from the lockfile, runs all tests, builds the gallery, and deploys `dist/` on pushes to `main` or manual dispatch. Pull requests test/build without deploying.
+The repository is [kumavis/vibeval](https://github.com/kumavis/vibeval), with `main` as its publishing branch. GitHub Pages uses **GitHub Actions** as its source. The included workflow installs from the lockfile, runs all tests, builds the gallery, and deploys `dist/` on pushes to `main` or manual dispatch. Pull requests test/build without deploying.
 
-No remote has been created or pushed by this scaffold. The Pages artifact contains only public viewer assets; the repository itself includes the shipped raw eval data.
+The Pages artifact contains only public viewer assets; the repository itself includes the shipped raw eval data.
 
 ## Provenance
 

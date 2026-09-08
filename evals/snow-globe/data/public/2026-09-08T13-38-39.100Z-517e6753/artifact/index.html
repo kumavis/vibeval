@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Snow Globe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .wrapper {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #canvas {
+            display: block;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.4), rgba(200,220,255,0.1) 60%, rgba(100,150,200,0.15) 100%);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset -5px -5px 15px rgba(0,0,0,0.2), inset 5px 5px 15px rgba(255,255,255,0.3);
+            cursor: grab;
+            user-select: none;
+        }
+        
+        #canvas:active {
+            cursor: grabbing;
+        }
+        
+        .base {
+            width: 420px;
+            height: 60px;
+            background: linear-gradient(to bottom, #8b7355, #654321);
+            border-radius: 50% 50% 30% 30% / 60% 60% 20% 20%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset -2px -2px 5px rgba(0,0,0,0.3);
+            position: relative;
+            top: -15px;
+        }
+        
+        .info {
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            font-size: 13px;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        
+        .info strong {
+            color: rgba(255,255,255,0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <div class="base"></div>
+        <div class="info">
+            <strong>Interactive Snow Globe</strong><br>
+            Drag to rotate | Scroll to zoom
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const globeRadius = 180;
+        
+        let rotationX = 0.3;
+        let rotationY = 0.5;
+        let zoom = 1;
+        let animationTime = 0;
+        
+        class Vector3 {
+            constructor(x = 0, y = 0, z = 0) {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+            }
+            
+            rotateX(angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                return new Vector3(
+                    this.x,
+                    this.y * cos - this.z * sin,
+                    this.y * sin + this.z * cos
+                );
+            }
+            
+            rotateY(angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                return new Vector3(
+                    this.x * cos + this.z * sin,
+                    this.y,
+                    -this.x * sin + this.z * cos
+                );
+            }
+            
+            rotate(angleX, angleY) {
+                return this.rotateY(angleY).rotateX(angleX);
+            }
+            
+            project(fov = 400) {
+                const scale = fov / (fov + this.z + 100);
+                return {
+                    x: centerX + this.x * scale * zoom,
+                    y: centerY + this.y * scale * zoom,
+                    z: this.z,
+                    scale: scale
+                };
+            }
+        }
+        
+        function generateMountain() {
+            const triangles = [];
+            const segments = 20;
+            const baseRadius = 70;
+            const peakHeight = 90;
+            const baseY = -60;
+            
+            for (let i = 0; i < segments; i++) {
+                const angle1 = (i / segments) * Math.PI * 2;
+                const angle2 = ((i + 1) / segments) * Math.PI * 2;
+                
+                const x1 = Math.cos(angle1) * baseRadius;
+                const z1 = Math.sin(angle1) * baseRadius;
+                const x2 = Math.cos(angle2) * baseRadius;
+                const z2 = Math.sin(angle2) * baseRadius;
+                
+                triangles.push({
+                    v1: new Vector3(x1, baseY, z1),
+                    v2: new Vector3(0, peakHeight, 0),
+                    v3: new Vector3(x2, baseY, z2),
+                    color: 'rgb(120, 90, 60)',
+                    type: 'rock'
+                });
+                
+                if (i < segments / 2) {
+                    triangles.push({
+                        v1: new Vector3(0, peakHeight, 0),
+                        v2: new Vector3(x1, peakHeight - 20, z1),
+                        v3: new Vector3(x2, peakHeight - 20, z2),
+                        color: 'rgba(255, 255, 255, 0.9)',
+                        type: 'snow'
+                    });
+                }
+            }
+            
+            for (let i = 0; i < segments; i++) {
+                const angle1 = (i / segments) * Math.PI * 2;
+                const angle2 = ((i + 1) / segments) * Math.PI * 2;
+                
+                const x1 = Math.cos(angle1) * baseRadius;
+                const z1 = Math.sin(angle1) * baseRadius;
+                const x2 = Math.cos(angle2) * baseRadius;
+                const z2 = Math.sin(angle2) * baseRadius;
+                
+                triangles.push({
+                    v1: new Vector3(x1, baseY, z1),
+                    v2: new Vector3(x2, baseY, z2),
+                    v3: new Vector3(0, baseY, 0),
+                    color: 'rgb(140, 110, 80)',
+                    type: 'base'
+                });
+            }
+            
+            return triangles;
+        }
+        
+        function generateSnow(count = 200) {
+            const particles = [];
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const radius = Math.random() * 140;
+                const height = (Math.random() - 0.5) * 200;
+                
+                particles.push({
+                    x: Math.cos(angle) * radius,
+                    y: height,
+                    z: Math.sin(angle) * radius,
+                    vy: -0.5 - Math.random() * 0.3,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vz: (Math.random() - 0.5) * 0.3,
+                    size: Math.random() * 2 + 1,
+                    opacity: 0.6 + Math.random() * 0.4
+                });
+            }
+            return particles;
+        }
+        
+        const mountainTriangles = generateMountain();
+        const snowParticles = generateSnow(250);
+        
+        function drawTriangle(tri) {
+            const p1 = tri.v1.rotate(rotationX, rotationY).project();
+            const p2 = tri.v2.rotate(rotationX, rotationY).project();
+            const p3 = tri.v3.rotate(rotationX, rotationY).project();
+            
+            ctx.fillStyle = tri.color;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.lineTo(p3.x, p3.y);
+            ctx.closePath();
+            ctx.fill();
+            
+            if (tri.type === 'rock') {
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+            }
+        }
+        
+        function render() {
+            ctx.fillStyle = 'rgba(200, 220, 240, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            animationTime += 0.016;
+            
+            for (let particle of snowParticles) {
+                particle.y += particle.vy;
+                particle.x += particle.vx;
+                particle.z += particle.vz;
+                
+                if (particle.y < -100) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const radius = Math.random() * 140;
+                    particle.x = Math.cos(angle) * radius;
+                    particle.y = 100;
+                    particle.z = Math.sin(angle) * radius;
+                }
+                
+                particle.vx += (Math.sin(animationTime * 0.5 + particle.y) - particle.vx) * 0.01;
+                particle.vz += (Math.cos(animationTime * 0.3 + particle.y) - particle.vz) * 0.01;
+            }
+            
+            const glowGradient = ctx.createRadialGradient(centerX, centerY, globeRadius * 0.3, centerX, centerY, globeRadius);
+            glowGradient.addColorStop(0, 'rgba(150, 180, 220, 0.1)');
+            glowGradient.addColorStop(1, 'rgba(50, 100, 180, 0.05)');
+            ctx.fillStyle = glowGradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, globeRadius, 0, Math.PI * 2);
+            ctx.fill();
+            
+            const sortedTriangles = mountainTriangles.map(tri => ({
+                tri: tri,
+                avgZ: (tri.v1.z + tri.v2.z + tri.v3.z) / 3
+            })).sort((a, b) => a.avgZ - b.avgZ);
+            
+            for (let item of sortedTriangles) {
+                drawTriangle(item.tri);
+            }
+            
+            const sortedSnow = snowParticles.map(p => ({
+                p: p,
+                z: p.z
+            })).sort((a, b) => a.z - b.z);
+            
+            for (let item of sortedSnow) {
+                const particle = item.p;
+                const rotated = new Vector3(particle.x, particle.y, particle.z).rotate(rotationX, rotationY);
+                const projected = rotated.project();
+                
+                const dist = Math.sqrt(
+                    Math.pow(projected.x - centerX, 2) + 
+                    Math.pow(projected.y - centerY, 2)
+                );
+                
+                if (dist < globeRadius) {
+                    const brightness = Math.min(1, 0.5 + rotated.z / 200);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity * brightness})`;
+                    ctx.beginPath();
+                    ctx.arc(projected.x, projected.y, particle.size * projected.scale, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            
+            ctx.strokeStyle = 'rgba(100, 150, 220, 0.6)';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, globeRadius, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            const shineGradient = ctx.createRadialGradient(
+                centerX - 50, centerY - 50, 10,
+                centerX - 50, centerY - 50, 80
+            );
+            shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.4)');
+            shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = shineGradient;
+            ctx.beginPath();
+            ctx.arc(centerX - 50, centerY - 50, 80, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.strokeStyle = 'rgba(180, 200, 255, 0.3)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(centerX + 60, centerY + 60, 40, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            requestAnimationFrame(render);
+        }
+        
+        let isDragging = false;
+        let prevX, prevY;
+        
+        function onMouseDown(e) {
+            isDragging = true;
+            prevX = e.clientX || e.touches[0].clientX;
+            prevY = e.clientY || e.touches[0].clientY;
+        }
+        
+        function onMouseMove(e) {
+            if (isDragging) {
+                const x = e.clientX || e.touches[0].clientX;
+                const y = e.clientY || e.touches[0].clientY;
+                const deltaX = x - prevX;
+                const deltaY = y - prevY;
+                rotationY += deltaX * 0.015;
+                rotationX += deltaY * 0.015;
+                prevX = x;
+                prevY = y;
+            }
+        }
+        
+        function onMouseUp() {
+            isDragging = false;
+        }
+        
+        canvas.addEventListener('mousedown', onMouseDown);
+        canvas.addEventListener('touchstart', onMouseDown);
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('touchmove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('touchend', onMouseUp);
+        
+        canvas.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            zoom *= (1 - e.deltaY * 0.0015);
+            zoom = Math.max(0.6, Math.min(2, zoom));
+        });
+        
+        render();
+    </script>
+</body>
+</html>

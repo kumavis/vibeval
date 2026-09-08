@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T13-38-39.100Z-517e6753",
+  "evalId": "snow-globe",
+  "trial": 3,
+  "format": "files",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 60 responses and 1800 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v1",
+    "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+    "dirty": true,
+    "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+    "evalSha256": "709e05449f0773a00ac06ee313f2aafb9dabcbb48ed7f1bd24072dde2a3cc9fc",
+    "instructionsSha256": "ed0925b2aee36454d56c0cb7b11002c66aec1070fc895456f15bf6b52b7ea852",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "claude-cli",
+    "requested": "claude-haiku-4-5-20251001",
+    "resolved": "claude-haiku-4-5-20251001",
+    "resolutionBasis": "provider-reported",
+    "cliVersion": "2.1.263 (Claude Code)"
+  },
+  "settings": {
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "write_file",
+      "read_file",
+      "list_files",
+      "check",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 60,
+      "maxWallMs": 1800000,
+      "maxArtifactBytes": 2000000,
+      "maxFiles": 32
+    }
+  },
+  "startedAt": "2026-09-08T13:38:39.100Z",
+  "finishedAt": "2026-09-08T13:40:42.931Z",
+  "wallMs": 123831,
+  "turns": {
+    "harness": 8,
+    "drafts": 1,
+    "submissions": 2,
+    "providerRequests": 8,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 13033
+      }
+    ],
+    "checks": [
+      "file budget",
+      "HTML entry",
+      "static HTML/CSS references"
+    ],
+    "notChecked": [
+      "visual quality",
+      "JavaScript behavior",
+      "dynamic network requests"
+    ]
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "website",
+    "entry": "index.html",
+    "note": "3D interactive snow globe webapp with animated snow particles, rotating snow-capped mountain peak, mouse drag rotation, scroll zoom, and glass reflections. Single self-contained HTML file using Canvas 2D with custom 3D vector math and depth-sorted rendering. No external dependencies or network calls.",
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 13033,
+        "sha256": "5ad706c38b96942fd0238a5aa704ed02cb5e70ff934d3830508219d9a113de65"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 8,
+    "requests": 8,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 16,
+    "inputTokens": 649,
+    "outputTokens": 13934,
+    "cacheReadTokens": 64987,
+    "cacheWriteTokens": 15037,
+    "thinkingTokens": 4172,
+    "modelOutputTokens": {
+      "claude-haiku-4-5-20251001": 87699
+    },
+    "costUsd": 0.1078877,
+    "apiMs": 123435,
+    "lastSessionModelTurns": 1,
+    "resolvedModel": "claude-haiku-4-5-20251001",
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.1078877,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  }
+}

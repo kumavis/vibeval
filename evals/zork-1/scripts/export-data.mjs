@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { transcriptData } from '../src/transcript-data.js';
 
 const evalRoot = fileURLToPath(new URL('../', import.meta.url));
 const source = process.argv[2] ? resolve(process.argv[2]) : join(evalRoot, 'data/raw');
@@ -17,19 +18,14 @@ for (const batch of (await readdir(source, { withFileTypes: true })).filter(e =>
     const row = summary.rows.find(r => r.tag === start.tag);
     if (!row) throw new Error(`Summary missing ${start.tag}; regenerate the batch report first`);
     const id = `run-${String(runs.length + 1).padStart(3, '0')}`;
-    const commands = [];
-    let commentary = '';
-    for (const event of events) {
-      if (event.type === 'model_turn') commentary = event.commentary || '';
-      if (event.type === 'command') commands.push({ command: event.command, response: event.response, commentary, turn: event.turn });
-    }
+    const { commands, samples, durationMs } = transcriptData(events);
     // Explicit projection: diagnostics, local paths, and full provider payloads
     // stay out of the public transcript. Source event order is preserved.
-    transcripts.push({ id, commands });
+    transcripts.push({ id, commands, samples, durationMs });
     runs.push({ id, model: row.model, resolvedModel: row.resolvedModel ?? null, provider: row.provider, tag: row.tag, seed: row.seed ?? start.seed ?? null,
       moveBudget: start.moveBudget, moves: row.moves ?? null, maxScore: row.maxScore ?? null, deaths: row.deaths ?? null,
       wallMin: row.wallMin ?? null, incomplete: Boolean(row.incomplete), endReason: row.endReason ?? null,
-      source: `${batch.name}/${file}`, transcript: `transcripts/${id}.json` });
+      source: `${batch.name}/${file}`, transcript: `transcripts/${id}.json`, samples, durationMs, commandCount: commands.length });
   }
 }
 await rm(output, { recursive: true, force: true });

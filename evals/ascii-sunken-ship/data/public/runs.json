@@ -1,0 +1,1187 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-29-56.338Z-2139a56b",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:29:56.339Z",
+      "finishedAt": "2026-09-08T13:30:10.333Z",
+      "wallMs": 13994,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-29-56.338Z-2139a56b/artifact/result.txt",
+        "note": "Created a detailed emoji-free ASCII scene of a shipwreck resting beneath a shallow, gently rippling sea.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1482,
+            "sha256": "b6b5d7c31390d5c095acf235e85b898038e49d6d673400b17c3aad210935c58d"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 13181,
+        "outputTokens": 407,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 62,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00132748,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-29-56.338Z-2139a56b/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-29-56.791Z-cdb7fb42",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:29:56.792Z",
+      "finishedAt": "2026-09-08T13:30:09.638Z",
+      "wallMs": 12846,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-29-56.791Z-cdb7fb42/artifact/result.txt",
+        "note": "A complete ASCII scene with sunlight, shallow-water waves, and a visibly sunken ship.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 611,
+            "sha256": "c2f61ebbcdcbeb9f6f85698aa135fa8aba1610ff3d5331b08397334e7e8ddcc4"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14743,
+        "outputTokens": 310,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 46,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0133916,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-29-56.791Z-cdb7fb42/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-00.011Z-0aa41d01",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "turn_limit",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:30:00.012Z",
+      "finishedAt": "2026-09-08T13:33:27.261Z",
+      "wallMs": 207249,
+      "turns": {
+        "harness": 20,
+        "drafts": 0,
+        "submissions": 0,
+        "providerRequests": 20,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": null,
+      "metrics": null,
+      "artifact": null,
+      "usage": {
+        "turns": 20,
+        "requests": 20,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 40,
+        "inputTokens": 635,
+        "outputTokens": 19926,
+        "cacheReadTokens": 279305,
+        "cacheWriteTokens": 21881,
+        "thinkingTokens": 16154,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 294487
+        },
+        "costUsd": 0.1729455,
+        "apiMs": 207221,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.1729455,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-30-00.011Z-0aa41d01/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-09.687Z-cd50c24a",
+      "evalId": "ascii-sunken-ship",
+      "trial": 2,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:30:09.687Z",
+      "finishedAt": "2026-09-08T13:30:28.784Z",
+      "wallMs": 19097,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-30-09.687Z-cd50c24a/artifact/result.txt",
+        "note": "A complete original ASCII scene: bright sun, shallow water, and a clearly sunken ship resting on the seabed.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1303,
+            "sha256": "29bfb9a27d10b29cc43325444bc86a8134b306f99fe08829d71625cd9e047b74"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14556,
+        "outputTokens": 390,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 21,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0139776,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-30-09.687Z-cd50c24a/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-10.374Z-24dc2533",
+      "evalId": "ascii-sunken-ship",
+      "trial": 2,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:30:10.374Z",
+      "finishedAt": "2026-09-08T13:30:23.732Z",
+      "wallMs": 13358,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-30-10.374Z-24dc2533/artifact/result.txt",
+        "note": "Submitted a detailed text-only ASCII scene of a wrecked ship resting in shallow, gently rippling water.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1336,
+            "sha256": "be412efcc0e9f88e5cd1ddec4f323b70e7fd28426e5e0b30d6fe6bdf376ae2d5"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12996,
+        "outputTokens": 448,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 63,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0013396799999999998,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-30-10.374Z-24dc2533/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-23.779Z-76458744",
+      "evalId": "ascii-sunken-ship",
+      "trial": 3,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:30:23.780Z",
+      "finishedAt": "2026-09-08T13:30:49.110Z",
+      "wallMs": 25330,
+      "turns": {
+        "harness": 2,
+        "drafts": 0,
+        "submissions": 2,
+        "providerRequests": 2,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-30-23.779Z-76458744/artifact/result.txt",
+        "note": "Revised the artwork to use ASCII characters only; the sun is now represented with asterisks.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 799,
+            "sha256": "f6fcab508431c21d850c35f00e1edb2edb198d3ad99fe6bb31982b01cdcdb5eb"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 2,
+        "requests": 2,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 27301,
+        "outputTokens": 638,
+        "cacheReadTokens": 22016,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 117,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00226292,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-30-23.779Z-76458744/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-30-28.831Z-abd97dc8",
+      "evalId": "ascii-sunken-ship",
+      "trial": 3,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:30:28.831Z",
+      "finishedAt": "2026-09-08T13:30:41.251Z",
+      "wallMs": 12420,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-30-28.831Z-abd97dc8/artifact/result.txt",
+        "note": "A clear shallow-sea wreck scene with waves, a partially sunken hull, broken mast, and seabed.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 721,
+            "sha256": "44d71a936f6a5c36b8583e5f276cf54c524e2cc5dd93beef44a1cf3a749d7bc6"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14554,
+        "outputTokens": 307,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 28,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0129776,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-30-28.831Z-abd97dc8/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-33-27.314Z-7cca37cf",
+      "evalId": "ascii-sunken-ship",
+      "trial": 2,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:33:27.315Z",
+      "finishedAt": "2026-09-08T13:34:14.886Z",
+      "wallMs": 47571,
+      "turns": {
+        "harness": 4,
+        "drafts": 3,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-33-27.314Z-7cca37cf/artifact/result.txt",
+        "note": "This ASCII art effectively depicts a sunken ship in shallow water. It shows the water surface with ripples at the top, a detailed ship wreck with visible portholes and structure, a water column representation, and a sandy seafloor at the bottom. The piece is clear, visually balanced, uses only ASCII characters, and successfully conveys the scene requested.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1156,
+            "sha256": "fd91a333ab3260245321a497bb0a2a9dc26e26d7a399c6900ed7d82e2b92a8ca"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 8,
+        "inputTokens": 5553,
+        "outputTokens": 4485,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 4376,
+        "thinkingTokens": 2791,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 12236
+        },
+        "costUsd": 0.037718,
+        "apiMs": 47700,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.037718,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-33-27.314Z-7cca37cf/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-34-14.993Z-ab3541ac",
+      "evalId": "ascii-sunken-ship",
+      "trial": 3,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "264a6ee40f7b1a82c527f362da3eee193de8f82679c73d48fc39f11abcd75d39",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:34:14.993Z",
+      "finishedAt": "2026-09-08T13:35:03.727Z",
+      "wallMs": 48734,
+      "turns": {
+        "harness": 5,
+        "drafts": 3,
+        "submissions": 1,
+        "providerRequests": 5,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-34-14.993Z-ab3541ac/artifact/result.txt",
+        "note": "Complete ASCII art showing a sunken ship in shallow water with clear water surface, tilted vessel, cargo/deck/mast structure, broken timbers, and detailed seafloor. Uses only ASCII characters (no emojis) as requested.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 785,
+            "sha256": "4482923b8d633b5c13259d59a6d87b3c65d56b85cfeb37e678515e9330b3d04a"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 5,
+        "requests": 5,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 10,
+        "inputTokens": 7506,
+        "outputTokens": 4536,
+        "cacheReadTokens": 4227,
+        "cacheWriteTokens": 4750,
+        "thinkingTokens": 3148,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 18029
+        },
+        "costUsd": 0.04109669999999999,
+        "apiMs": 48531,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.04109669999999999,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-34-14.993Z-ab3541ac/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-50-16.891Z-bd9fc4f8",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "0f1fd1e62d5cede4f7021ed9a3f7f5453e3d2443787a9c128a7c73c46f0f48b2",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:50:16.892Z",
+      "finishedAt": "2026-09-08T13:50:50.888Z",
+      "wallMs": 33996,
+      "turns": {
+        "harness": 2,
+        "drafts": 1,
+        "submissions": 1,
+        "providerRequests": 2,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-50-16.891Z-bd9fc4f8/artifact/result.txt",
+        "note": "The finished ASCII scene clearly depicts a sunken, tilted ship in shallow water, with a visible sun, waterline, fish, sand, and nearby seabed; it contains no emojis.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 638,
+            "sha256": "0642c458e78b144582ad6ce389771c58564f8457fe285057e4b0233cd8579800"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 2,
+        "requests": 2,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 29682,
+        "outputTokens": 656,
+        "cacheReadTokens": 25472,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 124,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.040148800000000005,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "trace": "2026-09-08T13-50-16.891Z-bd9fc4f8/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T13-50-20.423Z-404ba12a",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. You have 20 responses and 600 seconds. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v1",
+        "commit": "c49d8ba4c272d00f2bd7a7abf55bef2e8cd6237d",
+        "dirty": true,
+        "sourceSha256": "f26a7bb6c4404efe13e3b6c42283cde294110c8a7030882934c58dea627c741c",
+        "evalSha256": "0f1fd1e62d5cede4f7021ed9a3f7f5453e3d2443787a9c128a7c73c46f0f48b2",
+        "instructionsSha256": "a3d83182d012603f44fcf2d5280f352705ca9a523bcffb24eabcd7ddc7cc8ba8",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-opus-5",
+        "resolved": "claude-opus-5",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T13:50:20.424Z",
+      "finishedAt": "2026-09-08T13:52:16.000Z",
+      "wallMs": 115576,
+      "turns": {
+        "harness": 5,
+        "drafts": 3,
+        "submissions": 1,
+        "providerRequests": 5,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T13-50-20.423Z-404ba12a/artifact/result.txt",
+        "note": "Column-checked the hull outline, mast rake, and fallen spar so the wreck lines up; hull rests in the sand with a torn seam, sun and waterline above, fish and bubbles in the shallow water.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 879,
+            "sha256": "54fdd8aca8d8d88b33e214a3df81658e2cc89dd903c80a412154be6603572140"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 5,
+        "requests": 5,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 10,
+        "inputTokens": 10,
+        "outputTokens": 7720,
+        "cacheReadTokens": 12880,
+        "cacheWriteTokens": 6493,
+        "thinkingTokens": 5302,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 65,
+          "claude-opus-5": 23442
+        },
+        "costUsd": 0.26540800000000003,
+        "apiMs": 115691,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-opus-5",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.26540800000000003,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-08T13-50-20.423Z-404ba12a/events.json"
+    }
+  ]
+}
