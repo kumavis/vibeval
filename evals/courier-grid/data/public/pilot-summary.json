@@ -1,0 +1,45 @@
+{
+  "pilot": true,
+  "effort": "medium",
+  "independentDevelopmentRunsPerModel": 1,
+  "limits": {
+    "responses": 30,
+    "wallMinutes": 20,
+    "practiceEpisodes": 192
+  },
+  "results": [
+    {
+      "model": "gpt-5.6-terra",
+      "status": "submitted",
+      "finalScore": 61.96705268502102,
+      "finalEpisodes": 128,
+      "fullDeliveries": 23,
+      "bestFixedPractice": 73.81672245460851,
+      "latestFreshPractice": 78.70329526795044,
+      "responses": 23,
+      "practiceEpisodes": 192,
+      "wallSeconds": 503.305,
+      "estimatedUsd": 0.5552416,
+      "usageCompleteness": "reported-completed-requests"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "status": "time_limit",
+      "finalScore": null,
+      "finalEpisodes": 0,
+      "fullDeliveries": null,
+      "bestFixedPractice": 83.75372413192214,
+      "latestFreshPractice": 79.78175391778333,
+      "responses": 28,
+      "practiceEpisodes": 128,
+      "wallSeconds": 1200.004,
+      "estimatedUsd": 1.3251008,
+      "usageCompleteness": "may-exclude-unreported-in-flight-usage"
+    }
+  ],
+  "notes": [
+    "Sol did not submit before the wall time limit. No held-out evaluation was run for its draft.",
+    "Practice scores and held-out scores use different scenarios and must not be compared as final model rankings.",
+    "Both models encountered JSON action or export-format errors. Future protocol revisions should reduce formatting friction and expose remaining wall time."
+  ]
+}

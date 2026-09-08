@@ -1,0 +1,29 @@
+{
+  "id": "courier-grid",
+  "title": "Courier grid",
+  "description": "Write and refine a delivery controller. Route valuable cargo through a 24 \u00d7 24 grid while managing battery, deadlines, and hostile patrols.",
+  "kind": "interactive",
+  "format": "controller",
+  "entry": "controller.js",
+  "assessment": {
+    "type": "numeric",
+    "metrics": [
+      {
+        "id": "score",
+        "label": "Delivered value (%)",
+        "direction": "higher"
+      }
+    ]
+  },
+  "limits": {
+    "maxTurns": 30,
+    "maxWallMs": 7200000,
+    "maxArtifactBytes": 32768,
+    "maxFiles": 1
+  },
+  "tags": [
+    "Controller engineering",
+    "Scored",
+    "24 \u00d7 24 grid"
+  ]
+}

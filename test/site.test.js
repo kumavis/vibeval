@@ -18,7 +18,7 @@ test('Pages build publishes every registered viewer and transcript, without runn
     assert.ok(transcript.commands.length > 0);
     for (const command of transcript.commands) assert.equal(typeof command.response, 'string');
   }
-  for (const path of ['evals/zork-1/src', 'evals/zork-1/data/raw', 'evals/zork-1/zork1.z3', '.env']) await assert.rejects(access(join(root, 'dist', path)));
+  for (const path of ['evals/courier-grid/data/private', 'evals/courier-grid/src', 'evals/zork-1/src', 'evals/zork-1/data/raw', 'evals/zork-1/zork1.z3', '.env']) await assert.rejects(access(join(root, 'dist', path)));
   async function inspect(directory) {
     for (const file of await readdir(directory, { withFileTypes: true })) {
       const path = join(directory, file.name);

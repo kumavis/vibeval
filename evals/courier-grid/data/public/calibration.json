@@ -1,0 +1,143 @@
+{
+  "version": "courier-grid-v1",
+  "certifiedCases": 192,
+  "attempts": 263,
+  "description": "Each case includes a replay-verified full-delivery witness using the actual enemy policies.",
+  "baselines": {
+    "greedy": {
+      "episodes": 24,
+      "score": 31.064157506187318,
+      "standardDeviation": 24.083080157155177,
+      "standardError": 4.915938151631392,
+      "outcomes": {
+        "captured": 23,
+        "complete": 1
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902350,
+          "score": 0,
+          "status": "captured",
+          "ticks": 15
+        },
+        {
+          "seed": 698902352,
+          "score": 0,
+          "status": "captured",
+          "ticks": 26
+        },
+        {
+          "seed": 698902355,
+          "score": 0,
+          "status": "captured",
+          "ticks": 17
+        },
+        {
+          "seed": 698902362,
+          "score": 0,
+          "status": "captured",
+          "ticks": 27
+        },
+        {
+          "seed": 698902363,
+          "score": 0,
+          "status": "captured",
+          "ticks": 16
+        }
+      ],
+      "wallMs": 335.8802079999987
+    },
+    "value": {
+      "episodes": 24,
+      "score": 32.427851401629454,
+      "standardDeviation": 24.804311400271384,
+      "standardError": 5.06315886264705,
+      "outcomes": {
+        "captured": 23,
+        "complete": 1
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902350,
+          "score": 0,
+          "status": "captured",
+          "ticks": 15
+        },
+        {
+          "seed": 698902352,
+          "score": 0,
+          "status": "captured",
+          "ticks": 37
+        },
+        {
+          "seed": 698902353,
+          "score": 0,
+          "status": "captured",
+          "ticks": 27
+        },
+        {
+          "seed": 698902355,
+          "score": 0,
+          "status": "captured",
+          "ticks": 17
+        },
+        {
+          "seed": 698902362,
+          "score": 0,
+          "status": "captured",
+          "ticks": 30
+        }
+      ],
+      "wallMs": 343.5672909999994
+    },
+    "risk": {
+      "episodes": 24,
+      "score": 85.41241496787147,
+      "standardDeviation": 15.010937777012359,
+      "standardError": 3.064094842862358,
+      "outcomes": {
+        "captured": 11,
+        "complete": 10,
+        "deadline": 2,
+        "exhausted": 1
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902368,
+          "score": 51.61290322580645,
+          "status": "captured",
+          "ticks": 124
+        },
+        {
+          "seed": 698902367,
+          "score": 61.53846153846154,
+          "status": "captured",
+          "ticks": 147
+        },
+        {
+          "seed": 698902365,
+          "score": 62.06896551724138,
+          "status": "exhausted",
+          "ticks": 250
+        },
+        {
+          "seed": 698902364,
+          "score": 66.66666666666667,
+          "status": "captured",
+          "ticks": 171
+        },
+        {
+          "seed": 698902346,
+          "score": 73.52941176470588,
+          "status": "captured",
+          "ticks": 241
+        }
+      ],
+      "wallMs": 1174.3214999999982
+    }
+  },
+  "suiteSha256": "35466573a8bdb93111934e8d6cbfac2d942380a9575e26882bdb79dca2a724ab"
+}

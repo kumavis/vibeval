@@ -25,7 +25,7 @@ if (values.help) {
   const trials = Number(values.trials);
   if (!Number.isSafeInteger(trials) || trials < 1) throw new Error('--trials must be a positive integer');
   const pricing = JSON.parse(await readFile(values.pricing ? resolve(values.pricing) : join(root, 'packages/runner/src/pricing.json'), 'utf8'));
-  const score = definition.assessment.type === 'numeric' ? (await import(pathToFileURL(join(directory, 'scorer.js')))).score : undefined;
+  const score = definition.assessment.type === 'numeric' && definition.format !== 'controller' ? (await import(pathToFileURL(join(directory, 'scorer.js')))).score : undefined;
   const controller = new AbortController();
   const stop = () => controller.abort();
   process.on('SIGINT', stop); process.on('SIGTERM', stop);
@@ -33,7 +33,8 @@ if (values.help) {
     for (const model of models) {
       for (let trial = 1; trial <= trials && !controller.signal.aborted; trial++) {
         console.log(`${definition.id}: ${model.provider}:${model.name}@${model.effort}, trial ${trial}`);
-        const result = await runEval({ root, directory, definition, prompt, provider: model.provider, model: model.name, effort: model.effort, trial, pricing, score, signal: controller.signal });
+        const adapter = definition.format === 'controller' ? await (await import(pathToFileURL(join(directory, 'src/adapter.js')))).createAdapter({ directory }) : undefined;
+        const result = await runEval({ adapter, root, directory, definition, prompt, provider: model.provider, model: model.name, effort: model.effort, trial, pricing, score, signal: controller.signal });
         console.log(`${result.record.status} · ${result.record.turns.harness} turns · ${(result.record.wallMs / 1000).toFixed(1)}s\n${result.directory}`);
         if (result.record.status !== 'submitted') process.exitCode = 1;
       }

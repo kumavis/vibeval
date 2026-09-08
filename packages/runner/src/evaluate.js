@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
 import { createClaudeCliProvider } from './providers/claude-cli.js';
 import { createCodexCliProvider } from './providers/codex-cli.js';
-import { defineEval, submissionInstructions, validateScores } from './formats.js';
+import { defineEval, submissionInstructions, validateScores, controllerActionSchema } from './formats.js';
 import { createWorkspace, fileInventory } from './workspace.js';
 import { provenance, cliVersion, estimateCost } from './metadata.js';
 
@@ -20,14 +20,16 @@ function textCheck(content, definition) {
 }
 
 export async function runEval({ root, directory, definition: input, prompt, provider, model, effort, trial = 1, pricing = null, score,
-  createProvider = factories[provider], harness, runtimeVersion, signal }) {
+  createProvider = factories[provider], harness, runtimeVersion, signal, adapter }) {
   const definition = defineEval(input);
   if (definition.format === 'environment') throw new Error('Environment evals use their own runner (for example, Zork)');
   if (!Object.hasOwn(factories, provider) || !createProvider) throw new Error('Use claude-cli or codex-cli');
   if (!model || !effort) throw new Error('Pin --model and --effort for recorded runs');
   if (!Number.isSafeInteger(trial) || trial < 1) throw new Error('Trial must be a positive integer');
-  if (definition.assessment.type === 'numeric' && typeof score !== 'function') throw new Error('Numeric eval requires a score function');
+  if (definition.assessment.type === 'numeric' && typeof score !== 'function' && !adapter) throw new Error('Numeric eval requires a score function');
   const instructions = submissionInstructions(definition);
+  const singleChoice = definition.format === 'choice';
+  const textArtifact = singleChoice || definition.format === 'text';
   const version = harness ?? await provenance(root, definition, prompt, instructions, directory);
   const cli = runtimeVersion ?? await cliVersion(provider);
   const id = `${new Date().toISOString().replaceAll(':', '-')}-${randomUUID().slice(0,8)}`;
@@ -39,7 +41,7 @@ export async function runEval({ root, directory, definition: input, prompt, prov
   const record = { schemaVersion: 1, id, evalId: definition.id, trial, format: definition.format, assessment: definition.assessment,
     status: 'running', prompt, instructions, harness: version,
     model: { provider, requested: model, resolved: null, resolutionBasis: 'not-reported', cliVersion: cli },
-    settings: { effort, thinkingBudget: null, thinkingBudgetBasis: 'CLI/model default; no explicit token budget', webSearch: false, tools: definition.format === 'files' ? ['write_file','read_file','list_files','check','submit'] : ['draft','submit'], limits: definition.limits },
+    settings: { budgetPolicy: 'turns-primary', structuredActions: definition.format === 'controller' && provider === 'codex-cli', providerRequestTimeoutMs: definition.format === 'controller' ? 900000 : 300000, effort, thinkingBudget: null, thinkingBudgetBasis: 'CLI/model default; no explicit token budget', webSearch: false, tools: singleChoice ? [] : definition.format === 'controller' ? ['write_file','read_file','test','inspect_episode','submit'] : definition.format === 'files' ? ['write_file','read_file','list_files','check','submit'] : ['draft','submit'], limits: definition.limits },
     startedAt: new Date(started).toISOString(), finishedAt: null, wallMs: 0,
     turns: { harness: 0, drafts: 0, submissions: 0, providerRequests: 0, retries: 0, modelTurns: null },
     validation: null, metrics: null, artifact: null, usage: null, cost: null };
@@ -63,24 +65,35 @@ export async function runEval({ root, directory, definition: input, prompt, prov
       })]);
     } finally { clearTimeout(timer); if (onAbort) signal?.removeEventListener('abort', onAbort); }
   }
-  let observation = `${prompt}\n\nBegin your work. Submit only when you are satisfied.`;
+  let observation = singleChoice ? prompt : `${prompt}\n\nBegin your work. Submit only when you are satisfied.`;
   try {
-    agent = createProvider({ systemPrompt: instructions, responseFormat: 'text', model, effort, webSearch: false });
+    agent = createProvider({ systemPrompt: instructions, responseFormat: 'text', model, effort, webSearch: false, deadline, retryOnFailure: !singleChoice, ...(definition.format === 'controller' ? { turnTimeoutMs: 900000, ...(provider === 'codex-cli' ? { outputSchema: controllerActionSchema } : {}) } : {}) });
     await event({ type: 'start', evalId: definition.id });
     for (let turn = 1; turn <= definition.limits.maxTurns; turn++) {
       if (Date.now() >= deadline) { record.status = 'time_limit'; break; }
       record.turns.harness = turn;
-      await event({ type: 'observation', turn, content: observation });
-      const raw = await bounded(() => agent.requestText([observation]));
+      const budget = { primary: 'responses', response: turn, responsesRemainingIncludingThis: definition.limits.maxTurns - turn + 1,
+        responsesAfterThis: definition.limits.maxTurns - turn, fallbackSecondsRemaining: Math.max(0, Math.floor((deadline - Date.now()) / 1000)),
+        ...(adapter?.budget?.() ?? {}) };
+      const requestObservation = singleChoice ? prompt : `${observation}\n\nBUDGET: ${JSON.stringify(budget)}\n${turn === definition.limits.maxTurns ? 'LAST RESPONSE: explicitly submit your best valid work now.' : 'Reserve one response for explicit final submission. Use null for unused structured-action fields.'}`;
+      await event({ type: 'observation', turn, budget, content: requestObservation });
+      const raw = await bounded(() => agent.requestText([requestObservation]));
       await event({ type: 'response', turn, content: raw });
       let feedback;
       try {
         if (typeof raw !== 'string' || Buffer.byteLength(raw) > definition.limits.maxArtifactBytes * 2 + 10000) throw new Error('Response exceeds budget');
-        const action = JSON.parse(raw);
+        if (singleChoice) { record.response = raw; record.choice = definition.choices.find(c => c.toLowerCase() === raw.trim().toLowerCase()) ?? null; }
+        const action = singleChoice ? { action: 'submit', content: raw } : JSON.parse(raw);
         if (!action || Array.isArray(action) || typeof action !== 'object') throw new Error('Expected one JSON action object');
         let candidate = null;
-        if (definition.format === 'text' && ['draft', 'submit'].includes(action.action)) {
+        if (definition.format === 'controller') {
+          if (!adapter) throw new Error('Controller eval requires an adapter');
+          const handled = await bounded(() => adapter.handle(action, { workspace, workingDirectory, runDir, record }));
+          feedback = handled.feedback; candidate = handled.candidate ?? null;
+        } else if (textArtifact && ['draft', 'submit'].includes(action.action)) {
           feedback = textCheck(action.content, definition);
+          if (singleChoice && !record.choice) feedback = { valid: false, errors: ['Response must contain exactly one declared choice'] };
+          if (singleChoice) record.validation = feedback;
           if (action.action === 'draft') {
             record.turns.drafts++;
             if (feedback.valid) await writeFile(join(runDir, 'draft.txt'), action.content);
@@ -105,12 +118,12 @@ export async function runEval({ root, directory, definition: input, prompt, prov
         if (signal?.aborted) throw new Error('Run interrupted');
         if (Date.now() >= deadline) throw new Error('Wall clock budget exhausted');
         if (candidate) {
-          record.metrics = validateScores(definition.assessment, score ? await bounded(() => score({ ...candidate, definition, prompt })) : null);
+          if (!adapter) record.metrics = validateScores(definition.assessment, score ? await bounded(() => score({ ...candidate, definition, prompt })) : null);
           const artifactDir = join(runDir, 'artifact');
           await mkdir(artifactDir);
-          if (definition.format === 'text') await writeFile(join(artifactDir, 'result.txt'), candidate.content);
+          if (textArtifact) await writeFile(join(artifactDir, 'result.txt'), candidate.content);
           else await cp(workingDirectory, artifactDir, { recursive: true });
-          record.artifact = { type: definition.format === 'text' ? 'text' : 'website', entry: definition.format === 'text' ? 'result.txt' : 'index.html', note: candidate.note,
+          record.artifact = { type: definition.format === 'controller' ? 'controller' : textArtifact ? 'text' : 'website', entry: definition.format === 'controller' ? 'controller.js' : textArtifact ? 'result.txt' : 'index.html', note: candidate.note,
             files: await Promise.all((await fileInventory(artifactDir)).map(async f => {
               return { ...f, sha256: createHash('sha256').update(await readFile(join(artifactDir, f.path))).digest('hex') };
             })) };
@@ -128,6 +141,13 @@ export async function runEval({ root, directory, definition: input, prompt, prov
       await writeJson(join(runDir, 'run.json'), record);
     }
     if (record.status === 'running') record.status = 'turn_limit';
+    // Final controller scoring happens after freezing and outside the feedback loop.
+    if (record.status === 'submitted' && adapter) {
+      const final = await adapter.finalize({ runDir, record });
+      record.metrics = validateScores(definition.assessment, final.metrics);
+      record.evaluation = final.evaluation;
+      await event({ type: 'scored', metrics: record.metrics });
+    }
   } catch (error) {
     record.status = signal?.aborted ? 'interrupted' : Date.now() >= deadline ? 'time_limit' : 'failed';
     record.error = error.message;

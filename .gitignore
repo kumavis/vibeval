@@ -6,3 +6,4 @@ dist/
 **/logs/
 .DS_Store
 **/runs/
+**/data/private/

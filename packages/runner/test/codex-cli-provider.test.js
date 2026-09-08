@@ -73,3 +73,13 @@ test('CODEX_CLI_WEB_SEARCH=true unseals search and marks the model +web', async 
   // Granting the tool without saying so would measure discovery, not access.
   assert.match(turn.commentary, /told_about_search:true/);
 });
+
+test('structured response schema applies to initial and resumed requests',async t=>{
+ const schema={type:'object',properties:{action:{type:'string'}},required:['action'],additionalProperties:false};
+ const p=createCodexCliProvider({systemPrompt:'Test',responseFormat:'text',outputSchema:schema});t.after(()=>p.dispose());
+ const a=JSON.parse(await p.requestText(['SCHEMA'])),b=JSON.parse(await p.requestText(['SCHEMA']));assert.deepEqual(a.schema,schema);assert.deepEqual(b.schema,schema);assert.equal(b.resumed,'thread-1');
+});
+test('does not retry an elapsed request or a transport failure near the wall deadline',async t=>{
+ const p=createCodexCliProvider({systemPrompt:'Test',turnTimeoutMs:100});t.after(()=>p.dispose());await assert.rejects(p.requestText(['HANG']),/timed out/);assert.equal(p.stats().retries,0);
+ const q=createCodexCliProvider({systemPrompt:'Test',deadline:Date.now()+30000});t.after(()=>q.dispose());await assert.rejects(q.requestText(['DIE']),/simulated failure/);assert.equal(q.stats().retries,0);
+});

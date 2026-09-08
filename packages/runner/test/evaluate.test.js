@@ -161,3 +161,19 @@ test('provenance detects scorer changes even without a Git repository', async t 
   assert.notEqual(before.evalSha256, after.evalSha256);
   assert.equal(after.commit, null);
 });
+
+test('every request exposes remaining responses and fallback time, with a last-response submission warning',async t=>{
+ const s=await setup(t,[{action:'draft',content:'draft'},{action:'submit',content:'final'}],{limits:{maxTurns:2,maxWallMs:10000}});
+ const r=await runEval(s.options);assert.equal(r.record.status,'submitted');assert.match(s.observations[0],/"responsesRemainingIncludingThis":2/);assert.match(s.observations[1],/"responsesRemainingIncludingThis":1/);assert.match(s.observations[1],/LAST RESPONSE/);assert.match(s.observations[0],/fallbackSecondsRemaining/);
+});
+
+test('choice evaluation asks the exact question once and records its first answer without a submit protocol',async t=>{
+ const s=await setup(t,[],{format:'choice',choices:['rock','paper','scissors'],assessment:{type:'distribution'},limits:{maxTurns:1,maxWallMs:10000}});let calls=0;
+ const result=await runEval({...s.options,prompt:'Choose rock, paper, or scissors.',createProvider:settings=>{assert.equal(settings.retryOnFailure,false);assert.doesNotMatch(settings.systemPrompt,/submit|iterate|JSON/);return{requestText:async messages=>{calls++;assert.deepEqual(messages,['Choose rock, paper, or scissors.']);return 'Paper\n';},stats:()=>({requests:calls}),dispose(){}};}});
+ assert.equal(calls,1);assert.equal(result.record.choice,'paper');assert.equal(result.record.status,'submitted');assert.equal(await readFile(join(result.directory,'artifact/result.txt'),'utf8'),'Paper\n');
+});
+test('invalid single-turn choices are retained without asking again or coercing an explanation into a choice',async t=>{
+ const s=await setup(t,[],{format:'choice',choices:['rock','paper','scissors'],assessment:{type:'distribution'},limits:{maxTurns:1,maxWallMs:10000}});let calls=0;
+ const result=await runEval({...s.options,createProvider:()=>({requestText:async()=>{calls++;return 'I choose rock.';},stats:()=>({}),dispose(){}})});
+ assert.equal(calls,1);assert.equal(result.record.choice,null);assert.equal(result.record.response,'I choose rock.');assert.equal(result.record.artifact,null);
+});

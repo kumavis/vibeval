@@ -1,0 +1,21 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,mkdir,writeFile,readFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {generate} from '../src/simulation.js';
+import {createAdapter} from '../src/adapter.js';
+import {runEval} from '../../../packages/runner/src/evaluate.js';
+import {publishRun} from '../../../packages/runner/src/publish.js';
+test('practice feedback precedes frozen held-out scoring and publishes verified replay',async t=>{
+ const directory=await mkdtemp(join(tmpdir(),'courier-test-'));t.after(()=>rm(directory,{recursive:true,force:true}));
+ await mkdir(join(directory,'data/private'),{recursive:true});
+ await writeFile(join(directory,'data/private/suites.json'),JSON.stringify({suites:{practice:Array.from({length:24},(_,i)=>generate(i)),fresh:[],hidden:[generate(9999)]}}));
+ const definition={id:'courier-grid',format:'controller',entry:'controller.js',assessment:{type:'numeric',metrics:[{id:'score',direction:'higher'}]},limits:{maxTurns:5,maxWallMs:15000,maxFiles:1,maxArtifactBytes:32768}};
+ await writeFile(join(directory,'eval.json'),JSON.stringify(definition));
+ const responses=[{action:'write_file',path:'controller.js',content:'export function act(){return {action:{type:"wait"}}}'},{action:'test',suite:'fixed'},{action:'inspect_episode',testId:'test-1',seed:9999},{action:'submit'}];let calls=0;const inputs=[];
+ const result=await runEval({directory,root:directory,definition,prompt:'test',provider:'codex-cli',model:'fixture',effort:'medium',harness:{version:'fixture'},runtimeVersion:'fixture',adapter:await createAdapter({directory}),createProvider:()=>({requestText:async m=>{inputs.push(m[0]);return JSON.stringify(responses[calls++]);},stats:()=>({}),dispose(){}})});
+ assert.equal(result.record.status,'submitted');assert.equal(calls,4);assert.match(inputs[0],/"simulationsRemaining":192/);assert.match(inputs[2],/"simulationsRemaining":168/);assert.equal(result.record.practice[0].episodes,24);assert.match(inputs[3],/not in this practice test/);assert.equal(result.record.evaluation.summary.episodes,1);
+ const artifact=await readFile(join(result.directory,'artifact/controller.js'),'utf8');await writeFile(join(result.directory,'workspace/controller.js'),'changed');assert.equal(await readFile(join(result.directory,'artifact/controller.js'),'utf8'),artifact);
+ const published=await publishRun(directory,result.directory);assert.equal(JSON.parse(await readFile(join(directory,'data/public',published.evaluation.path))).cases[0].seed,9999);
+});

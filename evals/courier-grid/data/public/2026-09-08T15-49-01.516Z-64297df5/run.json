@@ -1,0 +1,2731 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T15-49-01.516Z-64297df5",
+  "evalId": "courier-grid",
+  "trial": 1,
+  "format": "controller",
+  "assessment": {
+    "type": "numeric",
+    "metrics": [
+      {
+        "id": "score",
+        "label": "Delivered value (%)",
+        "direction": "higher"
+      }
+    ]
+  },
+  "status": "submitted",
+  "prompt": "Build a JavaScript courier controller that maximizes delivered parcel value while avoiding two hostile robots. Export function act(observation, memory), returning {action:{type:..., ...}, memory:...}. Your function is called once each tick. Start memory is null; returned JSON memory persists within an episode (maximum 32 KiB). Plain synchronous JavaScript, no dependencies or I/O. controller.js must be at most 32 KiB. Computation budget is 1 second for the entire episode, so prefer efficient algorithms. Each episode starts a fresh controller.\n\nWorld: a known 24x24 grid of '.' floor and '#' walls, coordinates x rightward, y downward, origin top-left. Rooms have narrow doorways. Five parcels have known pickup/delivery locations, value, weight, deadline. Carry capacity is 5 total weight. Battery starts at 90. Four chargers at (2,2),(21,2),(2,21),(21,21). You start at one charger. Episodes last at most 300 ticks. All scenarios admit a full-delivery route, but the controller must discover a robust route under partial enemy visibility.\n\nobservation = {width:24,height:24,map:[24 strings],tick,ticksRemaining,courier:{x,y,battery,cargo:[parcel ids]},batteryCapacity:90,cargoCapacity:5,chargers:[{x,y}],jobs:[{id,from:{x,y},to:{x,y},value,weight,deadline,status}],enemies:[{id,kind,x,y,period}],deliveredValue,events:[strings]}.\nJob status: available, carried, delivered, expired. Enemy positions are visible only within Manhattan distance 6, even through walls. Remember previous sightings if useful. Enemy positions and routes outside visibility are not supplied.\n\nActions (one per tick):\n{type:'move',dir:'N'|'E'|'S'|'W'} moves one floor cell, costs 1 battery (2 when carried weight exceeds 3).\n{type:'pickup',id:'p0'} picks up an available parcel at your cell if capacity permits.\n{type:'deliver'} delivers all carried parcels whose destination is your current cell.\n{type:'charge'} restores 18 battery up to 90, only at a charger.\n{type:'wait'} stays still.\nNon-movement actions cost no battery. Invalid actions waste a tick. A parcel expires after its deadline; delivery at tick == deadline is allowed. Expired cargo is removed.\n\nOrder each tick: your action, then enemy movement, then tick increments and expired parcels disappear. Entering any currently occupied enemy cell captures you, even if that enemy moves away. Enemy moving onto you also captures you. Captured ends the episode. Reaching zero battery away from a charger ends it. Already delivered value is retained on capture/exhaustion/deadline. Delivering all five ends the episode.\n\nEnemies: patrol moves every 3 ticks (tick%3==0), following the four chargers cyclically in the order listed above; starting waypoint is unknown. Hunter moves every 2 ticks (tick%2==0). It detects you within Manhattan distance 7, records your location after your action, and pursues that location; sightings update it. It forgets after 18 ticks without a sighting. Otherwise it patrols pickup locations p0,p1,p2,p3 cyclically, starting waypoint unknown. Reaching a patrol waypoint advances its waypoint. Reaching a chase target clears the target. Both use shortest grid paths with BFS neighbor order N,E,S,W to break ties. These policies are fixed; positions vary across scenarios.\n\nDevelopment: test suite 'fixed' runs the same 24 practice scenarios each time. 'fresh' runs the next 8 scenarios from a separate 40-case practice pool. Total budget 192 simulated practice episodes. Tests report mean delivered value percentage, outcomes, and per-episode results. inspect_episode reads a stored test replay, up to 30 frames per request; it includes only enemy positions visible to your controller. Use failures to improve your algorithm. You may stop early and explicitly submit when satisfied. Testing never submits your code.\n\nFinal score: mean of 100 * delivered value / total parcel value across 128 held-out scenarios. Same frozen suite for all models. Final submission freezes your file and ends iteration before those scenarios are evaluated. Runtime errors/timeouts score zero for that episode. Aim for high value, not just survival: routing, cargo selection, battery planning, deadline feasibility, enemy tracking, and safe movement all matter. For context, on fixed practice cases a greedy courier scores 31%, and a simple nearby-enemy-aware routing heuristic scores 85%; there is room to improve. Do not hardcode particular seeds or maps.\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. Your primary budget is 30 responses, including final submission. The wall-time fallback is 7200 seconds. Every request includes remaining budgets. Reserve a response to submit; on your last response, submit your current best valid work. The harness returns feedback after each action. A rejected submission may be revised.\n\nWrite your controller in controller.js. Actions are one JSON object per response:\n{\"action\":\"write_file\",\"path\":\"controller.js\",\"content\":\"complete JavaScript source\"}\n{\"action\":\"read_file\",\"path\":\"controller.js\"}\n{\"action\":\"test\",\"suite\":\"fixed\"}\n{\"action\":\"test\",\"suite\":\"fresh\"}\n{\"action\":\"inspect_episode\",\"testId\":\"test-1\",\"seed\":123,\"from\":0,\"limit\":20}\n{\"action\":\"submit\",\"note\":\"why the controller is ready\"}\nTests spend the simulation budget described in the task. Inspection reads an existing replay. Final submission freezes your controller and ends development; held-out scoring is not returned for another revision.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is measured by the eval’s declared numeric scorer.",
+  "harness": {
+    "version": "submission-v2",
+    "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+    "dirty": true,
+    "sourceSha256": "b2d4b2b588b95a5384d0ed5fb09c26a87febf348ef9db9c0e7a7e27696cb9cff",
+    "evalSha256": "8a4153aadeedfa8c9771f71c7df3bd622eb7774e4b5ac919afc62c0831130eb4",
+    "instructionsSha256": "4841d2d67a4c6ca50b31f08f1bd59922e56b475ef0c03577d227d59d8d7159f7",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "codex-cli",
+    "requested": "gpt-5.6-sol",
+    "resolved": null,
+    "resolutionBasis": "not-reported",
+    "cliVersion": "codex-cli 0.152.0"
+  },
+  "settings": {
+    "budgetPolicy": "turns-primary",
+    "structuredActions": true,
+    "providerRequestTimeoutMs": 900000,
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "write_file",
+      "read_file",
+      "test",
+      "inspect_episode",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 30,
+      "maxWallMs": 7200000,
+      "maxArtifactBytes": 32768,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-08T15:49:01.517Z",
+  "finishedAt": "2026-09-08T16:08:08.245Z",
+  "wallMs": 1146728,
+  "turns": {
+    "harness": 29,
+    "drafts": 9,
+    "submissions": 1,
+    "providerRequests": 29,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "checks": [
+      "controller entry compiles"
+    ],
+    "simulationsUsed": 160
+  },
+  "metrics": {
+    "score": 76.2567838746272
+  },
+  "artifact": {
+    "type": "controller",
+    "entry": "controller.js",
+    "note": "Controller is complete: it combines value/deadline scheduling, capacity-aware routing, persistent battery refueling, opportunistic delivery, and tick-aware collision avoidance.",
+    "files": [
+      {
+        "path": "controller.js",
+        "bytes": 4936,
+        "sha256": "424b4cf5fa102e8c922384a1ea8b2188ca03cd2a1e71093a54fcf1538a2bbea6"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 29,
+    "requests": 29,
+    "retries": 0,
+    "costReported": false,
+    "assistantMessages": 0,
+    "inputTokens": 1669205,
+    "outputTokens": 28958,
+    "cacheReadTokens": 1572096,
+    "cacheWriteTokens": 0,
+    "thinkingTokens": 7769,
+    "costUsd": null,
+    "apiMs": 0,
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 1.5964344,
+    "basis": "api-equivalent-estimate",
+    "currency": "USD",
+    "subscriptionCharge": false,
+    "model": "gpt-5.6-sol",
+    "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+    "pricing": {
+      "asOf": "2026-09-07",
+      "source": "https://developers.openai.com/api/docs/models/compare",
+      "rates": {
+        "input": 4,
+        "cachedInput": 0.4,
+        "cacheWrite": 5,
+        "output": 20
+      }
+    },
+    "assumptions": [
+      "Reasoning tokens are included in output, not billed twice",
+      "No tier or long-context surcharge",
+      "Not subscription spend"
+    ]
+  },
+  "practice": [
+    {
+      "id": "test-1",
+      "suite": "fixed",
+      "codeSha256": "833748608b6c743f0ae21b2dccf9e47b4ffcbaaf0a0f1fee70ba635090ae0713",
+      "episodes": 24,
+      "score": 0,
+      "standardDeviation": 0,
+      "standardError": 0,
+      "outcomes": {
+        "error": 24
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902343,
+          "score": 0,
+          "status": "error",
+          "ticks": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902345,
+          "score": 0,
+          "status": "error",
+          "ticks": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902346,
+          "score": 0,
+          "status": "error",
+          "ticks": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902347,
+          "score": 0,
+          "status": "error",
+          "ticks": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902348,
+          "score": 0,
+          "status": "error",
+          "ticks": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        }
+      ],
+      "wallMs": 176,
+      "simulationsUsed": 24,
+      "simulationsRemaining": 168,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 0,
+          "value": 0,
+          "total": 29,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902345,
+          "score": 0,
+          "value": 0,
+          "total": 39,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902346,
+          "score": 0,
+          "value": 0,
+          "total": 34,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902347,
+          "score": 0,
+          "value": 0,
+          "total": 33,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902348,
+          "score": 0,
+          "value": 0,
+          "total": 42,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902350,
+          "score": 0,
+          "value": 0,
+          "total": 33,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902352,
+          "score": 0,
+          "value": 0,
+          "total": 24,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902353,
+          "score": 0,
+          "value": 0,
+          "total": 37,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902354,
+          "score": 0,
+          "value": 0,
+          "total": 30,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902355,
+          "score": 0,
+          "value": 0,
+          "total": 42,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902356,
+          "score": 0,
+          "value": 0,
+          "total": 28,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902357,
+          "score": 0,
+          "value": 0,
+          "total": 30,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902358,
+          "score": 0,
+          "value": 0,
+          "total": 42,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902359,
+          "score": 0,
+          "value": 0,
+          "total": 27,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902361,
+          "score": 0,
+          "value": 0,
+          "total": 31,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902362,
+          "score": 0,
+          "value": 0,
+          "total": 36,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902363,
+          "score": 0,
+          "value": 0,
+          "total": 31,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902364,
+          "score": 0,
+          "value": 0,
+          "total": 27,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902365,
+          "score": 0,
+          "value": 0,
+          "total": 29,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902366,
+          "score": 0,
+          "value": 0,
+          "total": 29,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902367,
+          "score": 0,
+          "value": 0,
+          "total": 39,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902368,
+          "score": 0,
+          "value": 0,
+          "total": 31,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902369,
+          "score": 0,
+          "value": 0,
+          "total": 36,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        },
+        {
+          "seed": 698902370,
+          "score": 0,
+          "value": 0,
+          "total": 28,
+          "status": "error",
+          "ticks": 0,
+          "invalidActions": 0,
+          "error": "Cannot set properties of undefined (setting 'exports')"
+        }
+      ]
+    },
+    {
+      "id": "test-2",
+      "suite": "fixed",
+      "codeSha256": "d69ff44f8b467ee336405fc4a867d73a4921908f6e489fd21babaa2775ab29fc",
+      "episodes": 24,
+      "score": 46.04754019930741,
+      "standardDeviation": 27.58053754479656,
+      "standardError": 5.6298536513687925,
+      "outcomes": {
+        "exhausted": 13,
+        "captured": 9,
+        "complete": 2
+      },
+      "invalidActions": 63,
+      "worst": [
+        {
+          "seed": 698902368,
+          "score": 0,
+          "status": "captured",
+          "ticks": 63
+        },
+        {
+          "seed": 698902343,
+          "score": 17.24137931034483,
+          "status": "exhausted",
+          "ticks": 88
+        },
+        {
+          "seed": 698902366,
+          "score": 20.689655172413794,
+          "status": "exhausted",
+          "ticks": 78
+        },
+        {
+          "seed": 698902355,
+          "score": 21.428571428571427,
+          "status": "captured",
+          "ticks": 82
+        },
+        {
+          "seed": 698902345,
+          "score": 23.076923076923077,
+          "status": "exhausted",
+          "ticks": 135
+        }
+      ],
+      "wallMs": 740,
+      "simulationsUsed": 48,
+      "simulationsRemaining": 144,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 17.24137931034483,
+          "value": 5,
+          "total": 29,
+          "status": "exhausted",
+          "ticks": 88,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 36
+          }
+        },
+        {
+          "seed": 698902345,
+          "score": 23.076923076923077,
+          "value": 9,
+          "total": 39,
+          "status": "exhausted",
+          "ticks": 135,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 25
+          }
+        },
+        {
+          "seed": 698902346,
+          "score": 73.52941176470588,
+          "value": 25,
+          "total": 34,
+          "status": "captured",
+          "ticks": 153,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 20,
+            "p0": 28,
+            "p1": 136,
+            "p2": 144
+          }
+        },
+        {
+          "seed": 698902347,
+          "score": 100,
+          "value": 33,
+          "total": 33,
+          "status": "complete",
+          "ticks": 132,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 23,
+            "p2": 37,
+            "p4": 59,
+            "p3": 88,
+            "p0": 131
+          }
+        },
+        {
+          "seed": 698902348,
+          "score": 23.80952380952381,
+          "value": 10,
+          "total": 42,
+          "status": "exhausted",
+          "ticks": 169,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 27
+          }
+        },
+        {
+          "seed": 698902350,
+          "score": 57.57575757575758,
+          "value": 19,
+          "total": 33,
+          "status": "exhausted",
+          "ticks": 93,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 31,
+            "p3": 48,
+            "p4": 55
+          }
+        },
+        {
+          "seed": 698902352,
+          "score": 50,
+          "value": 12,
+          "total": 24,
+          "status": "captured",
+          "ticks": 111,
+          "invalidActions": 4,
+          "deliveredAt": {
+            "p3": 51,
+            "p4": 76
+          }
+        },
+        {
+          "seed": 698902353,
+          "score": 24.324324324324323,
+          "value": 9,
+          "total": 37,
+          "status": "exhausted",
+          "ticks": 115,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 64
+          }
+        },
+        {
+          "seed": 698902354,
+          "score": 53.333333333333336,
+          "value": 16,
+          "total": 30,
+          "status": "exhausted",
+          "ticks": 179,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 28,
+            "p3": 61
+          }
+        },
+        {
+          "seed": 698902355,
+          "score": 21.428571428571427,
+          "value": 9,
+          "total": 42,
+          "status": "captured",
+          "ticks": 82,
+          "invalidActions": 4,
+          "deliveredAt": {
+            "p3": 37
+          }
+        },
+        {
+          "seed": 698902356,
+          "score": 57.142857142857146,
+          "value": 16,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 123,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 45,
+            "p4": 53,
+            "p1": 69
+          }
+        },
+        {
+          "seed": 698902357,
+          "score": 100,
+          "value": 30,
+          "total": 30,
+          "status": "complete",
+          "ticks": 213,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 28,
+            "p4": 64,
+            "p2": 97,
+            "p1": 142,
+            "p0": 212
+          }
+        },
+        {
+          "seed": 698902358,
+          "score": 23.80952380952381,
+          "value": 10,
+          "total": 42,
+          "status": "exhausted",
+          "ticks": 75,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 25
+          }
+        },
+        {
+          "seed": 698902359,
+          "score": 81.48148148148148,
+          "value": 22,
+          "total": 27,
+          "status": "captured",
+          "ticks": 231,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 30,
+            "p2": 80,
+            "p3": 97,
+            "p0": 187
+          }
+        },
+        {
+          "seed": 698902361,
+          "score": 29.032258064516128,
+          "value": 9,
+          "total": 31,
+          "status": "captured",
+          "ticks": 75,
+          "invalidActions": 2,
+          "deliveredAt": {
+            "p2": 23
+          }
+        },
+        {
+          "seed": 698902362,
+          "score": 25,
+          "value": 9,
+          "total": 36,
+          "status": "captured",
+          "ticks": 251,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 38,
+            "p0": 201
+          }
+        },
+        {
+          "seed": 698902363,
+          "score": 58.064516129032256,
+          "value": 18,
+          "total": 31,
+          "status": "captured",
+          "ticks": 137,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 29,
+            "p0": 35,
+            "p3": 116
+          }
+        },
+        {
+          "seed": 698902364,
+          "score": 44.44444444444444,
+          "value": 12,
+          "total": 27,
+          "status": "captured",
+          "ticks": 91,
+          "invalidActions": 13,
+          "deliveredAt": {
+            "p2": 28,
+            "p1": 40
+          }
+        },
+        {
+          "seed": 698902365,
+          "score": 89.65517241379311,
+          "value": 26,
+          "total": 29,
+          "status": "exhausted",
+          "ticks": 228,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 22,
+            "p4": 61,
+            "p2": 122,
+            "p3": 175
+          }
+        },
+        {
+          "seed": 698902366,
+          "score": 20.689655172413794,
+          "value": 6,
+          "total": 29,
+          "status": "exhausted",
+          "ticks": 78,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 23
+          }
+        },
+        {
+          "seed": 698902367,
+          "score": 41.02564102564103,
+          "value": 16,
+          "total": 39,
+          "status": "exhausted",
+          "ticks": 111,
+          "invalidActions": 31,
+          "deliveredAt": {
+            "p3": 13,
+            "p0": 33
+          }
+        },
+        {
+          "seed": 698902368,
+          "score": 0,
+          "value": 0,
+          "total": 31,
+          "status": "captured",
+          "ticks": 63,
+          "invalidActions": 9,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902369,
+          "score": 58.333333333333336,
+          "value": 21,
+          "total": 36,
+          "status": "exhausted",
+          "ticks": 142,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 27,
+            "p1": 70,
+            "p0": 78
+          }
+        },
+        {
+          "seed": 698902370,
+          "score": 32.142857142857146,
+          "value": 9,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 76,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 33,
+            "p0": 52
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-3",
+      "suite": "fixed",
+      "codeSha256": "68e910ff10e05a728a8d09d75f3461456b7a6199003f2c535a994a54b36d8e50",
+      "episodes": 24,
+      "score": 61.39181299631227,
+      "standardDeviation": 27.50388369012572,
+      "standardError": 5.614206748805374,
+      "outcomes": {
+        "captured": 16,
+        "exhausted": 1,
+        "complete": 5,
+        "deadline": 2
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902362,
+          "score": 11.11111111111111,
+          "status": "captured",
+          "ticks": 143
+        },
+        {
+          "seed": 698902352,
+          "score": 12.5,
+          "status": "captured",
+          "ticks": 77
+        },
+        {
+          "seed": 698902345,
+          "score": 30.76923076923077,
+          "status": "captured",
+          "ticks": 273
+        },
+        {
+          "seed": 698902355,
+          "score": 35.714285714285715,
+          "status": "captured",
+          "ticks": 263
+        },
+        {
+          "seed": 698902366,
+          "score": 37.93103448275862,
+          "status": "captured",
+          "ticks": 217
+        }
+      ],
+      "wallMs": 2968,
+      "simulationsUsed": 72,
+      "simulationsRemaining": 120,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 72.41379310344827,
+          "value": 21,
+          "total": 29,
+          "status": "captured",
+          "ticks": 191,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 20,
+            "p3": 51,
+            "p0": 94,
+            "p4": 166
+          }
+        },
+        {
+          "seed": 698902345,
+          "score": 30.76923076923077,
+          "value": 12,
+          "total": 39,
+          "status": "captured",
+          "ticks": 273,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 25,
+            "p1": 242
+          }
+        },
+        {
+          "seed": 698902346,
+          "score": 41.1764705882353,
+          "value": 14,
+          "total": 34,
+          "status": "exhausted",
+          "ticks": 95,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 34,
+            "p4": 36
+          }
+        },
+        {
+          "seed": 698902347,
+          "score": 100,
+          "value": 33,
+          "total": 33,
+          "status": "complete",
+          "ticks": 138,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 26,
+            "p1": 45,
+            "p4": 68,
+            "p3": 103,
+            "p0": 137
+          }
+        },
+        {
+          "seed": 698902348,
+          "score": 54.76190476190476,
+          "value": 23,
+          "total": 42,
+          "status": "captured",
+          "ticks": 239,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 27,
+            "p1": 110,
+            "p4": 168
+          }
+        },
+        {
+          "seed": 698902350,
+          "score": 72.72727272727273,
+          "value": 24,
+          "total": 33,
+          "status": "captured",
+          "ticks": 133,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 29,
+            "p3": 53,
+            "p4": 96,
+            "p0": 128
+          }
+        },
+        {
+          "seed": 698902352,
+          "score": 12.5,
+          "value": 3,
+          "total": 24,
+          "status": "captured",
+          "ticks": 77,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 32
+          }
+        },
+        {
+          "seed": 698902353,
+          "score": 56.75675675675676,
+          "value": 21,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 60,
+            "p3": 85,
+            "p4": 226
+          }
+        },
+        {
+          "seed": 698902354,
+          "score": 40,
+          "value": 12,
+          "total": 30,
+          "status": "captured",
+          "ticks": 286,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 28,
+            "p4": 100
+          }
+        },
+        {
+          "seed": 698902355,
+          "score": 35.714285714285715,
+          "value": 15,
+          "total": 42,
+          "status": "captured",
+          "ticks": 263,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 104,
+            "p2": 216
+          }
+        },
+        {
+          "seed": 698902356,
+          "score": 75,
+          "value": 21,
+          "total": 28,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 32,
+            "p1": 49,
+            "p3": 115,
+            "p2": 154
+          }
+        },
+        {
+          "seed": 698902357,
+          "score": 100,
+          "value": 30,
+          "total": 30,
+          "status": "complete",
+          "ticks": 211,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 28,
+            "p4": 64,
+            "p2": 115,
+            "p1": 169,
+            "p0": 210
+          }
+        },
+        {
+          "seed": 698902358,
+          "score": 64.28571428571429,
+          "value": 27,
+          "total": 42,
+          "status": "captured",
+          "ticks": 269,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 25,
+            "p1": 63,
+            "p4": 218
+          }
+        },
+        {
+          "seed": 698902359,
+          "score": 100,
+          "value": 27,
+          "total": 27,
+          "status": "complete",
+          "ticks": 200,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 23,
+            "p2": 44,
+            "p3": 92,
+            "p1": 156,
+            "p0": 199
+          }
+        },
+        {
+          "seed": 698902361,
+          "score": 77.41935483870968,
+          "value": 24,
+          "total": 31,
+          "status": "captured",
+          "ticks": 179,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 23,
+            "p3": 56,
+            "p1": 114,
+            "p0": 167
+          }
+        },
+        {
+          "seed": 698902362,
+          "score": 11.11111111111111,
+          "value": 4,
+          "total": 36,
+          "status": "captured",
+          "ticks": 143,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 57
+          }
+        },
+        {
+          "seed": 698902363,
+          "score": 100,
+          "value": 31,
+          "total": 31,
+          "status": "complete",
+          "ticks": 182,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 25,
+            "p0": 53,
+            "p4": 103,
+            "p2": 121,
+            "p3": 181
+          }
+        },
+        {
+          "seed": 698902364,
+          "score": 44.44444444444444,
+          "value": 12,
+          "total": 27,
+          "status": "captured",
+          "ticks": 229,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 21,
+            "p1": 48
+          }
+        },
+        {
+          "seed": 698902365,
+          "score": 100,
+          "value": 29,
+          "total": 29,
+          "status": "complete",
+          "ticks": 227,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 24,
+            "p4": 102,
+            "p2": 161,
+            "p3": 202,
+            "p0": 226
+          }
+        },
+        {
+          "seed": 698902366,
+          "score": 37.93103448275862,
+          "value": 11,
+          "total": 29,
+          "status": "captured",
+          "ticks": 217,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 27,
+            "p4": 167
+          }
+        },
+        {
+          "seed": 698902367,
+          "score": 84.61538461538461,
+          "value": 33,
+          "total": 39,
+          "status": "captured",
+          "ticks": 185,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 13,
+            "p0": 33,
+            "p1": 92,
+            "p4": 135
+          }
+        },
+        {
+          "seed": 698902368,
+          "score": 41.935483870967744,
+          "value": 13,
+          "total": 31,
+          "status": "captured",
+          "ticks": 91,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 41,
+            "p4": 41
+          }
+        },
+        {
+          "seed": 698902369,
+          "score": 55.55555555555556,
+          "value": 20,
+          "total": 36,
+          "status": "captured",
+          "ticks": 245,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 35,
+            "p0": 120,
+            "p3": 162
+          }
+        },
+        {
+          "seed": 698902370,
+          "score": 64.28571428571429,
+          "value": 18,
+          "total": 28,
+          "status": "captured",
+          "ticks": 207,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 30,
+            "p2": 101,
+            "p0": 182
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-4",
+      "suite": "fixed",
+      "codeSha256": "44d1c7c6f300e78ee802e4740a392e7714212cfa22014a12b045fcaed7f2234c",
+      "episodes": 24,
+      "score": 63.954685190256036,
+      "standardDeviation": 23.18103990786065,
+      "standardError": 4.7318099567793475,
+      "outcomes": {
+        "deadline": 19,
+        "complete": 4,
+        "exhausted": 1
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902363,
+          "score": 9.67741935483871,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902352,
+          "score": 29.166666666666668,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902359,
+          "score": 44.44444444444444,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902366,
+          "score": 44.827586206896555,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902354,
+          "score": 50,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ],
+      "wallMs": 2288,
+      "simulationsUsed": 96,
+      "simulationsRemaining": 96,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 55.172413793103445,
+          "value": 16,
+          "total": 29,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 20,
+            "p3": 57,
+            "p4": 220
+          }
+        },
+        {
+          "seed": 698902345,
+          "score": 74.35897435897436,
+          "value": 29,
+          "total": 39,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 25,
+            "p3": 127,
+            "p1": 141,
+            "p4": 198
+          }
+        },
+        {
+          "seed": 698902346,
+          "score": 91.17647058823529,
+          "value": 31,
+          "total": 34,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 34,
+            "p4": 36,
+            "p1": 110,
+            "p2": 178
+          }
+        },
+        {
+          "seed": 698902347,
+          "score": 100,
+          "value": 33,
+          "total": 33,
+          "status": "complete",
+          "ticks": 157,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 26,
+            "p1": 45,
+            "p4": 85,
+            "p3": 111,
+            "p0": 156
+          }
+        },
+        {
+          "seed": 698902348,
+          "score": 54.76190476190476,
+          "value": 23,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 27,
+            "p1": 120,
+            "p4": 151
+          }
+        },
+        {
+          "seed": 698902350,
+          "score": 57.57575757575758,
+          "value": 19,
+          "total": 33,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 29,
+            "p3": 53,
+            "p4": 118
+          }
+        },
+        {
+          "seed": 698902352,
+          "score": 29.166666666666668,
+          "value": 7,
+          "total": 24,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 42,
+            "p0": 176
+          }
+        },
+        {
+          "seed": 698902353,
+          "score": 81.08108108108108,
+          "value": 30,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 74,
+            "p3": 100,
+            "p2": 149,
+            "p4": 214
+          }
+        },
+        {
+          "seed": 698902354,
+          "score": 50,
+          "value": 15,
+          "total": 30,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 28,
+            "p4": 98,
+            "p2": 215
+          }
+        },
+        {
+          "seed": 698902355,
+          "score": 54.76190476190476,
+          "value": 23,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 153,
+            "p4": 216,
+            "p2": 243
+          }
+        },
+        {
+          "seed": 698902356,
+          "score": 57.142857142857146,
+          "value": 16,
+          "total": 28,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 32,
+            "p1": 49,
+            "p4": 172
+          }
+        },
+        {
+          "seed": 698902357,
+          "score": 100,
+          "value": 30,
+          "total": 30,
+          "status": "complete",
+          "ticks": 195,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 28,
+            "p4": 64,
+            "p2": 124,
+            "p1": 151,
+            "p0": 194
+          }
+        },
+        {
+          "seed": 698902358,
+          "score": 80.95238095238095,
+          "value": 34,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 25,
+            "p1": 63,
+            "p4": 199,
+            "p0": 271
+          }
+        },
+        {
+          "seed": 698902359,
+          "score": 44.44444444444444,
+          "value": 12,
+          "total": 27,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 23,
+            "p0": 168,
+            "p3": 233
+          }
+        },
+        {
+          "seed": 698902361,
+          "score": 100,
+          "value": 31,
+          "total": 31,
+          "status": "complete",
+          "ticks": 255,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 23,
+            "p3": 56,
+            "p4": 127,
+            "p0": 205,
+            "p1": 254
+          }
+        },
+        {
+          "seed": 698902362,
+          "score": 52.77777777777778,
+          "value": 19,
+          "total": 36,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 59,
+            "p1": 105,
+            "p0": 165
+          }
+        },
+        {
+          "seed": 698902363,
+          "score": 9.67741935483871,
+          "value": 3,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 25
+          }
+        },
+        {
+          "seed": 698902364,
+          "score": 62.96296296296296,
+          "value": 17,
+          "total": 27,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 21,
+            "p1": 50,
+            "p4": 233
+          }
+        },
+        {
+          "seed": 698902365,
+          "score": 100,
+          "value": 29,
+          "total": 29,
+          "status": "complete",
+          "ticks": 225,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 30,
+            "p4": 106,
+            "p2": 159,
+            "p3": 200,
+            "p0": 224
+          }
+        },
+        {
+          "seed": 698902366,
+          "score": 44.827586206896555,
+          "value": 13,
+          "total": 29,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 27,
+            "p1": 152
+          }
+        },
+        {
+          "seed": 698902367,
+          "score": 64.1025641025641,
+          "value": 25,
+          "total": 39,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 13,
+            "p0": 33,
+            "p1": 92
+          }
+        },
+        {
+          "seed": 698902368,
+          "score": 58.064516129032256,
+          "value": 18,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 41,
+            "p4": 41,
+            "p0": 154
+          }
+        },
+        {
+          "seed": 698902369,
+          "score": 58.333333333333336,
+          "value": 21,
+          "total": 36,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 37,
+            "p0": 122,
+            "p2": 185
+          }
+        },
+        {
+          "seed": 698902370,
+          "score": 53.57142857142857,
+          "value": 15,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 248,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 30,
+            "p2": 99
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-5",
+      "suite": "fresh",
+      "codeSha256": "e2ec5986ce215ade91bccdc6a9e7baa0de2a29033ce05968c443afbc5ddacfa8",
+      "episodes": 8,
+      "score": 64.8159681265706,
+      "standardDeviation": 23.436618641104168,
+      "standardError": 8.286095984603904,
+      "outcomes": {
+        "deadline": 5,
+        "complete": 1,
+        "exhausted": 2
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902380,
+          "score": 32.432432432432435,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902378,
+          "score": 45.16129032258065,
+          "status": "exhausted",
+          "ticks": 209
+        },
+        {
+          "seed": 698902383,
+          "score": 50,
+          "status": "exhausted",
+          "ticks": 277
+        },
+        {
+          "seed": 698902384,
+          "score": 50,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902375,
+          "score": 77.5,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ],
+      "wallMs": 522,
+      "simulationsUsed": 104,
+      "simulationsRemaining": 88,
+      "results": [
+        {
+          "seed": 698902375,
+          "score": 77.5,
+          "value": 31,
+          "total": 40,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 24,
+            "p1": 55,
+            "p3": 145,
+            "p4": 174
+          }
+        },
+        {
+          "seed": 698902376,
+          "score": 100,
+          "value": 28,
+          "total": 28,
+          "status": "complete",
+          "ticks": 213,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 48,
+            "p2": 85,
+            "p0": 127,
+            "p3": 200,
+            "p1": 212
+          }
+        },
+        {
+          "seed": 698902377,
+          "score": 81.08108108108108,
+          "value": 30,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 42,
+            "p3": 69,
+            "p4": 97,
+            "p0": 131
+          }
+        },
+        {
+          "seed": 698902378,
+          "score": 45.16129032258065,
+          "value": 14,
+          "total": 31,
+          "status": "exhausted",
+          "ticks": 209,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 43,
+            "p1": 128
+          }
+        },
+        {
+          "seed": 698902379,
+          "score": 82.3529411764706,
+          "value": 28,
+          "total": 34,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 44,
+            "p3": 115,
+            "p1": 141,
+            "p0": 178
+          }
+        },
+        {
+          "seed": 698902380,
+          "score": 32.432432432432435,
+          "value": 12,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 26,
+            "p1": 177
+          }
+        },
+        {
+          "seed": 698902383,
+          "score": 50,
+          "value": 12,
+          "total": 24,
+          "status": "exhausted",
+          "ticks": 277,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 19,
+            "p3": 43
+          }
+        },
+        {
+          "seed": 698902384,
+          "score": 50,
+          "value": 16,
+          "total": 32,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 16,
+            "p1": 32,
+            "p2": 143
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-6",
+      "suite": "fixed",
+      "codeSha256": "10736c35f7fc21b336ba490c3805d1a64dd23c3fa065f1dd9535c22c9995ba8b",
+      "episodes": 24,
+      "score": 48.606580627671605,
+      "standardDeviation": 31.879478864350318,
+      "standardError": 6.5073713736249355,
+      "outcomes": {
+        "exhausted": 11,
+        "deadline": 11,
+        "complete": 2
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902343,
+          "score": 0,
+          "status": "exhausted",
+          "ticks": 88
+        },
+        {
+          "seed": 698902352,
+          "score": 0,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902356,
+          "score": 0,
+          "status": "exhausted",
+          "ticks": 134
+        },
+        {
+          "seed": 698902364,
+          "score": 0,
+          "status": "exhausted",
+          "ticks": 159
+        },
+        {
+          "seed": 698902353,
+          "score": 8.108108108108109,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ],
+      "wallMs": 1343,
+      "simulationsUsed": 128,
+      "simulationsRemaining": 64,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 0,
+          "value": 0,
+          "total": 29,
+          "status": "exhausted",
+          "ticks": 88,
+          "invalidActions": 0,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902345,
+          "score": 46.15384615384615,
+          "value": 18,
+          "total": 39,
+          "status": "exhausted",
+          "ticks": 191,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 25,
+            "p3": 150
+          }
+        },
+        {
+          "seed": 698902346,
+          "score": 47.05882352941177,
+          "value": 16,
+          "total": 34,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 20,
+            "p0": 28,
+            "p1": 118
+          }
+        },
+        {
+          "seed": 698902347,
+          "score": 30.303030303030305,
+          "value": 10,
+          "total": 33,
+          "status": "exhausted",
+          "ticks": 65,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 23
+          }
+        },
+        {
+          "seed": 698902348,
+          "score": 47.61904761904762,
+          "value": 20,
+          "total": 42,
+          "status": "exhausted",
+          "ticks": 143,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 27,
+            "p1": 117
+          }
+        },
+        {
+          "seed": 698902350,
+          "score": 51.515151515151516,
+          "value": 17,
+          "total": 33,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 95,
+            "p3": 165,
+            "p4": 172
+          }
+        },
+        {
+          "seed": 698902352,
+          "score": 0,
+          "value": 0,
+          "total": 24,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902353,
+          "score": 8.108108108108109,
+          "value": 3,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 231
+          }
+        },
+        {
+          "seed": 698902354,
+          "score": 86.66666666666667,
+          "value": 26,
+          "total": 30,
+          "status": "exhausted",
+          "ticks": 203,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 28,
+            "p3": 59,
+            "p0": 153,
+            "p2": 161
+          }
+        },
+        {
+          "seed": 698902355,
+          "score": 78.57142857142857,
+          "value": 33,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 103,
+            "p1": 120,
+            "p4": 163,
+            "p2": 188
+          }
+        },
+        {
+          "seed": 698902356,
+          "score": 0,
+          "value": 0,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 134,
+          "invalidActions": 0,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902357,
+          "score": 86.66666666666667,
+          "value": 26,
+          "total": 30,
+          "status": "exhausted",
+          "ticks": 192,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 28,
+            "p4": 64,
+            "p2": 125,
+            "p1": 152
+          }
+        },
+        {
+          "seed": 698902358,
+          "score": 40.476190476190474,
+          "value": 17,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 25,
+            "p0": 256
+          }
+        },
+        {
+          "seed": 698902359,
+          "score": 81.48148148148148,
+          "value": 22,
+          "total": 27,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 30,
+            "p2": 94,
+            "p3": 111,
+            "p0": 169
+          }
+        },
+        {
+          "seed": 698902361,
+          "score": 100,
+          "value": 31,
+          "total": 31,
+          "status": "complete",
+          "ticks": 186,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 23,
+            "p3": 71,
+            "p4": 129,
+            "p1": 173,
+            "p0": 185
+          }
+        },
+        {
+          "seed": 698902362,
+          "score": 25,
+          "value": 9,
+          "total": 36,
+          "status": "exhausted",
+          "ticks": 235,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 68,
+            "p0": 167
+          }
+        },
+        {
+          "seed": 698902363,
+          "score": 74.19354838709677,
+          "value": 23,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 25,
+            "p0": 59,
+            "p2": 93,
+            "p3": 179
+          }
+        },
+        {
+          "seed": 698902364,
+          "score": 0,
+          "value": 0,
+          "total": 27,
+          "status": "exhausted",
+          "ticks": 159,
+          "invalidActions": 0,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902365,
+          "score": 100,
+          "value": 29,
+          "total": 29,
+          "status": "complete",
+          "ticks": 267,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 30,
+            "p4": 107,
+            "p2": 161,
+            "p3": 226,
+            "p0": 266
+          }
+        },
+        {
+          "seed": 698902366,
+          "score": 37.93103448275862,
+          "value": 11,
+          "total": 29,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 27,
+            "p2": 112
+          }
+        },
+        {
+          "seed": 698902367,
+          "score": 61.53846153846154,
+          "value": 24,
+          "total": 39,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 13,
+            "p0": 33,
+            "p4": 131
+          }
+        },
+        {
+          "seed": 698902368,
+          "score": 61.29032258064516,
+          "value": 19,
+          "total": 31,
+          "status": "exhausted",
+          "ticks": 137,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 54,
+            "p4": 54,
+            "p1": 76
+          }
+        },
+        {
+          "seed": 698902369,
+          "score": 55.55555555555556,
+          "value": 20,
+          "total": 36,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 61,
+            "p3": 159,
+            "p0": 225
+          }
+        },
+        {
+          "seed": 698902370,
+          "score": 46.42857142857143,
+          "value": 13,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 167,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 33,
+            "p0": 93,
+            "p3": 124
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-7",
+      "suite": "fixed",
+      "codeSha256": "740652ecfde1f119d56527700c4e1ba7ae20a68925e5b00886db900caaf216d5",
+      "episodes": 24,
+      "score": 66.55848129163388,
+      "standardDeviation": 29.236696645241853,
+      "standardError": 5.967915712115273,
+      "outcomes": {
+        "deadline": 15,
+        "complete": 6,
+        "exhausted": 3
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902355,
+          "score": 0,
+          "status": "exhausted",
+          "ticks": 91
+        },
+        {
+          "seed": 698902369,
+          "score": 19.444444444444443,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902345,
+          "score": 23.076923076923077,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902352,
+          "score": 29.166666666666668,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902356,
+          "score": 32.142857142857146,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ],
+      "wallMs": 1496,
+      "simulationsUsed": 152,
+      "simulationsRemaining": 40,
+      "results": [
+        {
+          "seed": 698902343,
+          "score": 55.172413793103445,
+          "value": 16,
+          "total": 29,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 20,
+            "p3": 84,
+            "p4": 231
+          }
+        },
+        {
+          "seed": 698902345,
+          "score": 23.076923076923077,
+          "value": 9,
+          "total": 39,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 25
+          }
+        },
+        {
+          "seed": 698902346,
+          "score": 100,
+          "value": 34,
+          "total": 34,
+          "status": "complete",
+          "ticks": 197,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 32,
+            "p4": 34,
+            "p1": 109,
+            "p2": 172,
+            "p0": 196
+          }
+        },
+        {
+          "seed": 698902347,
+          "score": 100,
+          "value": 33,
+          "total": 33,
+          "status": "complete",
+          "ticks": 145,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 26,
+            "p1": 39,
+            "p4": 62,
+            "p3": 110,
+            "p0": 144
+          }
+        },
+        {
+          "seed": 698902348,
+          "score": 76.19047619047619,
+          "value": 32,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 27,
+            "p1": 110,
+            "p4": 115,
+            "p3": 134
+          }
+        },
+        {
+          "seed": 698902350,
+          "score": 72.72727272727273,
+          "value": 24,
+          "total": 33,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 29,
+            "p3": 53,
+            "p4": 108,
+            "p0": 140
+          }
+        },
+        {
+          "seed": 698902352,
+          "score": 29.166666666666668,
+          "value": 7,
+          "total": 24,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 114,
+            "p0": 191
+          }
+        },
+        {
+          "seed": 698902353,
+          "score": 48.648648648648646,
+          "value": 18,
+          "total": 37,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 78,
+            "p3": 101
+          }
+        },
+        {
+          "seed": 698902354,
+          "score": 73.33333333333333,
+          "value": 22,
+          "total": 30,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 28,
+            "p4": 99,
+            "p0": 172,
+            "p2": 180
+          }
+        },
+        {
+          "seed": 698902355,
+          "score": 0,
+          "value": 0,
+          "total": 42,
+          "status": "exhausted",
+          "ticks": 91,
+          "invalidActions": 0,
+          "deliveredAt": {}
+        },
+        {
+          "seed": 698902356,
+          "score": 32.142857142857146,
+          "value": 9,
+          "total": 28,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 32,
+            "p1": 49
+          }
+        },
+        {
+          "seed": 698902357,
+          "score": 46.666666666666664,
+          "value": 14,
+          "total": 30,
+          "status": "exhausted",
+          "ticks": 265,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 28,
+            "p4": 64
+          }
+        },
+        {
+          "seed": 698902358,
+          "score": 64.28571428571429,
+          "value": 27,
+          "total": 42,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 25,
+            "p1": 63,
+            "p4": 172
+          }
+        },
+        {
+          "seed": 698902359,
+          "score": 81.48148148148148,
+          "value": 22,
+          "total": 27,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 23,
+            "p2": 88,
+            "p0": 168,
+            "p3": 252
+          }
+        },
+        {
+          "seed": 698902361,
+          "score": 100,
+          "value": 31,
+          "total": 31,
+          "status": "complete",
+          "ticks": 199,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 23,
+            "p3": 58,
+            "p1": 119,
+            "p4": 142,
+            "p0": 198
+          }
+        },
+        {
+          "seed": 698902362,
+          "score": 72.22222222222223,
+          "value": 26,
+          "total": 36,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 33,
+            "p1": 81,
+            "p0": 106,
+            "p3": 174
+          }
+        },
+        {
+          "seed": 698902363,
+          "score": 74.19354838709677,
+          "value": 23,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 25,
+            "p0": 57,
+            "p2": 95,
+            "p3": 152
+          }
+        },
+        {
+          "seed": 698902364,
+          "score": 100,
+          "value": 27,
+          "total": 27,
+          "status": "complete",
+          "ticks": 214,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 21,
+            "p1": 46,
+            "p3": 121,
+            "p0": 140,
+            "p4": 213
+          }
+        },
+        {
+          "seed": 698902365,
+          "score": 100,
+          "value": 29,
+          "total": 29,
+          "status": "complete",
+          "ticks": 217,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 22,
+            "p4": 61,
+            "p2": 118,
+            "p3": 140,
+            "p0": 216
+          }
+        },
+        {
+          "seed": 698902366,
+          "score": 65.51724137931035,
+          "value": 19,
+          "total": 29,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 23,
+            "p3": 49,
+            "p1": 164
+          }
+        },
+        {
+          "seed": 698902367,
+          "score": 100,
+          "value": 39,
+          "total": 39,
+          "status": "complete",
+          "ticks": 175,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p3": 13,
+            "p0": 33,
+            "p1": 95,
+            "p4": 119,
+            "p2": 174
+          }
+        },
+        {
+          "seed": 698902368,
+          "score": 77.41935483870968,
+          "value": 24,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 39,
+            "p4": 39,
+            "p1": 62,
+            "p0": 186
+          }
+        },
+        {
+          "seed": 698902369,
+          "score": 19.444444444444443,
+          "value": 7,
+          "total": 36,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 27
+          }
+        },
+        {
+          "seed": 698902370,
+          "score": 85.71428571428571,
+          "value": 24,
+          "total": 28,
+          "status": "exhausted",
+          "ticks": 285,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 30,
+            "p2": 95,
+            "p1": 165,
+            "p0": 213
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-8",
+      "suite": "fresh",
+      "codeSha256": "02b4b2646ed558c3d0e9450e6b8c59027f3c435af802fe15d41f63271528c608",
+      "episodes": 8,
+      "score": 60.807591736333706,
+      "standardDeviation": 22.688481687982087,
+      "standardError": 8.02158962819947,
+      "outcomes": {
+        "exhausted": 3,
+        "complete": 1,
+        "deadline": 4
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902392,
+          "score": 27.586206896551722,
+          "status": "exhausted",
+          "ticks": 93
+        },
+        {
+          "seed": 698902385,
+          "score": 45.714285714285715,
+          "status": "exhausted",
+          "ticks": 95
+        },
+        {
+          "seed": 698902395,
+          "score": 48.484848484848484,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902390,
+          "score": 58.53658536585366,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902389,
+          "score": 60,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ],
+      "wallMs": 444,
+      "simulationsUsed": 160,
+      "simulationsRemaining": 32,
+      "results": [
+        {
+          "seed": 698902385,
+          "score": 45.714285714285715,
+          "value": 16,
+          "total": 35,
+          "status": "exhausted",
+          "ticks": 95,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 28,
+            "p1": 42
+          }
+        },
+        {
+          "seed": 698902386,
+          "score": 100,
+          "value": 42,
+          "total": 42,
+          "status": "complete",
+          "ticks": 120,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p0": 19,
+            "p4": 32,
+            "p3": 59,
+            "p1": 108,
+            "p2": 119
+          }
+        },
+        {
+          "seed": 698902387,
+          "score": 61.29032258064516,
+          "value": 19,
+          "total": 31,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p2": 41,
+            "p4": 113,
+            "p3": 179
+          }
+        },
+        {
+          "seed": 698902389,
+          "score": 60,
+          "value": 24,
+          "total": 40,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 19,
+            "p1": 117,
+            "p3": 199
+          }
+        },
+        {
+          "seed": 698902390,
+          "score": 58.53658536585366,
+          "value": 24,
+          "total": 41,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 29,
+            "p2": 35,
+            "p3": 100
+          }
+        },
+        {
+          "seed": 698902392,
+          "score": 27.586206896551722,
+          "value": 8,
+          "total": 29,
+          "status": "exhausted",
+          "ticks": 93,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 33
+          }
+        },
+        {
+          "seed": 698902393,
+          "score": 84.84848484848484,
+          "value": 28,
+          "total": 33,
+          "status": "exhausted",
+          "ticks": 229,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p1": 23,
+            "p2": 64,
+            "p0": 105,
+            "p4": 166
+          }
+        },
+        {
+          "seed": 698902395,
+          "score": 48.484848484848484,
+          "value": 16,
+          "total": 33,
+          "status": "deadline",
+          "ticks": 300,
+          "invalidActions": 0,
+          "deliveredAt": {
+            "p4": 50,
+            "p3": 81,
+            "p2": 198
+          }
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "version": "courier-grid-v1",
+    "suiteSha256": "35466573a8bdb93111934e8d6cbfac2d942380a9575e26882bdb79dca2a724ab",
+    "summary": {
+      "episodes": 128,
+      "score": 76.2567838746272,
+      "standardDeviation": 22.113599596478963,
+      "standardError": 1.9545845288892971,
+      "outcomes": {
+        "exhausted": 11,
+        "deadline": 74,
+        "complete": 43
+      },
+      "invalidActions": 0,
+      "worst": [
+        {
+          "seed": 698902480,
+          "score": 0,
+          "status": "exhausted",
+          "ticks": 91
+        },
+        {
+          "seed": 698902540,
+          "score": 20,
+          "status": "exhausted",
+          "ticks": 92
+        },
+        {
+          "seed": 698902479,
+          "score": 28.205128205128204,
+          "status": "deadline",
+          "ticks": 300
+        },
+        {
+          "seed": 698902532,
+          "score": 30.434782608695652,
+          "status": "exhausted",
+          "ticks": 95
+        },
+        {
+          "seed": 698902463,
+          "score": 31.25,
+          "status": "deadline",
+          "ticks": 300
+        }
+      ]
+    },
+    "path": "evaluation.json",
+    "sha256": "5fe67dfff7b3af0eec95998186c8eb2904abf6011a74e4729f11801ddbc1947d"
+  }
+}

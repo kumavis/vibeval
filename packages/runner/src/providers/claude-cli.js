@@ -17,7 +17,7 @@ import {
 
 const TURN_TIMEOUT_MS = 5 * 60 * 1000;
 
-export function createClaudeCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS }) {
+export function createClaudeCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS, retryOnFailure = true }) {
   const model = requestedModel ?? process.env.CLAUDE_CLI_MODEL;
   const effort = requestedEffort ?? process.env.CLAUDE_CLI_EFFORT;
   const system = systemPrompt + (responseFormat === 'commands' ? TEXT_PROTOCOL_APPENDIX : '');
@@ -242,7 +242,7 @@ export function createClaudeCliProvider({ systemPrompt, responseFormat = 'comman
           needsReplay ? withTranscript(history, prompt) : prompt,
         );
       } catch (err) {
-        if (disposed) throw err;
+        if (disposed || !retryOnFailure) throw err;
         usage.retries += 1;
         // Process died, or returned an error while still alive — kill it and
         // restart, replaying the shadow transcript.

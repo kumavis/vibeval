@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 const exec = promisify(execFile);
-export const HARNESS_VERSION = 'submission-v1';
+export const HARNESS_VERSION = 'submission-v2';
 
 export async function provenance(root, definition, prompt, instructions, evalDirectory) {
   const hash = createHash('sha256');

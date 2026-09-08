@@ -1,0 +1,26 @@
+{
+  "id": "rock-paper-scissors",
+  "title": "Rock, paper, scissors",
+  "description": "One question, one answer. Measure which choice models favor across independent fresh conversations.",
+  "kind": "static-artifacts",
+  "format": "choice",
+  "choices": [
+    "rock",
+    "paper",
+    "scissors"
+  ],
+  "assessment": {
+    "type": "distribution",
+    "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+  },
+  "limits": {
+    "maxTurns": 1,
+    "maxWallMs": 900000,
+    "maxArtifactBytes": 10000,
+    "maxFiles": 1
+  },
+  "tags": [
+    "Single turn",
+    "Choice distribution"
+  ]
+}

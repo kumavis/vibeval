@@ -19,7 +19,7 @@
 // reports its model as `<model>+web` and its runs land in their own report
 // row rather than pooling with the sealed ones.
 import { spawn } from 'node:child_process';
-import { mkdtemp } from 'node:fs/promises';
+import { mkdtemp, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createInterface } from 'node:readline';
@@ -40,7 +40,7 @@ const WEB_SEARCH_APPENDIX = `
 - You have web search available. Use it if you think it will help.
 `;
 
-export function createCodexCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS }) {
+export function createCodexCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, webSearch: requestedWebSearch, turnTimeoutMs = TURN_TIMEOUT_MS, outputSchema, deadline = Infinity, retryOnFailure = true }) {
   const model = requestedModel ?? process.env.CODEX_CLI_MODEL;
   const effort = requestedEffort ?? process.env.CODEX_CLI_EFFORT;
   const webSearch = requestedWebSearch ?? (process.env.CODEX_CLI_WEB_SEARCH === 'true');
@@ -74,6 +74,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
   // fresh one from the shadow transcript.
   let threadId = null;
   let workspace = null;
+  let schemaPath = null;
   const children = new Set();
 
   const killChild = (proc) => {
@@ -90,6 +91,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
 
   const commonArgs = () => [
     '--json',
+    ...(schemaPath ? ['--output-schema', schemaPath] : []),
     '--skip-git-repo-check',
     '--ignore-user-config',
     '--ignore-rules',
@@ -130,9 +132,9 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
         (outcome === 'resolve' ? resolve : reject)(value);
       };
       let timer = setTimeout(() => {
-        finish('reject', new Error('codex CLI turn timed out'));
+        finish('reject', Object.assign(new Error('codex CLI turn timed out'), { code: 'REQUEST_TIMEOUT' }));
         killChild(child);
-      }, turnTimeoutMs);
+      }, Math.max(1, Math.min(turnTimeoutMs, deadline - Date.now())));
 
       const rl = createInterface({ input: child.stdout });
       rl.on('line', (line) => {
@@ -225,6 +227,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
         // An empty directory of its own: nothing to read, nothing to keep
         // between turns.
         workspace = await mkdtemp(join(tmpdir(), 'zork-codex-'));
+        if (outputSchema) { schemaPath = join(workspace, 'response-schema.json'); await writeFile(schemaPath, JSON.stringify(outputSchema)); }
       }
       const prompt =
         gameOutputs.join('\n') ||
@@ -237,7 +240,7 @@ export function createCodexCliProvider({ systemPrompt, responseFormat = 'command
       try {
         raw = await runTurn(needsReplay ? withTranscript(history, prompt) : prompt);
       } catch (err) {
-        if (disposed) throw err;
+        if (!retryOnFailure || disposed || err.code === 'REQUEST_TIMEOUT' || deadline - Date.now() < 60000) throw err;
         usage.retries += 1;
         console.warn(`codex CLI turn failed (${err.message}), restarting thread.`);
         threadId = null;

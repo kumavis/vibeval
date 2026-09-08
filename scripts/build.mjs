@@ -47,7 +47,7 @@ export async function build(base = root) {
     const dest = join(out, 'evals', item.id);
     await copyPublic(join(source, 'viewer'), dest);
     await copyPublic(join(source, 'data/public'), join(dest, 'data'));
-    if (['text', 'files'].includes(item.format)) {
+    if (['text', 'files', 'controller', 'choice'].includes(item.format)) {
       const prompt = await readFile(join(source, 'prompt.txt'), 'utf8');
       await writeFile(join(dest, 'data/eval-context.json'), JSON.stringify({ prompt }));
     }

@@ -1,0 +1,22 @@
+Build a JavaScript courier controller that maximizes delivered parcel value while avoiding two hostile robots. Export function act(observation, memory), returning {action:{type:..., ...}, memory:...}. Your function is called once each tick. Start memory is null; returned JSON memory persists within an episode (maximum 32 KiB). Plain synchronous JavaScript, no dependencies or I/O. controller.js must be at most 32 KiB. Computation budget is 1 second for the entire episode, so prefer efficient algorithms. Each episode starts a fresh controller.
+
+World: a known 24x24 grid of '.' floor and '#' walls, coordinates x rightward, y downward, origin top-left. Rooms have narrow doorways. Five parcels have known pickup/delivery locations, value, weight, deadline. Carry capacity is 5 total weight. Battery starts at 90. Four chargers at (2,2),(21,2),(2,21),(21,21). You start at one charger. Episodes last at most 300 ticks. All scenarios admit a full-delivery route, but the controller must discover a robust route under partial enemy visibility.
+
+observation = {width:24,height:24,map:[24 strings],tick,ticksRemaining,courier:{x,y,battery,cargo:[parcel ids]},batteryCapacity:90,cargoCapacity:5,chargers:[{x,y}],jobs:[{id,from:{x,y},to:{x,y},value,weight,deadline,status}],enemies:[{id,kind,x,y,period}],deliveredValue,events:[strings]}.
+Job status: available, carried, delivered, expired. Enemy positions are visible only within Manhattan distance 6, even through walls. Remember previous sightings if useful. Enemy positions and routes outside visibility are not supplied.
+
+Actions (one per tick):
+{type:'move',dir:'N'|'E'|'S'|'W'} moves one floor cell, costs 1 battery (2 when carried weight exceeds 3).
+{type:'pickup',id:'p0'} picks up an available parcel at your cell if capacity permits.
+{type:'deliver'} delivers all carried parcels whose destination is your current cell.
+{type:'charge'} restores 18 battery up to 90, only at a charger.
+{type:'wait'} stays still.
+Non-movement actions cost no battery. Invalid actions waste a tick. A parcel expires after its deadline; delivery at tick == deadline is allowed. Expired cargo is removed.
+
+Order each tick: your action, then enemy movement, then tick increments and expired parcels disappear. Entering any currently occupied enemy cell captures you, even if that enemy moves away. Enemy moving onto you also captures you. Captured ends the episode. Reaching zero battery away from a charger ends it. Already delivered value is retained on capture/exhaustion/deadline. Delivering all five ends the episode.
+
+Enemies: patrol moves every 3 ticks (tick%3==0), following the four chargers cyclically in the order listed above; starting waypoint is unknown. Hunter moves every 2 ticks (tick%2==0). It detects you within Manhattan distance 7, records your location after your action, and pursues that location; sightings update it. It forgets after 18 ticks without a sighting. Otherwise it patrols pickup locations p0,p1,p2,p3 cyclically, starting waypoint unknown. Reaching a patrol waypoint advances its waypoint. Reaching a chase target clears the target. Both use shortest grid paths with BFS neighbor order N,E,S,W to break ties. These policies are fixed; positions vary across scenarios.
+
+Development: test suite 'fixed' runs the same 24 practice scenarios each time. 'fresh' runs the next 8 scenarios from a separate 40-case practice pool. Total budget 192 simulated practice episodes. Tests report mean delivered value percentage, outcomes, and per-episode results. inspect_episode reads a stored test replay, up to 30 frames per request; it includes only enemy positions visible to your controller. Use failures to improve your algorithm. You may stop early and explicitly submit when satisfied. Testing never submits your code.
+
+Final score: mean of 100 * delivered value / total parcel value across 128 held-out scenarios. Same frozen suite for all models. Final submission freezes your file and ends iteration before those scenarios are evaluated. Runtime errors/timeouts score zero for that episode. Aim for high value, not just survival: routing, cargo selection, battery planning, deadline feasibility, enemy tracking, and safe movement all matter. For context, on fixed practice cases a greedy courier scores 31%, and a simple nearby-enemy-aware routing heuristic scores 85%; there is room to improve. Do not hardcode particular seeds or maps.

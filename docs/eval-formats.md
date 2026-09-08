@@ -118,3 +118,11 @@ The viewer preserves ASCII whitespace, embeds websites in sandboxed frames, and 
 ## Add another eval
 
 Copy `templates/text-submission` or `templates/file-submission` into `evals/<id>`, change `eval.json` and `prompt.txt`, and run the common CLI. Add `scorer.js` only for numeric assessment. The build discovers the directory automatically and exports the prompt into the viewer's context. The older `static-artifacts` template remains supported for importing pre-existing outputs that do not have submission-run metadata.
+
+## Controller evaluations
+
+The `controller` format separates iterative program development from final numeric scoring. It requires `entry: "controller.js"` and an eval-owned `src/adapter.js` exporting `createAdapter({directory})`. The shared runner passes JSON actions and an isolated file workspace into `handle`, freezes a valid submission, then calls `finalize` outside the model feedback loop.
+
+`handle(action, {workspace, workingDirectory, runDir, record})` returns `{feedback, candidate?}`. Only a candidate ends development. `finalize({runDir, record})` reads the frozen artifact and returns `{metrics, evaluation}`. An optional `evaluation.json` is SHA-256 verified and copied by the publisher, with its public path stored in the catalog. No final metrics reach another model turn.
+
+[Courier grid](../evals/courier-grid/README.md) implements fixed/fresh practice suites, bounded simulation budgets, replay inspection restricted to prior practice cases, SES controller execution, and a held-out scored replay viewer. Each eval owns its simulation and viewer; the common runner continues to own model sessions, metadata, turn/time limits, and immutable artifact publication.

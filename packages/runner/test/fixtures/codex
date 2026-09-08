@@ -25,6 +25,7 @@ const emit = (event) => process.stdout.write(JSON.stringify(event) + '\n');
 
 emit({ type: 'thread.started', thread_id: resumed ?? 'thread-1' });
 emit({ type: 'turn.started' });
+if (prompt === 'HANG') { setInterval(() => {}, 1000); await new Promise(() => {}); }
 if (prompt === 'DIE') {
   emit({ type: 'turn.failed', error: { message: 'simulated failure' } });
   process.exit(1);
@@ -38,7 +39,7 @@ emit({
   item: {
     id: 'item_0',
     type: 'agent_message',
-    text: process.env.VIBEVAL_FIXTURE_SUBMISSION ? submissionReply(prompt) : prompt === 'GENERATE_TEST_PAGE' ? (instructions.includes('# Response Format:') ? 'Unexpected command protocol' : '<html><body>Test page</body></html>') : `command_format:${instructions.includes('# Response Format:')}\nthread:${resumed ?? 'new'}\nweb_search:${webSearch}\ntold_about_search:${instructions.includes('You have web search available')}\nreceived:${prompt.split('\n')[0]}\nCOMMAND: LOOK`,
+    text: prompt === 'SCHEMA' ? JSON.stringify({schema: args.includes('--output-schema') ? JSON.parse(readFileSync(args[args.indexOf('--output-schema')+1], 'utf8')) : null, resumed}) : process.env.VIBEVAL_FIXTURE_SUBMISSION ? submissionReply(prompt) : prompt === 'GENERATE_TEST_PAGE' ? (instructions.includes('# Response Format:') ? 'Unexpected command protocol' : '<html><body>Test page</body></html>') : `command_format:${instructions.includes('# Response Format:')}\nthread:${resumed ?? 'new'}\nweb_search:${webSearch}\ntold_about_search:${instructions.includes('You have web search available')}\nreceived:${prompt.split('\n')[0]}\nCOMMAND: LOOK`,
   },
 });
 emit({

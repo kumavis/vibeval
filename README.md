@@ -1,13 +1,14 @@
 # Vibeval
 
-A monorepo of model evaluations. Each eval owns its runner, prompts, results, and static viewer. The gallery discovers eval manifests at build time and links to their viewers. Zork I measures game performance; the ASCII sunken ship and interactive snow globe evals let viewers judge creative submissions.
+A monorepo of model evaluations. Each eval owns its runner, prompts, results, and static viewer. The gallery discovers eval manifests at build time and links to their viewers. Courier grid tests generated routing controllers against hostile robots; Zork I measures game performance; the ASCII sunken ship and interactive snow globe evals let viewers judge creative submissions.
 
-The [common eval formats](docs/eval-formats.md) separate text/files/environment outputs from numeric/viewer judgment. Creative runs support revision and explicit final submission, with provenance, usage, timing, cost estimates, and iteration history.
+The [common eval formats](docs/eval-formats.md) separate text/files/controller/environment outputs from numeric/viewer judgment. Creative runs support revision and explicit final submission, with provenance, usage, timing, cost estimates, and iteration history.
 
 ```text
 apps/gallery/                Static gallery shell
 packages/runner/             Claude/Codex sessions, API adapters, model specs
 packages/viewer/             Shared styling and sandboxed artifact viewer
+evals/courier-grid/          Controller task, simulator, scored replays, and viewer
 evals/zork-1/                Zork runner, prompt, interpreter, tests, and results
   eval.json                 Gallery metadata
   data/raw/                 Shipped source runs and summaries (not in Pages output)
@@ -34,6 +35,10 @@ npm run eval -- --eval snow-globe --provider claude-cli --model YOUR_MODEL --eff
 ```
 
 Each run stays local until `npm run data:publish -- --eval <id> --run <run-directory>`. See the [format contract](docs/eval-formats.md) for model matrices, trials, numeric scorers, publication, and limits.
+
+## Run Courier grid
+
+See [Courier grid setup and scoring](evals/courier-grid/README.md). Models can test revisions on practice scenarios and inspect replays before submitting a frozen controller for held-out evaluation. Public scores and replays build without the private scenario suite. Running new trials requires the retained local suite or generating a separately versioned replacement.
 
 ## Run Zork
 

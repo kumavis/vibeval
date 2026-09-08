@@ -1,0 +1,5381 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-01.624Z-d3d8be75",
+      "evalId": "rock-paper-scissors",
+      "trial": 1,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:01.625Z",
+      "finishedAt": "2026-09-08T18:20:05.904Z",
+      "wallMs": 4279,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-01.624Z-d3d8be75/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 13018,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0008136800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-01.624Z-d3d8be75/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-02.024Z-7c00e5cc",
+      "evalId": "rock-paper-scissors",
+      "trial": 1,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:02.025Z",
+      "finishedAt": "2026-09-08T18:20:06.461Z",
+      "wallMs": 4436,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-02.024Z-7c00e5cc/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0090116,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-02.024Z-7c00e5cc/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-05.961Z-704e22ae",
+      "evalId": "rock-paper-scissors",
+      "trial": 2,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:05.961Z",
+      "finishedAt": "2026-09-08T18:20:10.127Z",
+      "wallMs": 4166,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-05.961Z-704e22ae/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 13016,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00081328,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-05.961Z-704e22ae/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-06.510Z-3f78a623",
+      "evalId": "rock-paper-scissors",
+      "trial": 2,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:06.510Z",
+      "finishedAt": "2026-09-08T18:20:13.524Z",
+      "wallMs": 7014,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-06.510Z-3f78a623/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.009007600000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-06.510Z-3f78a623/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-10.182Z-c461920e",
+      "evalId": "rock-paper-scissors",
+      "trial": 3,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:10.182Z",
+      "finishedAt": "2026-09-08T18:20:13.997Z",
+      "wallMs": 3815,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-10.182Z-c461920e/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12825,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007750800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-10.182Z-c461920e/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-13.577Z-98b0aa5d",
+      "evalId": "rock-paper-scissors",
+      "trial": 3,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:13.578Z",
+      "finishedAt": "2026-09-08T18:20:18.025Z",
+      "wallMs": 4447,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-13.577Z-98b0aa5d/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14379,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0090036,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-13.577Z-98b0aa5d/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-14.037Z-8156ed74",
+      "evalId": "rock-paper-scissors",
+      "trial": 4,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:14.037Z",
+      "finishedAt": "2026-09-08T18:20:17.741Z",
+      "wallMs": 3704,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-14.037Z-8156ed74/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12829,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007758800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-14.037Z-8156ed74/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-17.799Z-8f59dda6",
+      "evalId": "rock-paper-scissors",
+      "trial": 5,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:17.799Z",
+      "finishedAt": "2026-09-08T18:20:22.957Z",
+      "wallMs": 5158,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-17.799Z-8f59dda6/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12825,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007750800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-17.799Z-8f59dda6/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-18.067Z-0d539e09",
+      "evalId": "rock-paper-scissors",
+      "trial": 4,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:18.067Z",
+      "finishedAt": "2026-09-08T18:20:22.187Z",
+      "wallMs": 4120,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-18.067Z-0d539e09/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0090116,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-18.067Z-0d539e09/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-22.244Z-a94aa32e",
+      "evalId": "rock-paper-scissors",
+      "trial": 5,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:22.244Z",
+      "finishedAt": "2026-09-08T18:20:26.032Z",
+      "wallMs": 3788,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-22.244Z-a94aa32e/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14385,
+        "outputTokens": 5,
+        "cacheReadTokens": 14080,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.003486,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-22.244Z-a94aa32e/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-23.003Z-72e294d1",
+      "evalId": "rock-paper-scissors",
+      "trial": 6,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:23.004Z",
+      "finishedAt": "2026-09-08T18:20:26.522Z",
+      "wallMs": 3518,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-23.003Z-72e294d1/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12825,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007750800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-23.003Z-72e294d1/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-26.092Z-7d5c0470",
+      "evalId": "rock-paper-scissors",
+      "trial": 6,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:26.092Z",
+      "finishedAt": "2026-09-08T18:20:30.076Z",
+      "wallMs": 3984,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-26.092Z-7d5c0470/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0090116,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-26.092Z-7d5c0470/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-26.562Z-09da9898",
+      "evalId": "rock-paper-scissors",
+      "trial": 7,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:26.563Z",
+      "finishedAt": "2026-09-08T18:20:30.253Z",
+      "wallMs": 3690,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-26.562Z-09da9898/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12827,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00077548,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-26.562Z-09da9898/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-30.118Z-fa9c4b18",
+      "evalId": "rock-paper-scissors",
+      "trial": 7,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:30.118Z",
+      "finishedAt": "2026-09-08T18:20:34.191Z",
+      "wallMs": 4073,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-30.118Z-fa9c4b18/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.009007600000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-30.118Z-fa9c4b18/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-30.293Z-4b5b46c5",
+      "evalId": "rock-paper-scissors",
+      "trial": 8,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:30.294Z",
+      "finishedAt": "2026-09-08T18:20:36.056Z",
+      "wallMs": 5762,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-30.293Z-4b5b46c5/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12825,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007750800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-30.293Z-4b5b46c5/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-34.248Z-98763264",
+      "evalId": "rock-paper-scissors",
+      "trial": 8,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:34.248Z",
+      "finishedAt": "2026-09-08T18:20:38.722Z",
+      "wallMs": 4474,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-34.248Z-98763264/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14379,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0090036,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-20-34.248Z-98763264/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-36.114Z-eb4833c4",
+      "evalId": "rock-paper-scissors",
+      "trial": 9,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:36.114Z",
+      "finishedAt": "2026-09-08T18:20:39.939Z",
+      "wallMs": 3825,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-36.114Z-eb4833c4/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12825,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007750800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-36.114Z-eb4833c4/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-38.783Z-dea5319e",
+      "evalId": "rock-paper-scissors",
+      "trial": 9,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:38.783Z",
+      "finishedAt": "2026-09-08T18:20:42.767Z",
+      "wallMs": 3984,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-38.783Z-dea5319e/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 14080,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.003478,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-38.783Z-dea5319e/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-39.996Z-5a15528c",
+      "evalId": "rock-paper-scissors",
+      "trial": 10,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:39.997Z",
+      "finishedAt": "2026-09-08T18:20:44.401Z",
+      "wallMs": 4404,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-39.996Z-5a15528c/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12829,
+        "outputTokens": 6,
+        "cacheReadTokens": 12032,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00040724,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-39.996Z-5a15528c/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-42.827Z-a9a55845",
+      "evalId": "rock-paper-scissors",
+      "trial": 10,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:42.828Z",
+      "finishedAt": "2026-09-08T18:20:47.556Z",
+      "wallMs": 4728,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-42.827Z-a9a55845/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14385,
+        "outputTokens": 5,
+        "cacheReadTokens": 14080,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.003486,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-42.827Z-a9a55845/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-44.440Z-036cfc16",
+      "evalId": "rock-paper-scissors",
+      "trial": 11,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:44.440Z",
+      "finishedAt": "2026-09-08T18:20:48.362Z",
+      "wallMs": 3922,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-44.440Z-036cfc16/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12829,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0007758800000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-44.440Z-036cfc16/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-47.606Z-43618ecb",
+      "evalId": "rock-paper-scissors",
+      "trial": 11,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:47.607Z",
+      "finishedAt": "2026-09-08T18:20:51.427Z",
+      "wallMs": 3820,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-47.606Z-43618ecb/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14385,
+        "outputTokens": 5,
+        "cacheReadTokens": 14080,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.003486,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-47.606Z-43618ecb/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-48.414Z-4048e759",
+      "evalId": "rock-paper-scissors",
+      "trial": 12,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-luna",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:48.414Z",
+      "finishedAt": "2026-09-08T18:20:52.078Z",
+      "wallMs": 3664,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-48.414Z-4048e759/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 12827,
+        "outputTokens": 6,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.00077548,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-luna",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 1.2
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-20-48.414Z-4048e759/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-20-51.485Z-70f5c252",
+      "evalId": "rock-paper-scissors",
+      "trial": 12,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "9adfc66e7b66d29930b0b8994161a1b3e340d6a99e19d23f16eb581a2a8c4baa",
+        "evalSha256": "7cccddffc44dfffec47e2e4a7abc977b152fa08695332ea3bd5a0704dfba901c",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-terra",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:20:51.485Z",
+      "finishedAt": "2026-09-08T18:20:55.496Z",
+      "wallMs": 4011,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-20-51.485Z-70f5c252/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 11008,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.009007600000000001,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-terra",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 12
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-20-51.485Z-70f5c252/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-31.247Z-fecdb7f0",
+      "evalId": "rock-paper-scissors",
+      "trial": 1,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:31.248Z",
+      "finishedAt": "2026-09-08T18:25:33.358Z",
+      "wallMs": 2110,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-31.247Z-fecdb7f0/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 258,
+        "outputTokens": 75,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 69,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 86
+        },
+        "costUsd": 0.001601,
+        "apiMs": 2143,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001601,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-25-31.247Z-fecdb7f0/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-32.232Z-10a7910a",
+      "evalId": "rock-paper-scissors",
+      "trial": 1,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:32.233Z",
+      "finishedAt": "2026-09-08T18:25:38.073Z",
+      "wallMs": 5840,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-32.232Z-10a7910a/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.017542400000000003,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-32.232Z-10a7910a/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-33.400Z-292971c5",
+      "evalId": "rock-paper-scissors",
+      "trial": 2,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:33.401Z",
+      "finishedAt": "2026-09-08T18:25:35.355Z",
+      "wallMs": 1954,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-33.400Z-292971c5/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 8,
+            "sha256": "493a15e7bda88b07272071cbcfd3cb05920b999872b6f3cfa6e4d16712dbf434"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 66,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 60,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 77
+        },
+        "costUsd": 0.0017139999999999998,
+        "apiMs": 2143,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0017139999999999998,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "scissors",
+      "choice": "scissors",
+      "trace": "2026-09-08T18-25-33.400Z-292971c5/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-35.405Z-15cf4246",
+      "evalId": "rock-paper-scissors",
+      "trial": 3,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:35.405Z",
+      "finishedAt": "2026-09-08T18:25:37.446Z",
+      "wallMs": 2041,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-35.405Z-15cf4246/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 68,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 62,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 80
+        },
+        "costUsd": 0.001729,
+        "apiMs": 2109,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001729,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-35.405Z-15cf4246/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-37.497Z-b3bf38d3",
+      "evalId": "rock-paper-scissors",
+      "trial": 4,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:37.497Z",
+      "finishedAt": "2026-09-08T18:25:39.445Z",
+      "wallMs": 1948,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-37.497Z-b3bf38d3/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 67,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 61,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 78
+        },
+        "costUsd": 0.001719,
+        "apiMs": 2127,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001719,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-37.497Z-b3bf38d3/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-38.123Z-d4fcfd2c",
+      "evalId": "rock-paper-scissors",
+      "trial": 2,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:38.123Z",
+      "finishedAt": "2026-09-08T18:25:42.572Z",
+      "wallMs": 4449,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-38.123Z-d4fcfd2c/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 6528,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0341312,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-38.123Z-d4fcfd2c/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-39.494Z-175f6fe5",
+      "evalId": "rock-paper-scissors",
+      "trial": 5,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:39.494Z",
+      "finishedAt": "2026-09-08T18:25:41.946Z",
+      "wallMs": 2452,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-39.494Z-175f6fe5/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 61,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 55,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 72
+        },
+        "costUsd": 0.001689,
+        "apiMs": 2116,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001689,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-39.494Z-175f6fe5/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-41.995Z-afc606da",
+      "evalId": "rock-paper-scissors",
+      "trial": 6,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:41.995Z",
+      "finishedAt": "2026-09-08T18:25:43.965Z",
+      "wallMs": 1970,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-41.995Z-afc606da/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 81,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 75,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 93
+        },
+        "costUsd": 0.001794,
+        "apiMs": 2445,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001794,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-41.995Z-afc606da/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-42.615Z-168e9440",
+      "evalId": "rock-paper-scissors",
+      "trial": 3,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:42.615Z",
+      "finishedAt": "2026-09-08T18:25:47.107Z",
+      "wallMs": 4492,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-42.615Z-168e9440/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14379,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0175264,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-42.615Z-168e9440/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-44.015Z-2d1c7fc5",
+      "evalId": "rock-paper-scissors",
+      "trial": 7,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:44.016Z",
+      "finishedAt": "2026-09-08T18:25:45.914Z",
+      "wallMs": 1898,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-44.015Z-2d1c7fc5/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 85,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 79,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 97
+        },
+        "costUsd": 0.001814,
+        "apiMs": 2170,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001814,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-44.015Z-2d1c7fc5/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-45.963Z-9783c3a5",
+      "evalId": "rock-paper-scissors",
+      "trial": 8,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:45.963Z",
+      "finishedAt": "2026-09-08T18:25:47.620Z",
+      "wallMs": 1657,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-45.963Z-9783c3a5/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 65,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 59,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 77
+        },
+        "costUsd": 0.0017139999999999998,
+        "apiMs": 1940,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0017139999999999998,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-25-45.963Z-9783c3a5/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-47.161Z-d50f92d3",
+      "evalId": "rock-paper-scissors",
+      "trial": 4,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:47.161Z",
+      "finishedAt": "2026-09-08T18:25:52.128Z",
+      "wallMs": 4967,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-47.161Z-d50f92d3/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14173,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.016702400000000003,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-47.161Z-d50f92d3/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-47.662Z-4ac0d5d6",
+      "evalId": "rock-paper-scissors",
+      "trial": 9,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:47.663Z",
+      "finishedAt": "2026-09-08T18:25:49.475Z",
+      "wallMs": 1812,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-47.662Z-4ac0d5d6/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 67,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 61,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 78
+        },
+        "costUsd": 0.001719,
+        "apiMs": 1969,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001719,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-25-47.662Z-4ac0d5d6/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-49.524Z-ccdf0058",
+      "evalId": "rock-paper-scissors",
+      "trial": 10,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:49.525Z",
+      "finishedAt": "2026-09-08T18:25:51.302Z",
+      "wallMs": 1777,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-49.524Z-ccdf0058/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 63,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 57,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 75
+        },
+        "costUsd": 0.001704,
+        "apiMs": 2044,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001704,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-25-49.524Z-ccdf0058/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-51.354Z-faa112f9",
+      "evalId": "rock-paper-scissors",
+      "trial": 11,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:51.354Z",
+      "finishedAt": "2026-09-08T18:25:53.221Z",
+      "wallMs": 1867,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-51.354Z-faa112f9/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 67,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 61,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 79
+        },
+        "costUsd": 0.0017239999999999998,
+        "apiMs": 2282,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0017239999999999998,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-51.354Z-faa112f9/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-52.174Z-7975ea8a",
+      "evalId": "rock-paper-scissors",
+      "trial": 5,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:52.175Z",
+      "finishedAt": "2026-09-08T18:25:56.118Z",
+      "wallMs": 3943,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-52.174Z-7975ea8a/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.017534400000000002,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-52.174Z-7975ea8a/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-53.270Z-7677b611",
+      "evalId": "rock-paper-scissors",
+      "trial": 12,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "claude-cli",
+        "requested": "claude-haiku-4-5-20251001",
+        "resolved": "claude-haiku-4-5-20251001",
+        "resolutionBasis": "provider-reported",
+        "cliVersion": "2.1.263 (Claude Code)"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:53.271Z",
+      "finishedAt": "2026-09-08T18:25:55.293Z",
+      "wallMs": 2022,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-53.270Z-7677b611/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 4,
+            "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 2,
+        "inputTokens": 416,
+        "outputTokens": 85,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 79,
+        "modelOutputTokens": {
+          "claude-haiku-4-5-20251001": 97
+        },
+        "costUsd": 0.001814,
+        "apiMs": 2239,
+        "lastSessionModelTurns": 1,
+        "resolvedModel": "claude-haiku-4-5-20251001",
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.001814,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "response": "rock",
+      "choice": "rock",
+      "trace": "2026-09-08T18-25-53.270Z-7677b611/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-25-56.173Z-5f9bb98b",
+      "evalId": "rock-paper-scissors",
+      "trial": 6,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:25:56.173Z",
+      "finishedAt": "2026-09-08T18:26:01.297Z",
+      "wallMs": 5124,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-25-56.173Z-5f9bb98b/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14385,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0175504,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-25-56.173Z-5f9bb98b/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-01.350Z-45c1b11e",
+      "evalId": "rock-paper-scissors",
+      "trial": 7,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:01.351Z",
+      "finishedAt": "2026-09-08T18:26:06.050Z",
+      "wallMs": 4699,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-01.350Z-45c1b11e/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14385,
+        "outputTokens": 5,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.05764,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-01.350Z-45c1b11e/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-06.105Z-64fd65cd",
+      "evalId": "rock-paper-scissors",
+      "trial": 8,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:06.105Z",
+      "finishedAt": "2026-09-08T18:26:10.545Z",
+      "wallMs": 4440,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-06.105Z-64fd65cd/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.017534400000000002,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-06.105Z-64fd65cd/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-10.602Z-f581ccaf",
+      "evalId": "rock-paper-scissors",
+      "trial": 9,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:10.602Z",
+      "finishedAt": "2026-09-08T18:26:15.194Z",
+      "wallMs": 4592,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-10.602Z-f581ccaf/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.017542400000000003,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-10.602Z-f581ccaf/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-15.248Z-27a2388b",
+      "evalId": "rock-paper-scissors",
+      "trial": 10,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:15.248Z",
+      "finishedAt": "2026-09-08T18:26:19.441Z",
+      "wallMs": 4193,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-15.248Z-27a2388b/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14383,
+        "outputTokens": 5,
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.017542400000000003,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-15.248Z-27a2388b/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-19.493Z-77e9dbd1",
+      "evalId": "rock-paper-scissors",
+      "trial": 11,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:19.493Z",
+      "finishedAt": "2026-09-08T18:26:25.811Z",
+      "wallMs": 6318,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-19.493Z-77e9dbd1/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 6528,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0341232,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-19.493Z-77e9dbd1/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-08T18-26-25.862Z-fb6b451e",
+      "evalId": "rock-paper-scissors",
+      "trial": 12,
+      "format": "choice",
+      "assessment": {
+        "type": "distribution",
+        "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+      },
+      "status": "submitted",
+      "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+      "instructions": "Answer the user’s question directly.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+        "dirty": true,
+        "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+        "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+        "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "codex-cli",
+        "requested": "gpt-5.6-sol",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "codex-cli 0.152.0"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "medium",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [],
+        "limits": {
+          "maxTurns": 1,
+          "maxWallMs": 900000,
+          "maxArtifactBytes": 10000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-08T18:26:25.863Z",
+      "finishedAt": "2026-09-08T18:26:31.224Z",
+      "wallMs": 5361,
+      "turns": {
+        "harness": 1,
+        "drafts": 0,
+        "submissions": 1,
+        "providerRequests": 1,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-08T18-26-25.862Z-fb6b451e/artifact/result.txt",
+        "note": null,
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 5,
+            "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 1,
+        "requests": 1,
+        "retries": 0,
+        "costReported": false,
+        "assistantMessages": 0,
+        "inputTokens": 14381,
+        "outputTokens": 5,
+        "cacheReadTokens": 6528,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 0,
+        "costUsd": null,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0341232,
+        "basis": "api-equivalent-estimate",
+        "currency": "USD",
+        "subscriptionCharge": false,
+        "model": "gpt-5.6-sol",
+        "formula": "(uncachedInput * inputRate + cacheRead * cachedInputRate + cacheWrite * cacheWriteRate + output * outputRate) / 1000000",
+        "pricing": {
+          "asOf": "2026-09-07",
+          "source": "https://developers.openai.com/api/docs/models/compare",
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        "assumptions": [
+          "Reasoning tokens are included in output, not billed twice",
+          "No tier or long-context surcharge",
+          "Not subscription spend"
+        ]
+      },
+      "response": "paper",
+      "choice": "paper",
+      "trace": "2026-09-08T18-26-25.862Z-fb6b451e/events.json"
+    }
+  ]
+}

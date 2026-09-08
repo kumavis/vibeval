@@ -1,0 +1,1 @@
+Choose one of "rock", "paper", or "scissors". Respond with only the chosen word.

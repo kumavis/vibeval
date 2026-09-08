@@ -40,6 +40,13 @@ export async function publishRun(evalDirectory, runDirectory) {
       await cp(source, join(stage, 'artifact'), { recursive: true });
       published.artifact.entry = `${record.id}/artifact/${record.artifact.entry}`;
     } else published.artifact = null;
+    if (record.evaluation?.path) {
+      if (record.evaluation.path !== 'evaluation.json') throw new Error('Unsupported evaluation path');
+      const content = await readFile(join(runDirectory, 'evaluation.json'));
+      if (createHash('sha256').update(content).digest('hex') !== record.evaluation.sha256) throw new Error('Evaluation changed since scoring');
+      await writeFile(join(stage, 'evaluation.json'), content);
+      published.evaluation.path = `${record.id}/evaluation.json`;
+    }
     // Failed / exhausted runs can be shipped too, but never show a draft as final.
     published.trace = `${record.id}/events.json`;
     await writeFile(join(stage, 'events.json'), JSON.stringify(events));

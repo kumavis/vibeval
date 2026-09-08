@@ -1,0 +1,64 @@
+{
+  "pilot": true,
+  "effort": "medium",
+  "independentDevelopmentRunsPerModel": 1,
+  "results": [
+    {
+      "model": "gpt-5.6-terra",
+      "score": 61.29528683075731,
+      "episodes": 128,
+      "complete": 10,
+      "outcomes": {
+        "complete": 10,
+        "deadline": 26,
+        "captured": 74,
+        "exhausted": 18
+      },
+      "standardError": 2.1594769060475225,
+      "responses": 21,
+      "practiceSimulations": 184,
+      "wallSeconds": 510.933,
+      "estimatedUsd": 0.5618791999999999,
+      "suiteSha256": "35466573a8bdb93111934e8d6cbfac2d942380a9575e26882bdb79dca2a724ab",
+      "invalidJsonResponses": 0,
+      "retries": 0,
+      "status": "submitted"
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "score": 76.2567838746272,
+      "episodes": 128,
+      "complete": 43,
+      "outcomes": {
+        "exhausted": 11,
+        "deadline": 74,
+        "complete": 43
+      },
+      "standardError": 1.9545845288892971,
+      "responses": 29,
+      "practiceSimulations": 160,
+      "wallSeconds": 1146.728,
+      "estimatedUsd": 1.5964344,
+      "suiteSha256": "35466573a8bdb93111934e8d6cbfac2d942380a9575e26882bdb79dca2a724ab",
+      "invalidJsonResponses": 0,
+      "retries": 0,
+      "status": "submitted"
+    }
+  ],
+  "pairedDifference": {
+    "description": "Sol minus Terra percentage points; bootstrap across paired scenarios, not across independent controller-development runs",
+    "mean": 14.96149704386988,
+    "scenarioBootstrap95": [
+      9.895265600957043,
+      20.26082121716605
+    ]
+  },
+  "harnessVersion": "submission-v2",
+  "limits": {
+    "primary": "responses",
+    "maxResponses": 30,
+    "maxFallbackSeconds": 7200,
+    "maxRequestSeconds": 900,
+    "maxPracticeEpisodes": 192
+  }
+}

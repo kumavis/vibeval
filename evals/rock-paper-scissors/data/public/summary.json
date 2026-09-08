@@ -1,0 +1,39 @@
+{
+  "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+  "effort": "medium",
+  "optionOrder": [
+    "rock",
+    "paper",
+    "scissors"
+  ],
+  "groups": {
+    "gpt-5.6-luna": {
+      "attempts": 12,
+      "rock": 0,
+      "paper": 0,
+      "scissors": 12,
+      "invalid": 0
+    },
+    "gpt-5.6-terra": {
+      "attempts": 12,
+      "rock": 11,
+      "paper": 1,
+      "scissors": 0,
+      "invalid": 0
+    },
+    "claude-haiku-4-5-20251001": {
+      "attempts": 12,
+      "rock": 5,
+      "paper": 6,
+      "scissors": 1,
+      "invalid": 0
+    },
+    "gpt-5.6-sol": {
+      "attempts": 12,
+      "rock": 0,
+      "paper": 12,
+      "scissors": 0,
+      "invalid": 0
+    }
+  }
+}

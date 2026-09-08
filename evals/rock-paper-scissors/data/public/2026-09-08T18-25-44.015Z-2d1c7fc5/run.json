@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08T18-25-44.015Z-2d1c7fc5",
+  "evalId": "rock-paper-scissors",
+  "trial": 7,
+  "format": "choice",
+  "assessment": {
+    "type": "distribution",
+    "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+  },
+  "status": "submitted",
+  "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+  "instructions": "Answer the user’s question directly.",
+  "harness": {
+    "version": "submission-v2",
+    "commit": "a90758ee259b2e6f38b3e6446c1358e7265eadca",
+    "dirty": true,
+    "sourceSha256": "07c03e830c9cd4cf8b7289dfa8385b11c6e88567bab153acbf68eb2c26f120bd",
+    "evalSha256": "fa1bef9c9a703681a4d1da793ce33a3d11b6ce7d80e099c07bba3fd20b552511",
+    "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "claude-cli",
+    "requested": "claude-haiku-4-5-20251001",
+    "resolved": "claude-haiku-4-5-20251001",
+    "resolutionBasis": "provider-reported",
+    "cliVersion": "2.1.263 (Claude Code)"
+  },
+  "settings": {
+    "budgetPolicy": "turns-primary",
+    "structuredActions": false,
+    "providerRequestTimeoutMs": 300000,
+    "effort": "medium",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [],
+    "limits": {
+      "maxTurns": 1,
+      "maxWallMs": 900000,
+      "maxArtifactBytes": 10000,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-08T18:25:44.016Z",
+  "finishedAt": "2026-09-08T18:25:45.914Z",
+  "wallMs": 1898,
+  "turns": {
+    "harness": 1,
+    "drafts": 0,
+    "submissions": 1,
+    "providerRequests": 1,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "text",
+    "entry": "result.txt",
+    "note": null,
+    "files": [
+      {
+        "path": "result.txt",
+        "bytes": 5,
+        "sha256": "382635c9325bf3273d195ff1b8a44e5b11afd7d97addeb8863ea35feb98c1a07"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 1,
+    "requests": 1,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 2,
+    "inputTokens": 416,
+    "outputTokens": 85,
+    "cacheReadTokens": 0,
+    "cacheWriteTokens": 0,
+    "thinkingTokens": 79,
+    "modelOutputTokens": {
+      "claude-haiku-4-5-20251001": 97
+    },
+    "costUsd": 0.001814,
+    "apiMs": 2170,
+    "lastSessionModelTurns": 1,
+    "resolvedModel": "claude-haiku-4-5-20251001",
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.001814,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  },
+  "response": "paper",
+  "choice": "paper"
+}

@@ -42,3 +42,8 @@ test('reuses one CLI process across turns and replays the transcript after a cra
   assert.equal(stats.cacheReadTokens, 150);
   assert.ok(Math.abs(stats.costUsd - 0.03) < 1e-9);
 });
+
+test('single-turn sampling disables retries after a process failure',async t=>{
+ const p=createClaudeCliProvider({systemPrompt:'Answer directly.',responseFormat:'text',retryOnFailure:false});t.after(()=>p.dispose());
+ await assert.rejects(p.requestText(['DIE']));assert.equal(p.stats().requests,1);assert.equal(p.stats().retries,0);assert.equal(p.history().length,0);
+});
