@@ -1,0 +1,579 @@
+import { execSync } from 'node:child_process';
+import {
+  appendFile,
+  mkdir,
+  readdir,
+  readFile,
+  rename,
+  writeFile,
+} from 'node:fs/promises';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { pathToFileURL } from 'node:url';
+import { styleText } from 'node:util';
+import { createAgent } from '@vibeval/runner/agent.js';
+import {
+  selectReplayEvents,
+  stripUnsuccessfulModelTails,
+  validateZorkCommand,
+} from './run-safety.js';
+import { setup } from './zork.js';
+import { probeScore } from './score-probe.js';
+
+try {
+  process.loadEnvFile();
+} catch {
+  // No .env file — rely on the ambient environment.
+}
+
+// LOG_DIR env lets the eval runner group a batch's logs in one directory.
+const LOG_DIR = process.env.LOG_DIR
+  ? pathToFileURL(process.env.LOG_DIR.replace(/\/?$/, '/'))
+  : new URL('../logs/', import.meta.url);
+
+// Eval knobs: stop cleanly after this many game moves (MAX_MOVES), pin the
+// game's RNG (ZORK_SEED), and tag the run's logs (RUN_TAG).
+const MOVE_BUDGET = Number(process.env.MAX_MOVES) || null;
+const configuredModelTurnBudget = Number(process.env.MAX_MODEL_TURNS);
+const MODEL_TURN_BUDGET =
+  Number.isFinite(configuredModelTurnBudget) && configuredModelTurnBudget > 0
+    ? configuredModelTurnBudget
+    : MOVE_BUDGET === null
+      ? null
+      : MOVE_BUDGET * 2;
+const SEED =
+  process.env.ZORK_SEED !== undefined
+    ? Number(process.env.ZORK_SEED)
+    : undefined;
+const RUN_TAG = process.env.RUN_TAG || null;
+
+// Consecutive turns without a submitted command before giving up.
+const MAX_IDLE_TURNS = 5;
+// Consecutive model turns whose submitted command is unsafe for the Z-machine.
+const MAX_INVALID_COMMAND_TURNS = 5;
+// Consecutive failed model requests (each already retried by the SDK)
+// before giving up.
+const MAX_REQUEST_FAILURES = 5;
+
+// Zork's parser rejections (bad grammar/vocabulary), as opposed to legal
+// commands the world merely refuses ("You can't go that way").
+const PARSER_REJECTION =
+  /I don't know the word|in a way that I don't understand|That sentence isn't one I recognize|There was no verb in that|noun missing in that sentence|I beg your pardon/;
+// Legal commands the world refuses — exploration cost, not model error.
+const WORLD_REFUSAL =
+  /You can't go that way|There is a wall|You can't see any|You can't do that|Which .* do you mean/;
+const DARKNESS = /pitch black/;
+const DEATH = /You have died|You are dead/;
+
+const systemPrompt = await readFile(
+  new URL('system-prompt.txt', import.meta.url),
+  'utf8',
+);
+
+await main();
+// Backstop: exit even if something still holds the event loop open. Every
+// log write is awaited before main() returns, so nothing is lost.
+process.exit(0);
+
+async function main() {
+  const agent = createAgent({ systemPrompt });
+  console.log(
+    styleText('blue', `Player backend: ${agent.name} (${agent.model})`),
+  );
+
+  const zork = await setup({ seed: SEED });
+
+  // The interpreter halts when the game truly ends (e.g. the model confirms
+  // QUIT, or dies past the end-of-game prompt). In-game text like SCORE
+  // output is never treated as the end.
+  let halted = false;
+  zork.events.on('quit', () => {
+    halted = true;
+  });
+
+  const runStats = {
+    startedAt: Date.now(),
+    modelTurns: 0,
+    commands: 0,
+    parserRejections: 0,
+    worldRefusals: 0,
+    darknessWarnings: 0,
+    deaths: 0,
+    gameRestarts: 0,
+    score: null,
+    maxScore: null,
+    moves: null,
+    // Moves spent in earlier lives: the in-game counter resets on restart,
+    // so budgets and reports use movesBeforeRestarts + moves.
+    movesBeforeRestarts: 0,
+    totalMoves: 0,
+    // Staleness: the longest stretch of commands with no score change.
+    commandsAtLastScoreChange: 0,
+    maxCommandsWithoutScore: 0,
+    // Baseline for estimating moves across turns the game would not answer
+    // SCORE on (the Loud Room echoes it back), plus how often that happened.
+    commandsAtLastProbe: 0,
+    parserRejectionsAtLastProbe: 0,
+    scoreProbeFailures: 0,
+    turnLatenciesMs: [],
+  };
+
+  // Machine-readable event log for offline analysis (metrics, state-graph
+  // reconstruction) — one JSON object per line. The terminal log stays for
+  // humans. Writes are chained so lines never interleave.
+  // A run in flight writes a .partial file and only takes its final name
+  // once it has spent its move budget, so an interrupted run is never
+  // mistaken for a result — on disk or in git.
+  await mkdir(LOG_DIR, { recursive: true });
+  // An interrupted run leaves a .partial log. Because the game is seeded and
+  // deterministic, replaying its commands rebuilds the exact game state, so
+  // the run continues in that same log instead of starting over.
+  const resumeFrom = RUN_TAG ? await findPartialLog(LOG_DIR, RUN_TAG) : null;
+  const timestamp = new Date().toISOString().replaceAll(':', '-');
+  const eventLogUrl =
+    resumeFrom ??
+    new URL(`run-${timestamp}${RUN_TAG ? `-${RUN_TAG}` : ''}.jsonl`, LOG_DIR);
+  const partialLogUrl = new URL(`${eventLogUrl.href}.partial`);
+  let eventLogChain = Promise.resolve();
+  const logEvent = (type, data) => {
+    const line = `${JSON.stringify({ t: Date.now(), type, ...data })}\n`;
+    eventLogChain = eventLogChain.then(() => appendFile(partialLogUrl, line));
+  };
+  logEvent(resumeFrom ? 'run_resume' : 'run_start', {
+    provider: agent.name,
+    model: agent.model,
+    tag: RUN_TAG,
+    seed: SEED ?? null,
+    moveBudget: MOVE_BUDGET,
+    modelTurnBudget: MODEL_TURN_BUDGET,
+    harnessCommit: gitCommit(),
+  });
+  console.log(styleText('blue', `Event log: ${partialLogUrl.pathname}`));
+
+  let aborted = false;
+  // SIGTERM matters too: `timeout`-bounded benchmark runs end with it.
+  for (const signal of ['SIGINT', 'SIGTERM']) {
+    process.on(signal, async () => {
+      console.log(`Caught ${signal}, exiting...`);
+      aborted = true;
+      printRunStats(runStats, agent);
+      logEvent('run_end', {
+        endReason: signal,
+        budgetReached: false,
+        runStats,
+        usage: agent.stats?.() ?? null,
+      });
+      await eventLogChain;
+      await writeDebugLog(agent, runStats);
+      process.exit(0);
+    });
+  }
+
+  // Boot the game; the intro is the first thing the model sees. After that,
+  // every game output is the result of a command the model submitted.
+  const intro = await captureOutput(zork, () => zork.start());
+  printGame(intro);
+  let pendingOutputs = [toModelText(intro)];
+
+  if (resumeFrom) {
+    pendingOutputs = await replayInto(
+      zork,
+      agent,
+      runStats,
+      partialLogUrl,
+      toModelText(intro),
+    );
+  }
+  let idleTurns = 0;
+  let invalidCommandTurns = 0;
+  let requestFailures = 0;
+  // Whether the run ended by spending its move budget, as opposed to a
+  // signal or error. Only budget-complete runs are comparable in a report.
+  let budgetReached = false;
+  let endReason = 'stopped';
+
+  // The finally releases provider child processes (claude-cli), or the
+  // event loop keeps the harness alive after a fatal error.
+  try {
+    while (!aborted) {
+      if (
+        MODEL_TURN_BUDGET !== null &&
+        runStats.modelTurns >= MODEL_TURN_BUDGET
+      ) {
+        console.log(
+          styleText(
+            'yellow',
+            `Model-turn budget of ${MODEL_TURN_BUDGET} reached, ending run.`,
+          ),
+        );
+        endReason = 'model_turn_budget';
+        break;
+      }
+
+      let turn;
+      const requestStartedAt = Date.now();
+      try {
+        turn = await agent.requestCommands(pendingOutputs);
+        requestFailures = 0;
+      } catch (err) {
+        requestFailures += 1;
+        console.warn(
+          `>>> Model request failed (${requestFailures}/${MAX_REQUEST_FAILURES}): ${err.message}`,
+        );
+        if (requestFailures >= MAX_REQUEST_FAILURES) {
+          await writeDebugLog(agent);
+          throw err;
+        }
+        await sleep(2 ** requestFailures * 1000);
+        continue;
+      }
+
+      const { commands, commentary } = turn;
+      pendingOutputs = [];
+      runStats.modelTurns += 1;
+      runStats.turnLatenciesMs.push(Date.now() - requestStartedAt);
+      logEvent('model_turn', {
+        turn: runStats.modelTurns,
+        latencyMs: Date.now() - requestStartedAt,
+        commands,
+        commentary,
+      });
+
+      if (commentary) {
+        console.log(styleText('magenta', `Player: ${commentary}`));
+      }
+
+      if (commands.length === 0) {
+        idleTurns += 1;
+        if (idleTurns >= MAX_IDLE_TURNS) {
+          await writeDebugLog(agent);
+          throw new Error(
+            `Model produced no command for ${idleTurns} turns in a row.`,
+          );
+        }
+        continue;
+      }
+      idleTurns = 0;
+
+      let restarted = false;
+      for (const command of commands) {
+        if (restarted) {
+          pendingOutputs.push('(command skipped: the game restarted)');
+          continue;
+        }
+        if (command === '') {
+          pendingOutputs.push(
+            '(the submit_command call did not include a command)',
+          );
+          continue;
+        }
+
+        const validationError = validateZorkCommand(command);
+        if (validationError !== null) {
+          invalidCommandTurns += 1;
+          console.warn(`>>> Invalid Zork command: ${validationError}`);
+          logEvent('command_rejected', {
+            turn: runStats.modelTurns,
+            command,
+            reason: validationError,
+          });
+          pendingOutputs.push(
+            `(command rejected: ${validationError}; submit one short ASCII command)`,
+          );
+          if (invalidCommandTurns >= MAX_INVALID_COMMAND_TURNS) {
+            throw new Error(
+              `Model produced an invalid command for ${invalidCommandTurns} turns in a row.`,
+            );
+          }
+          continue;
+        }
+
+        console.log(styleText('magenta', `> ${command}`));
+
+        let rawMessages;
+        try {
+          rawMessages = await zork.input(command);
+        } catch (err) {
+          console.warn(`>>> Zork error: ${err.message}`);
+          logEvent('command_error', {
+            turn: runStats.modelTurns,
+            command,
+            error: err.message,
+          });
+          throw new Error(
+            `Zork failed while running ${JSON.stringify(command)}: ${err.message}`,
+            { cause: err },
+          );
+        }
+        invalidCommandTurns = 0;
+
+        let output = toModelText(rawMessages);
+        printGame(rawMessages);
+        runStats.commands += 1;
+        const rejected = PARSER_REJECTION.test(output);
+        const refused = WORLD_REFUSAL.test(output);
+        if (rejected) runStats.parserRejections += 1;
+        if (refused) runStats.worldRefusals += 1;
+        if (DARKNESS.test(output)) runStats.darknessWarnings += 1;
+        if (DEATH.test(output)) runStats.deaths += 1;
+        logEvent('command', {
+          turn: runStats.modelTurns,
+          command,
+          response: output,
+          parserRejection: rejected,
+          worldRefusal: refused,
+        });
+
+        if (halted) {
+          console.log(styleText('green', 'Game over, restarting...'));
+          const restartIntro = await captureOutput(zork, () => zork.restart());
+          halted = false;
+          restarted = true;
+          runStats.gameRestarts += 1;
+          runStats.movesBeforeRestarts += runStats.moves ?? 0;
+          runStats.moves = 0;
+          runStats.score = null;
+          logEvent('game_restart', { turn: runStats.modelTurns });
+          printGame(restartIntro);
+          output += `\n(The game has ended and restarted from the beginning.)\n${toModelText(restartIntro)}`;
+        }
+
+        pendingOutputs.push(output);
+      }
+
+      await probeScore(zork, runStats, restarted, logEvent, toModelText);
+
+      if (MOVE_BUDGET !== null && runStats.totalMoves >= MOVE_BUDGET) {
+        console.log(
+          styleText(
+            'green',
+            `Move budget of ${MOVE_BUDGET} reached, ending run.`,
+          ),
+        );
+        budgetReached = true;
+        endReason = 'budget';
+        break;
+      }
+    }
+  } catch (err) {
+    endReason = 'error';
+    logEvent('run_error', { error: err.message });
+    throw err;
+  } finally {
+    agent.dispose?.();
+    printRunStats(runStats, agent);
+    logEvent('run_end', {
+      endReason,
+      budgetReached,
+      runStats,
+      usage: agent.stats?.() ?? null,
+    });
+    await eventLogChain;
+    if (budgetReached) {
+      await compactCompletedLog(partialLogUrl);
+      await rename(partialLogUrl, eventLogUrl);
+    }
+  }
+}
+
+function printRunStats(runStats, agent) {
+  const wallSeconds = Math.round((Date.now() - runStats.startedAt) / 1000);
+  const latencies = [...runStats.turnLatenciesMs].sort((a, b) => a - b);
+  const pctile = (p) =>
+    latencies.length > 0
+      ? `${(latencies[Math.floor((latencies.length - 1) * p)] / 1000).toFixed(1)}s`
+      : '?';
+  const staleness = Math.max(
+    runStats.maxCommandsWithoutScore,
+    runStats.commands - runStats.commandsAtLastScoreChange,
+  );
+  const lines = [
+    `wall: ${wallSeconds}s | model turns: ${runStats.modelTurns} (latency p50 ${pctile(0.5)}, p95 ${pctile(0.95)}) | commands: ${runStats.commands}`,
+    `parser rejections: ${runStats.parserRejections} | world refusals: ${runStats.worldRefusals} | darkness warnings: ${runStats.darknessWarnings} | deaths: ${runStats.deaths} | restarts: ${runStats.gameRestarts}`,
+    `score: ${runStats.score ?? '(unknown)'} (max ${runStats.maxScore ?? '?'}) in ${runStats.moves ?? '?'} moves | longest scoreless stretch: ${staleness} commands`,
+  ];
+  const usage = agent.stats?.();
+  if (usage?.resolvedModel) {
+    lines.push(`model served: ${usage.resolvedModel}`);
+  }
+  if (usage) {
+    const pct = (n) => `${Math.round(n * 100)}%`;
+    const cachedShare =
+      usage.cacheReadTokens /
+      (usage.inputTokens + usage.cacheReadTokens + usage.cacheWriteTokens || 1);
+    lines.push(
+      `tokens in: ${usage.inputTokens} uncached + ${usage.cacheReadTokens} cache reads + ${usage.cacheWriteTokens} cache writes (${pct(cachedShare)} cached) | tokens out: ${usage.outputTokens}${usage.thinkingTokens ? ` (${usage.thinkingTokens} thinking)` : ''}`,
+    );
+    if (usage.costUsd) {
+      lines.push(
+        `est. cost at API list prices: $${usage.costUsd.toFixed(2)}${usage.apiMs ? ` | api time: ${Math.round(usage.apiMs / 1000)}s` : ''}`,
+      );
+    }
+  }
+  console.log(styleText('cyan', `=== Run stats ===\n${lines.join('\n')}`));
+}
+
+// Collects everything the game prints while running an action.
+async function captureOutput(zork, action) {
+  const messages = [];
+  const onPrint = (msg) => messages.push(msg);
+  zork.events.on('print', onPrint);
+  try {
+    await action();
+  } finally {
+    zork.events.off('print', onPrint);
+  }
+  return messages;
+}
+
+// The z-machine emits HTML-ish markup; the model gets plain text.
+function toModelText(rawMessages) {
+  return rawMessages
+    .join('\n')
+    .replaceAll('<span>></span>', '')
+    .replaceAll('<br>', '\n')
+    .replace(/<\/?span[^>]*>/g, '')
+    .trim();
+}
+
+// The terminal gets the same text with room names bold and objects underlined.
+function printGame(rawMessages) {
+  const formatted = rawMessages
+    .join('\n')
+    .replaceAll('<span>></span>', '')
+    .replaceAll('<br>', '\n')
+    .replaceAll('<span class="room">', '\x1b[1m')
+    .replaceAll('<span class="object">', '\x1b[4m')
+    .replaceAll('<span>', '')
+    .replaceAll('</span>', '\x1b[0m')
+    .trim();
+  console.log(styleText('white', `Game: ${formatted}`));
+}
+
+// The newest interrupted log for this tag, if any.
+async function findPartialLog(logDir, tag) {
+  let names;
+  try {
+    names = await readdir(logDir);
+  } catch {
+    return null;
+  }
+  const partials = names
+    .filter((f) => f.startsWith('run-') && f.endsWith(`-${tag}.jsonl.partial`))
+    .sort();
+  const newest = partials.at(-1);
+  return newest ? new URL(newest.replace(/\.partial$/, ''), logDir) : null;
+}
+
+// Rebuilds an interrupted run: feeds its commands back into the fresh game
+// (identical results, since the RNG is seeded), restores the counters, and
+// hands the model its own transcript so it continues where it left off.
+// Nothing is re-logged — the events are already in the file being appended to.
+async function replayInto(zork, agent, runStats, partialLogUrl, intro) {
+  const text = await readFile(partialLogUrl, 'utf8');
+  const allEvents = text
+    .split('\n')
+    .flatMap((line) => {
+      try {
+        return [JSON.parse(line)];
+      } catch {
+        return [];
+      }
+    });
+  const { events, droppedModelTurns } = selectReplayEvents(allEvents);
+
+  const history = [];
+  let pending = [intro];
+  for (const event of events) {
+    if (event.type === 'model_turn') {
+      history.push({ role: 'user', content: pending.join('\n') });
+      history.push({
+        role: 'assistant',
+        content: [event.commentary, ...event.commands.map((c) => `COMMAND: ${c}`)]
+          .filter(Boolean)
+          .join('\n'),
+      });
+      pending = [];
+      runStats.modelTurns += 1;
+      continue;
+    }
+    // Replay the command; the game's response must match what was logged.
+    const replayed = toModelText(await zork.input(event.command));
+    if (event.response !== undefined && replayed !== event.response) {
+      throw new Error(
+        `Resume diverged while replaying ${JSON.stringify(event.command)} at turn ${event.turn}.`,
+      );
+    }
+    pending.push(replayed);
+    runStats.commands += 1;
+    if (event.parserRejection) runStats.parserRejections += 1;
+    if (event.worldRefusal) runStats.worldRefusals += 1;
+  }
+
+  agent.restoreHistory?.(history);
+  await probeScore(zork, runStats, false, () => {}, toModelText);
+  if (droppedModelTurns > 0) {
+    console.warn(
+      `Resume discarded ${droppedModelTurns} model turns after their attempt's last successful command.`,
+    );
+  }
+  console.log(
+    styleText(
+      'green',
+      `Resumed: replayed ${runStats.commands} commands, score ${runStats.score} at move ${runStats.moves}.`,
+    ),
+  );
+  return pending.length > 0 ? pending : [`(resumed)\n${intro}`];
+}
+
+// Once a resumed run completes, remove model turns from interrupted attempts
+// that occurred after their last successfully applied command. Keeping those
+// poisoned tails would make event-level reports disagree with the recovered
+// run stats even though they were correctly excluded from replay.
+async function compactCompletedLog(eventLogUrl) {
+  const text = await readFile(eventLogUrl, 'utf8');
+  const events = text
+    .split('\n')
+    .flatMap((line) => {
+      try {
+        return [JSON.parse(line)];
+      } catch {
+        return [];
+      }
+    });
+  const compacted = stripUnsuccessfulModelTails(events);
+  if (compacted.droppedModelTurns === 0) return;
+  compacted.events.push({
+    t: Date.now(),
+    type: 'log_compaction',
+    droppedModelTurns: compacted.droppedModelTurns,
+  });
+  await writeFile(
+    eventLogUrl,
+    `${compacted.events.map((event) => JSON.stringify(event)).join('\n')}\n`,
+  );
+}
+
+function gitCommit() {
+  try {
+    return execSync('git rev-parse --short HEAD', {
+      cwd: new URL('.', import.meta.url).pathname,
+    })
+      .toString()
+      .trim();
+  } catch {
+    return null;
+  }
+}
+
+async function writeDebugLog(agent, runStats = null) {
+  const timestamp = new Date().toISOString().replaceAll(':', '-');
+  const debugLogUrl = new URL(`debug-${timestamp}.json`, LOG_DIR);
+  await mkdir(LOG_DIR, { recursive: true });
+  const payload = {
+    run: runStats,
+    usage: agent.stats?.() ?? null,
+    history: agent.history(),
+  };
+  await writeFile(debugLogUrl, JSON.stringify(payload, null, 2));
+  console.warn(`>>> Debug log written to: ${debugLogUrl.pathname}`);
+}

@@ -1,0 +1,28 @@
+# Introduction
+You are playing a text-based adventure game "Zork".
+It is an interactive fiction game where you explore a world and solve puzzles to progress.
+Your goal is to win the game by collecting items, solving puzzles, and exploring new locations.
+
+# How to Play
+- Use simple imperative sentences for commands ("GO NORTH" or "TAKE LETTER").
+- When moving, dont say "GO WEST TO FOREST" just say "GO WEST"
+- Talk to creatures by typing their name, then a comma, followed by your message
+- If you're unable to perform a command 3 times, try doing something different.
+- Do not attempt the same thing over and over.
+- Do not go the same places over and over in a loop.
+- When writing a command, never include the word "AGAIN".
+- Use the "LOOK" command to see where the paths are from your current position. Use this command when you're unsure of where to go, or when your command keeps failing.
+- Keep the commands extremely simple, at less than five words.
+- Do not chain commands together, do one thing at a time.
+
+# Basic Commands
+- BRIEF, SUPERBRIEF, VERBOSE: Set the level of location description
+- DIAGNOSE: Get a report of your physical condition
+- INVENTORY (I): List what you are carrying and wearing
+- LOOK (L): Get a full description of your location
+- EXAMINE (X): Get a description of an object
+- SCORE: Display your current score and rank. Type FULL SCORE for details
+
+# Hints:
+- When something is to heavy to lift, you might be able to "move" it.
+- Do not use RESTART, RESTORE, or QUIT; the harness handles game endings.

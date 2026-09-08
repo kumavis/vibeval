@@ -1,0 +1,21 @@
+{
+  "name": "vibeval",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "evals/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "npm run test --workspaces --if-present && node --test test/*.test.js",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "eval:zork": "npm run eval -w @vibeval/zork-1 --",
+    "start:zork": "npm run start -w @vibeval/zork-1 --",
+    "data:zork": "node evals/zork-1/scripts/export-data.mjs"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rows": [
+    {
+      "model": "claude-fable-5-1",
+      "resolvedModel": "claude-fable-5-1",
+      "provider": "claude-cli",
+      "tag": "claude-fable-5-1-t1",
+      "seed": 1,
+      "wallMin": 15.332016666666666,
+      "wallBasis": "recorded",
+      "wallAccounting": null,
+      "turns": 298,
+      "commands": 298,
+      "moves": 300,
+      "maxScore": 204,
+      "parserRejections": 0,
+      "worldRefusals": 1,
+      "deaths": 0,
+      "staleness": 60,
+      "tokensOut": 14629,
+      "costUsd": 2.6693779999999987,
+      "costBasis": "reported",
+      "costEstimate": null,
+      "usageAccounting": null
+    },
+    {
+      "model": "claude-fable-5-1",
+      "resolvedModel": "claude-fable-5-1",
+      "provider": "claude-cli",
+      "tag": "claude-fable-5-1-t2",
+      "seed": 2,
+      "wallMin": 18.6772,
+      "wallBasis": "recorded",
+      "wallAccounting": null,
+      "turns": 258,
+      "commands": 258,
+      "moves": 300,
+      "maxScore": 149,
+      "parserRejections": 0,
+      "worldRefusals": 1,
+      "deaths": 1,
+      "staleness": 86,
+      "tokensOut": 13859,
+      "costUsd": 2.3734852499999994,
+      "costBasis": "reported",
+      "costEstimate": null,
+      "usageAccounting": null
+    },
+    {
+      "model": "claude-fable-5-1",
+      "resolvedModel": "claude-fable-5-1",
+      "provider": "claude-cli",
+      "tag": "claude-fable-5-1-t3",
+      "seed": 3,
+      "wallMin": 16.064066666666665,
+      "wallBasis": "partial-attempt-last-event",
+      "wallAccounting": {
+        "interruptedAttempts": 1,
+        "method": "sum completed attempts plus each crash-ended attempt through its last logged event"
+      },
+      "turns": 302,
+      "commands": 302,
+      "moves": 300,
+      "maxScore": 296,
+      "parserRejections": 1,
+      "worldRefusals": 0,
+      "deaths": 0,
+      "staleness": 74,
+      "tokensOut": 14721,
+      "costUsd": 3.0116179469424473,
+      "costBasis": "partially-estimated",
+      "costEstimate": null,
+      "usageAccounting": {
+        "estimated": true,
+        "estimates": [
+          {
+            "retainedTurns": 74,
+            "recordedTurns": 74,
+            "costUsd": 0.6711724469424457,
+            "method": {
+              "kind": "pooled-peer-per-turn",
+              "formula": "sum(reference usage) / sum(reference usage.turns) * retained attempt turns",
+              "retainedAttemptTurns": 74,
+              "referenceTurns": 556,
+              "tokenRounding": "nearest integer",
+              "costRounding": "unrounded"
+            },
+            "referenceRuns": [
+              "run-2026-09-07T07-23-35.719Z-claude-fable-5-1-t1.jsonl",
+              "run-2026-09-07T07-51-08.224Z-claude-fable-5-1-t2.jsonl"
+            ],
+            "reason": "hard crash prevented provider usage from reaching run_end"
+          }
+        ],
+        "unaccountedAttempts": []
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "claude-fable-5-1",
+      "alias": "claude-fable-5-1",
+      "provider": "claude-cli",
+      "trials": 3,
+      "medianScore": 204,
+      "meanScore": 216.33333333333334,
+      "meanCommands": 286,
+      "meanWallMin": 16.691094444444445,
+      "wallBasis": "mixed",
+      "meanCostUsd": 2.684827065647482,
+      "costBasis": "mixed",
+      "scorePerDollar": 80.57626358931303
+    }
+  ]
+}

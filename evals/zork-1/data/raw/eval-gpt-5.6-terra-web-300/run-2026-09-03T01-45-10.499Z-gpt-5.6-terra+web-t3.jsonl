@@ -1,0 +1,640 @@
+{"t":1788399910518,"type":"run_start","provider":"codex-cli","model":"gpt-5.6-terra+web","tag":"gpt-5.6-terra+web-t3","seed":3,"moveBudget":300,"modelTurnBudget":600,"harnessCommit":"f8c6a11"}
+{"t":1788399915353,"type":"model_turn","turn":1,"latencyMs":4833,"commands":["OPEN MAILBOX"],"commentary":""}
+{"t":1788399915357,"type":"command","turn":1,"command":"OPEN MAILBOX","response":"Opening the small mailbox reveals a leaflet.","parserRejection":false,"worldRefusal":false}
+{"t":1788399921028,"type":"model_turn","turn":2,"latencyMs":5669,"commands":["TAKE LEAFLET"],"commentary":""}
+{"t":1788399921030,"type":"command","turn":2,"command":"TAKE LEAFLET","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788399921031,"type":"score","score":0,"moves":2,"commands":2}
+{"t":1788399929166,"type":"model_turn","turn":3,"latencyMs":8135,"commands":["GO NORTH"],"commentary":""}
+{"t":1788399929167,"type":"command","turn":3,"command":"GO NORTH","response":"North of House\nYou are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.","parserRejection":false,"worldRefusal":false}
+{"t":1788399935311,"type":"model_turn","turn":4,"latencyMs":6143,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788399935314,"type":"command","turn":4,"command":"GO SOUTH","response":"The windows are all boarded.","parserRejection":false,"worldRefusal":false}
+{"t":1788399941303,"type":"model_turn","turn":5,"latencyMs":5988,"commands":["GO EAST"],"commentary":""}
+{"t":1788399941305,"type":"command","turn":5,"command":"GO EAST","response":"Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.","parserRejection":false,"worldRefusal":false}
+{"t":1788399946475,"type":"model_turn","turn":6,"latencyMs":5169,"commands":["OPEN WINDOW"],"commentary":""}
+{"t":1788399946476,"type":"command","turn":6,"command":"OPEN WINDOW","response":"With great effort, you open the window far enough to allow entry.","parserRejection":false,"worldRefusal":false}
+{"t":1788399951389,"type":"model_turn","turn":7,"latencyMs":4912,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788399951391,"type":"command","turn":7,"command":"ENTER WINDOW","response":"Kitchen\nYou are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\nOn the table is an elongated brown sack, smelling of hot peppers.\nA bottle is sitting on the table.\nThe glass bottle contains:\n  A quantity of water","parserRejection":false,"worldRefusal":false}
+{"t":1788399951391,"type":"score","score":10,"moves":7,"commands":7}
+{"t":1788399956580,"type":"model_turn","turn":8,"latencyMs":5189,"commands":["TAKE SACK"],"commentary":""}
+{"t":1788399956582,"type":"command","turn":8,"command":"TAKE SACK","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788399960831,"type":"model_turn","turn":9,"latencyMs":4249,"commands":["TAKE BOTTLE"],"commentary":""}
+{"t":1788399960832,"type":"command","turn":9,"command":"TAKE BOTTLE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788399965604,"type":"model_turn","turn":10,"latencyMs":4771,"commands":["GO WEST"],"commentary":""}
+{"t":1788399965605,"type":"command","turn":10,"command":"GO WEST","response":"Living Room\nYou are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.\nAbove the trophy case hangs an elvish sword of great antiquity.\nA battery-powered brass lantern is on the trophy case.","parserRejection":false,"worldRefusal":false}
+{"t":1788399970348,"type":"model_turn","turn":11,"latencyMs":4742,"commands":["TAKE LANTERN"],"commentary":""}
+{"t":1788399970349,"type":"command","turn":11,"command":"TAKE LANTERN","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788399976928,"type":"model_turn","turn":12,"latencyMs":6578,"commands":["TAKE SWORD"],"commentary":""}
+{"t":1788399976929,"type":"command","turn":12,"command":"TAKE SWORD","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788399982949,"type":"model_turn","turn":13,"latencyMs":6019,"commands":["MOVE RUG"],"commentary":""}
+{"t":1788399982951,"type":"command","turn":13,"command":"MOVE RUG","response":"With a great effort, the rug is moved to one side of the room, revealing the dusty cover of a closed trap door.","parserRejection":false,"worldRefusal":false}
+{"t":1788399988185,"type":"model_turn","turn":14,"latencyMs":5233,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788399988187,"type":"command","turn":14,"command":"OPEN TRAPDOOR","response":"The door reluctantly opens to reveal a rickety staircase descending into darkness.","parserRejection":false,"worldRefusal":false}
+{"t":1788399992893,"type":"model_turn","turn":15,"latencyMs":4706,"commands":["TURN ON LANTERN"],"commentary":""}
+{"t":1788399992895,"type":"command","turn":15,"command":"TURN ON LANTERN","response":"The brass lantern is now on.","parserRejection":false,"worldRefusal":false}
+{"t":1788400000201,"type":"model_turn","turn":16,"latencyMs":7306,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400000202,"type":"command","turn":16,"command":"GO DOWN","response":"The trap door crashes shut, and you hear someone barring it.\n\nCellar\nYou are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.\nYour sword is glowing with a faint blue glow.","parserRejection":false,"worldRefusal":false}
+{"t":1788400000203,"type":"score","score":35,"moves":16,"commands":16}
+{"t":1788400004631,"type":"model_turn","turn":17,"latencyMs":4428,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400004632,"type":"command","turn":17,"command":"GO NORTH","response":"The Troll Room\nThis is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.\nA nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.\nYour sword has begun to glow very brightly.","parserRejection":false,"worldRefusal":false}
+{"t":1788400009735,"type":"model_turn","turn":18,"latencyMs":5102,"commands":["ATTACK TROLL"],"commentary":""}
+{"t":1788400009737,"type":"command","turn":18,"command":"ATTACK TROLL","response":"(with the sword)\nYou charge, but the troll jumps nimbly aside.\nThe troll swings his axe, but it misses.","parserRejection":false,"worldRefusal":false}
+{"t":1788400016370,"type":"model_turn","turn":19,"latencyMs":6633,"commands":["ATTACK TROLL"],"commentary":""}
+{"t":1788400016372,"type":"command","turn":19,"command":"ATTACK TROLL","response":"(with the sword)\nIt's curtains for the troll as your sword removes his head.\nAlmost as soon as the troll breathes his last breath, a cloud of sinister black fog envelops him, and when the fog lifts, the carcass has disappeared.\nYour sword is no longer glowing.","parserRejection":false,"worldRefusal":false}
+{"t":1788400022497,"type":"model_turn","turn":20,"latencyMs":6124,"commands":["GO EAST"],"commentary":""}
+{"t":1788400022499,"type":"command","turn":20,"command":"GO EAST","response":"East-West Passage\nThis is a narrow east-west passageway. There is a narrow stairway leading down at the north end of the room.","parserRejection":false,"worldRefusal":false}
+{"t":1788400022500,"type":"score","score":40,"moves":20,"commands":20}
+{"t":1788400030885,"type":"model_turn","turn":21,"latencyMs":8384,"commands":["GO EAST"],"commentary":""}
+{"t":1788400030887,"type":"command","turn":21,"command":"GO EAST","response":"Round Room\nThis is a circular stone room with passages in all directions. Several of them have unfortunately been blocked by cave-ins.","parserRejection":false,"worldRefusal":false}
+{"t":1788400037437,"type":"model_turn","turn":22,"latencyMs":6549,"commands":["LOOK"],"commentary":""}
+{"t":1788400037438,"type":"command","turn":22,"command":"LOOK","response":"Round Room\nThis is a circular stone room with passages in all directions. Several of them have unfortunately been blocked by cave-ins.","parserRejection":false,"worldRefusal":false}
+{"t":1788400044663,"type":"model_turn","turn":23,"latencyMs":7224,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400044664,"type":"command","turn":23,"command":"GO SOUTH","response":"Narrow Passage\nThis is a long and narrow corridor where a long north-south passageway briefly narrows even further.","parserRejection":false,"worldRefusal":false}
+{"t":1788400049869,"type":"model_turn","turn":24,"latencyMs":5204,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400049871,"type":"command","turn":24,"command":"GO SOUTH","response":"Mirror Room\nYou are in a large square room with tall ceilings. On the south wall is an enormous mirror which fills the entire wall. There are exits on the other three sides of the room.","parserRejection":false,"worldRefusal":false}
+{"t":1788400055463,"type":"model_turn","turn":25,"latencyMs":5592,"commands":["GO EAST"],"commentary":""}
+{"t":1788400055466,"type":"command","turn":25,"command":"GO EAST","response":"Cave\nThis is a tiny cave with entrances west and north, and a dark, forbidding staircase leading down.\nYour sword is glowing with a faint blue glow.","parserRejection":false,"worldRefusal":false}
+{"t":1788400060995,"type":"model_turn","turn":26,"latencyMs":5528,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400060996,"type":"command","turn":26,"command":"GO NORTH","response":"Mirror Room\nYour sword is no longer glowing.","parserRejection":false,"worldRefusal":false}
+{"t":1788400068900,"type":"model_turn","turn":27,"latencyMs":7903,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400068902,"type":"command","turn":27,"command":"GO NORTH","response":"Narrow Passage","parserRejection":false,"worldRefusal":false}
+{"t":1788400073975,"type":"model_turn","turn":28,"latencyMs":5073,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400073976,"type":"command","turn":28,"command":"GO NORTH","response":"Round Room","parserRejection":false,"worldRefusal":false}
+{"t":1788400080874,"type":"model_turn","turn":29,"latencyMs":6897,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400080875,"type":"command","turn":29,"command":"GO NORTH","response":"North-South Passage\nThis is a high north-south passage, which forks to the northeast.","parserRejection":false,"worldRefusal":false}
+{"t":1788400086052,"type":"model_turn","turn":30,"latencyMs":5176,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400086053,"type":"command","turn":30,"command":"GO NORTH","response":"Chasm\nA chasm runs southwest to northeast and the path follows it. You are on the south side of the chasm, where a crack opens into a passage.","parserRejection":false,"worldRefusal":false}
+{"t":1788400097437,"type":"model_turn","turn":31,"latencyMs":11383,"commands":["GO NE"],"commentary":""}
+{"t":1788400097438,"type":"command","turn":31,"command":"GO NE","response":"Reservoir South\nYou are in a long room on the south shore of a large lake, far too deep and wide for crossing.\nThere is a path along the stream to the east or west, a steep pathway climbing southwest along the edge of a chasm, and a path leading into a canyon to the southeast.","parserRejection":false,"worldRefusal":false}
+{"t":1788400103777,"type":"model_turn","turn":32,"latencyMs":6338,"commands":["GO EAST"],"commentary":""}
+{"t":1788400103779,"type":"command","turn":32,"command":"GO EAST","response":"Dam\nYou are standing on the top of the Flood Control Dam #3, which was quite a tourist attraction in times far distant. There are paths to the north, south, and west, and a scramble down.\nThe sluice gates on the dam are closed. Behind the dam, there can be seen a wide reservoir. Water is pouring over the top of the now abandoned dam.\nThere is a control panel here, on which a large metal bolt is mounted. Directly above the bolt is a small green plastic bubble.","parserRejection":false,"worldRefusal":false}
+{"t":1788400109935,"type":"model_turn","turn":33,"latencyMs":6155,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400109936,"type":"command","turn":33,"command":"GO NORTH","response":"Dam Lobby\nThis room appears to have been the waiting room for groups touring the dam. There are open doorways here to the north and east marked \"Private\", and there is a path leading south over the top of the dam.\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.\nThere is a matchbook whose cover says \"Visit Beautiful FCD#3\" here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400115129,"type":"model_turn","turn":34,"latencyMs":5192,"commands":[],"commentary":"RGCTX 񎔑"}
+{"t":1788400120135,"type":"model_turn","turn":35,"latencyMs":4994,"commands":["TAKE MATCHBOOK"],"commentary":""}
+{"t":1788400120137,"type":"command","turn":35,"command":"TAKE MATCHBOOK","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400125093,"type":"model_turn","turn":36,"latencyMs":4956,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400125096,"type":"command","turn":36,"command":"GO NORTH","response":"Maintenance Room\nThis is what appears to have been the maintenance room for Flood Control Dam #3. Apparently, this room has been ransacked recently, for most of the valuable equipment is gone. On the wall in front of you is a group of buttons colored blue, yellow, brown, and red. There are doorways to the west and south.\nThere is a group of tool chests here.\nThere is a wrench here.\nThere is an object which looks like a tube of toothpaste here.\nThere is a screwdriver here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400130837,"type":"model_turn","turn":37,"latencyMs":5740,"commands":["TAKE WRENCH"],"commentary":""}
+{"t":1788400130838,"type":"command","turn":37,"command":"TAKE WRENCH","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400136908,"type":"model_turn","turn":38,"latencyMs":6069,"commands":["TAKE SCREWDRIVER"],"commentary":""}
+{"t":1788400136909,"type":"command","turn":38,"command":"TAKE SCREWDRIVER","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400145349,"type":"model_turn","turn":39,"latencyMs":8439,"commands":["TAKE TUBE"],"commentary":""}
+{"t":1788400145351,"type":"command","turn":39,"command":"TAKE TUBE","response":"Your load is too heavy.","parserRejection":false,"worldRefusal":false}
+{"t":1788400152069,"type":"model_turn","turn":40,"latencyMs":6718,"commands":["PUT BOTTLE SACK"],"commentary":""}
+{"t":1788400152070,"type":"command","turn":40,"command":"PUT BOTTLE SACK","response":"That sentence isn't one I recognize.","parserRejection":true,"worldRefusal":false}
+{"t":1788400158444,"type":"model_turn","turn":41,"latencyMs":6373,"commands":["PUT BOTTLE IN SACK"],"commentary":""}
+{"t":1788400158445,"type":"command","turn":41,"command":"PUT BOTTLE IN SACK","response":"The brown sack isn't open.","parserRejection":false,"worldRefusal":false}
+{"t":1788400163262,"type":"model_turn","turn":42,"latencyMs":4816,"commands":["OPEN SACK"],"commentary":""}
+{"t":1788400163264,"type":"command","turn":42,"command":"OPEN SACK","response":"Opening the brown sack reveals a lunch, and a clove of garlic.","parserRejection":false,"worldRefusal":false}
+{"t":1788400168705,"type":"model_turn","turn":43,"latencyMs":5441,"commands":["PUT BOTTLE IN SACK"],"commentary":""}
+{"t":1788400168707,"type":"command","turn":43,"command":"PUT BOTTLE IN SACK","response":"There's no room.","parserRejection":false,"worldRefusal":false}
+{"t":1788400178356,"type":"model_turn","turn":44,"latencyMs":9649,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400178357,"type":"command","turn":44,"command":"GO SOUTH","response":"Dam Lobby\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.","parserRejection":false,"worldRefusal":false}
+{"t":1788400183075,"type":"model_turn","turn":45,"latencyMs":4717,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400183076,"type":"command","turn":45,"command":"GO SOUTH","response":"Dam","parserRejection":false,"worldRefusal":false}
+{"t":1788400189471,"type":"model_turn","turn":46,"latencyMs":6394,"commands":["TURN BOLT WRENCH"],"commentary":""}
+{"t":1788400189472,"type":"command","turn":46,"command":"TURN BOLT WRENCH","response":"That sentence isn't one I recognize.","parserRejection":true,"worldRefusal":false}
+{"t":1788400194700,"type":"model_turn","turn":47,"latencyMs":5228,"commands":["TURN BOLT"],"commentary":""}
+{"t":1788400194702,"type":"command","turn":47,"command":"TURN BOLT","response":"What do you want to turn the bolt with?","parserRejection":false,"worldRefusal":false}
+{"t":1788400200370,"type":"model_turn","turn":48,"latencyMs":5668,"commands":["WRENCH"],"commentary":""}
+{"t":1788400200371,"type":"command","turn":48,"command":"WRENCH","response":"There was no verb in that sentence!","parserRejection":true,"worldRefusal":false}
+{"t":1788400205851,"type":"model_turn","turn":49,"latencyMs":5479,"commands":["TURN BOLT WITH WRENCH"],"commentary":""}
+{"t":1788400205852,"type":"command","turn":49,"command":"TURN BOLT WITH WRENCH","response":"The bolt won't turn with your best effort.","parserRejection":false,"worldRefusal":false}
+{"t":1788400214536,"type":"model_turn","turn":50,"latencyMs":8683,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400214537,"type":"command","turn":50,"command":"GO NORTH","response":"Dam Lobby\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.","parserRejection":false,"worldRefusal":false}
+{"t":1788400220131,"type":"model_turn","turn":51,"latencyMs":5594,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400220133,"type":"command","turn":51,"command":"GO NORTH","response":"Maintenance Room\nThere is a group of tool chests here.\nThere is an object which looks like a tube of toothpaste here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400226153,"type":"model_turn","turn":52,"latencyMs":6019,"commands":["DROP LEAFLET"],"commentary":""}
+{"t":1788400226154,"type":"command","turn":52,"command":"DROP LEAFLET","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400230754,"type":"model_turn","turn":53,"latencyMs":4599,"commands":["TAKE TUBE"],"commentary":""}
+{"t":1788400230755,"type":"command","turn":53,"command":"TAKE TUBE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400236052,"type":"model_turn","turn":54,"latencyMs":5296,"commands":["EXAMINE TUBE"],"commentary":""}
+{"t":1788400236053,"type":"command","turn":54,"command":"EXAMINE TUBE","response":"---> Frobozz Magic Gunk Company <---\n\t  All-Purpose Gunk","parserRejection":false,"worldRefusal":false}
+{"t":1788400240543,"type":"model_turn","turn":55,"latencyMs":4489,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400240544,"type":"command","turn":55,"command":"GO SOUTH","response":"Dam Lobby\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.","parserRejection":false,"worldRefusal":false}
+{"t":1788400245210,"type":"model_turn","turn":56,"latencyMs":4665,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400245212,"type":"command","turn":56,"command":"GO SOUTH","response":"Dam","parserRejection":false,"worldRefusal":false}
+{"t":1788400250362,"type":"model_turn","turn":57,"latencyMs":5150,"commands":["OPEN TUBE"],"commentary":""}
+{"t":1788400250363,"type":"command","turn":57,"command":"OPEN TUBE","response":"Opening the tube reveals a viscous material.","parserRejection":false,"worldRefusal":false}
+{"t":1788400255850,"type":"model_turn","turn":58,"latencyMs":5487,"commands":["PUT GUNK BOLT"],"commentary":""}
+{"t":1788400255851,"type":"command","turn":58,"command":"PUT GUNK BOLT","response":"That sentence isn't one I recognize.","parserRejection":true,"worldRefusal":false}
+{"t":1788400261736,"type":"model_turn","turn":59,"latencyMs":5884,"commands":["PUT GUNK ON BOLT"],"commentary":""}
+{"t":1788400261737,"type":"command","turn":59,"command":"PUT GUNK ON BOLT","response":"There's no good surface on the bolt.","parserRejection":false,"worldRefusal":false}
+{"t":1788400267025,"type":"model_turn","turn":60,"latencyMs":5287,"commands":["SQUEEZE TUBE"],"commentary":""}
+{"t":1788400267026,"type":"command","turn":60,"command":"SQUEEZE TUBE","response":"The viscous material oozes into your hand.","parserRejection":false,"worldRefusal":false}
+{"t":1788400273027,"type":"model_turn","turn":61,"latencyMs":6001,"commands":["PUT GUNK ON BOLT"],"commentary":""}
+{"t":1788400273028,"type":"command","turn":61,"command":"PUT GUNK ON BOLT","response":"There's no good surface on the bolt.","parserRejection":false,"worldRefusal":false}
+{"t":1788400281794,"type":"model_turn","turn":62,"latencyMs":8765,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400281796,"type":"command","turn":62,"command":"GO SOUTH","response":"Deep Canyon\nYou are on the south edge of a deep canyon. Passages lead off to the east, northwest and southwest. A stairway leads down. You can hear the sound of flowing water from below.","parserRejection":false,"worldRefusal":false}
+{"t":1788400287516,"type":"model_turn","turn":63,"latencyMs":5719,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400287517,"type":"command","turn":63,"command":"GO DOWN","response":"Loud Room\nThis is a large room with a ceiling which cannot be detected from the ground. There is a narrow passage from east to west and a stone stairway leading upward. The room is deafeningly loud with an undetermined rushing sound. The sound seems to reverberate from all of the walls, making it difficult even to think.\nOn the ground is a large platinum bar.","parserRejection":false,"worldRefusal":false}
+{"t":1788400293301,"type":"model_turn","turn":64,"latencyMs":5783,"commands":["TAKE BAR"],"commentary":""}
+{"t":1788400293303,"type":"command","turn":64,"command":"TAKE BAR","response":"bar bar ...","parserRejection":false,"worldRefusal":false}
+{"t":1788400299502,"type":"model_turn","turn":65,"latencyMs":6199,"commands":["ECHO"],"commentary":""}
+{"t":1788400299504,"type":"command","turn":65,"command":"ECHO","response":"The acoustics of the room change subtly.\n\nLoud Room\nOn the ground is a large platinum bar.","parserRejection":false,"worldRefusal":false}
+{"t":1788400304820,"type":"model_turn","turn":66,"latencyMs":5315,"commands":["TAKE BAR"],"commentary":""}
+{"t":1788400304822,"type":"command","turn":66,"command":"TAKE BAR","response":"Your load is too heavy.","parserRejection":false,"worldRefusal":false}
+{"t":1788400311441,"type":"model_turn","turn":67,"latencyMs":6619,"commands":["DROP BOTTLE"],"commentary":""}
+{"t":1788400311443,"type":"command","turn":67,"command":"DROP BOTTLE","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400318213,"type":"model_turn","turn":68,"latencyMs":6770,"commands":["DROP TUBE"],"commentary":""}
+{"t":1788400318215,"type":"command","turn":68,"command":"DROP TUBE","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400324028,"type":"model_turn","turn":69,"latencyMs":5813,"commands":["TAKE BAR"],"commentary":""}
+{"t":1788400324030,"type":"command","turn":69,"command":"TAKE BAR","response":"Your load is too heavy.","parserRejection":false,"worldRefusal":false}
+{"t":1788400329648,"type":"model_turn","turn":70,"latencyMs":5617,"commands":["DROP MATCHBOOK"],"commentary":""}
+{"t":1788400329650,"type":"command","turn":70,"command":"DROP MATCHBOOK","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400334633,"type":"model_turn","turn":71,"latencyMs":4983,"commands":["TAKE BAR"],"commentary":""}
+{"t":1788400334634,"type":"command","turn":71,"command":"TAKE BAR","response":"Your load is too heavy.","parserRejection":false,"worldRefusal":false}
+{"t":1788400339932,"type":"model_turn","turn":72,"latencyMs":5296,"commands":["DROP SACK"],"commentary":""}
+{"t":1788400339933,"type":"command","turn":72,"command":"DROP SACK","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400344640,"type":"model_turn","turn":73,"latencyMs":4706,"commands":["TAKE BAR"],"commentary":""}
+{"t":1788400344642,"type":"command","turn":73,"command":"TAKE BAR","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400344643,"type":"score","score":50,"moves":65,"commands":72}
+{"t":1788400353876,"type":"model_turn","turn":74,"latencyMs":9233,"commands":["GO EAST"],"commentary":""}
+{"t":1788400353878,"type":"command","turn":74,"command":"GO EAST","response":"Damp Cave\nThis cave has exits to the west and east, and narrows to a crack toward the south. The earth is particularly damp here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400359990,"type":"model_turn","turn":75,"latencyMs":6111,"commands":["GO EAST"],"commentary":""}
+{"t":1788400359991,"type":"command","turn":75,"command":"GO EAST","response":"White Cliffs Beach\nYou are on a narrow strip of beach which runs along the base of the White Cliffs. There is a narrow path heading south along the Cliffs and a tight passage leading west into the cliffs themselves.","parserRejection":false,"worldRefusal":false}
+{"t":1788400366575,"type":"model_turn","turn":76,"latencyMs":6584,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400366581,"type":"command","turn":76,"command":"GO SOUTH","response":"White Cliffs Beach\nYou are on a rocky, narrow strip of beach beside the Cliffs. A narrow path leads north along the shore.","parserRejection":false,"worldRefusal":false}
+{"t":1788400373625,"type":"model_turn","turn":77,"latencyMs":7044,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400373627,"type":"command","turn":77,"command":"GO NORTH","response":"White Cliffs Beach","parserRejection":false,"worldRefusal":false}
+{"t":1788400378477,"type":"model_turn","turn":78,"latencyMs":4850,"commands":["GO WEST"],"commentary":""}
+{"t":1788400378478,"type":"command","turn":78,"command":"GO WEST","response":"Damp Cave\nA seedy-looking individual with a large bag just wandered through the room. On the way through, he quietly abstracted some valuables from the room and from your possession, mumbling something about \"Doing unto others before...\"","parserRejection":false,"worldRefusal":false}
+{"t":1788400384747,"type":"model_turn","turn":79,"latencyMs":6268,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400384749,"type":"command","turn":79,"command":"GO SOUTH","response":"It is too narrow for most insects.","parserRejection":false,"worldRefusal":false}
+{"t":1788400389820,"type":"model_turn","turn":80,"latencyMs":5071,"commands":["INVENTORY"],"commentary":""}
+{"t":1788400389821,"type":"command","turn":80,"command":"INVENTORY","response":"You are carrying:\n  A viscous material\n  A screwdriver\n  A wrench\n  A sword\n  A brass lantern (providing light)","parserRejection":false,"worldRefusal":false}
+{"t":1788400396473,"type":"model_turn","turn":81,"latencyMs":6651,"commands":["GO WEST"],"commentary":""}
+{"t":1788400396475,"type":"command","turn":81,"command":"GO WEST","response":"Loud Room\nThere is a brown sack here.\nThe brown sack contains:\n  A lunch\n  A clove of garlic\nThere is a matchbook whose cover says \"Visit Beautiful FCD#3\" here.\nThere is a glass bottle here.\nThe glass bottle contains:\n  A quantity of water","parserRejection":false,"worldRefusal":false}
+{"t":1788400402150,"type":"model_turn","turn":82,"latencyMs":5675,"commands":["TAKE SACK"],"commentary":""}
+{"t":1788400402152,"type":"command","turn":82,"command":"TAKE SACK","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400409018,"type":"model_turn","turn":83,"latencyMs":6864,"commands":["GO UP"],"commentary":""}
+{"t":1788400409022,"type":"command","turn":83,"command":"GO UP","response":"Deep Canyon","parserRejection":false,"worldRefusal":false}
+{"t":1788400414025,"type":"model_turn","turn":84,"latencyMs":5002,"commands":["GO NW"],"commentary":""}
+{"t":1788400414028,"type":"command","turn":84,"command":"GO NW","response":"Reservoir South","parserRejection":false,"worldRefusal":false}
+{"t":1788400419199,"type":"model_turn","turn":85,"latencyMs":5170,"commands":["GO SW"],"commentary":""}
+{"t":1788400419200,"type":"command","turn":85,"command":"GO SW","response":"Chasm","parserRejection":false,"worldRefusal":false}
+{"t":1788400425406,"type":"model_turn","turn":86,"latencyMs":6206,"commands":["GO SW"],"commentary":""}
+{"t":1788400425408,"type":"command","turn":86,"command":"GO SW","response":"East-West Passage","parserRejection":false,"worldRefusal":false}
+{"t":1788400430933,"type":"model_turn","turn":87,"latencyMs":5524,"commands":["GO WEST"],"commentary":""}
+{"t":1788400430936,"type":"command","turn":87,"command":"GO WEST","response":"The Troll Room\nThere is a bloody axe here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400436787,"type":"model_turn","turn":88,"latencyMs":5850,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400436788,"type":"command","turn":88,"command":"GO SOUTH","response":"Cellar","parserRejection":false,"worldRefusal":false}
+{"t":1788400447356,"type":"model_turn","turn":89,"latencyMs":10567,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400447358,"type":"command","turn":89,"command":"GO SOUTH","response":"East of Chasm\nYou are on the east edge of a chasm, the bottom of which cannot be seen. A narrow passage goes north, and the path you are on continues to the east.","parserRejection":false,"worldRefusal":false}
+{"t":1788400456145,"type":"model_turn","turn":90,"latencyMs":8787,"commands":["GO EAST"],"commentary":""}
+{"t":1788400456146,"type":"command","turn":90,"command":"GO EAST","response":"Gallery\nThis is an art gallery. Most of the paintings have been stolen by vandals with exceptional taste. The vandals left through either the north or west exits.\nFortunately, there is still one chance for you to be a vandal, for on the far wall is a painting of unparalleled beauty.","parserRejection":false,"worldRefusal":false}
+{"t":1788400463080,"type":"model_turn","turn":91,"latencyMs":6933,"commands":["TAKE PAINTING"],"commentary":""}
+{"t":1788400463081,"type":"command","turn":91,"command":"TAKE PAINTING","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400463082,"type":"score","score":54,"moves":83,"commands":90}
+{"t":1788400470135,"type":"model_turn","turn":92,"latencyMs":7053,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400470136,"type":"command","turn":92,"command":"GO NORTH","response":"Studio\nThis appears to have been an artist's studio. The walls and floors are splattered with paints of 69 different colors. Strangely enough, nothing of value is hanging here. At the south end of the room is an open door (also covered with paint). A dark and narrow chimney leads up from a fireplace; although you might be able to get up it, it seems unlikely you could get back down.\nLoosely attached to a wall is a small piece of paper.","parserRejection":false,"worldRefusal":false}
+{"t":1788400476430,"type":"model_turn","turn":93,"latencyMs":6294,"commands":["TAKE PAPER"],"commentary":""}
+{"t":1788400476431,"type":"command","turn":93,"command":"TAKE PAPER","response":"Your load is too heavy.","parserRejection":false,"worldRefusal":false}
+{"t":1788400482652,"type":"model_turn","turn":94,"latencyMs":6221,"commands":["GO UP"],"commentary":""}
+{"t":1788400482654,"type":"command","turn":94,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788400489077,"type":"model_turn","turn":95,"latencyMs":6423,"commands":["DROP SACK"],"commentary":""}
+{"t":1788400489079,"type":"command","turn":95,"command":"DROP SACK","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400494717,"type":"model_turn","turn":96,"latencyMs":5638,"commands":["GO UP"],"commentary":""}
+{"t":1788400494718,"type":"command","turn":96,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788400504475,"type":"model_turn","turn":97,"latencyMs":9757,"commands":["DROP SWORD"],"commentary":""}
+{"t":1788400504477,"type":"command","turn":97,"command":"DROP SWORD","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400511766,"type":"model_turn","turn":98,"latencyMs":7289,"commands":["GO UP"],"commentary":""}
+{"t":1788400511767,"type":"command","turn":98,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788400517021,"type":"model_turn","turn":99,"latencyMs":5254,"commands":["DROP WRENCH"],"commentary":""}
+{"t":1788400517024,"type":"command","turn":99,"command":"DROP WRENCH","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400522294,"type":"model_turn","turn":100,"latencyMs":5270,"commands":["GO UP"],"commentary":""}
+{"t":1788400522295,"type":"command","turn":100,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788400527585,"type":"model_turn","turn":101,"latencyMs":5290,"commands":["DROP SCREWDRIVER"],"commentary":""}
+{"t":1788400527587,"type":"command","turn":101,"command":"DROP SCREWDRIVER","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400532502,"type":"model_turn","turn":102,"latencyMs":4913,"commands":["GO UP"],"commentary":""}
+{"t":1788400532504,"type":"command","turn":102,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788400541717,"type":"model_turn","turn":103,"latencyMs":9213,"commands":["DROP GUNK"],"commentary":""}
+{"t":1788400541718,"type":"command","turn":103,"command":"DROP GUNK","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788400546964,"type":"model_turn","turn":104,"latencyMs":5245,"commands":["GO UP"],"commentary":""}
+{"t":1788400546965,"type":"command","turn":104,"command":"GO UP","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400553618,"type":"model_turn","turn":105,"latencyMs":6652,"commands":["GO EAST"],"commentary":""}
+{"t":1788400553619,"type":"command","turn":105,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400559273,"type":"model_turn","turn":106,"latencyMs":5654,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400559274,"type":"command","turn":106,"command":"GO NORTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788400565283,"type":"model_turn","turn":107,"latencyMs":6008,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400565284,"type":"command","turn":107,"command":"GO NORTH","response":"Forest Path\nThis is a path winding through a dimly lit forest. The path heads north-south here. One particularly large tree with some low branches stands at the edge of the path.","parserRejection":false,"worldRefusal":false}
+{"t":1788400571914,"type":"model_turn","turn":108,"latencyMs":6629,"commands":["CLIMB TREE"],"commentary":""}
+{"t":1788400571916,"type":"command","turn":108,"command":"CLIMB TREE","response":"Up a Tree\nYou are about 10 feet above the ground nestled among some large branches. The nearest branch above you is above your reach.\nBeside you on the branch is a small bird's nest.\nIn the bird's nest is a large egg encrusted with precious jewels, apparently scavenged by a childless songbird. The egg is covered with fine gold inlay, and ornamented in lapis lazuli and mother-of-pearl. Unlike most eggs, this one is hinged and closed with a delicate looking clasp. The egg appears extremely fragile.","parserRejection":false,"worldRefusal":false}
+{"t":1788400577856,"type":"model_turn","turn":109,"latencyMs":5940,"commands":["TAKE EGG"],"commentary":""}
+{"t":1788400577857,"type":"command","turn":109,"command":"TAKE EGG","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400577858,"type":"score","score":59,"moves":101,"commands":108}
+{"t":1788400583289,"type":"model_turn","turn":110,"latencyMs":5431,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400583290,"type":"command","turn":110,"command":"GO DOWN","response":"Forest Path","parserRejection":false,"worldRefusal":false}
+{"t":1788400589568,"type":"model_turn","turn":111,"latencyMs":6277,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400589570,"type":"command","turn":111,"command":"GO SOUTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788400595066,"type":"model_turn","turn":112,"latencyMs":5496,"commands":["GO EAST"],"commentary":""}
+{"t":1788400595067,"type":"command","turn":112,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400601163,"type":"model_turn","turn":113,"latencyMs":6095,"commands":["GO EAST"],"commentary":""}
+{"t":1788400601165,"type":"command","turn":113,"command":"GO EAST","response":"Clearing\nYou are in a small clearing in a well marked forest path that extends to the east and west.","parserRejection":false,"worldRefusal":false}
+{"t":1788400610109,"type":"model_turn","turn":114,"latencyMs":8943,"commands":["GO WEST"],"commentary":""}
+{"t":1788400610112,"type":"command","turn":114,"command":"GO WEST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400617507,"type":"model_turn","turn":115,"latencyMs":7394,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788400617509,"type":"command","turn":115,"command":"ENTER WINDOW","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400624812,"type":"model_turn","turn":116,"latencyMs":7300,"commands":["GO WEST"],"commentary":""}
+{"t":1788400624813,"type":"command","turn":116,"command":"GO WEST","response":"Living Room","parserRejection":false,"worldRefusal":false}
+{"t":1788400630495,"type":"model_turn","turn":117,"latencyMs":5681,"commands":["OPEN CASE"],"commentary":""}
+{"t":1788400630496,"type":"command","turn":117,"command":"OPEN CASE","response":"Opened.","parserRejection":false,"worldRefusal":false}
+{"t":1788400638264,"type":"model_turn","turn":118,"latencyMs":7768,"commands":["PUT EGG IN CASE"],"commentary":""}
+{"t":1788400638265,"type":"command","turn":118,"command":"PUT EGG IN CASE","response":"Done.","parserRejection":false,"worldRefusal":false}
+{"t":1788400638265,"type":"score","score":64,"moves":110,"commands":117}
+{"t":1788400645204,"type":"model_turn","turn":119,"latencyMs":6939,"commands":["GO EAST"],"commentary":""}
+{"t":1788400645205,"type":"command","turn":119,"command":"GO EAST","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400651028,"type":"model_turn","turn":120,"latencyMs":5823,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788400651029,"type":"command","turn":120,"command":"ENTER WINDOW","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400657000,"type":"model_turn","turn":121,"latencyMs":5971,"commands":["GO EAST"],"commentary":""}
+{"t":1788400657001,"type":"command","turn":121,"command":"GO EAST","response":"Clearing","parserRejection":false,"worldRefusal":false}
+{"t":1788400663127,"type":"model_turn","turn":122,"latencyMs":6125,"commands":["GO EAST"],"commentary":""}
+{"t":1788400663129,"type":"command","turn":122,"command":"GO EAST","response":"Canyon View\nYou are at the top of the Great Canyon on its west wall. From here there is a marvelous view of the canyon and parts of the Frigid River upstream. Across the canyon, the walls of the White Cliffs join the mighty ramparts of the Flathead Mountains to the east. Following the Canyon upstream to the north, Aragain Falls may be seen, complete with rainbow. The mighty Frigid River flows out from a great dark cavern. To the west and south can be seen an immense forest, stretching for miles around. A path leads northwest. It is possible to climb down into the canyon from here.","parserRejection":false,"worldRefusal":false}
+{"t":1788400670326,"type":"model_turn","turn":123,"latencyMs":7197,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400670327,"type":"command","turn":123,"command":"GO DOWN","response":"Rocky Ledge\nYou are on a ledge about halfway up the wall of the river canyon. You can see from here that the main flow from Aragain Falls twists along a passage which it is impossible for you to enter. Below you is the canyon bottom. Above you is more cliff, which appears climbable.","parserRejection":false,"worldRefusal":false}
+{"t":1788400678420,"type":"model_turn","turn":124,"latencyMs":8092,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400678422,"type":"command","turn":124,"command":"GO DOWN","response":"Canyon Bottom\nYou are beneath the walls of the river canyon which may be climbable here. The lesser part of the runoff of Aragain Falls flows by below. To the north is a narrow path.","parserRejection":false,"worldRefusal":false}
+{"t":1788400687434,"type":"model_turn","turn":125,"latencyMs":9012,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400687435,"type":"command","turn":125,"command":"GO NORTH","response":"End of Rainbow\nYou are on a small, rocky beach on the continuation of the Frigid River past the Falls. The beach is narrow due to the presence of the White Cliffs. The river canyon opens here and sunlight shines in from above. A rainbow crosses over the falls to the east and a narrow path continues to the southwest.","parserRejection":false,"worldRefusal":false}
+{"t":1788400702633,"type":"model_turn","turn":126,"latencyMs":15197,"commands":["GO SW"],"commentary":""}
+{"t":1788400702635,"type":"command","turn":126,"command":"GO SW","response":"Canyon Bottom","parserRejection":false,"worldRefusal":false}
+{"t":1788400708814,"type":"model_turn","turn":127,"latencyMs":6179,"commands":["GO UP"],"commentary":""}
+{"t":1788400708816,"type":"command","turn":127,"command":"GO UP","response":"Rocky Ledge","parserRejection":false,"worldRefusal":false}
+{"t":1788400714664,"type":"model_turn","turn":128,"latencyMs":5848,"commands":["GO UP"],"commentary":""}
+{"t":1788400714666,"type":"command","turn":128,"command":"GO UP","response":"Canyon View","parserRejection":false,"worldRefusal":false}
+{"t":1788400720357,"type":"model_turn","turn":129,"latencyMs":5690,"commands":["GO WEST"],"commentary":""}
+{"t":1788400720358,"type":"command","turn":129,"command":"GO WEST","response":"Forest\nThis is a dimly lit forest, with large trees all around.","parserRejection":false,"worldRefusal":false}
+{"t":1788400725690,"type":"model_turn","turn":130,"latencyMs":5331,"commands":["LOOK"],"commentary":""}
+{"t":1788400725691,"type":"command","turn":130,"command":"LOOK","response":"Forest\nThis is a dimly lit forest, with large trees all around.","parserRejection":false,"worldRefusal":false}
+{"t":1788400732603,"type":"model_turn","turn":131,"latencyMs":6911,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400732606,"type":"command","turn":131,"command":"GO SOUTH","response":"Storm-tossed trees block your way.","parserRejection":false,"worldRefusal":false}
+{"t":1788400739855,"type":"model_turn","turn":132,"latencyMs":7249,"commands":["GO EAST"],"commentary":""}
+{"t":1788400739856,"type":"command","turn":132,"command":"GO EAST","response":"The rank undergrowth prevents eastward movement.","parserRejection":false,"worldRefusal":false}
+{"t":1788400746897,"type":"model_turn","turn":133,"latencyMs":7040,"commands":["GO NE"],"commentary":""}
+{"t":1788400746898,"type":"command","turn":133,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788400753672,"type":"model_turn","turn":134,"latencyMs":6773,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400753673,"type":"command","turn":134,"command":"GO NORTH","response":"Clearing","parserRejection":false,"worldRefusal":false}
+{"t":1788400759765,"type":"model_turn","turn":135,"latencyMs":6091,"commands":["GO WEST"],"commentary":""}
+{"t":1788400759766,"type":"command","turn":135,"command":"GO WEST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400767690,"type":"model_turn","turn":136,"latencyMs":7923,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788400767692,"type":"command","turn":136,"command":"ENTER WINDOW","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400774760,"type":"model_turn","turn":137,"latencyMs":7068,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400774761,"type":"command","turn":137,"command":"GO DOWN","response":"Only Santa Claus climbs down chimneys.","parserRejection":false,"worldRefusal":false}
+{"t":1788400783336,"type":"model_turn","turn":138,"latencyMs":8574,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788400783338,"type":"command","turn":138,"command":"ENTER WINDOW","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400790197,"type":"model_turn","turn":139,"latencyMs":6859,"commands":["GO EAST"],"commentary":""}
+{"t":1788400790202,"type":"command","turn":139,"command":"GO EAST","response":"Clearing","parserRejection":false,"worldRefusal":false}
+{"t":1788400796369,"type":"model_turn","turn":140,"latencyMs":6167,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400796370,"type":"command","turn":140,"command":"GO NORTH","response":"Forest\nThis is a dimly lit forest, with large trees all around.","parserRejection":false,"worldRefusal":false}
+{"t":1788400803164,"type":"model_turn","turn":141,"latencyMs":6793,"commands":["GO WEST"],"commentary":""}
+{"t":1788400803165,"type":"command","turn":141,"command":"GO WEST","response":"Forest Path","parserRejection":false,"worldRefusal":false}
+{"t":1788400810707,"type":"model_turn","turn":142,"latencyMs":7540,"commands":["GO EAST"],"commentary":""}
+{"t":1788400810708,"type":"command","turn":142,"command":"GO EAST","response":"Forest","parserRejection":false,"worldRefusal":false}
+{"t":1788400817344,"type":"model_turn","turn":143,"latencyMs":6635,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400817344,"type":"command","turn":143,"command":"GO NORTH","response":"The forest becomes impenetrable to the north.","parserRejection":false,"worldRefusal":false}
+{"t":1788400822994,"type":"model_turn","turn":144,"latencyMs":5649,"commands":["GO EAST"],"commentary":""}
+{"t":1788400822995,"type":"command","turn":144,"command":"GO EAST","response":"Forest\nThe forest thins out, revealing impassable mountains.","parserRejection":false,"worldRefusal":false}
+{"t":1788400828737,"type":"model_turn","turn":145,"latencyMs":5742,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400828738,"type":"command","turn":145,"command":"GO SOUTH","response":"Forest\nYou hear in the distance the chirping of a song bird.","parserRejection":false,"worldRefusal":false}
+{"t":1788400837289,"type":"model_turn","turn":146,"latencyMs":8550,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400837290,"type":"command","turn":146,"command":"GO SOUTH","response":"Clearing","parserRejection":false,"worldRefusal":false}
+{"t":1788400844039,"type":"model_turn","turn":147,"latencyMs":6748,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400844040,"type":"command","turn":147,"command":"GO NORTH","response":"Forest","parserRejection":false,"worldRefusal":false}
+{"t":1788400851174,"type":"model_turn","turn":148,"latencyMs":7133,"commands":["GO WEST"],"commentary":""}
+{"t":1788400851176,"type":"command","turn":148,"command":"GO WEST","response":"Forest Path","parserRejection":false,"worldRefusal":false}
+{"t":1788400856843,"type":"model_turn","turn":149,"latencyMs":5667,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400856844,"type":"command","turn":149,"command":"GO NORTH","response":"Clearing\nYou are in a clearing, with a forest surrounding you on all sides. A path leads south.\nOn the ground is a pile of leaves.","parserRejection":false,"worldRefusal":false}
+{"t":1788400863018,"type":"model_turn","turn":150,"latencyMs":6174,"commands":["MOVE LEAVES"],"commentary":""}
+{"t":1788400863020,"type":"command","turn":150,"command":"MOVE LEAVES","response":"Done.\nIn disturbing the pile of leaves, a grating is revealed.","parserRejection":false,"worldRefusal":false}
+{"t":1788400870375,"type":"model_turn","turn":151,"latencyMs":7355,"commands":["OPEN GRATING"],"commentary":""}
+{"t":1788400870376,"type":"command","turn":151,"command":"OPEN GRATING","response":"The grating is locked.","parserRejection":false,"worldRefusal":false}
+{"t":1788400879482,"type":"model_turn","turn":152,"latencyMs":9105,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400879486,"type":"command","turn":152,"command":"GO SOUTH","response":"Forest Path\nYou hear in the distance the chirping of a song bird.","parserRejection":false,"worldRefusal":false}
+{"t":1788400887184,"type":"model_turn","turn":153,"latencyMs":7698,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788400887185,"type":"command","turn":153,"command":"GO SOUTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788400893899,"type":"model_turn","turn":154,"latencyMs":6713,"commands":["GO EAST"],"commentary":""}
+{"t":1788400893900,"type":"command","turn":154,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400900544,"type":"model_turn","turn":155,"latencyMs":6643,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788400900547,"type":"command","turn":155,"command":"ENTER WINDOW","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400910932,"type":"model_turn","turn":156,"latencyMs":10385,"commands":["GO UP"],"commentary":""}
+{"t":1788400910933,"type":"command","turn":156,"command":"GO UP","response":"Attic\nThis is the attic. The only exit is a stairway leading down.\nA large coil of rope is lying in the corner.\nOn a table is a nasty-looking knife.","parserRejection":false,"worldRefusal":false}
+{"t":1788400919759,"type":"model_turn","turn":157,"latencyMs":8825,"commands":["TAKE ROPE"],"commentary":""}
+{"t":1788400919763,"type":"command","turn":157,"command":"TAKE ROPE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400926746,"type":"model_turn","turn":158,"latencyMs":6983,"commands":["TAKE KNIFE"],"commentary":""}
+{"t":1788400926747,"type":"command","turn":158,"command":"TAKE KNIFE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788400944796,"type":"model_turn","turn":159,"latencyMs":18048,"commands":["GO DOWN"],"commentary":""}
+{"t":1788400944797,"type":"command","turn":159,"command":"GO DOWN","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400952591,"type":"model_turn","turn":160,"latencyMs":7793,"commands":["GO WEST"],"commentary":""}
+{"t":1788400952592,"type":"command","turn":160,"command":"GO WEST","response":"Living Room\nYour collection of treasures consists of:\n  A jewel-encrusted egg","parserRejection":false,"worldRefusal":false}
+{"t":1788400961381,"type":"model_turn","turn":161,"latencyMs":8789,"commands":["GO EAST"],"commentary":""}
+{"t":1788400961382,"type":"command","turn":161,"command":"GO EAST","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788400968098,"type":"model_turn","turn":162,"latencyMs":6716,"commands":["GO EAST"],"commentary":""}
+{"t":1788400968099,"type":"command","turn":162,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788400974975,"type":"model_turn","turn":163,"latencyMs":6875,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400974978,"type":"command","turn":163,"command":"GO NORTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788400980866,"type":"model_turn","turn":164,"latencyMs":5887,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400980866,"type":"command","turn":164,"command":"GO NORTH","response":"Forest Path","parserRejection":false,"worldRefusal":false}
+{"t":1788400987249,"type":"model_turn","turn":165,"latencyMs":6382,"commands":["GO NORTH"],"commentary":""}
+{"t":1788400987250,"type":"command","turn":165,"command":"GO NORTH","response":"Clearing\nOn the ground is a pile of leaves.","parserRejection":false,"worldRefusal":false}
+{"t":1788400992981,"type":"model_turn","turn":166,"latencyMs":5730,"commands":["UNLOCK GRATING KNIFE"],"commentary":""}
+{"t":1788400992982,"type":"command","turn":166,"command":"UNLOCK GRATING KNIFE","response":"That sentence isn't one I recognize.","parserRejection":true,"worldRefusal":false}
+{"t":1788400998577,"type":"model_turn","turn":167,"latencyMs":5594,"commands":["UNLOCK GRATING WITH KNIFE"],"commentary":""}
+{"t":1788400998579,"type":"command","turn":167,"command":"UNLOCK GRATING WITH KNIFE","response":"Can you unlock a grating with a nasty knife?","parserRejection":false,"worldRefusal":false}
+{"t":1788401019586,"type":"model_turn","turn":168,"latencyMs":21007,"commands":["SEARCH LEAVES"],"commentary":""}
+{"t":1788401019588,"type":"command","turn":168,"command":"SEARCH LEAVES","response":"You find nothing unusual.","parserRejection":false,"worldRefusal":false}
+{"t":1788401031671,"type":"model_turn","turn":169,"latencyMs":12083,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401031672,"type":"command","turn":169,"command":"GO SOUTH","response":"Forest Path","parserRejection":false,"worldRefusal":false}
+{"t":1788401038086,"type":"model_turn","turn":170,"latencyMs":6413,"commands":["GO SOUTH{Jsiiassistant to=functions.exec code"],"commentary":""}
+{"t":1788401038088,"type":"command","turn":170,"command":"GO SOUTH{Jsiiassistant to=functions.exec code","response":"I don't know the word \"south{jsiiassistant\".","parserRejection":true,"worldRefusal":false}
+{"t":1788401044321,"type":"model_turn","turn":171,"latencyMs":6233,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401044322,"type":"command","turn":171,"command":"GO SOUTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788401055053,"type":"model_turn","turn":172,"latencyMs":10730,"commands":["GO EAST"],"commentary":""}
+{"t":1788401055054,"type":"command","turn":172,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788401060707,"type":"model_turn","turn":173,"latencyMs":5652,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788401060708,"type":"command","turn":173,"command":"ENTER WINDOW","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401068712,"type":"model_turn","turn":174,"latencyMs":8003,"commands":[],"commentary":"RGCTX 植物百科通 to=functions.exec code"}
+{"t":1788401074890,"type":"model_turn","turn":175,"latencyMs":6178,"commands":["GO WEST"],"commentary":""}
+{"t":1788401074891,"type":"command","turn":175,"command":"GO WEST","response":"Living Room\nYour collection of treasures consists of:\n  A jewel-encrusted egg","parserRejection":false,"worldRefusal":false}
+{"t":1788401083856,"type":"model_turn","turn":176,"latencyMs":8964,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788401083858,"type":"command","turn":176,"command":"OPEN TRAPDOOR","response":"The door reluctantly opens to reveal a rickety staircase descending into darkness.","parserRejection":false,"worldRefusal":false}
+{"t":1788401090919,"type":"model_turn","turn":177,"latencyMs":7060,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401090919,"type":"command","turn":177,"command":"GO DOWN","response":"The trap door crashes shut, and you hear someone barring it.\n\nCellar","parserRejection":false,"worldRefusal":false}
+{"t":1788401099494,"type":"model_turn","turn":178,"latencyMs":8574,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788401099495,"type":"command","turn":178,"command":"OPEN TRAPDOOR","response":"The door is locked from above.","parserRejection":false,"worldRefusal":false}
+{"t":1788401111415,"type":"model_turn","turn":179,"latencyMs":11919,"commands":["PRY TRAPDOOR KNIFE"],"commentary":""}
+{"t":1788401111416,"type":"command","turn":179,"command":"PRY TRAPDOOR KNIFE","response":"I don't know the word \"pry\".","parserRejection":true,"worldRefusal":false}
+{"t":1788401120873,"type":"model_turn","turn":180,"latencyMs":9456,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401120875,"type":"command","turn":180,"command":"GO SOUTH","response":"East of Chasm","parserRejection":false,"worldRefusal":false}
+{"t":1788401126705,"type":"model_turn","turn":181,"latencyMs":5830,"commands":["GO EAST"],"commentary":""}
+{"t":1788401126706,"type":"command","turn":181,"command":"GO EAST","response":"Gallery","parserRejection":false,"worldRefusal":false}
+{"t":1788401133202,"type":"model_turn","turn":182,"latencyMs":6495,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401133203,"type":"command","turn":182,"command":"GO NORTH","response":"Studio\nLoosely attached to a wall is a small piece of paper.\nThere is a viscous material here.\nThere is a screwdriver here.\nThere is a wrench here.\nThere is a sword here.\nThere is a brown sack here.\nThe brown sack contains:\n  A lunch\n  A clove of garlic","parserRejection":false,"worldRefusal":false}
+{"t":1788401143080,"type":"model_turn","turn":183,"latencyMs":9877,"commands":["INVENTORY"],"commentary":""}
+{"t":1788401143081,"type":"command","turn":183,"command":"INVENTORY","response":"You are carrying:\n  A nasty knife\n  A rope\n  A painting\n  A brass lantern (providing light)","parserRejection":false,"worldRefusal":false}
+{"t":1788401156837,"type":"model_turn","turn":184,"latencyMs":13755,"commands":["DROP ROPE"],"commentary":""}
+{"t":1788401156839,"type":"command","turn":184,"command":"DROP ROPE","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401163224,"type":"model_turn","turn":185,"latencyMs":6384,"commands":["GO UP"],"commentary":""}
+{"t":1788401163226,"type":"command","turn":185,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788401175894,"type":"model_turn","turn":186,"latencyMs":12668,"commands":["DROP KNIFE"],"commentary":""}
+{"t":1788401175896,"type":"command","turn":186,"command":"DROP KNIFE","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401182002,"type":"model_turn","turn":187,"latencyMs":6105,"commands":["DROP PAINTING"],"commentary":""}
+{"t":1788401182003,"type":"command","turn":187,"command":"DROP PAINTING","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401187672,"type":"model_turn","turn":188,"latencyMs":5668,"commands":["TAKE ROPE"],"commentary":""}
+{"t":1788401187674,"type":"command","turn":188,"command":"TAKE ROPE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401194007,"type":"model_turn","turn":189,"latencyMs":6333,"commands":["TAKE KNIFE"],"commentary":""}
+{"t":1788401194009,"type":"command","turn":189,"command":"TAKE KNIFE","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401199828,"type":"model_turn","turn":190,"latencyMs":5818,"commands":["GO UP"],"commentary":""}
+{"t":1788401199829,"type":"command","turn":190,"command":"GO UP","response":"You can't get up there with what you're carrying.","parserRejection":false,"worldRefusal":false}
+{"t":1788401206656,"type":"model_turn","turn":191,"latencyMs":6827,"commands":["DROP ROPE"],"commentary":""}
+{"t":1788401206657,"type":"command","turn":191,"command":"DROP ROPE","response":"Dropped.\nA seedy-looking individual with a large bag just wandered through the room. On the way through, he quietly abstracted some valuables from the room and from your possession, mumbling something about \"Doing unto others before...\"","parserRejection":false,"worldRefusal":false}
+{"t":1788401213392,"type":"model_turn","turn":192,"latencyMs":6734,"commands":["GO UP"],"commentary":""}
+{"t":1788401213393,"type":"command","turn":192,"command":"GO UP","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401219619,"type":"model_turn","turn":193,"latencyMs":6226,"commands":["GO WEST"],"commentary":""}
+{"t":1788401219621,"type":"command","turn":193,"command":"GO WEST","response":"Living Room\nYour collection of treasures consists of:\n  A jewel-encrusted egg","parserRejection":false,"worldRefusal":false}
+{"t":1788401226370,"type":"model_turn","turn":194,"latencyMs":6749,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788401226371,"type":"command","turn":194,"command":"OPEN TRAPDOOR","response":"The door reluctantly opens to reveal a rickety staircase descending into darkness.","parserRejection":false,"worldRefusal":false}
+{"t":1788401233157,"type":"model_turn","turn":195,"latencyMs":6785,"commands":["PUT KNIFE IN TRAPDOOR"],"commentary":""}
+{"t":1788401233158,"type":"command","turn":195,"command":"PUT KNIFE IN TRAPDOOR","response":"There's no room.","parserRejection":false,"worldRefusal":false}
+{"t":1788401238860,"type":"model_turn","turn":196,"latencyMs":5701,"commands":["PUT KNIFE UNDER TRAPDOOR"],"commentary":""}
+{"t":1788401238865,"type":"command","turn":196,"command":"PUT KNIFE UNDER TRAPDOOR","response":"You can't do that.","parserRejection":false,"worldRefusal":true}
+{"t":1788401247780,"type":"model_turn","turn":197,"latencyMs":8915,"commands":["WEDGE KNIFE TRAPDOOR"],"commentary":""}
+{"t":1788401247781,"type":"command","turn":197,"command":"WEDGE KNIFE TRAPDOOR","response":"I don't know the word \"wedge\".","parserRejection":true,"worldRefusal":false}
+{"t":1788401259778,"type":"model_turn","turn":198,"latencyMs":11996,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401259779,"type":"command","turn":198,"command":"GO DOWN","response":"The trap door crashes shut, and you hear someone barring it.\n\nCellar","parserRejection":false,"worldRefusal":false}
+{"t":1788401267057,"type":"model_turn","turn":199,"latencyMs":7277,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401267057,"type":"command","turn":199,"command":"GO SOUTH","response":"East of Chasm","parserRejection":false,"worldRefusal":false}
+{"t":1788401273331,"type":"model_turn","turn":200,"latencyMs":6273,"commands":["GO EAST"],"commentary":""}
+{"t":1788401273332,"type":"command","turn":200,"command":"GO EAST","response":"Gallery","parserRejection":false,"worldRefusal":false}
+{"t":1788401283271,"type":"model_turn","turn":201,"latencyMs":9939,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401283273,"type":"command","turn":201,"command":"GO NORTH","response":"Studio\nLoosely attached to a wall is a small piece of paper.\nThere is a rope here.\nThere is a viscous material here.\nThere is a screwdriver here.\nThere is a wrench here.\nThere is a sword here.\nThere is a brown sack here.\nThe brown sack contains:\n  A lunch\n  A clove of garlic","parserRejection":false,"worldRefusal":false}
+{"t":1788401289996,"type":"model_turn","turn":202,"latencyMs":6723,"commands":["TAKE PAPER"],"commentary":""}
+{"t":1788401289997,"type":"command","turn":202,"command":"TAKE PAPER","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401295408,"type":"model_turn","turn":203,"latencyMs":5410,"commands":["EXAMINE PAPER"],"commentary":""}
+{"t":1788401295408,"type":"command","turn":203,"command":"EXAMINE PAPER","response":"Congratulations!\n\nYou are the privileged owner of ZORK I: The Great Underground Empire, a self-contained and self-maintaining universe. If used and maintained in accordance with normal operating practices for small universes, ZORK will provide many months of trouble-free operation.","parserRejection":false,"worldRefusal":false}
+{"t":1788401304544,"type":"model_turn","turn":204,"latencyMs":9135,"commands":["DROP KNIFE"],"commentary":""}
+{"t":1788401304546,"type":"command","turn":204,"command":"DROP KNIFE","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401309795,"type":"model_turn","turn":205,"latencyMs":5248,"commands":["DROP PAPER"],"commentary":""}
+{"t":1788401309796,"type":"command","turn":205,"command":"DROP PAPER","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401316239,"type":"model_turn","turn":206,"latencyMs":6442,"commands":["TAKE SWORD"],"commentary":""}
+{"t":1788401316240,"type":"command","turn":206,"command":"TAKE SWORD","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401322745,"type":"model_turn","turn":207,"latencyMs":6505,"commands":["GO UP"],"commentary":""}
+{"t":1788401322746,"type":"command","turn":207,"command":"GO UP","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401331121,"type":"model_turn","turn":208,"latencyMs":8375,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788401331122,"type":"command","turn":208,"command":"ENTER WINDOW","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788401337701,"type":"model_turn","turn":209,"latencyMs":6578,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401337702,"type":"command","turn":209,"command":"GO SOUTH","response":"South of House\nYou are facing the south side of a white house. There is no door here, and all the windows are boarded.","parserRejection":false,"worldRefusal":false}
+{"t":1788401345440,"type":"model_turn","turn":210,"latencyMs":7737,"commands":["GO EAST"],"commentary":""}
+{"t":1788401345441,"type":"command","turn":210,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788401356121,"type":"model_turn","turn":211,"latencyMs":10679,"commands":["GO WEST"],"commentary":""}
+{"t":1788401356123,"type":"command","turn":211,"command":"GO WEST","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401376284,"type":"model_turn","turn":212,"latencyMs":20158,"commands":["GO WEST"],"commentary":""}
+{"t":1788401376285,"type":"command","turn":212,"command":"GO WEST","response":"Living Room\nYour collection of treasures consists of:\n  A jewel-encrusted egg","parserRejection":false,"worldRefusal":false}
+{"t":1788401383456,"type":"model_turn","turn":213,"latencyMs":7170,"commands":[],"commentary":"Down."}
+{"t":1788401390740,"type":"model_turn","turn":214,"latencyMs":7284,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401390741,"type":"command","turn":214,"command":"GO DOWN","response":"The trap door is closed.","parserRejection":false,"worldRefusal":false}
+{"t":1788401397775,"type":"model_turn","turn":215,"latencyMs":7033,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788401397776,"type":"command","turn":215,"command":"OPEN TRAPDOOR","response":"The door reluctantly opens to reveal a rickety staircase descending into darkness.","parserRejection":false,"worldRefusal":false}
+{"t":1788401405035,"type":"model_turn","turn":216,"latencyMs":7258,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401405037,"type":"command","turn":216,"command":"GO DOWN","response":"The trap door crashes shut, and you hear someone barring it.\n\nCellar","parserRejection":false,"worldRefusal":false}
+{"t":1788401414082,"type":"model_turn","turn":217,"latencyMs":9044,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401414083,"type":"command","turn":217,"command":"GO NORTH","response":"The Troll Room","parserRejection":false,"worldRefusal":false}
+{"t":1788401420520,"type":"model_turn","turn":218,"latencyMs":6436,"commands":["GO EAST"],"commentary":""}
+{"t":1788401420522,"type":"command","turn":218,"command":"GO EAST","response":"East-West Passage","parserRejection":false,"worldRefusal":false}
+{"t":1788401426933,"type":"model_turn","turn":219,"latencyMs":6410,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401426934,"type":"command","turn":219,"command":"GO NORTH","response":"Chasm","parserRejection":false,"worldRefusal":false}
+{"t":1788401433198,"type":"model_turn","turn":220,"latencyMs":6263,"commands":["GO NE"],"commentary":""}
+{"t":1788401433199,"type":"command","turn":220,"command":"GO NE","response":"Reservoir South","parserRejection":false,"worldRefusal":false}
+{"t":1788401439461,"type":"model_turn","turn":221,"latencyMs":6261,"commands":["GO EAST"],"commentary":""}
+{"t":1788401439463,"type":"command","turn":221,"command":"GO EAST","response":"Dam","parserRejection":false,"worldRefusal":false}
+{"t":1788401445731,"type":"model_turn","turn":222,"latencyMs":6268,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401445732,"type":"command","turn":222,"command":"GO NORTH","response":"Dam Lobby\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.","parserRejection":false,"worldRefusal":false}
+{"t":1788401452474,"type":"model_turn","turn":223,"latencyMs":6741,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401452475,"type":"command","turn":223,"command":"GO NORTH","response":"Maintenance Room\nA small leaflet is on the ground.\nThere is a group of tool chests here.","parserRejection":false,"worldRefusal":false}
+{"t":1788401458528,"type":"model_turn","turn":224,"latencyMs":6052,"commands":["OPEN CHESTS"],"commentary":""}
+{"t":1788401458529,"type":"command","turn":224,"command":"OPEN CHESTS","response":"The chests are so rusty and corroded that they crumble when you touch them.","parserRejection":false,"worldRefusal":false}
+{"t":1788401467872,"type":"model_turn","turn":225,"latencyMs":9342,"commands":["GO WEST"],"commentary":""}
+{"t":1788401467873,"type":"command","turn":225,"command":"GO WEST","response":"Dam Lobby\nSome guidebooks entitled \"Flood Control Dam #3\" are on the reception desk.","parserRejection":false,"worldRefusal":false}
+{"t":1788401483609,"type":"model_turn","turn":226,"latencyMs":15735,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401483610,"type":"command","turn":226,"command":"GO SOUTH","response":"Dam","parserRejection":false,"worldRefusal":false}
+{"t":1788401493763,"type":"model_turn","turn":227,"latencyMs":10152,"commands":["GO WEST"],"commentary":""}
+{"t":1788401493765,"type":"command","turn":227,"command":"GO WEST","response":"Reservoir South","parserRejection":false,"worldRefusal":false}
+{"t":1788401500934,"type":"model_turn","turn":228,"latencyMs":7169,"commands":["GO SW"],"commentary":""}
+{"t":1788401500935,"type":"command","turn":228,"command":"GO SW","response":"Chasm\nThe lamp appears a bit dimmer.","parserRejection":false,"worldRefusal":false}
+{"t":1788401509443,"type":"model_turn","turn":229,"latencyMs":8507,"commands":["GO SW"],"commentary":""}
+{"t":1788401509444,"type":"command","turn":229,"command":"GO SW","response":"East-West Passage\nA \"lean and hungry\" gentleman just wandered through, carrying a large bag. Finding nothing of value, he left disgruntled.","parserRejection":false,"worldRefusal":false}
+{"t":1788401519009,"type":"model_turn","turn":230,"latencyMs":9565,"commands":["GO WEST"],"commentary":""}
+{"t":1788401519011,"type":"command","turn":230,"command":"GO WEST","response":"The Troll Room","parserRejection":false,"worldRefusal":false}
+{"t":1788401526169,"type":"model_turn","turn":231,"latencyMs":7158,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401526170,"type":"command","turn":231,"command":"GO SOUTH","response":"Cellar","parserRejection":false,"worldRefusal":false}
+{"t":1788401532927,"type":"model_turn","turn":232,"latencyMs":6756,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401532929,"type":"command","turn":232,"command":"GO SOUTH","response":"East of Chasm","parserRejection":false,"worldRefusal":false}
+{"t":1788401539815,"type":"model_turn","turn":233,"latencyMs":6886,"commands":["GO EAST"],"commentary":""}
+{"t":1788401539816,"type":"command","turn":233,"command":"GO EAST","response":"Gallery","parserRejection":false,"worldRefusal":false}
+{"t":1788401547486,"type":"model_turn","turn":234,"latencyMs":7670,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401547488,"type":"command","turn":234,"command":"GO NORTH","response":"Studio\nThere is a ZORK owner's manual here.\nThere is a nasty knife here.\nThere is a rope here.\nThere is a viscous material here.\nThere is a screwdriver here.\nThere is a wrench here.\nThere is a brown sack here.\nThe brown sack contains:\n  A lunch\n  A clove of garlic","parserRejection":false,"worldRefusal":false}
+{"t":1788401555407,"type":"model_turn","turn":235,"latencyMs":7919,"commands":["GO UP"],"commentary":""}
+{"t":1788401555408,"type":"command","turn":235,"command":"GO UP","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401561094,"type":"model_turn","turn":236,"latencyMs":5685,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788401561096,"type":"command","turn":236,"command":"ENTER WINDOW","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788401567073,"type":"model_turn","turn":237,"latencyMs":5977,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401567074,"type":"command","turn":237,"command":"GO NORTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788401573681,"type":"model_turn","turn":238,"latencyMs":6607,"commands":["GO WEST"],"commentary":""}
+{"t":1788401573682,"type":"command","turn":238,"command":"GO WEST","response":"West of House\nThere is a small mailbox here.","parserRejection":false,"worldRefusal":false}
+{"t":1788401581383,"type":"model_turn","turn":239,"latencyMs":7700,"commands":["OPEN MAILBOX"],"commentary":""}
+{"t":1788401581384,"type":"command","turn":239,"command":"OPEN MAILBOX","response":"It is already open.","parserRejection":false,"worldRefusal":false}
+{"t":1788401587983,"type":"model_turn","turn":240,"latencyMs":6599,"commands":["LOOK MAILBOX"],"commentary":""}
+{"t":1788401587984,"type":"command","turn":240,"command":"LOOK MAILBOX","response":"That sentence isn't one I recognize.","parserRejection":true,"worldRefusal":false}
+{"t":1788401595207,"type":"model_turn","turn":241,"latencyMs":7222,"commands":["EXAMINE MAILBOX"],"commentary":""}
+{"t":1788401595208,"type":"command","turn":241,"command":"EXAMINE MAILBOX","response":"The small mailbox is empty.","parserRejection":false,"worldRefusal":false}
+{"t":1788401610896,"type":"model_turn","turn":242,"latencyMs":15687,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401610897,"type":"command","turn":242,"command":"GO NORTH","response":"North of House","parserRejection":false,"worldRefusal":false}
+{"t":1788401621188,"type":"model_turn","turn":243,"latencyMs":10291,"commands":["GO EAST"],"commentary":""}
+{"t":1788401621189,"type":"command","turn":243,"command":"GO EAST","response":"Behind House","parserRejection":false,"worldRefusal":false}
+{"t":1788401634789,"type":"model_turn","turn":244,"latencyMs":13599,"commands":["ENTER WINDOW"],"commentary":""}
+{"t":1788401634791,"type":"command","turn":244,"command":"ENTER WINDOW","response":"Kitchen","parserRejection":false,"worldRefusal":false}
+{"t":1788401641566,"type":"model_turn","turn":245,"latencyMs":6775,"commands":["GO WEST"],"commentary":""}
+{"t":1788401641567,"type":"command","turn":245,"command":"GO WEST","response":"Living Room\nYour collection of treasures consists of:\n  A jewel-encrusted egg","parserRejection":false,"worldRefusal":false}
+{"t":1788401647214,"type":"model_turn","turn":246,"latencyMs":5646,"commands":["OPEN TRAPDOOR"],"commentary":""}
+{"t":1788401647215,"type":"command","turn":246,"command":"OPEN TRAPDOOR","response":"The door reluctantly opens to reveal a rickety staircase descending into darkness.","parserRejection":false,"worldRefusal":false}
+{"t":1788401652960,"type":"model_turn","turn":247,"latencyMs":5745,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401652961,"type":"command","turn":247,"command":"GO DOWN","response":"The trap door crashes shut, and you hear someone barring it.\n\nCellar","parserRejection":false,"worldRefusal":false}
+{"t":1788401660203,"type":"model_turn","turn":248,"latencyMs":7242,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401660204,"type":"command","turn":248,"command":"GO NORTH","response":"The Troll Room","parserRejection":false,"worldRefusal":false}
+{"t":1788401667502,"type":"model_turn","turn":249,"latencyMs":7297,"commands":["GO WEST"],"commentary":""}
+{"t":1788401667503,"type":"command","turn":249,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401685291,"type":"model_turn","turn":250,"latencyMs":17787,"commands":["GO WEST"],"commentary":""}
+{"t":1788401685292,"type":"command","turn":250,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401691831,"type":"model_turn","turn":251,"latencyMs":6538,"commands":["GO WEST"],"commentary":""}
+{"t":1788401691833,"type":"command","turn":251,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401699030,"type":"model_turn","turn":252,"latencyMs":7197,"commands":["GO WEST"],"commentary":""}
+{"t":1788401699031,"type":"command","turn":252,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401706743,"type":"model_turn","turn":253,"latencyMs":7711,"commands":["GO UP"],"commentary":""}
+{"t":1788401706744,"type":"command","turn":253,"command":"GO UP","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401719191,"type":"model_turn","turn":254,"latencyMs":12446,"commands":["GO EAST"],"commentary":""}
+{"t":1788401719193,"type":"command","turn":254,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401728411,"type":"model_turn","turn":255,"latencyMs":9218,"commands":["GO UP"],"commentary":""}
+{"t":1788401728412,"type":"command","turn":255,"command":"GO UP","response":"Maze\nThis is part of a maze of twisty little passages, all alike. A skeleton, probably the remains of a luckless adventurer, lies here.\nBeside the skeleton is a rusty knife.\nThe deceased adventurer's useless lantern is here.\nThere is a skeleton key here.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788401734912,"type":"model_turn","turn":256,"latencyMs":6500,"commands":["TAKE KEY"],"commentary":""}
+{"t":1788401734914,"type":"command","turn":256,"command":"TAKE KEY","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401741729,"type":"model_turn","turn":257,"latencyMs":6815,"commands":["TAKE BAG"],"commentary":""}
+{"t":1788401741730,"type":"command","turn":257,"command":"TAKE BAG","response":"Taken.","parserRejection":false,"worldRefusal":false}
+{"t":1788401741731,"type":"score","score":74,"moves":242,"commands":254}
+{"t":1788401751141,"type":"model_turn","turn":258,"latencyMs":9410,"commands":["GO SW"],"commentary":""}
+{"t":1788401751142,"type":"command","turn":258,"command":"GO SW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401757386,"type":"model_turn","turn":259,"latencyMs":6243,"commands":["GO UP"],"commentary":""}
+{"t":1788401757388,"type":"command","turn":259,"command":"GO UP","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401765490,"type":"model_turn","turn":260,"latencyMs":8102,"commands":["GO EAST"],"commentary":""}
+{"t":1788401765492,"type":"command","turn":260,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401772511,"type":"model_turn","turn":261,"latencyMs":7019,"commands":["GO NE"],"commentary":""}
+{"t":1788401772512,"type":"command","turn":261,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401780591,"type":"model_turn","turn":262,"latencyMs":8079,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401780592,"type":"command","turn":262,"command":"GO NORTH","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401801786,"type":"model_turn","turn":263,"latencyMs":21193,"commands":["GO WEST"],"commentary":""}
+{"t":1788401801788,"type":"command","turn":263,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401808316,"type":"model_turn","turn":264,"latencyMs":6528,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401808317,"type":"command","turn":264,"command":"GO DOWN","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401815555,"type":"model_turn","turn":265,"latencyMs":7237,"commands":["GO NE"],"commentary":""}
+{"t":1788401815556,"type":"command","turn":265,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401830950,"type":"model_turn","turn":266,"latencyMs":15393,"commands":["GO EAST"],"commentary":""}
+{"t":1788401830952,"type":"command","turn":266,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401838112,"type":"model_turn","turn":267,"latencyMs":7159,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401838112,"type":"command","turn":267,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401845428,"type":"model_turn","turn":268,"latencyMs":7315,"commands":["GO SE"],"commentary":""}
+{"t":1788401845429,"type":"command","turn":268,"command":"GO SE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401873597,"type":"model_turn","turn":269,"latencyMs":28167,"commands":["GO NW"],"commentary":""}
+{"t":1788401873599,"type":"command","turn":269,"command":"GO NW","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401888864,"type":"model_turn","turn":270,"latencyMs":15263,"commands":["GO UP"],"commentary":""}
+{"t":1788401888868,"type":"command","turn":270,"command":"GO UP","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401898601,"type":"model_turn","turn":271,"latencyMs":9732,"commands":["GO NW"],"commentary":""}
+{"t":1788401898605,"type":"command","turn":271,"command":"GO NW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401919588,"type":"model_turn","turn":272,"latencyMs":20983,"commands":["DROP BAG"],"commentary":""}
+{"t":1788401919590,"type":"command","turn":272,"command":"DROP BAG","response":"Dropped.","parserRejection":false,"worldRefusal":false}
+{"t":1788401928915,"type":"model_turn","turn":273,"latencyMs":9325,"commands":["GO SW"],"commentary":""}
+{"t":1788401928916,"type":"command","turn":273,"command":"GO SW","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401936972,"type":"model_turn","turn":274,"latencyMs":8055,"commands":["GO DOWN"],"commentary":""}
+{"t":1788401936973,"type":"command","turn":274,"command":"GO DOWN","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401944711,"type":"model_turn","turn":275,"latencyMs":7737,"commands":["GO WEST"],"commentary":""}
+{"t":1788401944712,"type":"command","turn":275,"command":"GO WEST","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788401953476,"type":"model_turn","turn":276,"latencyMs":8763,"commands":["GO NORTH"],"commentary":""}
+{"t":1788401953477,"type":"command","turn":276,"command":"GO NORTH","response":"Dead End\nYou have come to a dead end in the maze.","parserRejection":false,"worldRefusal":false}
+{"t":1788401960476,"type":"model_turn","turn":277,"latencyMs":6998,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788401960477,"type":"command","turn":277,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401968807,"type":"model_turn","turn":278,"latencyMs":8330,"commands":["GO SW"],"commentary":""}
+{"t":1788401968808,"type":"command","turn":278,"command":"GO SW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788401975265,"type":"model_turn","turn":279,"latencyMs":6456,"commands":["GO NW"],"commentary":""}
+{"t":1788401975266,"type":"command","turn":279,"command":"GO NW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788401997567,"type":"model_turn","turn":280,"latencyMs":22301,"commands":["GO NW"],"commentary":""}
+{"t":1788401997568,"type":"command","turn":280,"command":"GO NW","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402005404,"type":"model_turn","turn":281,"latencyMs":7836,"commands":["GO NE"],"commentary":""}
+{"t":1788402005406,"type":"command","turn":281,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402012955,"type":"model_turn","turn":282,"latencyMs":7549,"commands":["GO EAST"],"commentary":""}
+{"t":1788402012956,"type":"command","turn":282,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402021168,"type":"model_turn","turn":283,"latencyMs":8211,"commands":["GO NE"],"commentary":""}
+{"t":1788402021170,"type":"command","turn":283,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402029757,"type":"model_turn","turn":284,"latencyMs":8587,"commands":["GO UP"],"commentary":""}
+{"t":1788402029759,"type":"command","turn":284,"command":"GO UP","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402039537,"type":"model_turn","turn":285,"latencyMs":9778,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788402039538,"type":"command","turn":285,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788402046593,"type":"model_turn","turn":286,"latencyMs":7054,"commands":["GO NORTH"],"commentary":""}
+{"t":1788402046594,"type":"command","turn":286,"command":"GO NORTH","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402053889,"type":"model_turn","turn":287,"latencyMs":7294,"commands":["GO WEST"],"commentary":""}
+{"t":1788402053891,"type":"command","turn":287,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402063498,"type":"model_turn","turn":288,"latencyMs":9606,"commands":["GO NW"],"commentary":""}
+{"t":1788402063500,"type":"command","turn":288,"command":"GO NW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788402069826,"type":"model_turn","turn":289,"latencyMs":6325,"commands":["GO UP"],"commentary":""}
+{"t":1788402069828,"type":"command","turn":289,"command":"GO UP","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402076808,"type":"model_turn","turn":290,"latencyMs":6979,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788402076810,"type":"command","turn":290,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402086538,"type":"model_turn","turn":291,"latencyMs":9727,"commands":["GO SE"],"commentary":""}
+{"t":1788402086539,"type":"command","turn":291,"command":"GO SE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402094246,"type":"model_turn","turn":292,"latencyMs":7706,"commands":["GO EAST"],"commentary":""}
+{"t":1788402094247,"type":"command","turn":292,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402100664,"type":"model_turn","turn":293,"latencyMs":6417,"commands":["GO SE"],"commentary":""}
+{"t":1788402100665,"type":"command","turn":293,"command":"GO SE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402106824,"type":"model_turn","turn":294,"latencyMs":6159,"commands":["GO NORTH"],"commentary":""}
+{"t":1788402106825,"type":"command","turn":294,"command":"GO NORTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402115352,"type":"model_turn","turn":295,"latencyMs":8525,"commands":["GO WEST"],"commentary":""}
+{"t":1788402115353,"type":"command","turn":295,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402123830,"type":"model_turn","turn":296,"latencyMs":8477,"commands":["GO UP"],"commentary":""}
+{"t":1788402123832,"type":"command","turn":296,"command":"GO UP","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402131157,"type":"model_turn","turn":297,"latencyMs":7325,"commands":["GO NE"],"commentary":""}
+{"t":1788402131158,"type":"command","turn":297,"command":"GO NE","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402138735,"type":"model_turn","turn":298,"latencyMs":7577,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788402138737,"type":"command","turn":298,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788402151014,"type":"model_turn","turn":299,"latencyMs":12277,"commands":["GO DOWN"],"commentary":""}
+{"t":1788402151015,"type":"command","turn":299,"command":"GO DOWN","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402158561,"type":"model_turn","turn":300,"latencyMs":7545,"commands":["GO WEST"],"commentary":""}
+{"t":1788402158562,"type":"command","turn":300,"command":"GO WEST","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402167721,"type":"model_turn","turn":301,"latencyMs":9158,"commands":["GO EAST"],"commentary":""}
+{"t":1788402167722,"type":"command","turn":301,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nAn old leather bag, bulging with coins, is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788402176899,"type":"model_turn","turn":302,"latencyMs":9176,"commands":["GO UP"],"commentary":""}
+{"t":1788402176900,"type":"command","turn":302,"command":"GO UP","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402188712,"type":"model_turn","turn":303,"latencyMs":11811,"commands":["GO EAST"],"commentary":""}
+{"t":1788402188713,"type":"command","turn":303,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402196238,"type":"model_turn","turn":304,"latencyMs":7525,"commands":["GO WEST"],"commentary":""}
+{"t":1788402196239,"type":"command","turn":304,"command":"GO WEST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402205964,"type":"model_turn","turn":305,"latencyMs":9724,"commands":["GO NW"],"commentary":""}
+{"t":1788402205965,"type":"command","turn":305,"command":"GO NW","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402213196,"type":"model_turn","turn":306,"latencyMs":7230,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788402213197,"type":"command","turn":306,"command":"GO SOUTH","response":"You can't go that way.","parserRejection":false,"worldRefusal":true}
+{"t":1788402220662,"type":"model_turn","turn":307,"latencyMs":7465,"commands":["GO DOWN"],"commentary":""}
+{"t":1788402220663,"type":"command","turn":307,"command":"GO DOWN","response":"You won't be able to get back up to the tunnel you are going through when it gets to the next room.\n\nMaze\nThis is part of a maze of twisty little passages, all alike. A skeleton, probably the remains of a luckless adventurer, lies here.\nBeside the skeleton is a rusty knife.\nThe deceased adventurer's useless lantern is here.","parserRejection":false,"worldRefusal":false}
+{"t":1788402228758,"type":"model_turn","turn":308,"latencyMs":8094,"commands":["GO SW"],"commentary":""}
+{"t":1788402228759,"type":"command","turn":308,"command":"GO SW","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402235774,"type":"model_turn","turn":309,"latencyMs":7015,"commands":["GO EAST"],"commentary":""}
+{"t":1788402235775,"type":"command","turn":309,"command":"GO EAST","response":"Maze\nThis is part of a maze of twisty little passages, all alike.","parserRejection":false,"worldRefusal":false}
+{"t":1788402246558,"type":"model_turn","turn":310,"latencyMs":10782,"commands":["GO SOUTH"],"commentary":""}
+{"t":1788402246559,"type":"command","turn":310,"command":"GO SOUTH","response":"Maze\nThis is part of a maze of twisty little passages, all alike.\nYour sword is glowing with a faint blue glow.","parserRejection":false,"worldRefusal":false}
+{"t":1788402254073,"type":"model_turn","turn":311,"latencyMs":7513,"commands":["GO SE"],"commentary":""}
+{"t":1788402254074,"type":"command","turn":311,"command":"GO SE","response":"Cyclops Room\nThis room has an exit on the northwest, and a staircase leading up.\nA cyclops, who looks prepared to eat horses (much less mere adventurers), blocks the staircase. From his state of health, and the bloodstains on the walls, you gather that he is not very friendly, though he likes people.\nYour sword has begun to glow very brightly.","parserRejection":false,"worldRefusal":false}
+{"t":1788402261335,"type":"model_turn","turn":312,"latencyMs":7260,"commands":["ODYSSEUS"],"commentary":""}
+{"t":1788402261336,"type":"command","turn":312,"command":"ODYSSEUS","response":"The cyclops, hearing the name of his father's deadly nemesis, flees the room by knocking down the wall on the east of the room.\nYour sword is no longer glowing.","parserRejection":false,"worldRefusal":false}
+{"t":1788402269475,"type":"model_turn","turn":313,"latencyMs":8138,"commands":["GO UP"],"commentary":""}
+{"t":1788402269477,"type":"command","turn":313,"command":"GO UP","response":"You hear a scream of anguish as you violate the robber's hideaway. Using passages unknown to you, he rushes to its defense.\nThe thief gestures mysteriously, and the treasures in the room suddenly vanish.\n\nTreasure Room\nThis is a large room, whose east wall is solid granite. A number of discarded bags, which crumble at your touch, are scattered about on the floor. There is an exit down a staircase.\nThere is a suspicious-looking individual, holding a large bag, leaning against one wall. He is armed with a deadly stiletto.\nThere is a silver chalice, intricately engraved, here.\nYour sword has begun to glow very brightly.\nThe stiletto touches your forehead, and the blood obscures your vision.","parserRejection":false,"worldRefusal":false}
+{"t":1788402269478,"type":"score","score":99,"moves":298,"commands":310}
+{"t":1788402276713,"type":"model_turn","turn":314,"latencyMs":7235,"commands":["ATTACK THIEF"],"commentary":""}
+{"t":1788402276715,"type":"command","turn":314,"command":"ATTACK THIEF","response":"(with the sword)\nThe blow lands, making a shallow gash in the thief's arm!\nThe thief comes in from the side, feints, and inserts the blade into your ribs.\nIt appears that that last blow was too much for you. I'm afraid you are dead.\n \n   ****  You have died  **** \n\nNow, let's take a look here... Well, you probably deserve another chance. I can't quite fix you up completely, but you can't have everything.\n\nForest\nThis is a forest, with trees in all directions. To the east, there appears to be sunlight.","parserRejection":false,"worldRefusal":false}
+{"t":1788402276716,"type":"score","score":89,"moves":299,"commands":311}
+{"t":1788402284871,"type":"model_turn","turn":315,"latencyMs":8155,"commands":["INVENTORY"],"commentary":""}
+{"t":1788402284872,"type":"command","turn":315,"command":"INVENTORY","response":"You are empty-handed.","parserRejection":false,"worldRefusal":false}
+{"t":1788402284874,"type":"run_end","endReason":"budget","budgetReached":true,"runStats":{"startedAt":1788399910499,"modelTurns":315,"commands":312,"parserRejections":9,"worldRefusals":23,"darknessWarnings":0,"deaths":1,"gameRestarts":0,"score":89,"maxScore":99,"moves":300,"movesBeforeRestarts":0,"totalMoves":300,"commandsAtLastScoreChange":311,"maxCommandsWithoutScore":137,"turnLatenciesMs":[4833,5669,8135,6143,5988,5169,4912,5189,4249,4771,4742,6578,6019,5233,4706,7306,4428,5102,6633,6124,8384,6549,7224,5204,5592,5528,7903,5073,6897,5176,11383,6338,6155,5192,4994,4956,5740,6069,8439,6718,6373,4816,5441,9649,4717,6394,5228,5668,5479,8683,5594,6019,4599,5296,4489,4665,5150,5487,5884,5287,6001,8765,5719,5783,6199,5315,6619,6770,5813,5617,4983,5296,4706,9233,6111,6584,7044,4850,6268,5071,6651,5675,6864,5002,5170,6206,5524,5850,10567,8787,6933,7053,6294,6221,6423,5638,9757,7289,5254,5270,5290,4913,9213,5245,6652,5654,6008,6629,5940,5431,6277,5496,6095,8943,7394,7300,5681,7768,6939,5823,5971,6125,7197,8092,9012,15197,6179,5848,5690,5331,6911,7249,7040,6773,6091,7923,7068,8574,6859,6167,6793,7540,6635,5649,5742,8550,6748,7133,5667,6174,7355,9105,7698,6713,6643,10385,8825,6983,18048,7793,8789,6716,6875,5887,6382,5730,5594,21007,12083,6413,6233,10730,5652,8003,6178,8964,7060,8574,11919,9456,5830,6495,9877,13755,6384,12668,6105,5668,6333,5818,6827,6734,6226,6749,6785,5701,8915,11996,7277,6273,9939,6723,5410,9135,5248,6442,6505,8375,6578,7737,10679,20158,7170,7284,7033,7258,9044,6436,6410,6263,6261,6268,6741,6052,9342,15735,10152,7169,8507,9565,7158,6756,6886,7670,7919,5685,5977,6607,7700,6599,7222,15687,10291,13599,6775,5646,5745,7242,7297,17787,6538,7197,7711,12446,9218,6500,6815,9410,6243,8102,7019,8079,21193,6528,7237,15393,7159,7315,28167,15263,9732,20983,9325,8055,7737,8763,6998,8330,6456,22301,7836,7549,8211,8587,9778,7054,7294,9606,6325,6979,9727,7706,6417,6159,8525,8477,7325,7577,12277,7545,9158,9176,11811,7525,9724,7229,7465,8094,7015,10782,7513,7260,8138,7235,8155]},"usage":{"turns":315,"inputTokens":10695759,"outputTokens":19508,"cacheReadTokens":10359552,"cacheWriteTokens":0,"thinkingTokens":15764,"costUsd":null,"apiMs":0}}

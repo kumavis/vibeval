@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "model": "claude-opus-5",
+      "resolvedModel": "claude-opus-5",
+      "provider": "claude-cli",
+      "tag": "claude-opus-5-t1",
+      "seed": 1,
+      "wallMin": 36.532833333333336,
+      "turns": 311,
+      "commands": 310,
+      "moves": 300,
+      "maxScore": 144,
+      "parserRejections": 0,
+      "worldRefusals": 45,
+      "deaths": 1,
+      "staleness": 223,
+      "tokensOut": 110584,
+      "costUsd": 9.978156499999994,
+      "costBasis": "reported",
+      "costEstimate": null
+    },
+    {
+      "model": "claude-opus-5",
+      "resolvedModel": "claude-opus-5",
+      "provider": "claude-cli",
+      "tag": "claude-opus-5-t2",
+      "seed": 2,
+      "wallMin": 24.602816666666666,
+      "turns": 311,
+      "commands": 310,
+      "moves": 300,
+      "maxScore": 94,
+      "parserRejections": 3,
+      "worldRefusals": 52,
+      "deaths": 3,
+      "staleness": 145,
+      "tokensOut": 84426,
+      "costUsd": 10.477134500000004,
+      "costBasis": "reported",
+      "costEstimate": null
+    },
+    {
+      "model": "claude-opus-5",
+      "resolvedModel": "claude-opus-5",
+      "provider": "claude-cli",
+      "tag": "claude-opus-5-t3",
+      "seed": 3,
+      "wallMin": 46.722633333333334,
+      "turns": 313,
+      "commands": 309,
+      "moves": 300,
+      "maxScore": 98,
+      "parserRejections": 0,
+      "worldRefusals": 36,
+      "deaths": 0,
+      "staleness": 127,
+      "tokensOut": 115469,
+      "costUsd": 8.9157275,
+      "costBasis": "reported",
+      "costEstimate": null
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "claude-opus-5",
+      "alias": "claude-opus-5",
+      "provider": "claude-cli",
+      "trials": 3,
+      "medianScore": 98,
+      "meanScore": 112,
+      "meanCommands": 309.6666666666667,
+      "meanWallMin": 35.95276111111111,
+      "meanCostUsd": 9.790339499999998,
+      "costBasis": "reported",
+      "scorePerDollar": 11.439848434265228
+    }
+  ]
+}

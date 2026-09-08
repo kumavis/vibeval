@@ -1,0 +1,8 @@
+{
+  "id": "zork-1",
+  "title": "Zork I",
+  "description": "One text adventure. 300 moves. Compare exploration, problem solving, and survival across models.",
+  "kind": "interactive",
+  "tags": ["Agent", "Text adventure", "Seeded trials"],
+  "metric": "Peak score / 350"
+}

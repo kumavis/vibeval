@@ -1,0 +1,193 @@
+{
+  "rows": [
+    {
+      "model": "gpt-5.6-terra+web",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-5.6-terra+web-t1",
+      "seed": 1,
+      "wallMin": 38.19493333333333,
+      "turns": 320,
+      "commands": 319,
+      "moves": 300,
+      "maxScore": 92,
+      "parserRejections": 12,
+      "worldRefusals": 28,
+      "deaths": 0,
+      "staleness": 133,
+      "tokensOut": 16146,
+      "costUsd": 2.411798,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-5.6-terra",
+        "pricingAsOf": "2026-09-02",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 2.411798,
+        "tokens": {
+          "input": 8689183,
+          "uncachedInput": 266783,
+          "cachedInput": 8422400,
+          "cacheWrite": 0,
+          "output": 16146,
+          "reasoning": 12767
+        },
+        "usdPerMillionTokens": {
+          "input": 2,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 12
+        },
+        "breakdownUsd": {
+          "uncachedInput": 0.533566,
+          "cachedInput": 1.68448,
+          "cacheWrite": 0,
+          "output": 0.193752
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 320,
+          "retainedTurns": 320,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    },
+    {
+      "model": "gpt-5.6-terra+web",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-5.6-terra+web-t3",
+      "seed": 3,
+      "wallMin": 39.5726,
+      "turns": 315,
+      "commands": 312,
+      "moves": 300,
+      "maxScore": 99,
+      "parserRejections": 9,
+      "worldRefusals": 23,
+      "deaths": 1,
+      "staleness": 137,
+      "tokensOut": 19508,
+      "costUsd": 2.9784204,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-5.6-terra",
+        "pricingAsOf": "2026-09-02",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 2.9784204,
+        "tokens": {
+          "input": 10695759,
+          "uncachedInput": 336207,
+          "cachedInput": 10359552,
+          "cacheWrite": 0,
+          "output": 19508,
+          "reasoning": 15764
+        },
+        "usdPerMillionTokens": {
+          "input": 2,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 12
+        },
+        "breakdownUsd": {
+          "uncachedInput": 0.672414,
+          "cachedInput": 2.0719104,
+          "cacheWrite": 0,
+          "output": 0.23409600000000003
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 315,
+          "retainedTurns": 315,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    },
+    {
+      "model": "gpt-5.6-terra+web",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-5.6-terra+web-t2",
+      "seed": 2,
+      "wallMin": 36.8791,
+      "turns": 319,
+      "commands": 315,
+      "moves": 300,
+      "maxScore": 87,
+      "parserRejections": 4,
+      "worldRefusals": 14,
+      "deaths": 1,
+      "staleness": 132,
+      "tokensOut": 12894,
+      "costUsd": 2.4454052,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-5.6-terra",
+        "pricingAsOf": "2026-09-02",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 2.4454052,
+        "tokens": {
+          "input": 8352481,
+          "uncachedInput": 344545,
+          "cachedInput": 8007936,
+          "cacheWrite": 0,
+          "output": 12894,
+          "reasoning": 9543
+        },
+        "usdPerMillionTokens": {
+          "input": 2,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 12
+        },
+        "breakdownUsd": {
+          "uncachedInput": 0.68909,
+          "cachedInput": 1.6015872000000002,
+          "cacheWrite": 0,
+          "output": 0.15472799999999998
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 319,
+          "retainedTurns": 319,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "gpt-5.6-terra+web",
+      "alias": "gpt-5.6-terra+web",
+      "provider": "codex-cli",
+      "trials": 3,
+      "medianScore": 92,
+      "meanScore": 92.66666666666667,
+      "meanCommands": 315.3333333333333,
+      "meanWallMin": 38.21554444444445,
+      "meanCostUsd": 2.6118745333333333,
+      "costBasis": "api-equivalent-estimate",
+      "scorePerDollar": 35.478988551721656
+    }
+  ]
+}

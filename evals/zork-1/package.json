@@ -1,0 +1,24 @@
+{
+  "name": "@vibeval/zork-1",
+  "version": "2.0.0",
+  "description": "An LLM plays Zork I through an OpenAI-compatible API and a z-machine WebAssembly interpreter",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "eval": "node src/eval.js",
+    "eval:cost": "node src/cost-estimator.js",
+    "eval:doctor-usage": "node src/doctor-missing-usage.js",
+    "eval:report": "node src/eval-report.js",
+    "eval:score-svg": "node src/eval-score-svg.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@vibeval/runner": "0.1.0",
+    "wasm-ffi": "^0.3.0"
+  },
+  "private": true
+}

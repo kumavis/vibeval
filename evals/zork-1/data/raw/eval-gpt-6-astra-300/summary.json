@@ -1,0 +1,193 @@
+{
+  "rows": [
+    {
+      "model": "gpt-6-astra",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-6-astra-t1",
+      "seed": 1,
+      "wallMin": 37.110216666666666,
+      "turns": 301,
+      "commands": 301,
+      "moves": 300,
+      "maxScore": 185,
+      "parserRejections": 0,
+      "worldRefusals": 15,
+      "deaths": 0,
+      "staleness": 58,
+      "tokensOut": 4418,
+      "costUsd": 7.806704,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-6-astra",
+        "pricingAsOf": "2026-09-07",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 7.806704,
+        "tokens": {
+          "input": 6562126,
+          "uncachedInput": 113742,
+          "cachedInput": 6448384,
+          "cacheWrite": 0,
+          "output": 4418,
+          "reasoning": 1685
+        },
+        "usdPerMillionTokens": {
+          "input": 10,
+          "cachedInput": 1,
+          "cacheWrite": 12.5,
+          "output": 50
+        },
+        "breakdownUsd": {
+          "uncachedInput": 1.1374199999999999,
+          "cachedInput": 6.448384,
+          "cacheWrite": 0,
+          "output": 0.2209
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 301,
+          "retainedTurns": 301,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    },
+    {
+      "model": "gpt-6-astra",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-6-astra-t3",
+      "seed": 3,
+      "wallMin": 40.98925,
+      "turns": 301,
+      "commands": 301,
+      "moves": 300,
+      "maxScore": 214,
+      "parserRejections": 0,
+      "worldRefusals": 3,
+      "deaths": 0,
+      "staleness": 42,
+      "tokensOut": 3825,
+      "costUsd": 8.00717,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-6-astra",
+        "pricingAsOf": "2026-09-07",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 8.00717,
+        "tokens": {
+          "input": 6600344,
+          "uncachedInput": 135064,
+          "cachedInput": 6465280,
+          "cacheWrite": 0,
+          "output": 3825,
+          "reasoning": 1071
+        },
+        "usdPerMillionTokens": {
+          "input": 10,
+          "cachedInput": 1,
+          "cacheWrite": 12.5,
+          "output": 50
+        },
+        "breakdownUsd": {
+          "uncachedInput": 1.3506399999999998,
+          "cachedInput": 6.46528,
+          "cacheWrite": 0,
+          "output": 0.19125
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 301,
+          "retainedTurns": 301,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    },
+    {
+      "model": "gpt-6-astra",
+      "resolvedModel": null,
+      "provider": "codex-cli",
+      "tag": "gpt-6-astra-t2",
+      "seed": 2,
+      "wallMin": 37.302933333333335,
+      "turns": 301,
+      "commands": 301,
+      "moves": 300,
+      "maxScore": 189,
+      "parserRejections": 0,
+      "worldRefusals": 2,
+      "deaths": 1,
+      "staleness": 49,
+      "tokensOut": 3803,
+      "costUsd": 7.915692,
+      "costBasis": "api-equivalent-estimate",
+      "costEstimate": {
+        "kind": "api-equivalent-estimate",
+        "model": "gpt-6-astra",
+        "pricingAsOf": "2026-09-07",
+        "pricingSource": "https://developers.openai.com/api/docs/models/compare",
+        "formula": "(uncachedInput * inputPrice + cachedInput * cachedInputPrice + cacheWrite * 1.25 * inputPrice + output * outputPrice) / 1_000_000",
+        "currency": "USD",
+        "totalUsd": 7.915692,
+        "tokens": {
+          "input": 6669527,
+          "uncachedInput": 117335,
+          "cachedInput": 6552192,
+          "cacheWrite": 0,
+          "output": 3803,
+          "reasoning": 1064
+        },
+        "usdPerMillionTokens": {
+          "input": 10,
+          "cachedInput": 1,
+          "cacheWrite": 12.5,
+          "output": 50
+        },
+        "breakdownUsd": {
+          "uncachedInput": 1.17335,
+          "cachedInput": 6.552192,
+          "cacheWrite": 0,
+          "output": 0.19014999999999999
+        },
+        "assumptions": {
+          "subscriptionSpend": false,
+          "reasoningIncludedInOutput": true,
+          "longContextSurchargeIncluded": false,
+          "usageBasis": "retained-scoring-transcript",
+          "recordedTurns": 301,
+          "retainedTurns": 301,
+          "discardedTurns": 0,
+          "discardedTurnAllocation": "none"
+        }
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "gpt-6-astra",
+      "alias": "gpt-6-astra",
+      "provider": "codex-cli",
+      "trials": 3,
+      "medianScore": 189,
+      "meanScore": 196,
+      "meanCommands": 301,
+      "meanWallMin": 38.46746666666667,
+      "meanCostUsd": 7.909855333333333,
+      "costBasis": "api-equivalent-estimate",
+      "scorePerDollar": 24.779214251116098
+    }
+  ]
+}

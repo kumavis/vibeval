@@ -1,0 +1,17 @@
+{
+  "name": "@vibeval/runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/agent.js",
+    "./*.js": "./src/*.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "openai": "^7.4.0"
+  }
+}
