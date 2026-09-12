@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-12T14-14-04.201Z-b08e14d1",
+  "evalId": "snow-globe",
+  "trial": 2,
+  "format": "files",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+  },
+  "status": "submitted",
+  "prompt": "make a static webapp showing a 3d interactive snow globe showing a scene with a snow-capped peak\n",
+  "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. Your primary budget is 60 responses, including final submission. The wall-time fallback is 1800 seconds. Every request includes remaining budgets. Reserve a response to submit; on your last response, submit your current best valid work. The harness returns feedback after each action. A rejected submission may be revised.\n\nYou have an initially empty working directory. Use these actions to create and inspect files; paths are relative to it. This harness performs the file operations.\nActions:\n{\"action\":\"write_file\",\"path\":\"index.html\",\"content\":\"complete file contents\"}\n{\"action\":\"read_file\",\"path\":\"index.html\"}\n{\"action\":\"list_files\"}\n{\"action\":\"check\"}\n{\"action\":\"submit\",\"note\":\"what you checked and why it is ready\"}\nYou may repeatedly overwrite files to iterate. Deliver index.html and its relative local assets. No build step, external dependencies, network calls, absolute URLs, or emoji are needed. Checks verify packaging, not appearance: review the code and interaction design yourself. The viewer uses a sandboxed iframe with scripts allowed and an opaque origin. Prefer classic scripts; storage and fetched ES modules are unavailable.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+  "harness": {
+    "version": "submission-v2",
+    "commit": "9597c5a4645d0b9880abe071ee2bdfce0e276d36",
+    "dirty": true,
+    "sourceSha256": "ccac8a1200001600f6d5200d64e114c80942f2c06da8bbd3d8c0a5e691d6be67",
+    "evalSha256": "c9478e6509b02d4d6a9bf6c416ada0742f60f8ffbbf83bf4b600408b84d0113a",
+    "instructionsSha256": "4929258798638cd0aacdfb9f443087726a21ea458852094fc02854f970f3ee0f",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "opencode-cli",
+    "requested": "openrouter/deepseek/deepseek-v4.1-flash",
+    "resolved": null,
+    "resolutionBasis": "not-reported",
+    "cliVersion": "1.18.30"
+  },
+  "settings": {
+    "budgetPolicy": "turns-primary",
+    "structuredActions": false,
+    "providerRequestTimeoutMs": 900000,
+    "effort": "high",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [
+      "write_file",
+      "read_file",
+      "list_files",
+      "check",
+      "submit"
+    ],
+    "limits": {
+      "maxTurns": 60,
+      "maxWallMs": 1800000,
+      "maxArtifactBytes": 2000000,
+      "maxFiles": 32
+    }
+  },
+  "startedAt": "2026-09-12T14:14:04.201Z",
+  "finishedAt": "2026-09-12T14:20:37.840Z",
+  "wallMs": 393639,
+  "turns": {
+    "harness": 9,
+    "drafts": 1,
+    "submissions": 1,
+    "providerRequests": 9,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 21604
+      }
+    ],
+    "checks": [
+      "file budget",
+      "HTML entry",
+      "static HTML/CSS references"
+    ],
+    "notChecked": [
+      "visual quality",
+      "JavaScript behavior",
+      "dynamic network requests"
+    ]
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "website",
+    "entry": "index.html",
+    "note": "Self-contained single-file 3D snow globe (index.html, ~21.6 KB, no external assets or network). Custom software 3D renderer on 2D canvas: heightfield snow-capped mountain (30x30 grid, altitude/normal-based snow coloring), 14 low-poly conifers, 280 snowflake particles with wind, sphere-boundary bouncing, and terrain landing/accumulation. Painter's-algorithm depth sorting over quads/triangles/sprites using a preallocated pool and Float64Array depth keys; backface culling plus Lambert shading. Perspective orbit camera with drag, wheel/pinch zoom, click-to-shake with impulse and decaying jitter, idle auto-rotate, Space/R/double-click controls, and a Shake button. Packaging check returned valid:true with no errors.",
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 21604,
+        "sha256": "759298035f13cf1f08e3804569a60787257db4cb2153b74582d8a3f5e32746b3"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 9,
+    "requests": 9,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 9,
+    "inputTokens": 454086,
+    "outputTokens": 69881,
+    "cacheReadTokens": 130304,
+    "cacheWriteTokens": 0,
+    "thinkingTokens": 38578,
+    "costUsd": 0.133579212,
+    "apiMs": 0,
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.133579212,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  }
+}

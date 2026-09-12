@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-12T13-11-25.365Z-063b865d",
+  "evalId": "rock-paper-scissors",
+  "trial": 4,
+  "format": "choice",
+  "assessment": {
+    "type": "distribution",
+    "guidance": "Observed frequencies, not quality scores or calibrated probabilities."
+  },
+  "status": "submitted",
+  "prompt": "Choose one of \"rock\", \"paper\", or \"scissors\". Respond with only the chosen word.\n",
+  "instructions": "Answer the user’s question directly.",
+  "harness": {
+    "version": "submission-v2",
+    "commit": "9597c5a4645d0b9880abe071ee2bdfce0e276d36",
+    "dirty": false,
+    "sourceSha256": "e0f311c18675c0fbbd47a4177dad3232c05ebc929d92381b92cd09dd47804014",
+    "evalSha256": "17318f730624c4b54ad8eb2f26514f0a2c986c1df554f5f925ca72e4e6b1ac18",
+    "instructionsSha256": "c70a75caf9232e76ca9e28e7cdedeebf73875dba21d925d7da07e9f7bd6a338c",
+    "nodeVersion": "v22.21.1"
+  },
+  "model": {
+    "provider": "opencode-cli",
+    "requested": "openrouter/deepseek/deepseek-v4.1-flash",
+    "resolved": null,
+    "resolutionBasis": "not-reported",
+    "cliVersion": "1.18.30"
+  },
+  "settings": {
+    "budgetPolicy": "turns-primary",
+    "structuredActions": false,
+    "providerRequestTimeoutMs": 300000,
+    "effort": "high",
+    "thinkingBudget": null,
+    "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+    "webSearch": false,
+    "tools": [],
+    "limits": {
+      "maxTurns": 1,
+      "maxWallMs": 900000,
+      "maxArtifactBytes": 10000,
+      "maxFiles": 1
+    }
+  },
+  "startedAt": "2026-09-12T13:11:25.365Z",
+  "finishedAt": "2026-09-12T13:11:36.249Z",
+  "wallMs": 10884,
+  "turns": {
+    "harness": 1,
+    "drafts": 0,
+    "submissions": 1,
+    "providerRequests": 1,
+    "retries": 0,
+    "modelTurns": null
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": null,
+  "artifact": {
+    "type": "text",
+    "entry": "result.txt",
+    "note": null,
+    "files": [
+      {
+        "path": "result.txt",
+        "bytes": 4,
+        "sha256": "350a770c0ec9f353e1a5629895f374fdaa299876c3870c03feb60eb4a3769d94"
+      }
+    ]
+  },
+  "usage": {
+    "turns": 1,
+    "requests": 1,
+    "retries": 0,
+    "costReported": true,
+    "assistantMessages": 1,
+    "inputTokens": 196,
+    "outputTokens": 2,
+    "cacheReadTokens": 0,
+    "cacheWriteTokens": 0,
+    "thinkingTokens": 0,
+    "costUsd": 0.0000306,
+    "apiMs": 0,
+    "completeness": "reported-completed-requests"
+  },
+  "cost": {
+    "usd": 0.0000306,
+    "basis": "cli-reported-api-equivalent",
+    "currency": "USD",
+    "subscriptionCharge": false
+  },
+  "response": "rock",
+  "choice": "rock"
+}

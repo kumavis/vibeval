@@ -1182,6 +1182,303 @@
         "subscriptionCharge": false
       },
       "trace": "2026-09-08T13-50-20.423Z-404ba12a/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-12T13-23-16.792Z-21e6860d",
+      "evalId": "ascii-sunken-ship",
+      "trial": 3,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. Your primary budget is 20 responses, including final submission. The wall-time fallback is 600 seconds. Every request includes remaining budgets. Reserve a response to submit; on your last response, submit your current best valid work. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "9597c5a4645d0b9880abe071ee2bdfce0e276d36",
+        "dirty": false,
+        "sourceSha256": "e0f311c18675c0fbbd47a4177dad3232c05ebc929d92381b92cd09dd47804014",
+        "evalSha256": "58e5549ee1448a90cf3b68802ef49d0dd078d03e9980d307730e092018e672c2",
+        "instructionsSha256": "13f2808a21ea97079631e044826a5105f7574b7b9572a0fc584032b3a43fa7bd",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "opencode-cli",
+        "requested": "openrouter/deepseek/deepseek-v4.1-flash",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "1.18.30"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "high",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-12T13:23:16.792Z",
+      "finishedAt": "2026-09-12T13:29:05.421Z",
+      "wallMs": 348629,
+      "turns": {
+        "harness": 4,
+        "drafts": 3,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-12T13-23-16.792Z-21e6860d/artifact/result.txt",
+        "note": "final: sun rays slanting to a shallow-sea surface, fish and bubbles, a fully aligned hull and deck with portholes, a broken mast centered on the deck, kelp, rocks, sand and an anchor on the seabed. Pure ASCII, no emojis.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 839,
+            "sha256": "c48d6c60638bf40e11feb52aab457e441ff9e0c0bdf420853f5e0f727f05fd45"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 4,
+        "inputTokens": 2633,
+        "outputTokens": 1225,
+        "cacheReadTokens": 1486,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 35081,
+        "costUsd": 0.022183008,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.022183008,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-12T13-23-16.792Z-21e6860d/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-12T13-19-04.815Z-aad97131",
+      "evalId": "ascii-sunken-ship",
+      "trial": 2,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. Your primary budget is 20 responses, including final submission. The wall-time fallback is 600 seconds. Every request includes remaining budgets. Reserve a response to submit; on your last response, submit your current best valid work. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "9597c5a4645d0b9880abe071ee2bdfce0e276d36",
+        "dirty": false,
+        "sourceSha256": "e0f311c18675c0fbbd47a4177dad3232c05ebc929d92381b92cd09dd47804014",
+        "evalSha256": "58e5549ee1448a90cf3b68802ef49d0dd078d03e9980d307730e092018e672c2",
+        "instructionsSha256": "13f2808a21ea97079631e044826a5105f7574b7b9572a0fc584032b3a43fa7bd",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "opencode-cli",
+        "requested": "openrouter/deepseek/deepseek-v4.1-flash",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "1.18.30"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "high",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-12T13:19:04.815Z",
+      "finishedAt": "2026-09-12T13:23:16.465Z",
+      "wallMs": 251650,
+      "turns": {
+        "harness": 9,
+        "drafts": 8,
+        "submissions": 1,
+        "providerRequests": 9,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-12T13-19-04.815Z-aad97131/artifact/result.txt",
+        "note": "Ready to submit: a balanced shallow-sea scene with tapering light shafts from the surface, schools of fish and drifting bubbles, a tilted snapped mast with trailing rigging, and a wide portholed hull resting on a layered sandy seabed with seaweed.",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1921,
+            "sha256": "4d359cc94f57c55286214219f1849a0bc8d4f6374c0e12059359cca68f6c5dd0"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 9,
+        "requests": 9,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 9,
+        "inputTokens": 16201,
+        "outputTokens": 4128,
+        "cacheReadTokens": 7552,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 33136,
+        "costUsd": 0.024811206000000002,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.024811206000000002,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-12T13-19-04.815Z-aad97131/events.json"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "2026-09-12T13-12-33.859Z-badcbc0b",
+      "evalId": "ascii-sunken-ship",
+      "trial": 1,
+      "format": "text",
+      "assessment": {
+        "type": "subjective",
+        "guidance": "Judge the final work yourself. Packaging checks are not quality scores."
+      },
+      "status": "submitted",
+      "prompt": "make an ascii art of a sunken ship in a shallow sea (no emojis)\n",
+      "instructions": "You are completing an evaluation. Work carefully, inspect your work, and iterate until you are satisfied. You choose when to submit. A draft is not a submission. There is no reward for using all available turns.\n\nReturn exactly one JSON object per response, without Markdown fences. Your primary budget is 20 responses, including final submission. The wall-time fallback is 600 seconds. Every request includes remaining budgets. Reserve a response to submit; on your last response, submit your current best valid work. The harness returns feedback after each action. A rejected submission may be revised.\n\nActions:\n{\"action\":\"draft\",\"content\":\"full revised text\",\"note\":\"what you improved\"}\n{\"action\":\"submit\",\"content\":\"complete final text\",\"note\":\"why it is ready\"}\nThe full content must be included each time. Preserve spaces and line breaks.\n\nOnly explicit, valid submit actions finish a run. Running out of time or turns leaves the run unsubmitted. Quality is judged by the human viewer; validity checks are not quality scores.",
+      "harness": {
+        "version": "submission-v2",
+        "commit": "9597c5a4645d0b9880abe071ee2bdfce0e276d36",
+        "dirty": false,
+        "sourceSha256": "e0f311c18675c0fbbd47a4177dad3232c05ebc929d92381b92cd09dd47804014",
+        "evalSha256": "58e5549ee1448a90cf3b68802ef49d0dd078d03e9980d307730e092018e672c2",
+        "instructionsSha256": "13f2808a21ea97079631e044826a5105f7574b7b9572a0fc584032b3a43fa7bd",
+        "nodeVersion": "v22.21.1"
+      },
+      "model": {
+        "provider": "opencode-cli",
+        "requested": "openrouter/deepseek/deepseek-v4.1-flash",
+        "resolved": null,
+        "resolutionBasis": "not-reported",
+        "cliVersion": "1.18.30"
+      },
+      "settings": {
+        "budgetPolicy": "turns-primary",
+        "structuredActions": false,
+        "providerRequestTimeoutMs": 300000,
+        "effort": "high",
+        "thinkingBudget": null,
+        "thinkingBudgetBasis": "CLI/model default; no explicit token budget",
+        "webSearch": false,
+        "tools": [
+          "draft",
+          "submit"
+        ],
+        "limits": {
+          "maxTurns": 20,
+          "maxWallMs": 600000,
+          "maxArtifactBytes": 20000,
+          "maxFiles": 1
+        }
+      },
+      "startedAt": "2026-09-12T13:12:33.862Z",
+      "finishedAt": "2026-09-12T13:19:04.503Z",
+      "wallMs": 390641,
+      "turns": {
+        "harness": 4,
+        "drafts": 2,
+        "submissions": 1,
+        "providerRequests": 4,
+        "retries": 0,
+        "modelTurns": null
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "metrics": null,
+      "artifact": {
+        "type": "text",
+        "entry": "2026-09-12T13-12-33.859Z-badcbc0b/artifact/result.txt",
+        "note": "Final clean version: shallow-sea surface, fish and bubbles, sunken ship with broken mast resting on the seabed, seaweed",
+        "files": [
+          {
+            "path": "result.txt",
+            "bytes": 1100,
+            "sha256": "644d5c27133ae21ae943940b53b073900c42459e15996813dc59600ed92facde"
+          }
+        ]
+      },
+      "usage": {
+        "turns": 4,
+        "requests": 4,
+        "retries": 0,
+        "costReported": true,
+        "assistantMessages": 4,
+        "inputTokens": 5004,
+        "outputTokens": 1860,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "thinkingTokens": 8466,
+        "costUsd": 0.0069462,
+        "apiMs": 0,
+        "completeness": "reported-completed-requests"
+      },
+      "cost": {
+        "usd": 0.0069462,
+        "basis": "cli-reported-api-equivalent",
+        "currency": "USD",
+        "subscriptionCharge": false
+      },
+      "trace": "2026-09-12T13-12-33.859Z-badcbc0b/events.json"
     }
   ]
 }

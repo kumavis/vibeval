@@ -31,6 +31,10 @@ export async function runEval({ root, directory, definition: input, prompt, prov
   const instructions = submissionInstructions(definition);
   const singleChoice = definition.format === 'choice';
   const textArtifact = singleChoice || definition.format === 'text';
+  // The per-request ceiling recorded in the run settings and handed to the
+  // provider. Controller development and OpenCode's long artifact generations
+  // get fifteen minutes; the other backends keep five.
+  const requestTimeoutMs = definition.format === 'controller' || provider === 'opencode-cli' ? 900000 : 300000;
   const version = harness ?? await provenance(root, definition, prompt, instructions, directory);
   const cli = runtimeVersion ?? await cliVersion(provider);
   const id = `${new Date().toISOString().replaceAll(':', '-')}-${randomUUID().slice(0,8)}`;
@@ -42,7 +46,7 @@ export async function runEval({ root, directory, definition: input, prompt, prov
   const record = { schemaVersion: 1, id, evalId: definition.id, trial, format: definition.format, assessment: definition.assessment,
     status: 'running', prompt, instructions, harness: version,
     model: { provider, requested: model, resolved: null, resolutionBasis: 'not-reported', cliVersion: cli },
-    settings: { budgetPolicy: 'turns-primary', structuredActions: definition.format === 'controller' && provider === 'codex-cli', providerRequestTimeoutMs: definition.format === 'controller' ? 900000 : 300000, effort, thinkingBudget: null, thinkingBudgetBasis: 'CLI/model default; no explicit token budget', webSearch: false, tools: singleChoice ? [] : definition.format === 'controller' ? ['write_file','read_file','test','inspect_episode','submit'] : definition.format === 'files' ? ['write_file','read_file','list_files','check','submit'] : ['draft','submit'], limits: definition.limits },
+    settings: { budgetPolicy: 'turns-primary', structuredActions: definition.format === 'controller' && provider === 'codex-cli', providerRequestTimeoutMs: requestTimeoutMs, effort, thinkingBudget: null, thinkingBudgetBasis: 'CLI/model default; no explicit token budget', webSearch: false, tools: singleChoice ? [] : definition.format === 'controller' ? ['write_file','read_file','test','inspect_episode','submit'] : definition.format === 'files' ? ['write_file','read_file','list_files','check','submit'] : ['draft','submit'], limits: definition.limits },
     startedAt: new Date(started).toISOString(), finishedAt: null, wallMs: 0,
     turns: { harness: 0, drafts: 0, submissions: 0, providerRequests: 0, retries: 0, modelTurns: null },
     validation: null, metrics: null, artifact: null, usage: null, cost: null };
@@ -68,7 +72,7 @@ export async function runEval({ root, directory, definition: input, prompt, prov
   }
   let observation = singleChoice ? prompt : `${prompt}\n\nBegin your work. Submit only when you are satisfied.`;
   try {
-    agent = createProvider({ systemPrompt: instructions, responseFormat: 'text', model, effort, webSearch: false, deadline, retryOnFailure: !singleChoice, ...(definition.format === 'controller' ? { turnTimeoutMs: 900000, ...(provider === 'codex-cli' ? { outputSchema: controllerActionSchema } : {}) } : {}) });
+    agent = createProvider({ systemPrompt: instructions, responseFormat: 'text', model, effort, webSearch: false, deadline, retryOnFailure: !singleChoice, turnTimeoutMs: requestTimeoutMs, ...(definition.format === 'controller' && provider === 'codex-cli' ? { outputSchema: controllerActionSchema } : {}) });
     await event({ type: 'start', evalId: definition.id });
     for (let turn = 1; turn <= definition.limits.maxTurns; turn++) {
       if (Date.now() >= deadline) { record.status = 'time_limit'; break; }

@@ -123,7 +123,9 @@ single `*: deny` permission closes built-in, custom, and MCP tools alike.
 It runs with `--pure` (no external plugins) and disables snapshots,
 sharing, autoupdate, and CLAUDE.md-style instruction files around an
 empty scratch directory per game, so like the Claude backend its only
-effector is the game.
+effector is the game. A single request may run for fifteen minutes so
+large artifact generations can finish; the run's wall-clock budget still
+bounds every turn.
 
 So cross-harness numbers compare *harness plus model*, which is what a
 subscription actually buys; only within a backend is the model the single

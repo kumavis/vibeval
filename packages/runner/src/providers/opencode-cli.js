@@ -25,7 +25,12 @@ import {
   withTranscript,
 } from './text-protocol.js';
 
-const TURN_TIMEOUT_MS = 5 * 60 * 1000;
+// Large artifact generations can exceed five minutes at high reasoning effort.
+// The eval's wall-clock budget still bounds every turn; this only decides when
+// a single request is declared stuck. OpenCode's own 32k completion cap is
+// left in place: on a hit, it auto-continues the step, which keeps very long
+// reasoning from turning into one unbounded turn.
+const TURN_TIMEOUT_MS = 15 * 60 * 1000;
 const AGENT_NAME = 'vibeval';
 
 export function createOpenCodeCliProvider({ systemPrompt, responseFormat = 'commands', model: requestedModel, effort: requestedEffort, turnTimeoutMs = TURN_TIMEOUT_MS, deadline = Infinity, retryOnFailure = true }) {
