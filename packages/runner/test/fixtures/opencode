@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+// Fake `opencode` CLI for tests: speaks just enough of the `run --format
+// json` event stream. Echoes the session id (`--session` means resumed),
+// the inline agent config, and the received prompt so tests can assert
+// session continuity, transcript replay, and the sandbox knobs.
+// Exits with an error event when the prompt is exactly "DIE".
+if (process.argv.includes('--version')) { process.stdout.write('fixture-cli 1\n'); process.exit(0); }
+const args = process.argv.slice(2);
+const resumed = args.includes('--session') ? args[args.indexOf('--session') + 1] : null;
+const model = args.includes('--model') ? args[args.indexOf('--model') + 1] : null;
+const variant = args.includes('--variant') ? args[args.indexOf('--variant') + 1] : null;
+const agent = args.includes('--agent') ? args[args.indexOf('--agent') + 1] : null;
+const pure = args.includes('--pure');
+let config = {};
+try { config = JSON.parse(process.env.OPENCODE_CONFIG_CONTENT ?? '{}'); } catch { /* ignore */ }
+const agentConfig = config.agent?.[agent] ?? {};
+const instructions = agentConfig.prompt ?? '';
+const commandFormat = instructions.includes('# Response Format:');
+const toolsDenied = agentConfig.permission?.['*'] === 'deny';
+
+const sessionID = resumed ?? 'ses-1';
+const emit = (event) => process.stdout.write(JSON.stringify(event) + '\n');
+
+let prompt = '';
+process.stdin.setEncoding('utf8');
+for await (const chunk of process.stdin) prompt += chunk;
+
+emit({ type: 'step_start', timestamp: Date.now(), sessionID, part: { id: 'prt-1', type: 'step-start' } });
+if (prompt === 'HANG') { setInterval(() => {}, 1000); await new Promise(() => {}); }
+if (prompt === 'DIE') {
+  emit({ type: 'error', timestamp: Date.now(), sessionID, error: { name: 'UnknownError', data: { message: 'simulated failure' } } });
+  process.exit(1);
+}
+function submissionReply(prompt) {
+  if (process.env.VIBEVAL_FIXTURE_SUBMISSION === 'text') return JSON.stringify({ action: 'submit', content: '  |\n__|__\n\\___/' });
+  return JSON.stringify(prompt.includes('Begin your work.') ? { action: 'write_file', path: 'index.html', content: '<html><body>fixture page</body></html>' } : { action: 'submit' });
+}
+const text = process.env.VIBEVAL_FIXTURE_SUBMISSION ? submissionReply(prompt) : prompt === 'GENERATE_TEST_PAGE' ? (commandFormat ? 'Unexpected command protocol' : '<html><body>Test page</body></html>') : `command_format:${commandFormat}\nsession:${resumed ?? 'new'}\nmodel:${model}\nvariant:${variant}\nagent:${agent}\npure:${pure}\ntools_denied:${toolsDenied}\nreceived:${prompt.split('\n')[0]}\nCOMMAND: LOOK`;
+emit({ type: 'text', timestamp: Date.now(), sessionID, part: { id: 'prt-2', type: 'text', text, time: { start: 1, end: 2 } } });
+emit({ type: 'step_finish', timestamp: Date.now(), sessionID, part: { id: 'prt-3', type: 'step-finish', reason: 'stop', cost: 0.01, tokens: { input: 100, output: 10, reasoning: 4, cache: { read: 50, write: 5 } } } });

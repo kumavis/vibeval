@@ -40,8 +40,12 @@ export async function provenance(root, definition, prompt, instructions, evalDir
     instructionsSha256: createHash('sha256').update(instructions).digest('hex'), nodeVersion: process.version };
 }
 
+const CLI_COMMANDS = { 'claude-cli': 'claude', 'codex-cli': 'codex', 'opencode-cli': 'opencode' };
+
 export async function cliVersion(provider) {
-  try { return (await exec(provider === 'codex-cli' ? 'codex' : 'claude', ['--version'], { timeout: 10000 })).stdout.trim(); }
+  const command = CLI_COMMANDS[provider];
+  if (!command) return null;
+  try { return (await exec(command, ['--version'], { timeout: 10000 })).stdout.trim(); }
   catch { return null; }
 }
 
@@ -53,6 +57,8 @@ export function estimateCost({ provider, model, usage, pricing }) {
   if (!rates) return { usd: null, basis: 'unavailable', reason: 'No CLI-reported cost or exact-model pricing snapshot', currency: 'USD' };
   if (!pricing.asOf || !pricing.source || ['input', 'cachedInput', 'cacheWrite', 'output'].some(k => !Number.isFinite(rates[k]) || rates[k] < 0)) throw new Error('Pricing needs asOf, source, and nonnegative per-million rates');
   const input = usage.inputTokens ?? 0, cached = usage.cacheReadTokens ?? 0, writes = usage.cacheWriteTokens ?? 0, output = usage.outputTokens ?? 0;
+  // Codex reports total input including cache reads/writes; Claude and
+  // OpenCode already report uncached input separately.
   const uncached = provider === 'codex-cli' ? input - cached - writes : input;
   if ([uncached, cached, writes, output].some(n => !Number.isFinite(n) || n < 0)) return { usd: null, basis: 'unavailable', reason: 'Invalid or inconsistent token counts' };
   return { usd: (uncached * rates.input + cached * rates.cachedInput + writes * rates.cacheWrite + output * rates.output) / 1e6,

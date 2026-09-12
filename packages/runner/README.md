@@ -16,7 +16,7 @@ try {
 }
 ```
 
-`LLM_PROVIDER` selects `claude-cli`, `codex-cli`, `anthropic`, or `openai`. See the Zork `.env.example` for model/auth environment variables. CLI backends use existing CLI login; tests use fake executables and local HTTP servers.
+`LLM_PROVIDER` selects `claude-cli`, `codex-cli`, `opencode-cli`, `anthropic`, or `openai`. See the Zork `.env.example` for model/auth environment variables. CLI backends use existing CLI login; tests use fake executables and local HTTP servers.
 
 The copied command adapters still contain Zork-oriented tool descriptions. They are suitable for the migrated eval; a different command environment should supply its own protocol adapter. Process/session infrastructure belongs here, scoring and environment behavior belong in the eval.
 

@@ -36,6 +36,20 @@ test('rejects interpreter lifecycle commands handled by the harness', () => {
   assert.equal(validateZorkCommand('PRAY'), null);
 });
 
+test('resume keeps restart markers so probe replay can skip them', () => {
+  const replay = selectReplayEvents([
+    { type: 'model_turn', turn: 1, commands: ['LOOK'] },
+    { type: 'command', turn: 1, command: 'LOOK' },
+    { type: 'game_restart', turn: 1 },
+    { type: 'model_turn', turn: 2, commands: ['NORTH'] },
+    { type: 'command', turn: 2, command: 'NORTH' },
+  ]);
+  assert.deepEqual(
+    replay.events.map((event) => event.type),
+    ['model_turn', 'command', 'game_restart', 'model_turn', 'command'],
+  );
+});
+
 test('resume drops the unsuccessful tail from each stopped attempt', () => {
   const events = [
     { type: 'run_start' },

@@ -36,14 +36,15 @@ supports them.
 Requires Node.js 22+.
 
 ```sh
-cp .env.example .env   # pick a backend and add a key (not needed for claude-cli)
+cp .env.example .env   # pick a backend and add a key (not needed for the CLI backends)
 yarn                   # install dependencies
 ```
 
 The backend is chosen with `LLM_PROVIDER` (`openai`, `anthropic`,
-`claude-cli`, or `codex-cli`); when unset, it is inferred from which API
-key is present. The two CLI backends need their tool installed and logged
-in (`claude`, or `brew install codex && codex login`) but no key here. See
+`claude-cli`, `codex-cli`, or `opencode-cli`); when unset, it is inferred
+from which API key is present. The CLI backends need their tool installed
+and logged in (`claude`, `brew install codex && codex login`, or
+`brew install opencode && opencode auth login`) but no key here. See
 `.env.example` for all knobs (models, base URL, reasoning effort).
 
 ## Run
@@ -116,6 +117,14 @@ with two differences worth stating rather than papering over:
   own agent instructions stay in the request and the player prompt rides
   on top of them as `developer_instructions`.
 
+The `opencode-cli` backend defines its own primary agent inline: the
+player prompt replaces OpenCode's default agent instructions, and a
+single `*: deny` permission closes built-in, custom, and MCP tools alike.
+It runs with `--pure` (no external plugins) and disables snapshots,
+sharing, autoupdate, and CLAUDE.md-style instruction files around an
+empty scratch directory per game, so like the Claude backend its only
+effector is the game.
+
 So cross-harness numbers compare *harness plus model*, which is what a
 subscription actually buys; only within a backend is the model the single
 variable.
@@ -129,8 +138,10 @@ Also pin one reasoning effort per model within a batch
 The Claude CLI reports its own API-equivalent cost. The Codex CLI reports
 tokens but no dollar amount because these runs use a ChatGPT subscription,
 so `src/cost-estimator.js` estimates what the same recorded usage would cost
-at standard OpenAI API list prices. Estimated amounts carry a `~` prefix and
-are not the subscription charge.
+at standard OpenAI API list prices. The OpenCode CLI prices each step from
+models.dev list rates and reports that API-equivalent amount; it stays
+unreported when the model has no rate metadata rather than becoming zero.
+Estimated amounts carry a `~` prefix and are not the subscription charge.
 
 The estimator subtracts cached reads and cache writes from total input to
 obtain uncached input, then calculates:
@@ -250,9 +261,10 @@ finishes the game.
   story file, feeds commands, and emits the game's printed output.
 - `src/agent.js` — selects the provider backend.
 - `src/providers/` — the backends: `openai.js`, `anthropic.js`,
-  `claude-cli.js`, and `codex-cli.js`. Each owns its native conversation
-  history and exposes the same interface: `requestCommands(gameOutputs)`
-  returns the model's submitted commands plus its out-loud commentary.
+  `claude-cli.js`, `codex-cli.js`, and `opencode-cli.js`. Each owns its
+  native conversation history and exposes the same interface:
+  `requestCommands(gameOutputs)` returns the model's submitted commands
+  plus its out-loud commentary.
 - `src/index.js` — the game loop: runs submitted commands in the game,
   feeds the printed output back as the next tool result, and restarts
   the game when it ends.
@@ -271,4 +283,7 @@ prefixes automatically; the Claude CLI backend resumes one CLI session
 per game and only sends new game output, letting the CLI manage its own
 history and caching. The Codex backend cannot hold a process open, so each
 turn re-enters the same thread with `codex exec resume`; the Responses API
-still cache-reads the replayed prefix, which is most of the request.
+still cache-reads the replayed prefix, which is most of the request. The
+OpenCode backend works the same way through `opencode run --session <id>`,
+re-entering the stored session each turn and letting the provider cache the
+replayed prefix.

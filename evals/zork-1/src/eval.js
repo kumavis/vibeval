@@ -11,6 +11,7 @@
 // A --models entry may name its own backend and reasoning effort, so one
 // batch can span harnesses and land in a single report:
 //   --models claude-cli:claude-sonnet-5,codex-cli:gpt-5.6-sol@medium
+//   --models opencode-cli:openrouter/openai/gpt-5.6-sol@high
 // The bare form uses --provider and the backend's default effort. A trailing
 // +web unseals the codex backend's web search, so the model can look up a
 // walkthrough mid-game:
@@ -81,7 +82,7 @@ console.log(
 
 for (const model of models) {
   for (const trial of trialNumbers) {
-    const tag = `${model.label}-t${trial}`;
+    const tag = `${model.label.replaceAll('/', '-')}-t${trial}`;
     // Resume: a trial that already spent its budget is left alone, so an
     // interrupted batch can be relaunched with the same command.
     if (await isTrialComplete(tag)) {
@@ -151,12 +152,13 @@ function runOne(model, trial, tag) {
           ...process.env,
           LLM_PROVIDER: model.provider,
           // Each backend reads its own model variable, and only the selected
-          // one is consulted, so setting all three is harmless.
+          // one is consulted, so setting all of them is harmless.
           CLAUDE_CLI_MODEL: model.name,
           CODEX_CLI_MODEL: model.name,
+          OPENCODE_CLI_MODEL: model.name,
           ANTHROPIC_MODEL: model.name,
           ...(model.effort
-            ? { CODEX_CLI_EFFORT: model.effort, ANTHROPIC_EFFORT: model.effort }
+            ? { CODEX_CLI_EFFORT: model.effort, OPENCODE_CLI_EFFORT: model.effort, ANTHROPIC_EFFORT: model.effort }
             : {}),
           CODEX_CLI_WEB_SEARCH: String(model.web),
           MAX_MOVES: String(moves),

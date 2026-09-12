@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "model": "openrouter/deepseek/deepseek-v4-flash-0731",
+      "resolvedModel": null,
+      "provider": "opencode-cli",
+      "tag": "openrouter-deepseek-deepseek-v4-flash-0731-t1",
+      "seed": 1,
+      "wallMin": 160.2516,
+      "wallBasis": "partial-attempt-last-event",
+      "wallAccounting": {
+        "interruptedAttempts": 1,
+        "method": "sum completed attempts plus each crash-ended attempt through its last logged event"
+      },
+      "turns": 360,
+      "commands": 353,
+      "moves": 300,
+      "maxScore": 40,
+      "parserRejections": 28,
+      "worldRefusals": 28,
+      "deaths": 0,
+      "staleness": 324,
+      "tokensOut": 27115,
+      "costUsd": 0.06584400906827306,
+      "costBasis": "incomplete",
+      "costEstimate": null,
+      "usageAccounting": {
+        "estimated": false,
+        "estimates": [],
+        "unaccountedAttempts": [
+          {
+            "startedAt": 1789216206037,
+            "endedAt": 1789216206037,
+            "retainedTurns": 0
+          }
+        ]
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "openrouter/deepseek/deepseek-v4-flash-0731",
+      "alias": "openrouter/deepseek/deepseek-v4-flash-0731",
+      "provider": "opencode-cli",
+      "trials": 1,
+      "medianScore": 40,
+      "meanScore": 40,
+      "meanCommands": 353,
+      "meanWallMin": 160.2516,
+      "wallBasis": "partial-attempt-last-event",
+      "meanCostUsd": null,
+      "costBasis": null,
+      "scorePerDollar": null
+    }
+  ]
+}

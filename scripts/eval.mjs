@@ -21,7 +21,7 @@ if (values.help) {
   if (values['max-turns']) definition.limits.maxTurns = Number(values['max-turns']);
   if (values['max-seconds']) definition.limits.maxWallMs = Number(values['max-seconds']) * 1000;
   const models = values.models ? values.models.split(',').map(s => parseModelSpec(s.trim(), values.provider)) : [{ provider: values.provider, name: values.model, effort: values.effort, web: false }];
-  if (!models.length || models.some(m => !['claude-cli','codex-cli'].includes(m.provider) || !m.name || !m.effort || m.web)) throw new Error('Pin a provider, model, and effort for each sealed run');
+  if (!models.length || models.some(m => !['claude-cli','codex-cli','opencode-cli'].includes(m.provider) || !m.name || !m.effort || m.web)) throw new Error('Pin a provider, model, and effort for each sealed run');
   const trials = Number(values.trials);
   if (!Number.isSafeInteger(trials) || trials < 1) throw new Error('--trials must be a positive integer');
   const pricing = JSON.parse(await readFile(values.pricing ? resolve(values.pricing) : join(root, 'packages/runner/src/pricing.json'), 'utf8'));

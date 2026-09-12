@@ -2896,6 +2896,47 @@
       ],
       "durationMs": 2238176,
       "commandCount": 301
+    },
+    {
+      "id": "run-031",
+      "model": "openrouter/deepseek/deepseek-v4-flash-0731",
+      "resolvedModel": null,
+      "provider": "opencode-cli",
+      "tag": "openrouter-deepseek-deepseek-v4-flash-0731-t1",
+      "seed": 1,
+      "moveBudget": 300,
+      "moves": 300,
+      "maxScore": 40,
+      "deaths": 0,
+      "wallMin": 160.2516,
+      "incomplete": false,
+      "endReason": null,
+      "source": "eval-opencode-dsv4flash-300/run-2026-09-12T09-59-36.669Z-openrouter-deepseek-deepseek-v4-flash-0731-t1.jsonl",
+      "transcript": "transcripts/run-031.json",
+      "samples": [
+        {
+          "command": 1,
+          "activeMs": 3252,
+          "score": 0
+        },
+        {
+          "command": 10,
+          "activeMs": 67595,
+          "score": 10
+        },
+        {
+          "command": 26,
+          "activeMs": 207926,
+          "score": 35
+        },
+        {
+          "command": 31,
+          "activeMs": 247843,
+          "score": 40
+        }
+      ],
+      "durationMs": 9615096,
+      "commandCount": 353
     }
   ]
 }

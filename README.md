@@ -6,7 +6,7 @@ The [common eval formats](docs/eval-formats.md) separate text/files/controller/e
 
 ```text
 apps/gallery/                Static gallery shell
-packages/runner/             Claude/Codex sessions, API adapters, model specs
+packages/runner/             Claude/Codex/OpenCode sessions, API adapters, model specs
 packages/viewer/             Shared styling and sandboxed artifact viewer
 evals/courier-grid/          Controller task, simulator, scored replays, and viewer
 evals/zork-1/                Zork runner, prompt, interpreter, tests, and results
@@ -42,7 +42,7 @@ See [Courier grid setup and scoring](evals/courier-grid/README.md). Models can t
 
 ## Run Zork
 
-Use installed and authenticated Claude/Codex CLIs, or configure API credentials in your shell. `.env` files are not loaded automatically. See [Zork setup](evals/zork-1/README.md) and the copied [runner reference](evals/zork-1/RUNNER.md).
+Use installed and authenticated Claude/Codex/OpenCode CLIs, or configure API credentials in your shell. `.env` files are not loaded automatically. See [Zork setup](evals/zork-1/README.md) and the copied [runner reference](evals/zork-1/RUNNER.md).
 
 ```sh
 npm run eval:zork -- --models claude-cli:YOUR_CLAUDE_MODEL,codex-cli:YOUR_CODEX_MODEL@medium --trials 3 --moves 300 --name comparison
@@ -75,7 +75,7 @@ Change the manifest ID/title, then edit `data/public/artifacts.json`:
 }
 ```
 
-Put the outputs under `data/public/model-a/index.html`, etc. The reusable viewer presents the shared prompt and side-by-side sandboxed previews. Prefer self-contained HTML; sandboxed frames have opaque origins, so browser storage and some module-loading patterns are unavailable. The sandbox isolates the gallery but does not prevent outbound network requests. Keep artifacts self-contained for reproducibility. The [runner package](packages/runner/README.md) includes a `generatePage` helper for Claude/Codex raw-text generation. No fictional outputs are included in the template.
+Put the outputs under `data/public/model-a/index.html`, etc. The reusable viewer presents the shared prompt and side-by-side sandboxed previews. Prefer self-contained HTML; sandboxed frames have opaque origins, so browser storage and some module-loading patterns are unavailable. The sandbox isolates the gallery but does not prevent outbound network requests. Keep artifacts self-contained for reproducibility. The [runner package](packages/runner/README.md) includes a `generatePage` helper for Claude/Codex/OpenCode raw-text generation. No fictional outputs are included in the template.
 
 ## GitHub Pages
 

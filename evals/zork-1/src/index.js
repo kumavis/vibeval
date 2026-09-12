@@ -191,7 +191,7 @@ async function main() {
   let budgetReached = false;
   let endReason = 'stopped';
 
-  // The finally releases provider child processes (claude-cli), or the
+  // The finally releases provider child processes (the CLI backends), or the
   // event loop keeps the harness alive after a fatal error.
   try {
     while (!aborted) {
@@ -483,8 +483,21 @@ async function replayInto(zork, agent, runStats, partialLogUrl, intro) {
 
   const history = [];
   let pending = [intro];
+  // The live loop probes the game with a silent SCORE after every turn that
+  // applied commands (unless the game restarted). The parser keeps state
+  // between inputs, so an exact replay has to type those probes too — without
+  // them a later "GO WINDOW" can parse differently and the replay diverges.
+  let turnHadCommands = false;
+  let turnRestarted = false;
+  const finishTurn = async () => {
+    if (turnHadCommands && !turnRestarted) await zork.input('SCORE');
+    turnHadCommands = false;
+    turnRestarted = false;
+  };
   for (const event of events) {
     if (event.type === 'model_turn') {
+      await finishTurn();
+      turnHadCommands = (event.commands?.length ?? 0) > 0;
       history.push({ role: 'user', content: pending.join('\n') });
       history.push({
         role: 'assistant',
@@ -494,6 +507,10 @@ async function replayInto(zork, agent, runStats, partialLogUrl, intro) {
       });
       pending = [];
       runStats.modelTurns += 1;
+      continue;
+    }
+    if (event.type === 'game_restart') {
+      turnRestarted = true;
       continue;
     }
     // Replay the command; the game's response must match what was logged.
@@ -508,6 +525,7 @@ async function replayInto(zork, agent, runStats, partialLogUrl, intro) {
     if (event.parserRejection) runStats.parserRejections += 1;
     if (event.worldRefusal) runStats.worldRefusals += 1;
   }
+  await finishTurn();
 
   agent.restoreHistory?.(history);
   await probeScore(zork, runStats, false, () => {}, toModelText);

@@ -73,7 +73,10 @@ export function selectReplayEvents(events) {
   const stripped = stripUnsuccessfulModelTails(events);
   return {
     events: stripped.events.filter(
-      (event) => event.type === 'model_turn' || event.type === 'command',
+      (event) =>
+        event.type === 'model_turn' ||
+        event.type === 'command' ||
+        event.type === 'game_restart',
     ),
     droppedModelTurns: stripped.droppedModelTurns,
   };

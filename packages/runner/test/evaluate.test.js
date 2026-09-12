@@ -114,15 +114,16 @@ test('pricing records exact-model snapshots, handles provider cache semantics, a
   const usage = { inputTokens: 1000000, cacheReadTokens: 500000, outputTokens: 100000, thinkingTokens: 50000 };
   assert.equal(estimateCost({ provider: 'codex-cli', model: 'model', usage, pricing }).usd, 7.5);
   assert.equal(estimateCost({ provider: 'claude-cli', model: 'model', usage, pricing }).usd, 12.5);
+  assert.equal(estimateCost({ provider: 'opencode-cli', model: 'model', usage, pricing }).usd, 12.5);
   assert.equal(estimateCost({ provider: 'codex-cli', model: 'unknown', usage, pricing }).usd, null);
   assert.equal(estimateCost({ provider: 'claude-cli', model: 'unknown', usage: { costReported: true, costUsd: 0 } }).usd, 0);
 });
 
-test('both CLI transports complete text and file submissions using fake executables', async t => {
+test('all CLI transports complete text and file submissions using fake executables', async t => {
   const oldPath = process.env.PATH;
   process.env.PATH = `${fileURLToPath(new URL('./fixtures/', import.meta.url))}:${oldPath}`;
   t.after(() => { process.env.PATH = oldPath; delete process.env.VIBEVAL_FIXTURE_SUBMISSION; });
-  for (const provider of ['claude-cli', 'codex-cli']) {
+  for (const provider of ['claude-cli', 'codex-cli', 'opencode-cli']) {
     for (const format of ['text', 'files']) {
       process.env.VIBEVAL_FIXTURE_SUBMISSION = format;
       const s = await setup(t, [], format === 'files' ? { format, entry: 'index.html' } : {});

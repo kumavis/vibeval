@@ -3,11 +3,12 @@ import { join } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
 import { createClaudeCliProvider } from './providers/claude-cli.js';
 import { createCodexCliProvider } from './providers/codex-cli.js';
+import { createOpenCodeCliProvider } from './providers/opencode-cli.js';
 import { defineEval, submissionInstructions, validateScores, controllerActionSchema } from './formats.js';
 import { createWorkspace, fileInventory } from './workspace.js';
 import { provenance, cliVersion, estimateCost } from './metadata.js';
 
-const factories = { 'claude-cli': createClaudeCliProvider, 'codex-cli': createCodexCliProvider };
+const factories = { 'claude-cli': createClaudeCliProvider, 'codex-cli': createCodexCliProvider, 'opencode-cli': createOpenCodeCliProvider };
 const writeJson = (path, value) => writeFile(path, JSON.stringify(value, null, 2) + '\n');
 function textCheck(content, definition) {
   const errors = [];
@@ -23,7 +24,7 @@ export async function runEval({ root, directory, definition: input, prompt, prov
   createProvider = factories[provider], harness, runtimeVersion, signal, adapter }) {
   const definition = defineEval(input);
   if (definition.format === 'environment') throw new Error('Environment evals use their own runner (for example, Zork)');
-  if (!Object.hasOwn(factories, provider) || !createProvider) throw new Error('Use claude-cli or codex-cli');
+  if (!Object.hasOwn(factories, provider) || !createProvider) throw new Error('Use claude-cli, codex-cli, or opencode-cli');
   if (!model || !effort) throw new Error('Pin --model and --effort for recorded runs');
   if (!Number.isSafeInteger(trial) || trial < 1) throw new Error('Trial must be a positive integer');
   if (definition.assessment.type === 'numeric' && typeof score !== 'function' && !adapter) throw new Error('Numeric eval requires a score function');
