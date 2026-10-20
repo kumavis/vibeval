@@ -4,6 +4,8 @@ A monorepo of model evaluations. Each eval owns its runner, prompts, results, an
 
 The [common eval formats](docs/eval-formats.md) separate text/files/controller/environment outputs from numeric/viewer judgment. Creative runs support revision and explicit final submission, with provenance, usage, timing, cost estimates, and iteration history.
 
+The [AI catastrophe research comparison](evals/p-doom/README.md) adds live web research and agent-built ProbLog models for LEAP’s >10%-fatality scenario by 2050. `npm run eval:doom:batch` runs the matched Luna thinking-level sweep and Sol/Astra comparisons with three responses and thirty minutes per attempt. Its research protocol is separate from the sealed artifact runner.
+
 ```text
 apps/gallery/                Static gallery shell
 packages/runner/             Claude/Codex/OpenCode sessions, API adapters, model specs

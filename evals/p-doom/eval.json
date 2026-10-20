@@ -1,0 +1,10 @@
+{
+  "id": "p-doom",
+  "title": "Modeling AI catastrophe risk",
+  "description": "Independent web research and agent-built probability graphs for LEAP’s >10% fatality scenario by 2050, compared across models and thinking levels.",
+  "kind": "interactive",
+  "format": "environment",
+  "assessment": { "type": "subjective", "guidance": "Evidence and reasoning review; computed probabilities are forecasts, not accuracy scores." },
+  "tags": ["Research", "ProbLog", "Forecasting"],
+  "protocol": "doom-leap-v3"
+}

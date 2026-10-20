@@ -1,0 +1,16 @@
+{
+  "id": "leap-wave9-ai-catastrophe-2050",
+  "title": "LEAP: AI-related global catastrophe by 2050",
+  "source": "https://leap.forecastingresearch.org/reports/wave9#ai-catastrophic-risk",
+  "verifiedAt": "2026-10-19",
+  "mortalityFraction": 0.1,
+  "thresholdOperator": ">",
+  "resolutionDate": "2050-12-31",
+  "windowYears": 5,
+  "windowStartOnOrAfter": "2025-12-31",
+  "windowEndRule": "The relevant five-year period must end before the resolution date.",
+  "baseline": "People alive at the start of the relevant five-year period.",
+  "causation": "AI is the direct or proximate cause of the deaths. Proximate causation uses a but-for test: without substantial AI involvement within one year before the event, it would not occur or would be extremely unlikely. Subsequent attributable consequences count; incidental assistance that does not materially enable the event does not.",
+  "conditioning": "Unconditional on AI progress, capability arrival, or deployment.",
+  "resolutionEvidence": "Use widely recognized population/fatality sources; disagreements affecting resolution are settled by relevant experts."
+}

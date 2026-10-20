@@ -1,0 +1,2 @@
+problog==2.2.10
+setuptools==84.0.0

@@ -7,3 +7,5 @@ dist/
 .DS_Store
 **/runs/
 **/data/private/
+**/.venv/
+**/__pycache__/

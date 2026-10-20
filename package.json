@@ -18,6 +18,8 @@
     "start:zork": "npm run start -w @vibeval/zork-1 --",
     "data:zork": "node evals/zork-1/scripts/export-data.mjs",
     "eval": "node scripts/eval.mjs",
+    "eval:doom": "node evals/p-doom/src/cli.js",
+    "eval:doom:batch": "node evals/p-doom/src/batch.js",
     "data:publish": "node scripts/publish-run.mjs"
   }
 }
