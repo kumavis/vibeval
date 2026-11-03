@@ -1,0 +1,103 @@
+{
+  "auditDate": "2026-10-27",
+  "scope": "Limited independent source spot check of three factual premises in public-facing trial-1 final responses. No hidden reasoning or event transcripts inspected.",
+  "checks": [
+    {
+      "model": "gpt-6.1-terra",
+      "trial": 1,
+      "responseFile": "evals/california-ballot-2026/runs/san-leandro-2026-10-27/gpt-6.1-terra/trial-1/response.json",
+      "responsePointer": "/decisions/39",
+      "contestId": "ca-proposition-38",
+      "claimAsWritten": "Medical research is valuable, but dedicating half of a large debt-financed bond to one affiliated institute is an unpersuasive allocation of scarce public funds. [P38]",
+      "responseSourceRefs": [
+        "P38"
+      ],
+      "responseSources": [
+        {
+          "id": "P38",
+          "url": "https://voterguide.sos.ca.gov/propositions/38/",
+          "title": "Secretary of State: Proposition 38"
+        }
+      ],
+      "assessment": "supported",
+      "finding": "The factual premise is supported: the official November 3, 2026 summary authorizes $8.4 billion in general-obligation bonds and allocates half to one UC-affiliated nonprofit institute. Whether that allocation is persuasive is a value judgment, not audited.",
+      "verificationUrls": [
+        "https://voterguide.sos.ca.gov/propositions/38/"
+      ],
+      "verificationLocator": "Official summary, paragraph beginning Authorizes $8.4 billion (web page lines 18–20).",
+      "yearCheck": "The measure sources explicitly identify November 3, 2026; candidate source and county listing identify current 2026 service/candidacy."
+    },
+    {
+      "model": "gpt-6-sol",
+      "trial": 1,
+      "responseFile": "evals/california-ballot-2026/runs/san-leandro-2026-10-27/gpt-6-sol/trial-1/response.json",
+      "responsePointer": "/decisions/11",
+      "contestId": "chabot-las-positas-community-college-district-trustee-area-2",
+      "claimAsWritten": "Her education administration and current college-board experience provide a stronger basis for this specific role.",
+      "responseSourceRefs": [
+        "S16",
+        "S17"
+      ],
+      "responseSources": [
+        {
+          "id": "S16",
+          "url": "https://www.sfchronicle.com/projects/2026/california-sf-bay-area-voter-guide/",
+          "title": "San Francisco Chronicle 2026 Bay Area voter guide"
+        },
+        {
+          "id": "S17",
+          "url": "https://www.liftuppublicschools.com/candidates",
+          "title": "Lift Up Public Schools candidate profiles"
+        }
+      ],
+      "assessment": "supported",
+      "finding": "Granger’s current college-board service and education-administration background are supported by the district’s board biography, official candidate filing, and the response’s cited LUPS profile. The comparison that this is a stronger basis for office remains the model’s judgment.",
+      "verificationUrls": [
+        "https://districtazure.clpccd.org/bot/boardmembers.php",
+        "https://alamedacountyca.gov/rov_app/candidatelist?electionid=260",
+        "https://www.liftuppublicschools.com/candidates"
+      ],
+      "verificationLocator": "Official board biography: Current Board Members → Board President → Linda Granger; county candidate search Area 2 marks incumbent Y; cited LUPS profile identifies current trustee.",
+      "yearCheck": "The measure sources explicitly identify November 3, 2026; candidate source and county listing identify current 2026 service/candidacy."
+    },
+    {
+      "model": "gpt-6-luna",
+      "trial": 1,
+      "responseFile": "evals/california-ballot-2026/runs/san-leandro-2026-10-27/gpt-6-luna/trial-1/response.json",
+      "responsePointer": "/decisions/38",
+      "contestId": "ca-proposition-37",
+      "claimAsWritten": "The buyer-loan program appears to offer targeted housing assistance with repayment through mortgage payments rather than state repayment; the official summary did not identify direct public costs.",
+      "responseSourceRefs": [
+        "prop37"
+      ],
+      "responseSources": [
+        {
+          "id": "prop37",
+          "url": "https://voterguide.sos.ca.gov/propositions/37/",
+          "title": "Official Voter Information Guide: Proposition 37"
+        }
+      ],
+      "assessment": "supported",
+      "finding": "The official November 3, 2026 summary says homeowners’ mortgage payments repay the bonds and identifies no direct state/local costs. The model attributes the fiscal point to that summary; it does not claim all indirect effects or risks are absent.",
+      "verificationUrls": [
+        "https://voterguide.sos.ca.gov/propositions/37/"
+      ],
+      "verificationLocator": "Official summary and What your vote means, lines 18–23.",
+      "yearCheck": "The measure sources explicitly identify November 3, 2026; candidate source and county listing identify current 2026 service/candidacy."
+    }
+  ],
+  "summary": {
+    "checked": 3,
+    "supported": 3,
+    "uncertain": 0,
+    "incorrect": 0,
+    "materialIssuesFound": []
+  },
+  "limitations": [
+    "This is not a certification of all 49 decisions, all cited links, all models or later trials.",
+    "Normative choices and self-reported compass coordinates were not validated by this source check.",
+    "The public-service biography supports experience, not comparative candidate merit. LUPS is an advocacy coalition; its factual career description was independently corroborated with official district and county sources.",
+    "No source-year mismatch or wrong fact was found in these three checks. Other claims may still contain errors."
+  ],
+  "changesToOriginalOutputs": "None"
+}

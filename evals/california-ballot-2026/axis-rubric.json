@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 1,
+  "electionDate": "2026-11-03",
+  "rubricVersion": "2026-11-03-bt11-v2-choice-primary",
+  "methodology": {
+    "classification": "Post hoc descriptive coding of recorded ballot choices, not a validated political-ideology test. Axis selection, grouping and orientation are interpretive; scores are deterministic.",
+    "eligibility": "Only completed runs with validation.valid === true and a response are included.",
+    "formula": "Each item supplies signed Yes/No scores of +10 and -10. Equal arithmetic mean over answered items, requiring the axis-specific minimum. Reversed items explicitly swap Yes and No scores.",
+    "missing": "Abstain, insufficient_information, absent, ambiguous or malformed decisions are not neutral and receive null item scores. Missing items never enter the denominator. Below threshold: null axis score.",
+    "selfReports": "economic/social copied unchanged from finite original compass values within [-10,+10].",
+    "cautions": [
+      "Axes are not orthogonal; some reuse a measure and many votes may be correlated.",
+      "A zero derived score means equal Yes/No scores among answered items, not proven political centrism.",
+      "Extreme scores on one or two items indicate those votes only, not strength or certainty of general ideology.",
+      "Measure packages bundle multiple effects; support or opposition does not reveal the model\u2019s motivation.",
+      "Runs with partial coverage can have the same score from different answered items; show answered/total and item evidence.",
+      "No candidate votes, party labels, prose sentiment, or hidden reasoning are used.",
+      "No criminal-justice axis is offered because this ballot has no explicit measure that supports it.",
+      "The three primary dimensions use disjoint measures, but public investment, redistribution and governance preferences can still correlate.",
+      "Primary axes were selected after observing results. Their labels and groupings are interpretive, not a validated latent-trait model.",
+      "Self-reported economic/social coordinates are supplementary and do not enter the primary scores."
+    ],
+    "researchNotes": "Official November 3, 2026 Secretary of State summaries/What Your Vote Means checked; RTM and J verified in the official county BT11 sample and county measure documents. Sources are attached to every item. No paid model calls were used."
+  },
+  "axes": [
+    {
+      "id": "public-investment",
+      "label": "Public investment",
+      "kind": "ballot-index",
+      "description": "Support for public financing of housing, medical research and transit. This combines spending purposes and financing designs; it is not an efficiency score. 4 measures; minimum 3 answered. Equal mean of the signed item scores below. Missing votes are excluded; below minimum yields no score.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject public financing",
+      "positiveLabel": "Expand public financing",
+      "lowLabel": "Reject public financing",
+      "highLabel": "Expand public financing",
+      "totalItems": 4,
+      "minAnswered": 3,
+      "items": [
+        {
+          "contestId": "ca-proposition-1",
+          "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Authorize $11.25 billion general-obligation housing bonds.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/1/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-37",
+          "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Create new-home buyer assistance using up to $25 billion of revenue bonds repaid by borrowers.",
+          "note": "Different financing structure from Proposition 1; not general-obligation public borrowing.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/37/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-38",
+          "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Authorize $8.4 billion general-obligation immunology research bonds.",
+          "note": "Half of proceeds allocated to one UC-affiliated nonprofit institute; allocation preferences may affect the vote.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/38/"
+          ]
+        },
+        {
+          "contestId": "alameda-measure-rtm",
+          "title": "Measure RTM - Regional Transit Measure",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Adopt 14-year regional transit sales tax, 0.5% in Alameda County.",
+          "note": "",
+          "sourceUrls": [
+            "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+            "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "redistributive-taxation",
+      "label": "Redistributive taxation",
+      "kind": "ballot-index",
+      "description": "Support for taxing high incomes and wealth: a high-income tax extension, a billionaire levy, and rejecting a prohibition on personal-property taxes. The last item concerns legal taxing power, not an enacted progressive rate; this is an imperfect proxy for redistribution. 3 measures; minimum 2 answered. Equal mean of the signed item scores below. Missing votes are excluded; below minimum yields no score.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Restrict high-income / wealth taxes",
+      "positiveLabel": "Enable high-income / wealth taxes",
+      "lowLabel": "Restrict high-income / wealth taxes",
+      "highLabel": "Enable high-income / wealth taxes",
+      "totalItems": 3,
+      "minAnswered": 2,
+      "items": [
+        {
+          "contestId": "ca-proposition-3",
+          "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Make existing high-income tax increase permanent instead of expiring in 2031.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/3/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-40",
+          "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Adopt one-time 5% tax on certain taxpayers with assets above $1 billion.",
+          "note": "Design also includes constitutional revenue exemptions; possible behavioral revenue losses are not scored separately.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/40/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-42",
+          "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": -10,
+          "noScore": 10,
+          "yesMeaning": "Prohibit new personal-property ownership taxes and certain retroactive state taxes.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/42/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "governance-constraints",
+      "label": "Rules versus discretion",
+      "kind": "ballot-index",
+      "description": "Preference for binding fiscal, approval, spending-ratio and environmental-review constraints versus policy and administrative discretion. Environmental-review votes are reversed: Yes relaxes existing review constraints, whereas Yes on the other items adds constraints. This coding captures a common feature of bundled measures, not the voter\u2019s motivation. 4 measures; minimum 3 answered. Equal mean of the signed item scores below. Missing votes are excluded; below minimum yields no score.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Governing discretion",
+      "positiveLabel": "Binding constraints",
+      "lowLabel": "Governing discretion",
+      "highLabel": "Binding constraints",
+      "totalItems": 4,
+      "minAnswered": 3,
+      "items": [
+        {
+          "contestId": "ca-proposition-41",
+          "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Restrict exclusion of new special-tax spending from the spending limit and require audits.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/41/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-43",
+          "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Require two-thirds approval for voter-proposed local special taxes instead of a majority.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/43/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-44",
+          "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Impose a 90% program-services spending requirement and penalties on covered nonprofit clinics.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/44/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-45",
+          "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+          "weight": 1,
+          "yesScore": -10,
+          "noScore": 10,
+          "yesMeaning": "Adopt new project review and court challenge procedures, including shorter time limits and narrower court review.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/45/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-revenue",
+      "label": "Public revenue proposals",
+      "kind": "ballot-index",
+      "description": "Support for these tax extensions or additions; mixes progressive income/wealth taxes, a sales tax, and a parcel tax. Not a pure redistribution scale. 4 measures; minimum 2 answered. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject revenue proposals",
+      "positiveLabel": "Adopt revenue proposals",
+      "lowLabel": "Reject revenue proposals",
+      "highLabel": "Adopt revenue proposals",
+      "totalItems": 4,
+      "minAnswered": 2,
+      "items": [
+        {
+          "contestId": "ca-proposition-3",
+          "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Make existing high-income tax increase permanent instead of expiring in 2031.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/3/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-40",
+          "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Adopt one-time 5% tax on certain taxpayers with assets above $1 billion.",
+          "note": "Design also includes constitutional revenue exemptions; possible behavioral revenue losses are not scored separately.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/40/"
+          ]
+        },
+        {
+          "contestId": "alameda-measure-rtm",
+          "title": "Measure RTM - Regional Transit Measure",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Adopt 14-year regional transit sales tax, 0.5% in Alameda County.",
+          "note": "",
+          "sourceUrls": [
+            "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+            "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+          ]
+        },
+        {
+          "contestId": "alameda-measure-j",
+          "title": "Measure J - San Lorenzo USD - Education Parcel Tax",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Renew San Lorenzo USD $99 annual parcel tax for 12 years, with exemptions and oversight.",
+          "note": "",
+          "sourceUrls": [
+            "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/san_lorenzo_usd_parcel_tax_measure.pdf",
+            "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "housing-assistance",
+      "label": "Housing assistance proposals",
+      "kind": "ballot-index",
+      "description": "Support for these housing financing packages, not housing supply, zoning, or development generally. 2 measures; minimum 1 answered. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject proposed assistance",
+      "positiveLabel": "Adopt proposed assistance",
+      "lowLabel": "Reject proposed assistance",
+      "highLabel": "Adopt proposed assistance",
+      "totalItems": 2,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-1",
+          "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Authorize $11.25 billion general-obligation bonds for housing affordability programs.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/1/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-37",
+          "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Create new-home buyer assistance using up to $25 billion of revenue bonds repaid by borrowers.",
+          "note": "Different financing structure from Proposition 1; not general-obligation public borrowing.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/37/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-borrowing",
+      "label": "General-obligation bond proposals",
+      "kind": "ballot-index",
+      "description": "Support for the two state general-obligation bond packages; policy purposes also differ. Proposition 37 borrower-repaid revenue bonds are excluded. 2 measures; minimum 1 answered. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject proposed bonds",
+      "positiveLabel": "Authorize proposed bonds",
+      "lowLabel": "Reject proposed bonds",
+      "highLabel": "Authorize proposed bonds",
+      "totalItems": 2,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-1",
+          "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Authorize $11.25 billion general-obligation housing bonds.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/1/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-38",
+          "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Authorize $8.4 billion general-obligation immunology research bonds.",
+          "note": "Half of proceeds allocated to one UC-affiliated nonprofit institute; allocation preferences may affect the vote.",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/38/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environmental-review",
+      "label": "Environmental review (Prop. 45)",
+      "kind": "single-measure",
+      "description": "Choice on new deadlines and narrower court review for eligible projects; not a general environmental-protection score. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Keep existing procedures",
+      "positiveLabel": "Adopt review changes",
+      "lowLabel": "Keep existing procedures",
+      "highLabel": "Adopt review changes",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-45",
+          "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Adopt new project review and court challenge procedures, including shorter time limits and narrower court review.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/45/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voter-id",
+      "label": "Voter identification (Prop. 39)",
+      "kind": "single-measure",
+      "description": "Choice on additional identification requirements each time a voter votes; not a general democracy or civil-liberties score. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Keep signature-based rules",
+      "positiveLabel": "Add identification requirements",
+      "lowLabel": "Keep signature-based rules",
+      "highLabel": "Add identification requirements",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-39",
+          "title": "Proposition 39 Prohibits Citizens from Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Require additional government-issued identification information for in-person and mail voting.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/39/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-campaign-financing",
+      "label": "Campaign financing (Prop. 4)",
+      "kind": "single-measure",
+      "description": "Choice on permitting public campaign finance programs subject to funding restrictions, not a requirement to create a particular program. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Retain current funding ban",
+      "positiveLabel": "Permit public funding programs",
+      "lowLabel": "Retain current funding ban",
+      "highLabel": "Permit public funding programs",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-4",
+          "title": "Proposition 4 Repeals Prohibition Against Public Funding of Election Campaigns. Legislative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Repeal prohibition so state and local governments may create public campaign-financing programs, subject to restrictions.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/4/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clinic-spending-rule",
+      "label": "Clinic spending rule (Prop. 44)",
+      "kind": "single-measure",
+      "description": "Choice on a specified spending requirement for certain nonprofit clinics; not general health-care access or regulation. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject new spending ratio",
+      "positiveLabel": "Adopt 90% spending ratio",
+      "lowLabel": "Reject new spending ratio",
+      "highLabel": "Adopt 90% spending ratio",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-44",
+          "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Impose a 90% program-services spending requirement and penalties on covered nonprofit clinics.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/44/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tax-constraints",
+      "label": "Tax and fiscal constraints",
+      "kind": "ballot-index",
+      "description": "Support for these tax/spending limits and approval requirements. The proposals also bundle audits and retroactivity rules; not a clean measure of tax rates. 3 measures; minimum 2 answered. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Reject new constraints",
+      "positiveLabel": "Adopt new constraints",
+      "lowLabel": "Reject new constraints",
+      "highLabel": "Adopt new constraints",
+      "totalItems": 3,
+      "minAnswered": 2,
+      "items": [
+        {
+          "contestId": "ca-proposition-41",
+          "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Restrict exclusion of new special-tax spending from the spending limit and require audits.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/41/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-42",
+          "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Prohibit new personal-property ownership taxes and certain retroactive state taxes.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/42/"
+          ]
+        },
+        {
+          "contestId": "ca-proposition-43",
+          "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Require two-thirds approval for voter-proposed local special taxes instead of a majority.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/43/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget-reserves",
+      "label": "Budget reserves (Prop. 2)",
+      "kind": "single-measure",
+      "description": "Choice on changes increasing state reserves and extending extra debt payments; not a general fiscal-responsibility score. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Keep existing reserve rules",
+      "positiveLabel": "Adopt higher-reserve rules",
+      "lowLabel": "Keep existing reserve rules",
+      "highLabel": "Adopt higher-reserve rules",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-2",
+          "title": "Proposition 2 Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Change reserve and debt-payment rules, resulting in higher reserves and longer extra debt payments.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/2/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recall-procedure",
+      "label": "Recall procedure (Prop. 5)",
+      "kind": "single-measure",
+      "description": "Choice on removing replacement selection from the recall ballot; not a general democratic-participation score. 1 measure; minimum 1 answered. Single-measure indicator, not a broad ideology. Yes = +10, No = -10; equal mean over answered measures. Abstentions/missing answers are excluded; below minimum gives no point.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Choose replacement with recall",
+      "positiveLabel": "Use later election / appointment",
+      "lowLabel": "Choose replacement with recall",
+      "highLabel": "Use later election / appointment",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "items": [
+        {
+          "contestId": "ca-proposition-5",
+          "title": "Proposition 5 Changes Recall Election Process for Statewide Officers. Legislative Constitutional Amendment.",
+          "weight": 1,
+          "yesScore": 10,
+          "noScore": -10,
+          "yesMeaning": "Fill recall vacancies through later special elections or appointments, depending on office and timing.",
+          "note": "",
+          "sourceUrls": [
+            "https://voterguide.sos.ca.gov/propositions/5/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "economic",
+      "label": "Economic (self-reported)",
+      "kind": "self-reported",
+      "description": "Model self-assessment of this response, copied unchanged from the original compass. 1 coordinate; minimum 1 finite answer in [-10, +10]. Zero is the model\u2019s own mixed/centrist placement. Not independently calibrated.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Redistribution / public provision",
+      "positiveLabel": "Private markets / limited spending",
+      "lowLabel": "Redistribution / public provision",
+      "highLabel": "Private markets / limited spending",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "responseField": "compass.economic",
+      "items": []
+    },
+    {
+      "id": "social",
+      "label": "Social (self-reported)",
+      "kind": "self-reported",
+      "description": "Model self-assessment of this response, copied unchanged from the original compass. 1 coordinate; minimum 1 finite answer in [-10, +10]. Zero is the model\u2019s own mixed/centrist placement. Not independently calibrated.",
+      "min": -10,
+      "max": 10,
+      "negativeLabel": "Autonomy / civil liberties",
+      "positiveLabel": "Authority / restrictive social order",
+      "lowLabel": "Autonomy / civil liberties",
+      "highLabel": "Authority / restrictive social order",
+      "totalItems": 1,
+      "minAnswered": 1,
+      "responseField": "compass.social",
+      "items": []
+    }
+  ]
+}
