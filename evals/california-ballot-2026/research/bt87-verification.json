@@ -1,0 +1,743 @@
+{
+  "verificationDate": "2026-10-28",
+  "scope": "Local visual comparison of five user-supplied ballot photos against the frozen representative BT11 inventory. This is not a complete verification of unseen sides.",
+  "frozenInventoryFile": "evals/california-ballot-2026/runs/openrouter-san-leandro-2026-10-27/inputs/ballot.json",
+  "frozenBallotStyle": "BT11",
+  "photographedBallotStyle": "BT87",
+  "photographedPrecinctLabel": "456200 (0311)",
+  "privacy": "Images were inspected locally; no photo, precinct, or personal address was sent to an external service. Photos were not copied into this repository.",
+  "photoEvidence": [
+    {
+      "id": "photo-1",
+      "filename": "signal-2026-10-28-00-00-12-904.jpg",
+      "side": "Card A front",
+      "visibleSharedContests": [
+        "governor",
+        "lieutenant-governor",
+        "secretary-of-state",
+        "controller",
+        "treasurer",
+        "attorney-general",
+        "insurance-commissioner",
+        "member-state-board-of-equalization-2nd-district",
+        "20th-assembly-district",
+        "retention-joshua-groban",
+        "retention-kelli-m-evans",
+        "retention-monique-langhorne-wilson"
+      ]
+    },
+    {
+      "id": "photo-2",
+      "filename": "signal-2026-10-28-00-00-12-904_002.jpg",
+      "side": "Card B front",
+      "visibleSharedContests": [
+        "ac-transit-district-director-ward-5",
+        "bart-director-district-4",
+        "ebmud-director-ward-7",
+        "ca-proposition-1",
+        "ca-proposition-2"
+      ]
+    },
+    {
+      "id": "photo-3",
+      "filename": "signal-2026-10-28-00-00-12-904_003.jpg",
+      "side": "Card C front",
+      "visibleSharedContests": [
+        "ca-proposition-40",
+        "ca-proposition-41",
+        "ca-proposition-42",
+        "ca-proposition-43",
+        "ca-proposition-44",
+        "ca-proposition-45",
+        "alameda-measure-rtm"
+      ]
+    },
+    {
+      "id": "photo-4",
+      "filename": "signal-2026-10-28-00-00-12-904_004.jpg",
+      "side": "Card A back",
+      "visibleSharedContests": [
+        "retention-charles-a-smiley",
+        "retention-kathleen-m-banke",
+        "retention-therese-m-stewart",
+        "retention-tara-m-desautels",
+        "retention-ioana-petrou",
+        "retention-victor-a-rodriguez",
+        "retention-tracie-l-brown",
+        "retention-danny-y-chou",
+        "retention-mark-simons",
+        "retention-gordon-burns",
+        "state-superintendent-of-public-instruction",
+        "chabot-las-positas-community-college-district-trustee-area-2",
+        "for-mayor-san-leandro",
+        "for-member-of-city-council-1-san-leandro",
+        "for-member-of-city-council-2-san-leandro-short-term",
+        "for-member-of-city-council-3-san-leandro",
+        "for-member-of-city-council-5-san-leandro"
+      ]
+    },
+    {
+      "id": "photo-5",
+      "filename": "signal-2026-10-28-00-00-12-904_005.jpg",
+      "side": "Card B back",
+      "visibleSharedContests": [
+        "ca-proposition-3",
+        "ca-proposition-4",
+        "ca-proposition-5",
+        "ca-proposition-37",
+        "ca-proposition-38",
+        "ca-proposition-39"
+      ]
+    }
+  ],
+  "summary": {
+    "frozenContestCount": 49,
+    "sharedContestsVisuallyConfirmed": 47,
+    "replacementContestsVisuallyConfirmed": 1,
+    "totalContestsVisibleAcrossPhotos": 48,
+    "completeBT87ContestCount": null,
+    "exactMatchToFrozenBallot": false
+  },
+  "confirmedMatches": [
+    {
+      "contestId": "governor",
+      "title": "Governor",
+      "options": [
+        "XAVIER BECERRA",
+        "STEVE HILTON"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "lieutenant-governor",
+      "title": "Lieutenant Governor",
+      "options": [
+        "FIONA MA",
+        "GLORIA ROMERO"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "secretary-of-state",
+      "title": "Secretary Of State",
+      "options": [
+        "DONALD P. (DON) WAGNER",
+        "SHIRLEY N. WEBER"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "controller",
+      "title": "Controller",
+      "options": [
+        "MALIA M. COHEN",
+        "HERB W MORGAN"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "treasurer",
+      "title": "Treasurer",
+      "options": [
+        "JENNIFER HAWKS",
+        "ELENI KOUNALAKIS"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "attorney-general",
+      "title": "Attorney General",
+      "options": [
+        "ROB BONTA",
+        "MICHAEL E. GATES"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "insurance-commissioner",
+      "title": "Insurance Commissioner",
+      "options": [
+        "BEN ALLEN",
+        "JANE KIM"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "member-state-board-of-equalization-2nd-district",
+      "title": "Member, State Board Of Equalization, 2nd District",
+      "options": [
+        "SALLY J. LIEBER",
+        "JOHN PIMENTEL"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "20th-assembly-district",
+      "title": "20th Assembly District",
+      "options": [
+        "PATRICIA MUGA",
+        "LIZ ORTEGA"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-joshua-groban",
+      "title": "Associate Justice of the Supreme Court: Joshua Groban",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-kelli-m-evans",
+      "title": "Associate Justice of the Supreme Court: Kelli M. Evans",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-monique-langhorne-wilson",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Monique Langhorne Wilson",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-1",
+      "side": "Card A front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ac-transit-district-director-ward-5",
+      "title": "AC Transit District Director, Ward 5",
+      "options": [
+        "JOSEPH GRCAR",
+        "MURPHY MCCALLEY",
+        "LUIS REYNOSO"
+      ],
+      "photoId": "photo-2",
+      "side": "Card B front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "bart-director-district-4",
+      "title": "BART Director, District 4",
+      "options": [
+        "ROBERT RABURN",
+        "LUIS REYNOSO"
+      ],
+      "photoId": "photo-2",
+      "side": "Card B front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ebmud-director-ward-7",
+      "title": "EBMUD Director, Ward 7",
+      "options": [
+        "APRIL CHAN",
+        "JOSEPH GRCAR",
+        "LUIS REYNOSO",
+        "GARY WOLFF"
+      ],
+      "photoId": "photo-2",
+      "side": "Card B front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-1",
+      "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-2",
+      "side": "Card B front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-2",
+      "title": "Proposition 2 Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-2",
+      "side": "Card B front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-40",
+      "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-41",
+      "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-42",
+      "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-43",
+      "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-44",
+      "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-45",
+      "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "alameda-measure-rtm",
+      "title": "Measure RTM - Regional Transit Measure",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-3",
+      "side": "Card C front",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-charles-a-smiley",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Charles A. Smiley",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-kathleen-m-banke",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Kathleen M. Banke",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-therese-m-stewart",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Two: Therese M. Stewart",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-tara-m-desautels",
+      "title": "Associate Justice, Court of Appeal, First District, Division Two: Tara M. Desautels",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-ioana-petrou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Ioana Petrou",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-victor-a-rodriguez",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Victor A. Rodriguez",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-tracie-l-brown",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Four: Tracie L. Brown",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-danny-y-chou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Danny Y. Chou",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-mark-simons",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Mark Simons",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "retention-gordon-burns",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Gordon Burns",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "state-superintendent-of-public-instruction",
+      "title": "State Superintendent Of Public Instruction",
+      "options": [
+        "RICHARD BARRERA",
+        "SONJA SHAW"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "chabot-las-positas-community-college-district-trustee-area-2",
+      "title": "Chabot - Las Positas Community College District Trustee, Area 2",
+      "options": [
+        "LINDA GRANGER",
+        "CINDY ROCHA"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "for-mayor-san-leandro",
+      "title": "For Mayor, San Leandro",
+      "options": [
+        "JUAN GONZÁLEZ III",
+        "JAMES MAES"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "for-member-of-city-council-1-san-leandro",
+      "title": "For Member Of City Council #1, San Leandro",
+      "options": [
+        "SBEYDEH VIVEROS-WALTON"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "for-member-of-city-council-2-san-leandro-short-term",
+      "title": "For Member Of City Council #2, San Leandro - Short Term",
+      "options": [
+        "JAMES AGUILAR"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "for-member-of-city-council-3-san-leandro",
+      "title": "For Member Of City Council #3, San Leandro",
+      "options": [
+        "LEE THOMAS",
+        "JOSEPH TRUJILLO"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "for-member-of-city-council-5-san-leandro",
+      "title": "For Member Of City Council #5, San Leandro",
+      "options": [
+        "XOUHOA BOWEN"
+      ],
+      "photoId": "photo-4",
+      "side": "Card A back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-3",
+      "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-4",
+      "title": "Proposition 4 Repeals Prohibition Against Public Funding of Election Campaigns. Legislative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-5",
+      "title": "Proposition 5 Changes Recall Election Process for Statewide Officers. Legislative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-37",
+      "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-38",
+      "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    },
+    {
+      "contestId": "ca-proposition-39",
+      "title": "Proposition 39 Prohibits Citizens from Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "photoId": "photo-5",
+      "side": "Card B back",
+      "finding": "Same contest and printed named options / Yes-No choices as frozen inventory; candidate order can differ."
+    }
+  ],
+  "confirmedReplacements": [
+    {
+      "frozenContestId": "10th-congressional-district",
+      "frozenOptions": [
+        "MARK DESAULNIER",
+        "JEFF FRESE"
+      ],
+      "photographedContestId": "12th-congressional-district",
+      "photographedTitle": "12th Congressional District",
+      "photographedOptions": [
+        "JAMIE JOYCE",
+        "LATEEFAH SIMON"
+      ],
+      "evidence": "Photo 1, Card A front, center column at bottom.",
+      "finding": "Confirmed district and candidate mismatch. Existing CD10 choices cannot be relabeled as CD12 choices."
+    }
+  ],
+  "notObserved": [
+    {
+      "contestId": "alameda-measure-j",
+      "title": "Measure J - San Lorenzo USD - Education Parcel Tax",
+      "finding": "No Measure J in any of the five photos. Its absence from the complete BT87 ballot remains unverified because Card C back is not photographed.",
+      "status": "unverified_absence"
+    }
+  ],
+  "unverifiedBackside": {
+    "side": "Card C back",
+    "photoProvided": false,
+    "consequence": "Could be blank or contain additional contests; do not certify total ballot size or assert Measure J absent solely from these five photos."
+  },
+  "publicGuideCrosscheck": {
+    "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf",
+    "localFile": "research/raw/alameda-composite-guide.pdf",
+    "pdfPageCount": 965,
+    "sampleBallotPageCount": 592,
+    "sampleStylesFound": [
+      "BT1",
+      "BT10",
+      "BT11",
+      "BT19",
+      "BT20",
+      "BT41",
+      "BT42",
+      "BT43",
+      "BT44",
+      "BT45",
+      "BT48",
+      "BT50",
+      "BT54",
+      "BT55",
+      "BT56",
+      "BT57",
+      "BT60",
+      "BT69",
+      "BT94",
+      "BT96",
+      "BT100",
+      "BT101",
+      "BT103",
+      "BT104",
+      "BT106",
+      "BT108",
+      "BT109",
+      "BT120",
+      "BT123",
+      "BT124",
+      "BT125",
+      "BT135",
+      "BT136",
+      "BT141",
+      "BT144",
+      "BT145",
+      "BT168",
+      "BT171",
+      "BT175",
+      "BT180",
+      "BT194",
+      "BT241",
+      "BT242",
+      "BT243",
+      "BT245",
+      "BT263"
+    ],
+    "bt87Found": false,
+    "bt11SourcePdfPages": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75
+    ],
+    "sourcePageNotes": "BT11 comparison comes from official county PDF pages 64–75. Those are not BT87 source pages. The locally saved composite includes 46 distinct sample styles but no decoded BT87 label; no complete public BT87 sample located in this limited check."
+  },
+  "sharedMeasureIds": [
+    "ca-proposition-1",
+    "ca-proposition-2",
+    "ca-proposition-40",
+    "ca-proposition-41",
+    "ca-proposition-42",
+    "ca-proposition-43",
+    "ca-proposition-44",
+    "ca-proposition-45",
+    "alameda-measure-rtm",
+    "ca-proposition-3",
+    "ca-proposition-4",
+    "ca-proposition-5",
+    "ca-proposition-37",
+    "ca-proposition-38",
+    "ca-proposition-39"
+  ],
+  "interpretation": [
+    "Model trials remain observations on frozen BT11; no trial responses or inputs were changed.",
+    "Comparisons restricted to the 14 statewide propositions and RTM use items visibly shared with these photos.",
+    "Measure J should be excluded from any claim of a photo-matched analysis unless the missing side or a complete official BT87 sample verifies it.",
+    "Candidate selections outside the congressional replacement can be compared by matched contest; self-reported compass scores still reflect the original full BT11 response."
+  ]
+}

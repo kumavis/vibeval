@@ -1,0 +1,891 @@
+{
+  "electionDate": "2026-11-03",
+  "scope": "Representative San Leandro printed ballot BT11, precinct 454510 (0301), November 3, 2026; official county composite PDF pages 64–75. This is a specific sample ballot, not a personalized ballot.",
+  "sources": [
+    {
+      "url": "https://acvote.alamedacountyca.gov/election-information/elections?id=260",
+      "title": "Official county election page"
+    },
+    {
+      "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf",
+      "title": "Official Alameda County composite voter information guide (965 PDF pages)"
+    },
+    {
+      "url": "https://alamedacountyca.gov/rov_app/candidatelist",
+      "title": "Official on-ballot candidate search, electionId=260, raceStatus=onballot, candidateStatus=COMPLETED"
+    },
+    {
+      "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+      "title": "State certified candidates and judicial retention list, August 27 2026"
+    },
+    {
+      "url": "https://voterguide.sos.ca.gov/propositions/",
+      "title": "Official statewide propositions"
+    },
+    {
+      "url": "https://acvote.alamedacountyca.gov/main/article?newsid=sanleandro",
+      "title": "October 24 2026 county notice; full live HTML saved; web text fetch intermittently errors"
+    },
+    {
+      "url": "https://sanleandro.legistar.com/LegislationDetail.aspx?FullText=1&GUID=FC539250-F086-4D6D-9762-C7259CB1DDA4&ID=8285082&Options=&Search=",
+      "title": "October 12 2026 municipal report, Reso 2026-131, printed ballot and district tabulation"
+    }
+  ],
+  "contests": [
+    {
+      "id": "governor",
+      "title": "Governor",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "XAVIER BECERRA",
+        "STEVE HILTON"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "lieutenant-governor",
+      "title": "Lieutenant Governor",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "FIONA MA",
+        "GLORIA ROMERO"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "secretary-of-state",
+      "title": "Secretary Of State",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "DONALD P. (DON) WAGNER",
+        "SHIRLEY N. WEBER"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "controller",
+      "title": "Controller",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "MALIA M. COHEN",
+        "HERB W MORGAN"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "treasurer",
+      "title": "Treasurer",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "JENNIFER HAWKS",
+        "ELENI KOUNALAKIS"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "attorney-general",
+      "title": "Attorney General",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "ROB BONTA",
+        "MICHAEL E. GATES"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "insurance-commissioner",
+      "title": "Insurance Commissioner",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "BEN ALLEN",
+        "JANE KIM"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "member-state-board-of-equalization-2nd-district",
+      "title": "Member, State Board Of Equalization, 2nd District",
+      "type": "candidate",
+      "jurisdiction": "Member, State Board Of Equalization, 2nd District",
+      "options": [
+        "SALLY J. LIEBER",
+        "JOHN PIMENTEL"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "10th-congressional-district",
+      "title": "10th Congressional District",
+      "type": "candidate",
+      "jurisdiction": "10th Congressional District",
+      "options": [
+        "MARK DESAULNIER",
+        "JEFF FRESE"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "20th-assembly-district",
+      "title": "20th Assembly District",
+      "type": "candidate",
+      "jurisdiction": "20th Assembly District",
+      "options": [
+        "PATRICIA MUGA",
+        "LIZ ORTEGA"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "state-superintendent-of-public-instruction",
+      "title": "State Superintendent Of Public Instruction",
+      "type": "candidate",
+      "jurisdiction": "California",
+      "options": [
+        "RICHARD BARRERA",
+        "SONJA SHAW"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "chabot-las-positas-community-college-district-trustee-area-2",
+      "title": "Chabot - Las Positas Community College District Trustee, Area 2",
+      "type": "candidate",
+      "jurisdiction": "Chabot - Las Positas Community College District Trustee, Area 2",
+      "options": [
+        "LINDA GRANGER",
+        "CINDY ROCHA"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "for-mayor-san-leandro",
+      "title": "For Mayor, San Leandro",
+      "type": "candidate",
+      "jurisdiction": "City of San Leandro",
+      "options": [
+        "JUAN GONZÁLEZ III",
+        "JAMES MAES"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "for-member-of-city-council-1-san-leandro",
+      "title": "For Member Of City Council #1, San Leandro",
+      "type": "candidate",
+      "jurisdiction": "City of San Leandro",
+      "options": [
+        "SBEYDEH VIVEROS-WALTON"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification.",
+      "note": "This race appears on the printed BT11 ballot. The city adopted district-based elections; printed ballots contain all four council races. See scope note and current official instructions."
+    },
+    {
+      "id": "for-member-of-city-council-2-san-leandro-short-term",
+      "title": "For Member Of City Council #2, San Leandro - Short Term",
+      "type": "candidate",
+      "jurisdiction": "City of San Leandro",
+      "options": [
+        "JAMES AGUILAR"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification.",
+      "note": "This race appears on the printed BT11 ballot. The city adopted district-based elections; printed ballots contain all four council races. See scope note and current official instructions."
+    },
+    {
+      "id": "for-member-of-city-council-3-san-leandro",
+      "title": "For Member Of City Council #3, San Leandro",
+      "type": "candidate",
+      "jurisdiction": "City of San Leandro",
+      "options": [
+        "LEE THOMAS",
+        "JOSEPH TRUJILLO"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification.",
+      "note": "This race appears on the printed BT11 ballot. The city adopted district-based elections; printed ballots contain all four council races. See scope note and current official instructions."
+    },
+    {
+      "id": "for-member-of-city-council-5-san-leandro",
+      "title": "For Member Of City Council #5, San Leandro",
+      "type": "candidate",
+      "jurisdiction": "City of San Leandro",
+      "options": [
+        "XOUHOA BOWEN"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification.",
+      "note": "This race appears on the printed BT11 ballot. The city adopted district-based elections; printed ballots contain all four council races. See scope note and current official instructions."
+    },
+    {
+      "id": "ac-transit-district-director-ward-5",
+      "title": "AC Transit District Director, Ward 5",
+      "type": "candidate",
+      "jurisdiction": "AC Transit District Director, Ward 5",
+      "options": [
+        "JOSEPH GRCAR",
+        "MURPHY MCCALLEY",
+        "LUIS REYNOSO"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "bart-director-district-4",
+      "title": "BART Director, District 4",
+      "type": "candidate",
+      "jurisdiction": "BART Director, District 4",
+      "options": [
+        "ROBERT RABURN",
+        "LUIS REYNOSO"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "ebmud-director-ward-7",
+      "title": "EBMUD Director, Ward 7",
+      "type": "candidate",
+      "jurisdiction": "East Bay Municipal Utility District",
+      "options": [
+        "APRIL CHAN",
+        "JOSEPH GRCAR",
+        "LUIS REYNOSO",
+        "GARY WOLFF"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "seats": 1,
+      "sourceUrls": [
+        "https://alamedacountyca.gov/rov_app/candidatelist",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ],
+      "writeInPolicy": "Printed candidates only; qualified write-ins, if any, require separate verification."
+    },
+    {
+      "id": "retention-kelli-m-evans",
+      "title": "Associate Justice of the Supreme Court: Kelli M. Evans",
+      "type": "retention",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-joshua-groban",
+      "title": "Associate Justice of the Supreme Court: Joshua Groban",
+      "type": "retention",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-charles-a-smiley",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Charles A. Smiley",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-kathleen-m-banke",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Kathleen M. Banke",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-monique-langhorne-wilson",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Monique Langhorne Wilson",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-therese-m-stewart",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Two: Therese M. Stewart",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-tara-m-desautels",
+      "title": "Associate Justice, Court of Appeal, First District, Division Two: Tara M. Desautels",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-ioana-petrou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Ioana Petrou",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-victor-a-rodriguez",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Victor A. Rodriguez",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-tracie-l-brown",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Four: Tracie L. Brown",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-mark-simons",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Mark Simons",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-danny-y-chou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Danny Y. Chou",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "retention-gordon-burns",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Gordon Burns",
+      "type": "retention",
+      "jurisdiction": "First Appellate District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf"
+      ]
+    },
+    {
+      "id": "ca-proposition-1",
+      "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/1/"
+      ]
+    },
+    {
+      "id": "ca-proposition-2",
+      "title": "Proposition 2 Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/2/"
+      ]
+    },
+    {
+      "id": "ca-proposition-3",
+      "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/3/"
+      ]
+    },
+    {
+      "id": "ca-proposition-4",
+      "title": "Proposition 4 Repeals Prohibition Against Public Funding of Election Campaigns. Legislative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/4/"
+      ]
+    },
+    {
+      "id": "ca-proposition-5",
+      "title": "Proposition 5 Changes Recall Election Process for Statewide Officers. Legislative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/5/"
+      ]
+    },
+    {
+      "id": "ca-proposition-37",
+      "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/37/"
+      ]
+    },
+    {
+      "id": "ca-proposition-38",
+      "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/38/"
+      ]
+    },
+    {
+      "id": "ca-proposition-39",
+      "title": "Proposition 39 Prohibits Citizens from Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/39/"
+      ]
+    },
+    {
+      "id": "ca-proposition-40",
+      "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/40/"
+      ]
+    },
+    {
+      "id": "ca-proposition-41",
+      "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/41/"
+      ]
+    },
+    {
+      "id": "ca-proposition-42",
+      "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/42/"
+      ]
+    },
+    {
+      "id": "ca-proposition-43",
+      "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/43/"
+      ]
+    },
+    {
+      "id": "ca-proposition-44",
+      "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/44/"
+      ]
+    },
+    {
+      "id": "ca-proposition-45",
+      "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+      "type": "measure",
+      "jurisdiction": "California",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://voterguide.sos.ca.gov/propositions/45/"
+      ]
+    },
+    {
+      "id": "alameda-measure-rtm",
+      "title": "Measure RTM - Regional Transit Measure",
+      "type": "measure",
+      "jurisdiction": "Public Transit Revenue Measure District",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+        "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+      ]
+    },
+    {
+      "id": "alameda-measure-j",
+      "title": "Measure J - San Lorenzo USD - Education Parcel Tax",
+      "type": "measure",
+      "jurisdiction": "San Lorenzo USD",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "maxSelections": 1,
+      "ranked": false,
+      "sourceUrls": [
+        "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/san_lorenzo_usd_parcel_tax_measure.pdf",
+        "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+      ]
+    }
+  ],
+  "methodology": {
+    "retrievedDate": "2026-10-27",
+    "candidateSearch": "POST electionId=260&categoryId=&raceId=&lastName=&raceStatus=onballot&candidateStatus=COMPLETED to https://alamedacountyca.gov/rov_app/candidatelist/",
+    "deduplication": "Official race title; candidate search desktop and mobile renderings merged. Excludes races marked Not On Ballot.",
+    "retentionVerification": "All 13 state and First Appellate District retention names occur on BT11 PDF pages 64–67.",
+    "rankedVerification": "All candidate contests on this printed San Leandro sample say Vote for One; none use ranked-choice voting.",
+    "writeIns": "Options contain printed candidate names; no assertion that these exhaust any late qualified write-ins.",
+    "limitations": "A specific San Leandro ballot style; other San Leandro precincts can have different district contests. Names preserve the official candidate-list spelling. Printed candidates only; late qualified write-ins are not independently inventoried.",
+    "representativeSelection": "Selected one complete official printed San Leandro style, BT11; no collage of contests from other precincts."
+  },
+  "ballotStyle": "BT11",
+  "precinctLabel": "454510 (0301)",
+  "sourcePdfPages": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75
+  ],
+  "districtLabels": [
+    "U.S. House district 10",
+    "California Assembly district 20",
+    "Board of Equalization district 2",
+    "Chabot–Las Positas CCD area 2",
+    "AC Transit ward 5",
+    "BART district 4",
+    "EBMUD ward 7",
+    "San Lorenzo USD Measure J"
+  ],
+  "scopeNotes": [
+    "San Leandro City Hall geocodes to consolidated precinct 458400 in the official November 2026 map, while the available composite sample is precinct 454510 (0301), BT11. City Hall location was not used to infer or assemble this ballot.",
+    "The printed BT11 sample contains mayor and council district 1, 2 short-term, 3 and 5 contests. San Leandro passed Measure F for district elections, but printed ballots contain all four races. The October 24 county notice says the office will count and report votes and the city will determine winners from certified precinct/district results. This experiment uses the printed ballot; it is not personal voting guidance.",
+    "The official lookup returned City Hall CD12, while printed BT11 is CD10. We preserve the verified printed CD10 contest and do not mix GIS and sample ballot contents."
+  ]
+}

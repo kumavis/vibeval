@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const [templatePath,outputPath]=process.argv.slice(2);
+if(!templatePath||!outputPath)throw new Error('Usage: node src/render-inline.mjs TEMPLATE_PATH OUTPUT_PATH');
+const data=JSON.parse(await readFile(new URL('../data/public/results.json',import.meta.url),'utf8'));
+const axisData=JSON.parse(await readFile(new URL('../data/public/axes.json',import.meta.url),'utf8'));
+const names={'x-ai/grok-4.7':'Grok 4.7','x-ai/grok-4.3':'Grok 4.3','z-ai/glm-5.3':'GLM 5.3','google/gemini-4-argon':'Gemini 4 Argon','deepseek/deepseek-v4.1-flash-1017':'DeepSeek V4.1 Flash','qwen/qwen3.8-max-0902':'Qwen 3.8 Max','moonshotai/kimi-k3.1-pro':'Kimi K3.1 Pro','mistralai/mistral-large-4-0':'Mistral Large 4.0'};
+const payload={scope:`San Leandro ${data.ballot.ballotStyle} · ${data.ballot.contests.length} contests`,models:data.batch.models.map(id=>({id,label:names[id]??id.replace('gpt-','GPT ').replace(/-/g,' ').replace(/\b(sol|astra|terra|luna)\b/g,s=>s[0].toUpperCase()+s.slice(1))})),runs:data.runs.map(r=>({model:r.model,trial:r.trial,status:r.status,economic:r.response?.compass?.economic??null,social:r.response?.compass?.social??null,confidence:r.response?.compass?.confidence??'unavailable',voted:r.response?.decisions?.filter(d=>d.status==='voted').length??0}))};
+payload.axes=axisData.axes;
+payload.runs.forEach((r,i)=>{const id=data.runs[i].id;r.scores=axisData.runs[id]??{};r.evidence=Object.fromEntries(Object.entries(axisData.evidence?.[id]??{}).map(([key,value])=>[key,{answered:value.answered,total:value.total,minAnswered:value.minAnswered}]))});
+const template=await readFile(templatePath,'utf8');
+if(template.split('__BALLOT_COMPASS_DATA__').length!==2)throw new Error('Expected one data placeholder');
+await writeFile(outputPath,template.replace('__BALLOT_COMPASS_DATA__',JSON.stringify(payload).replace(/</g,'\\u003c')));
+console.log(outputPath);

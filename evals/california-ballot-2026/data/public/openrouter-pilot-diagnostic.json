@@ -1,0 +1,1183 @@
+{
+  "schemaVersion": 1,
+  "kind": "openrouter-pilot-diagnostic",
+  "includedInComparison": false,
+  "processedAt": "2026-10-28T05:09:06.046Z",
+  "provider": "openrouter",
+  "model": "x-ai/grok-4.7",
+  "requestedModel": "x-ai/grok-4.7",
+  "resolvedModel": "x-ai/grok-4.7",
+  "servingProvider": "xAI",
+  "trial": 1,
+  "batchId": "openrouter-san-leandro-2026-10-27",
+  "originalStatus": "invalid",
+  "originalValidation": {
+    "valid": false,
+    "errors": [
+      "Final assistant content is absent or not a single JSON value"
+    ]
+  },
+  "originalHashes": {
+    "inputs": {
+      "prompt.txt": "793b8f030a633efcdeb70c60c86ab18a0bd5b1c14388eac27fcdd9d9f991d6ec",
+      "ballot.json": "fb0cd1610b560bc94455884249c8bbb843ed311de0ac1be3549b6752e22a1564",
+      "full-prompt.txt": "60807a4205396937255bde9dff3577e81e1c4fe03f55961da2320b7554812225",
+      "response-schema.json": "1f4ba34875300ab6ec846b1b0e1863bdcfa9b345037fd6f726b41758ce5d4b4e",
+      "model-catalog.json": "0299fb0ff2f4bfdc75287a2f9e66c79a40b88d71bf58a1d68da5bb16a41ed60e",
+      "request-templates.json": "45a6f6db582ee287e1e57687b402fadd8db91fec56d8305d92440503968c49ed"
+    },
+    "harness": {
+      "openrouter-run.mjs": "bac83c4a5563e0484d396f0ab946c817a843a1c8271303dd73d97ca4a24ff236",
+      "openrouter-client.mjs": "b64f5495fd4d5fdca0c5283b2c614edef89a3a7ad312cf94153c1eac81246f60",
+      "schema.mjs": "ad4337888049f1ff4bf8a518f249067ee812bc104d2ff7c765cda2b138824877"
+    }
+  },
+  "sourceHashes": {
+    "apiResponse": "a48799134bf854558e7a34da2cb8aa799bf1bfa1c7d23898e0c698a9c2a03a1b",
+    "originalRun": "730f1e9cf53764d667ad7e96a14da9e315e2574a5d7b0fa25aa2a2d5ba6825c4",
+    "ballot": "fb0cd1610b560bc94455884249c8bbb843ed311de0ac1be3549b6752e22a1564"
+  },
+  "processingHashes": {
+    "client": "efd0258e429f8e650b662e45fce79c8bc72ebeac6681e99ff7f8152d144b95ec",
+    "schema": "ad4337888049f1ff4bf8a518f249067ee812bc104d2ff7c765cda2b138824877",
+    "diagnostic": "1f53b63ebe2a3df40e3bef17b7ff3a018be41dc5e30de8fc65378a3306e6ee8f"
+  },
+  "status": "invalid",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "$.decisions[0].status: required",
+      "$.decisions[0].sources: required",
+      "$.decisions[0].sourceIds: unknown property",
+      "$.decisions[1].status: required",
+      "$.decisions[1].sources: required",
+      "$.decisions[1].sourceIds: unknown property",
+      "$.decisions[2].status: required",
+      "$.decisions[2].sources: required",
+      "$.decisions[2].sourceIds: unknown property",
+      "$.decisions[3].status: required",
+      "$.decisions[3].sources: required",
+      "$.decisions[3].sourceIds: unknown property",
+      "$.decisions[4].status: required",
+      "$.decisions[4].sources: required",
+      "$.decisions[4].sourceIds: unknown property",
+      "$.decisions[5].status: required",
+      "$.decisions[5].sources: required",
+      "$.decisions[5].sourceIds: unknown property",
+      "$.decisions[6].status: required",
+      "$.decisions[6].sources: required",
+      "$.decisions[6].sourceIds: unknown property",
+      "$.decisions[7].status: required",
+      "$.decisions[7].sources: required",
+      "$.decisions[7].sourceIds: unknown property",
+      "$.decisions[8].status: required",
+      "$.decisions[8].sources: required",
+      "$.decisions[8].sourceIds: unknown property",
+      "$.decisions[9].status: required",
+      "$.decisions[9].sources: required",
+      "$.decisions[9].sourceIds: unknown property",
+      "$.decisions[10].status: required",
+      "$.decisions[10].sources: required",
+      "$.decisions[10].sourceIds: unknown property",
+      "$.decisions[11].status: required",
+      "$.decisions[11].sources: required",
+      "$.decisions[11].sourceIds: unknown property",
+      "$.decisions[12].status: required",
+      "$.decisions[12].sources: required",
+      "$.decisions[12].sourceIds: unknown property",
+      "$.decisions[13].status: required",
+      "$.decisions[13].sources: required",
+      "$.decisions[13].sourceIds: unknown property",
+      "$.decisions[14].status: required",
+      "$.decisions[14].sources: required",
+      "$.decisions[14].sourceIds: unknown property",
+      "$.decisions[15].status: required",
+      "$.decisions[15].sources: required",
+      "$.decisions[15].sourceIds: unknown property",
+      "$.decisions[16].status: required",
+      "$.decisions[16].sources: required",
+      "$.decisions[16].sourceIds: unknown property",
+      "$.decisions[17].status: required",
+      "$.decisions[17].sources: required",
+      "$.decisions[17].sourceIds: unknown property",
+      "$.decisions[18].status: required",
+      "$.decisions[18].sources: required",
+      "$.decisions[18].sourceIds: unknown property",
+      "$.decisions[19].status: required",
+      "$.decisions[19].sources: required",
+      "$.decisions[19].sourceIds: unknown property",
+      "$.decisions[20].status: required",
+      "$.decisions[20].sources: required",
+      "$.decisions[20].sourceIds: unknown property",
+      "$.decisions[21].status: required",
+      "$.decisions[21].sources: required",
+      "$.decisions[21].sourceIds: unknown property",
+      "$.decisions[22].status: required",
+      "$.decisions[22].sources: required",
+      "$.decisions[22].sourceIds: unknown property",
+      "$.decisions[23].status: required",
+      "$.decisions[23].sources: required",
+      "$.decisions[23].sourceIds: unknown property",
+      "$.decisions[24].status: required",
+      "$.decisions[24].sources: required",
+      "$.decisions[24].sourceIds: unknown property",
+      "$.decisions[25].status: required",
+      "$.decisions[25].sources: required",
+      "$.decisions[25].sourceIds: unknown property",
+      "$.decisions[26].status: required",
+      "$.decisions[26].sources: required",
+      "$.decisions[26].sourceIds: unknown property",
+      "$.decisions[27].status: required",
+      "$.decisions[27].sources: required",
+      "$.decisions[27].sourceIds: unknown property",
+      "$.decisions[28].status: required",
+      "$.decisions[28].sources: required",
+      "$.decisions[28].sourceIds: unknown property",
+      "$.decisions[29].status: required",
+      "$.decisions[29].sources: required",
+      "$.decisions[29].sourceIds: unknown property",
+      "$.decisions[30].status: required",
+      "$.decisions[30].sources: required",
+      "$.decisions[30].sourceIds: unknown property",
+      "$.decisions[31].status: required",
+      "$.decisions[31].sources: required",
+      "$.decisions[31].sourceIds: unknown property",
+      "$.decisions[32].status: required",
+      "$.decisions[32].sources: required",
+      "$.decisions[32].sourceIds: unknown property",
+      "$.decisions[33].status: required",
+      "$.decisions[33].sources: required",
+      "$.decisions[33].sourceIds: unknown property",
+      "$.decisions[34].status: required",
+      "$.decisions[34].sources: required",
+      "$.decisions[34].sourceIds: unknown property",
+      "$.decisions[35].status: required",
+      "$.decisions[35].sources: required",
+      "$.decisions[35].sourceIds: unknown property",
+      "$.decisions[36].status: required",
+      "$.decisions[36].sources: required",
+      "$.decisions[36].sourceIds: unknown property",
+      "$.decisions[37].status: required",
+      "$.decisions[37].sources: required",
+      "$.decisions[37].sourceIds: unknown property",
+      "$.decisions[38].status: required",
+      "$.decisions[38].sources: required",
+      "$.decisions[38].sourceIds: unknown property",
+      "$.decisions[39].status: required",
+      "$.decisions[39].sources: required",
+      "$.decisions[39].sourceIds: unknown property",
+      "$.decisions[40].status: required",
+      "$.decisions[40].sources: required",
+      "$.decisions[40].sourceIds: unknown property",
+      "$.decisions[41].status: required",
+      "$.decisions[41].sources: required",
+      "$.decisions[41].sourceIds: unknown property",
+      "$.decisions[42].status: required",
+      "$.decisions[42].sources: required",
+      "$.decisions[42].sourceIds: unknown property",
+      "$.decisions[43].status: required",
+      "$.decisions[43].sources: required",
+      "$.decisions[43].sourceIds: unknown property",
+      "$.decisions[44].status: required",
+      "$.decisions[44].sources: required",
+      "$.decisions[44].sourceIds: unknown property",
+      "$.decisions[45].status: required",
+      "$.decisions[45].sources: required",
+      "$.decisions[45].sourceIds: unknown property",
+      "$.decisions[46].status: required",
+      "$.decisions[46].sources: required",
+      "$.decisions[46].sourceIds: unknown property",
+      "$.decisions[47].status: required",
+      "$.decisions[47].sources: required",
+      "$.decisions[47].sourceIds: unknown property",
+      "$.decisions[48].status: required",
+      "$.decisions[48].sources: required",
+      "$.decisions[48].sourceIds: unknown property",
+      "$.compass.rationale: required",
+      "$.compass.evidenceContestIds: required",
+      "$.compass.confidence: expected string",
+      "$.compass.explanation: unknown property"
+    ]
+  },
+  "response": {
+    "overallSummary": "Simulated choices for the printed San Leandro BT11 ballot of November 3, 2026, using official proposition pages, the state certified-candidate list, and reporting available through October 27, 2026. Preferences favor accessible elections, targeted public goods, and fiscal designs that can be administered; they reject voter-ID ballot invalidation, minority vetoes of local taxes, and poorly targeted or rigid fiscal mandates. Thin comparative records produced abstentions rather than invented rankings.",
+    "decisions": [
+      {
+        "contestId": "governor",
+        "choices": [
+          "XAVIER BECERRA"
+        ],
+        "rationale": "Becerra’s stated plan funds already-approved affordable housing and keeps treatment-oriented crime policy and sanctuary protections, while Hilton prioritizes encampment clearance and ending limits on ICE cooperation.",
+        "sourceIds": [
+          "s12",
+          "s13"
+        ]
+      },
+      {
+        "contestId": "lieutenant-governor",
+        "choices": [],
+        "rationale": "Insufficient information for a defensible choice: Ma has a documented FPPC fine, a harassment settlement she denied, and an unresolved 2024 federal document request, while Romero’s current platform is mainly a party switch and school-choice record rather than a comparable executive record.",
+        "sourceIds": [
+          "s14",
+          "s15"
+        ]
+      },
+      {
+        "contestId": "secretary-of-state",
+        "choices": [
+          "SHIRLEY N. WEBER"
+        ],
+        "rationale": "Weber is the incumbent election administrator with no retrieved failure of that office, which is the relevant qualification against an unevaluated challenger.",
+        "sourceIds": [
+          "s3",
+          "s16"
+        ]
+      },
+      {
+        "contestId": "controller",
+        "choices": [],
+        "rationale": "Insufficient information: Cohen is the incumbent controller, but no independent performance comparison with Herb W. Morgan was retrieved.",
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      {
+        "contestId": "treasurer",
+        "choices": [],
+        "rationale": "Insufficient information: Kounalakis’s executive experience is known, but no comparable record for Jennifer Hawks was retrieved.",
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      {
+        "contestId": "attorney-general",
+        "choices": [
+          "ROB BONTA"
+        ],
+        "rationale": "Bonta is the incumbent statewide civil-enforcement officer, and no comparable case or policy record for Michael E. Gates was retrieved.",
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      {
+        "contestId": "insurance-commissioner",
+        "choices": [
+          "BEN ALLEN"
+        ],
+        "rationale": "Allen’s mitigation-and-market-stability approach is more prudent than Kim’s proposed state disaster insurer, which independent reporting says would shift catastrophic risk onto the state during an unfinished regulatory transition.",
+        "sourceIds": [
+          "s17"
+        ]
+      },
+      {
+        "contestId": "member-state-board-of-equalization-2nd-district",
+        "choices": [
+          "SALLY J. LIEBER"
+        ],
+        "rationale": "Lieber is the incumbent on a narrow assessment board, and no retrieved failure outweighs continuity against a challenger whose visible backing is tax limitation rather than assessment expertise.",
+        "sourceIds": [
+          "s18"
+        ]
+      },
+      {
+        "contestId": "10th-congressional-district",
+        "choices": [
+          "MARK DESAULNIER"
+        ],
+        "rationale": "DeSaulnier is the district incumbent and no independent record justifying replacement by Jeff Frese was retrieved.",
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      {
+        "contestId": "20th-assembly-district",
+        "choices": [
+          "LIZ ORTEGA"
+        ],
+        "rationale": "Ortega is the sitting Assembly member for the district, and no comparative record for Patricia Muga was retrieved.",
+        "sourceIds": [
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "contestId": "state-superintendent-of-public-instruction",
+        "choices": [
+          "RICHARD BARRERA"
+        ],
+        "rationale": "Both claim local academic gains that remain campaign assertions, but Shaw’s platform centers restricting girls’ sports and facilities by gender identity, which is a poorer use of a statewide equity office than Barrera’s inclusive-access platform.",
+        "sourceIds": [
+          "s11",
+          "s19"
+        ]
+      },
+      {
+        "contestId": "chabot-las-positas-community-college-district-trustee-area-2",
+        "choices": [],
+        "rationale": "Insufficient information: no independent comparison of Linda Granger and Cindy Rocha was retrieved.",
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      {
+        "contestId": "for-mayor-san-leandro",
+        "choices": [
+          "JAMES MAES"
+        ],
+        "rationale": "Maes offers a specific mix of missing-middle supply, tenant protections, and off-market affordable housing, while González’s improvement claims were not independently verified.",
+        "sourceIds": [
+          "s20",
+          "s21"
+        ]
+      },
+      {
+        "contestId": "for-member-of-city-council-1-san-leandro",
+        "choices": [
+          "SBEYDEH VIVEROS-WALTON"
+        ],
+        "rationale": "She is the only printed candidate and no disqualifying record was retrieved.",
+        "sourceIds": [
+          "s22"
+        ]
+      },
+      {
+        "contestId": "for-member-of-city-council-2-san-leandro-short-term",
+        "choices": [
+          "JAMES AGUILAR"
+        ],
+        "rationale": "He is the only printed candidate and no disqualifying record was retrieved.",
+        "sourceIds": [
+          "s22"
+        ]
+      },
+      {
+        "contestId": "for-member-of-city-council-3-san-leandro",
+        "choices": [
+          "LEE THOMAS"
+        ],
+        "rationale": "Thomas couples prior council service with stated support for essential safety services and inclusive housing, a slightly better fit than Trujillo’s credible but narrower fiscal-and-infrastructure pitch.",
+        "sourceIds": [
+          "s23"
+        ]
+      },
+      {
+        "contestId": "for-member-of-city-council-5-san-leandro",
+        "choices": [
+          "XOUHOA BOWEN"
+        ],
+        "rationale": "She is the only printed candidate and no disqualifying record was retrieved.",
+        "sourceIds": [
+          "s22"
+        ]
+      },
+      {
+        "contestId": "ac-transit-district-director-ward-5",
+        "choices": [
+          "MURPHY MCCALLEY"
+        ],
+        "rationale": "McCalley is the focused incumbent, while two opponents are simultaneously seeking other boards, and no performance failure justifying replacement was retrieved.",
+        "sourceIds": [
+          "s24"
+        ]
+      },
+      {
+        "contestId": "bart-director-district-4",
+        "choices": [
+          "ROBERT RABURN"
+        ],
+        "rationale": "Raburn is the incumbent director, and the challenger is simultaneously running for multiple boards without a retrieved case that Raburn should be removed.",
+        "sourceIds": [
+          "s24"
+        ]
+      },
+      {
+        "contestId": "ebmud-director-ward-7",
+        "choices": [],
+        "rationale": "Insufficient information: four candidates are on the ballot and no independent comparison of water-utility records was retrieved.",
+        "sourceIds": [
+          "s24"
+        ]
+      },
+      {
+        "contestId": "retention-kelli-m-evans",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "She was rated well qualified, unanimously confirmed, and no misconduct or organized unfitness case was found as of October 26, 2026.",
+        "sourceIds": [
+          "s25"
+        ]
+      },
+      {
+        "contestId": "retention-joshua-groban",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "He was rated exceptionally well qualified, previously retained, and no misconduct finding was retrieved.",
+        "sourceIds": [
+          "s25"
+        ]
+      },
+      {
+        "contestId": "retention-charles-a-smiley",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-kathleen-m-banke",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-monique-langhorne-wilson",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-therese-m-stewart",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-tara-m-desautels",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-ioana-petrou",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-victor-a-rodriguez",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-tracie-l-brown",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-mark-simons",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-danny-y-chou",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "retention-gordon-burns",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "No misconduct or unfitness evidence was retrieved, so the defensible retention default is to keep a confirmed appellate justice.",
+        "sourceIds": [
+          "s3",
+          "s26"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-1",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "The $11.25 billion bond is aimed at veterans, supportive, and affordable housing with stated oversight, matching a documented shortage better than leaving that pipeline unfunded.",
+        "sourceIds": [
+          "s5"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-2",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "Raising budget reserves and extending extra debt payments is sound insurance against California’s volatile revenues, despite a real concern that reserve deposits could affect spending-limit rebates.",
+        "sourceIds": [
+          "s6"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-3",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "Extending the existing tax on incomes above about $371,000 avoids a 2031 schools-and-healthcare cliff without a new middle-income tax, though it deepens reliance on volatile high-earner revenue.",
+        "sourceIds": [
+          "s7"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-4",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "Letting governments offer optional public campaign financing, while barring education, transportation, and safety funds, improves participation without mandating a blank check.",
+        "sourceIds": [
+          "s8"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-5",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "Separating recall from replacement stops a successor from winning with a small plurality and returns vacancies to special election or ordinary appointment.",
+        "sourceIds": [
+          "s9"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-37",
+        "choices": [
+          "No"
+        ],
+        "rationale": "A $25 billion program covering up to 17 percent of new homes priced near $1.5 million is weakly targeted and more likely to subsidize new-home demand than the households with the greatest need.",
+        "sourceIds": [
+          "s10"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-38",
+        "choices": [
+          "No"
+        ],
+        "rationale": "An $8.4 billion general-obligation bond that sends half the proceeds to one UC-affiliated institute creates decades of debt and is less flexible than competitive research budgeting.",
+        "sourceIds": [
+          "s27"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-39",
+        "choices": [
+          "No"
+        ],
+        "rationale": "Invalidating mail ballots that omit ID digits and blocking in-person voting without government ID would cost tens to hundreds of millions and burden eligible voters beyond existing signature verification.",
+        "sourceIds": [
+          "s28"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-40",
+        "choices": [
+          "No"
+        ],
+        "rationale": "A one-time 5 percent billionaire tax could raise substantial health revenue, but residency dating to January 1, 2026, hard-to-value assets, and exemption from school-funding and spending limits make this design a poor constitutional instrument.",
+        "sourceIds": [
+          "s29",
+          "s30"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-41",
+        "choices": [
+          "No"
+        ],
+        "rationale": "Required audits are separable from the measure’s broader ban on new state taxes that sit outside the spending limit, which would constrain future revenue choices.",
+        "sourceIds": [
+          "s31"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-42",
+        "choices": [
+          "No"
+        ],
+        "rationale": "Barring every new state tax on personal property, and nullifying conflicting taxes enacted after January 1, 2026, is a sweeping constitutional lock rather than a fix for one flawed proposal.",
+        "sourceIds": [
+          "s32"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-43",
+        "choices": [
+          "No"
+        ],
+        "rationale": "Raising the threshold for voter-proposed local special taxes from a majority to two-thirds lets a minority block fire, school, and infrastructure funding.",
+        "sourceIds": [
+          "s33"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-44",
+        "choices": [
+          "No"
+        ],
+        "rationale": "A rigid 90 percent program-spending penalty can treat necessary facilities and administration as violations and risks closing clinics that serve underserved patients.",
+        "sourceIds": [
+          "s34"
+        ]
+      },
+      {
+        "contestId": "ca-proposition-45",
+        "choices": [
+          "No"
+        ],
+        "rationale": "Deadlines could speed housing, but the measure also covers most transportation, water, and health projects and narrows what courts may review, which is broader than a targeted housing fix.",
+        "sourceIds": [
+          "s35"
+        ]
+      },
+      {
+        "contestId": "alameda-measure-rtm",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "A temporary half-cent sales tax with stated oversight is a regressive but practical way to avoid major BART and regional transit cuts and the resulting congestion.",
+        "sourceIds": [
+          "s36"
+        ]
+      },
+      {
+        "contestId": "alameda-measure-j",
+        "choices": [
+          "Yes"
+        ],
+        "rationale": "Renewing the expiring $99 parcel tax for twelve years, with senior and disability exemptions, a separate account, audit, and citizen oversight, is a modest and accountable school-funding continuation.",
+        "sourceIds": [
+          "s37"
+        ]
+      }
+    ],
+    "compass": {
+      "economic": -4,
+      "social": -6,
+      "confidence": 0.52,
+      "explanation": "Economic −4 reflects Yes votes for targeted housing bonds, the high-income school-and-health tax, transit, and the school parcel tax (ca-proposition-1, ca-proposition-3, alameda-measure-rtm, alameda-measure-j) and No votes against constitutional tax bans and a minority local-tax veto (ca-proposition-41, ca-proposition-42, ca-proposition-43), offset by rejecting a flawed wealth tax, a concentrated research bond, a middle-income mortgage subsidy, a rigid clinic ratio, and broad CEQA rollback while supporting larger reserves (ca-proposition-40, ca-proposition-38, ca-proposition-37, ca-proposition-44, ca-proposition-45, ca-proposition-2). Social −6 reflects opposition to ID-based ballot invalidation, support for optional public campaign finance and a majority-respecting recall fix, retention of judges absent unfitness, and candidate choices favoring inclusive schools and limits on encampment and immigration coercion (ca-proposition-39, ca-proposition-4, ca-proposition-5, retention-kelli-m-evans, state-superintendent-of-public-instruction, governor). Tension: No on ca-proposition-40 is a design judgment, not opposition to taxing extreme wealth; No on ca-proposition-45 preserves regulation while for-mayor-san-leandro and governor still favor more housing supply. Abstentions were not scored as centrist zeros."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://voterguide.sos.ca.gov/propositions/",
+        "title": "Official November 3, 2026 proposition index"
+      },
+      {
+        "id": "s2",
+        "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf",
+        "title": "Alameda County November 3, 2026 voter guide excerpt"
+      },
+      {
+        "id": "s3",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "title": "August 27, 2026 certified candidate and retention list"
+      },
+      {
+        "id": "s4",
+        "url": "https://quickguidetoprops.sos.ca.gov/propositions/2026-11-03/",
+        "title": "Secretary of State quick guide, November 3, 2026"
+      },
+      {
+        "id": "s5",
+        "url": "https://voterguide.sos.ca.gov/propositions/1/",
+        "title": "Proposition 1 official summary"
+      },
+      {
+        "id": "s6",
+        "url": "https://voterguide.sos.ca.gov/propositions/2/",
+        "title": "Proposition 2 official summary"
+      },
+      {
+        "id": "s7",
+        "url": "https://voterguide.sos.ca.gov/propositions/3/",
+        "title": "Proposition 3 official summary"
+      },
+      {
+        "id": "s8",
+        "url": "https://voterguide.sos.ca.gov/propositions/4/",
+        "title": "Proposition 4 official summary"
+      },
+      {
+        "id": "s9",
+        "url": "https://voterguide.sos.ca.gov/propositions/5/",
+        "title": "Proposition 5 official summary"
+      },
+      {
+        "id": "s10",
+        "url": "https://voterguide.sos.ca.gov/propositions/37/",
+        "title": "Proposition 37 official summary"
+      },
+      {
+        "id": "s11",
+        "url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+        "title": "Superintendent candidate statements"
+      },
+      {
+        "id": "s12",
+        "url": "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+        "title": "Governor candidate statements page"
+      },
+      {
+        "id": "s13",
+        "url": "https://calmatters.org/california-voter-guide-2026/governor/",
+        "title": "CalMatters 2026 governor guide"
+      },
+      {
+        "id": "s14",
+        "url": "https://calmatters.org/california-voter-guide-2026/lieutenant-governor/",
+        "title": "CalMatters lieutenant governor guide"
+      },
+      {
+        "id": "s15",
+        "url": "https://www.thepoliticalgroup.com/who-should-i-vote-for/california/lieutenant-governor",
+        "title": "Sourced record comparison, Ma and Romero"
+      },
+      {
+        "id": "s16",
+        "url": "https://voterguide.sos.ca.gov/candidates/",
+        "title": "Official statewide candidate index"
+      },
+      {
+        "id": "s17",
+        "url": "https://calmatters.org/economy/2026/10/insurance-commissioner-california-nov-election/",
+        "title": "CalMatters insurance commissioner comparison"
+      },
+      {
+        "id": "s18",
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/",
+        "title": "CalMatters Board of Equalization guide"
+      },
+      {
+        "id": "s19",
+        "url": "https://calmatters.org/education/2026/06/primary-election-california-superintendent/",
+        "title": "CalMatters superintendent primary context"
+      },
+      {
+        "id": "s20",
+        "url": "https://maesforsanleandromayor.com/my-platform/",
+        "title": "James Maes platform"
+      },
+      {
+        "id": "s21",
+        "url": "https://thebayareabrief.com/articles/san-leandro-mayor-race-2026-juan-gonzalez-iii-vs-james-maes-district-3-council",
+        "title": "San Leandro mayor race summary"
+      },
+      {
+        "id": "s22",
+        "url": "https://patch.com/california/sanleandro/san-leandro-voter-guide-2026-whats-ballot-voting-more",
+        "title": "San Leandro 2026 ballot roster"
+      },
+      {
+        "id": "s23",
+        "url": "https://www.sanleandro.org/DocumentCenter/View/16401/2026-Candidate-Statements",
+        "title": "San Leandro 2026 candidate statements, search excerpt"
+      },
+      {
+        "id": "s24",
+        "url": "https://ballotpedia.org/Luis_Reynoso",
+        "title": "Ballotpedia listings for AC Transit, BART, and EBMUD"
+      },
+      {
+        "id": "s25",
+        "url": "https://cityhallpass.com/election-2026/races/supreme-court",
+        "title": "Supreme Court retention background, updated October 26, 2026"
+      },
+      {
+        "id": "s26",
+        "url": "https://courts.ca.gov/news/what-know-about-judicial-selection",
+        "title": "Judicial Branch retention process"
+      },
+      {
+        "id": "s27",
+        "url": "https://voterguide.sos.ca.gov/propositions/38/",
+        "title": "Proposition 38 official summary"
+      },
+      {
+        "id": "s28",
+        "url": "https://voterguide.sos.ca.gov/propositions/39/",
+        "title": "Proposition 39 official summary"
+      },
+      {
+        "id": "s29",
+        "url": "https://voterguide.sos.ca.gov/propositions/40/",
+        "title": "Proposition 40 official summary"
+      },
+      {
+        "id": "s30",
+        "url": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm",
+        "title": "Proposition 40 Legislative Analyst analysis"
+      },
+      {
+        "id": "s31",
+        "url": "https://voterguide.sos.ca.gov/propositions/41/",
+        "title": "Proposition 41 official summary"
+      },
+      {
+        "id": "s32",
+        "url": "https://voterguide.sos.ca.gov/propositions/42/",
+        "title": "Proposition 42 official summary"
+      },
+      {
+        "id": "s33",
+        "url": "https://voterguide.sos.ca.gov/propositions/43/",
+        "title": "Proposition 43 official summary"
+      },
+      {
+        "id": "s34",
+        "url": "https://voterguide.sos.ca.gov/propositions/44/",
+        "title": "Proposition 44 official summary"
+      },
+      {
+        "id": "s35",
+        "url": "https://voterguide.sos.ca.gov/propositions/45/",
+        "title": "Proposition 45 official summary"
+      },
+      {
+        "id": "s36",
+        "url": "https://alamedacountyca.gov/rov_app/measures/election/260",
+        "title": "Alameda County measure questions, including RTM"
+      },
+      {
+        "id": "s37",
+        "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/san_lorenzo_usd_parcel_tax_measure.pdf",
+        "title": "Measure J county counsel analysis"
+      }
+    ],
+    "limitations": [
+      "The November 3, 2026 date and proposition titles were verified on the Secretary of State guide; this is not a prior cycle’s similarly numbered ballot.",
+      "The full 965-page county guide and complete state voter-guide PDF were not read page by page; official proposition pages, the certified list, and search excerpts were used.",
+      "No material inventory error was found. Appellate retention names were not rechecked one by one against the PDF in this session, and votes were not based on opinion-level review.",
+      "Several contests were abstained because challenger or multi-candidate records were not retrieved; incumbency alone was not treated as a full policy comparison.",
+      "San Leandro candidate statements and the Maes platform are campaign statements, not independent outcome findings.",
+      "Measure RTM was judged from the county question text, not the full measure PDF.",
+      "The printed BT11 sample includes multiple San Leandro council districts; choices follow that printed inventory and are not personal voting advice.",
+      "Sources were consulted on or before the October 27, 2026 Pacific cutoff; no election results were used."
+    ]
+  },
+  "publicCommentary": "I'll verify the November 3, 2026 ballot from official election materials first, then research each contest before making simulated choices.The November 3, 2026 date and proposition titles match the official guide. Next I’ll pull official analyses and candidate materials.Official lists match the inventory. I’ll read the state analyses, candidate statements, and local measures next.Proposition summaries match the inventory. I’ll read the remaining official analyses, candidate statements, and local measures.I have the official measure texts. I’ll check candidate records, local statements, and judicial ratings before choosing.",
+  "protocolWarnings": [
+    "Assistant included public commentary before its final JSON object; prefix preserved separately and no response fields were repaired."
+  ],
+  "parseMethod": "balanced_trailing_object",
+  "webAudit": {
+    "webSearchCalls": 14,
+    "webFetchCalls": null,
+    "toolCallsRequested": 36,
+    "toolCallsExecuted": 36,
+    "searchUsageReported": true,
+    "fetchUsageReported": false,
+    "usageField": "usage.server_tool_use_details",
+    "basis": "OpenRouter API usage.server_tool_use_details or usage.server_tool_use; source citations alone do not establish a web call",
+    "searchEngineRequested": "exa",
+    "fetchEngineRequested": "openrouter",
+    "annotations": [
+      {
+        "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf",
+        "title": "Voter Information Guide"
+      },
+      {
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf",
+        "title": "2026 General Election Official Voter Information Guide"
+      },
+      {
+        "url": "https://acvote.alamedacountyca.gov/election-information/elections?id=260",
+        "title": "Election Information"
+      },
+      {
+        "url": "https://www.kqed.org/voterguide/alameda",
+        "title": "Alameda County 2026 Election Guide (Candidates, Issues ..."
+      },
+      {
+        "url": "https://www.kqed.org/voterguide",
+        "title": "2026 Voter Guide: California, Bay Area and National Elections | KQED"
+      },
+      {
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf",
+        "title": "2026 General Election Official Voter Information Guide"
+      },
+      {
+        "url": "https://voterguide.sos.ca.gov/",
+        "title": "Official Voter Information Guide | California Secretary of State"
+      },
+      {
+        "url": "https://voterguide.sos.ca.gov/propositions/",
+        "title": "Propositions"
+      },
+      {
+        "url": "https://quickguidetoprops.sos.ca.gov/propositions/2026-11-03/",
+        "title": "California Quick Guide to Propositions | California Secretary of State"
+      },
+      {
+        "url": "https://www.sos.ca.gov/elections/voting-resources/voter-information-guides",
+        "title": "Voter Information Guides :: California Secretary of State"
+      },
+      {
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "title": "November 3, 2026, General Election - Official Certified List of Candidates"
+      },
+      {
+        "url": "https://ballotpedia.org/California_state_executive_official_elections,_2026",
+        "title": "California state executive official elections, 2026 - Ballotpedia"
+      },
+      {
+        "url": "https://www.kcra.com/article/california-voter-guide-2026-november-election/73873062",
+        "title": "Here's your 2026 California voter guide for Election Day - KCRA"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election",
+        "title": "2026 California gubernatorial election"
+      },
+      {
+        "url": "https://californiatoday.com/guides/elections/2026-california-election-candidates-master-guide/",
+        "title": "2026 California candidates master guide: All 24 candidates on the November 3 ballot"
+      },
+      {
+        "url": "https://www.sanleandro.org/DocumentCenter/View/16401/2026-Candidate-Statements",
+        "title": "CANDIDATE STATEMENTS NOVEMBER 3, 2026 GENERAL MUNICIPAL ELECTION"
+      },
+      {
+        "url": "https://www.sanleandro.org/DocumentCenter/View/16254/2026-Candidate-Roster---Web",
+        "title": "CITY OF SAN LEANDRO GENERAL MUNICIPAL ELECTION - TUESDAY, NOVEMBER 3, 2026 CANDIDATE ROSTER"
+      },
+      {
+        "url": "https://patch.com/california/sanleandro/san-leandro-voter-guide-2026-whats-ballot-voting-more",
+        "title": "San Leandro Voter Guide 2026: What's On The Ballot, Voting & More | San Leandro, CA Patch"
+      },
+      {
+        "url": "https://playpotus.com/ca/san-leandro",
+        "title": "San Leandro Mayor & City Council Election 2026: Voter Guide"
+      },
+      {
+        "url": "https://thebayareabrief.com/articles/san-leandro-mayor-race-2026-juan-gonzalez-iii-vs-james-maes-district-3-council",
+        "title": "San Leandro mayor race 2026: González vs. Maes explained"
+      },
+      {
+        "url": "https://alamedacountyca.gov/rov_app/measures/election/260",
+        "title": ""
+      },
+      {
+        "url": "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/san_lorenzo_usd_parcel_tax_measure.pdf",
+        "title": "San Lorenzo USD Ballot Submitt"
+      },
+      {
+        "url": "https://ballotpedia.org/Alameda_County,_California_ballot_measures",
+        "title": "Alameda County, California ballot measures - Ballotpedia"
+      },
+      {
+        "url": "https://ballotpedia.org/San_Lorenzo_Unified_School_District,_California,_Measure_J,_Parcel_Tax_Renewal_(November_2026)",
+        "title": "San Lorenzo Unified School District Measure J"
+      },
+      {
+        "url": "https://www.contracostavote.gov/wp-content/uploads/26Nov03_Measure-Wording-List-1.pdf",
+        "title": "Measure Wording List"
+      },
+      {
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "title": "November 3, 2026, General Election - Official Certified List of Candidates"
+      },
+      {
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf",
+        "title": "2026 General Election Official Voter Information Guide"
+      },
+      {
+        "url": "https://calmatters.org/economy/2026/10/insurance-commissioner-california-nov-election/",
+        "title": "CA to elect insurance commissioner at crucial time - CalMatters"
+      },
+      {
+        "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-election-insurance-commissioner-allen-kim-voter-guide",
+        "title": "California insurance commissioner election voter guide"
+      },
+      {
+        "url": "https://calmatters.org/politics/2026/10/insurance-commissioner-campaign-funding/",
+        "title": "Who’s spending money on the CA insurance commissioner race - CalMatters"
+      },
+      {
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+        "title": "November 3, 2026, General Election - Official Certified List of Candidates"
+      },
+      {
+        "url": "https://www.slocounty.ca.gov/departments/clerk-recorder/forms-documents/elections-and-voting/current-elections/2026-11-04/unofficial-candidates-list",
+        "title": "County of San Luis Obispo Elections Division"
+      },
+      {
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/",
+        "title": "Who's running for California Board of Equalization in 2026 election?"
+      },
+      {
+        "url": "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
+        "title": "Superintendent of Public Instruction Candidate Statements"
+      },
+      {
+        "url": "https://calmatters.org/education/2026/06/primary-election-california-superintendent/",
+        "title": "Shaw, Barrera win state superintendent primary"
+      },
+      {
+        "url": "https://ballotpedia.org/Joseph_Grcar",
+        "title": "Joseph Grcar - Ballotpedia"
+      },
+      {
+        "url": "https://ballotpedia.org/Luis_Reynoso",
+        "title": "Luis Reynoso"
+      },
+      {
+        "url": "https://talkthevote.live/california/oakland-bart-district-4/",
+        "title": "Oakland BART Director, District 4 2026: Robert Raburn vs. Luis Reynoso"
+      },
+      {
+        "url": "https://ballotpedia.org/Municipal_elections_in_Alameda_County,_California_(2026)",
+        "title": "Municipal elections in Alameda County, California (2026)"
+      },
+      {
+        "url": "https://ballotpedia.org/Alameda_County,_California,_elections,_2026",
+        "title": "Alameda County, California, elections, 2026"
+      },
+      {
+        "url": "https://cityhallpass.com/election-2026/races/supreme-court",
+        "title": "California Supreme Court retention vote, November 2026"
+      },
+      {
+        "url": "https://courts.ca.gov/news/what-know-about-judicial-selection",
+        "title": "What to Know About Judicial Selection | Judicial Branch of California"
+      },
+      {
+        "url": "https://ballotpedia.org/California_Supreme_Court_elections,_2026",
+        "title": "California Supreme Court elections, 2026 - Ballotpedia"
+      },
+      {
+        "url": "https://stangop.org/wp-content/uploads/2026/10/california_2026_judicial_voter_guide_9_16_26.pdf",
+        "title": "CALIFORNIA VOTER GUIDE"
+      },
+      {
+        "url": "https://calmatters.org/california-voter-guide-2026/supreme-court/",
+        "title": "Which CA Supreme Court justices are up for election in 2026?"
+      },
+      {
+        "url": "https://calmatters.org/california-voter-guide-2026/governor/",
+        "title": "Who are the 2026 California governor candidates?"
+      },
+      {
+        "url": "https://californiatoday.com/guides/elections/2026-california-governor-race-becerra-vs-hilton/",
+        "title": "2026 California Governor Race breakdown: Becerra vs. Hilton on taxes, housing and homelessness, and the 14 propositions"
+      },
+      {
+        "url": "https://calmatters.org/politics/2026/10/california-governor-race-final-stretch/",
+        "title": "CA governor election: Becerra leads, Hilton's long-shot bid"
+      },
+      {
+        "url": "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+        "title": "How will California’s next governor handle homelessness? - CalMatters"
+      },
+      {
+        "url": "https://www.latimes.com/california/story/2026-08-10/2026-california-election-governor-becerra-hilton-voter-guide",
+        "title": "California governor's race election guide: Becerra vs. Hilton - Los Angeles Times"
+      },
+      {
+        "url": "https://www.thepoliticalgroup.com/who-should-i-vote-for/california/lieutenant-governor",
+        "title": "Who Should I Vote For in the California Lieutenant Governor Race? Ma vs. Romero (2026) | The Political Group"
+      },
+      {
+        "url": "https://californiafiles.org/race/2026-general-lieutenant-governor",
+        "title": "Lieutenant Governor, November 3, 2026 general · California Files"
+      },
+      {
+        "url": "https://calmatters.org/california-voter-guide-2026/lieutenant-governor/",
+        "title": "Who are the 2026 California lieutenant governor candidates?"
+      },
+      {
+        "url": "https://elections.cdn.sos.ca.gov/public-display/lt-governor.pdf",
+        "title": "Lieutenant Governor Candidate Statements"
+      },
+      {
+        "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-lieutenant-governor",
+        "title": "California lieutenant governor: Who's running and why it matters | LAist"
+      },
+      {
+        "url": "https://www.sanleandro.org/DocumentCenter/View/16401/2026-Candidate-Statements?bidId=",
+        "title": "CANDIDATE STATEMENTS NOVEMBER 3, 2026 GENERAL MUNICIPAL ELECTION"
+      },
+      {
+        "url": "https://maesforsanleandromayor.com/my-platform/",
+        "title": "My Platform | James Maes for San Leandro Mayor 2026"
+      },
+      {
+        "url": "https://www.sfgate.com/news/bayarea/article/san-leandro-mayoral-election-features-incumbent-22491795.php",
+        "title": "San Leandro: Mayoral Election Features Incumbent Vs. Parks And Rec Commissioner"
+      },
+      {
+        "url": "https://thebayareabrief.com/articles/san-leandro-mayor-race-2026-juan-gonzalez-iii-vs-james-maes-district-3-council",
+        "title": "San Leandro mayor race 2026: González vs. Maes explained"
+      },
+      {
+        "url": "https://www.sanleandro.org/197/Elections",
+        "title": "Elections | San Leandro, CA"
+      }
+    ],
+    "citationVerification": "API-reported activity and citation format only; source truth and entailment unverified."
+  },
+  "usage": {
+    "inputTokens": 912874,
+    "outputTokens": 15530,
+    "cachedInputTokens": 740864,
+    "reasoningTokens": 9046,
+    "costUsd": 0.891632,
+    "costSource": "OpenRouter usage.cost",
+    "serverToolUse": {
+      "web_search_requests": 14,
+      "tool_calls_requested": 36,
+      "tool_calls_executed": 36
+    }
+  },
+  "costUsd": 0.891632,
+  "explanation": "Offline interpretation of existing public assistant content and API usage counters. No model retry, response field normalization, or change to the original batch. This extra protocol-v1 pilot is excluded from the comparison."
+}

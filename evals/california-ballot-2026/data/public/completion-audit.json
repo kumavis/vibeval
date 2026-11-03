@@ -1,0 +1,20 @@
+{
+  "attempts": 48,
+  "models": 16,
+  "trialsPerModel": 3,
+  "statuses": {
+    "completed": 42,
+    "invalid": 5,
+    "failed": 1
+  },
+  "axes": 12,
+  "validContestEntries": 2058,
+  "originalCodexRecordsPreserved": true,
+  "anthropicOpenRouterRequests": 0,
+  "knownOpenRouterBatchCostUsd": 10.9715394447,
+  "unknownOpenRouterCosts": 1,
+  "pilotCostUsd": 0.891632,
+  "knownCostIncludingPilotUsd": 11.863171444699999,
+  "continuationPreservedPriorRecords": true,
+  "webMetricNote": "Codex web actions and OpenRouter reported search requests are different units."
+}

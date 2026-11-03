@@ -1,0 +1,17 @@
+{
+  "id": "california-ballot-2026",
+  "title": "San Leandro ballot, model by model",
+  "description": "Three independent live-web attempts per model on a representative San Leandro ballot for November 3, 2026. Compare Codex and OpenRouter models, including Grok, across 15 selectable policy axes with votes, sources, and scoring rules.",
+  "kind": "interactive",
+  "format": "environment",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Inspect simulated ballot judgments and evidence. Economic/social coordinates are response self-assessments; additional axes descriptively code measure votes using visible rules. Neither is a validated ideology test or model identity."
+  },
+  "tags": [
+    "Politics",
+    "Research",
+    "Model comparison"
+  ],
+  "protocol": "california-ballot-2026-v1"
+}
