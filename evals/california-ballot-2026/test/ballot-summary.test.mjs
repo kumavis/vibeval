@@ -79,3 +79,14 @@ test('ranking sorts descending, preserves ballot indexes and ties, and recalcula
   assert.deepEqual(rankBallotItems(contests,runs).map(r=>r.index),[1,0,2,3]);
   assert.deepEqual(rankBallotItems(contests,runs.filter(r=>r.model!=='c')).map(r=>r.index),[0,1,2,3]);
 });
+
+test('Claude research counters stay separate from API requests and missing activity stays unknown',()=>{
+ const evidence=researchEvidence({provider:'claude-code',audit:{webSearchCalls:5,searchCalls:3,fetchCalls:2}});
+ assert.equal(evidence.actions,5);assert.equal(evidence.searches,3);assert.equal(evidence.fetches,2);assert.match(evidence.basis,/Claude Code/);
+ assert.equal(researchEvidence({provider:'claude-code'}).state,'unknown');
+});
+test('Claude identities use their own brand and consistent tier colors',async()=>{
+ const {brand,modelColor,tierColors}=await import('../viewer/model-identity.js');
+ assert.equal(brand('claude-sonnet-5-5'),'claude');assert.equal(modelColor('claude-sonnet-5-5'),tierColors.terra);
+ assert.equal(modelColor('claude-fable-5-1'),tierColors.astra);assert.equal(brand('gpt-6.1-sol'),'openai');
+});

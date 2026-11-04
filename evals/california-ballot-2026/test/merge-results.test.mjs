@@ -17,3 +17,8 @@ test('merge preserves cohorts and refuses incompatible or duplicate attempts', (
   assert.throws(() => mergeResults([a,a]), /Duplicate/);
   assert.equal(a.runs[0].provider, undefined);
 });
+
+test('merge retains Claude Code provider and collection timing',()=>{
+ const a=sample('codex','codex-cli'),b=sample('claude','claude-code');b.batch.collectionTimezone='America/Los_Angeles';
+ const merged=mergeResults([a,b]);assert.equal(merged.runs[1].provider,'claude-code');assert.equal(merged.batches[1].collectionTimezone,'America/Los_Angeles');
+});

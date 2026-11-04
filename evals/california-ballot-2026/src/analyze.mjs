@@ -12,7 +12,7 @@ export function analyze(data) {
     const completed = group.filter(r => r.status === 'completed');
     const points = completed.filter(r => Number.isFinite(r.response?.compass?.economic) && Number.isFinite(r.response?.compass?.social));
     const economic = points.map(r => r.response.compass.economic), social = points.map(r => r.response.compass.social);
-    const costs = group.map(r => r.usageCost ?? r.usage?.costUsd);
+    const costs = group.map(r => r.provider === 'claude-code' ? r.costUsd : r.usageCost ?? r.usage?.costUsd);
     return {model, provider: group[0]?.provider ?? 'codex-cli', attempts: group.length, completed: completed.length, plotted: points.length,
       economicMean: average(economic), socialMean: average(social), economicRange: extent(economic), socialRange: extent(social),
       votes: completed.reduce((n, r) => n + r.response.decisions.filter(d => d.status === 'voted').length, 0),
@@ -20,9 +20,10 @@ export function analyze(data) {
       insufficientInformation: completed.reduce((n, r) => n + r.response.decisions.filter(d => d.status === 'insufficient_information').length, 0),
       webCalls: group.reduce((n, r) => n + (r.webSearchCalls ?? 0), 0),
       reportedCostUsd: costs.some(Number.isFinite) ? costs.filter(Number.isFinite).reduce((a,b)=>a+b,0) : null,
+      costBasis: group[0]?.provider === 'claude-code' ? 'CLI API-equivalent estimate; not a verified subscription charge' : 'Provider-reported usage cost',
       costComplete: costs.length > 0 && costs.every(Number.isFinite),
-      inputTokens: group.reduce((n, r) => n + (r.usage?.inputTokens ?? 0), 0),
-      outputTokens: group.reduce((n, r) => n + (r.usage?.outputTokens ?? 0), 0)};
+      inputTokens: group.reduce((n, r) => n + (r.usage?.inputTokens ?? ((r.usage?.input_tokens ?? 0)+(r.usage?.cache_creation_input_tokens ?? 0)+(r.usage?.cache_read_input_tokens ?? 0))), 0),
+      outputTokens: group.reduce((n, r) => n + (r.usage?.outputTokens ?? r.usage?.output_tokens ?? 0), 0)};
   });
   const contests = (data.ballot?.contests ?? []).map(contest => {
     const choices = new Map();

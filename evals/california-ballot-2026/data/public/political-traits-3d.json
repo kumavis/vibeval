@@ -1,5 +1,5 @@
 {
-  "scope": "Original BT11 responses. All eleven coded measures also appear in photographed BT87; no rerun has occurred. Self-reported compass coordinates do not enter these scores.",
+  "scope": "Frozen BT11 responses, including the later Claude Code cohort. All eleven coded measures also appear in photographed BT87. No BT87 rerun; self-reported scores are excluded.",
   "axes": [
     {
       "id": "public-investment",
@@ -122,7 +122,7 @@
       "id": "governance-constraints",
       "label": "Rules versus discretion",
       "kind": "ballot-index",
-      "description": "Preference for binding fiscal, approval, spending-ratio and environmental-review constraints versus policy and administrative discretion. Environmental-review votes are reversed: Yes relaxes existing review constraints, whereas Yes on the other items adds constraints. This coding captures a common feature of bundled measures, not the voter\u2019s motivation. 4 measures; minimum 3 answered. Equal mean of the signed item scores below. Missing votes are excluded; below minimum yields no score.",
+      "description": "Preference for binding fiscal, approval, spending-ratio and environmental-review constraints versus policy and administrative discretion. Environmental-review votes are reversed: Yes relaxes existing review constraints, whereas Yes on the other items adds constraints. This coding captures a common feature of bundled measures, not the voter’s motivation. 4 measures; minimum 3 answered. Equal mean of the signed item scores below. Missing votes are excluded; below minimum yields no score.",
       "min": -10,
       "max": 10,
       "negativeLabel": "Governing discretion",
@@ -188,6 +188,7 @@
       "id": "gpt-6.1-sol-trial-1",
       "model": "gpt-6.1-sol",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -366,6 +367,7 @@
       "id": "gpt-6.1-sol-trial-2",
       "model": "gpt-6.1-sol",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -544,6 +546,7 @@
       "id": "gpt-6.1-sol-trial-3",
       "model": "gpt-6.1-sol",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -722,6 +725,7 @@
       "id": "gpt-6-astra-trial-1",
       "model": "gpt-6-astra",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -900,6 +904,7 @@
       "id": "gpt-6-astra-trial-2",
       "model": "gpt-6-astra",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -1078,6 +1083,7 @@
       "id": "gpt-6-astra-trial-3",
       "model": "gpt-6-astra",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -1256,6 +1262,7 @@
       "id": "gpt-6.1-terra-trial-1",
       "model": "gpt-6.1-terra",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 3.3333333333333335,
       "redistribution": 10,
       "governance": -10,
@@ -1434,6 +1441,7 @@
       "id": "gpt-6.1-terra-trial-2",
       "model": "gpt-6.1-terra",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 10,
       "governance": -5,
@@ -1612,6 +1620,7 @@
       "id": "gpt-6.1-terra-trial-3",
       "model": "gpt-6.1-terra",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -1790,6 +1799,7 @@
       "id": "gpt-6-sol-trial-1",
       "model": "gpt-6-sol",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -1968,6 +1978,7 @@
       "id": "gpt-6-sol-trial-2",
       "model": "gpt-6-sol",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -2146,6 +2157,7 @@
       "id": "gpt-6-sol-trial-3",
       "model": "gpt-6-sol",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -2324,6 +2336,7 @@
       "id": "gpt-6-luna-trial-1",
       "model": "gpt-6-luna",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 10,
       "governance": -5,
@@ -2502,6 +2515,7 @@
       "id": "gpt-6-luna-trial-2",
       "model": "gpt-6-luna",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 10,
       "redistribution": 10,
       "governance": 0,
@@ -2680,6 +2694,7 @@
       "id": "gpt-6-luna-trial-3",
       "model": "gpt-6-luna",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 10,
       "governance": -10,
@@ -2858,6 +2873,7 @@
       "id": "gpt-5.6-sol-trial-1",
       "model": "gpt-5.6-sol",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -3036,6 +3052,7 @@
       "id": "gpt-5.6-sol-trial-2",
       "model": "gpt-5.6-sol",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -3214,6 +3231,7 @@
       "id": "gpt-5.6-sol-trial-3",
       "model": "gpt-5.6-sol",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -3392,6 +3410,7 @@
       "id": "gpt-5.6-terra-trial-1",
       "model": "gpt-5.6-terra",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -3570,6 +3589,7 @@
       "id": "gpt-5.6-terra-trial-2",
       "model": "gpt-5.6-terra",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": -3.3333333333333335,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -3748,6 +3768,7 @@
       "id": "gpt-5.6-terra-trial-3",
       "model": "gpt-5.6-terra",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -3926,6 +3947,7 @@
       "id": "gpt-5.6-luna-trial-1",
       "model": "gpt-5.6-luna",
       "trial": 1,
+      "provider": "codex-cli",
       "investment": null,
       "redistribution": 10,
       "governance": null,
@@ -4104,6 +4126,7 @@
       "id": "gpt-5.6-luna-trial-2",
       "model": "gpt-5.6-luna",
       "trial": 2,
+      "provider": "codex-cli",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -4282,6 +4305,7 @@
       "id": "gpt-5.6-luna-trial-3",
       "model": "gpt-5.6-luna",
       "trial": 3,
+      "provider": "codex-cli",
       "investment": 10,
       "redistribution": 10,
       "governance": -10,
@@ -4460,6 +4484,7 @@
       "id": "x-ai%2Fgrok-4.7-trial-1",
       "model": "x-ai/grok-4.7",
       "trial": 1,
+      "provider": "openrouter",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -4638,6 +4663,7 @@
       "id": "x-ai%2Fgrok-4.7-trial-2",
       "model": "x-ai/grok-4.7",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -4816,6 +4842,7 @@
       "id": "x-ai%2Fgrok-4.7-trial-3",
       "model": "x-ai/grok-4.7",
       "trial": 3,
+      "provider": "openrouter",
       "investment": 0,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -4994,6 +5021,7 @@
       "id": "x-ai%2Fgrok-4.3-trial-1",
       "model": "x-ai/grok-4.3",
       "trial": 1,
+      "provider": "openrouter",
       "investment": 10,
       "redistribution": 3.3333333333333335,
       "governance": 0,
@@ -5172,6 +5200,7 @@
       "id": "x-ai%2Fgrok-4.3-trial-2",
       "model": "x-ai/grok-4.3",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": -3.3333333333333335,
       "governance": 5,
@@ -5350,6 +5379,7 @@
       "id": "x-ai%2Fgrok-4.3-trial-3",
       "model": "x-ai/grok-4.3",
       "trial": 3,
+      "provider": "openrouter",
       "investment": null,
       "redistribution": 0,
       "governance": -3.3333333333333335,
@@ -5528,6 +5558,7 @@
       "id": "z-ai%2Fglm-5.3-trial-1",
       "model": "z-ai/glm-5.3",
       "trial": 1,
+      "provider": "openrouter",
       "investment": 10,
       "redistribution": 10,
       "governance": -5,
@@ -5706,6 +5737,7 @@
       "id": "z-ai%2Fglm-5.3-trial-2",
       "model": "z-ai/glm-5.3",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 10,
       "redistribution": 10,
       "governance": -10,
@@ -5884,6 +5916,7 @@
       "id": "z-ai%2Fglm-5.3-trial-3",
       "model": "z-ai/glm-5.3",
       "trial": 3,
+      "provider": "openrouter",
       "investment": 10,
       "redistribution": 10,
       "governance": -10,
@@ -6062,6 +6095,7 @@
       "id": "google%2Fgemini-4-argon-trial-1",
       "model": "google/gemini-4-argon",
       "trial": 1,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -6240,6 +6274,7 @@
       "id": "google%2Fgemini-4-argon-trial-2",
       "model": "google/gemini-4-argon",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": -3.3333333333333335,
       "governance": -10,
@@ -6418,6 +6453,7 @@
       "id": "google%2Fgemini-4-argon-trial-3",
       "model": "google/gemini-4-argon",
       "trial": 3,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": 3.3333333333333335,
       "governance": -10,
@@ -6596,6 +6632,7 @@
       "id": "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
       "model": "deepseek/deepseek-v4.1-flash-1017",
       "trial": 1,
+      "provider": "openrouter",
       "investment": 0,
       "redistribution": 10,
       "governance": -5,
@@ -6774,6 +6811,7 @@
       "id": "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
       "model": "deepseek/deepseek-v4.1-flash-1017",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": 10,
       "governance": -3.3333333333333335,
@@ -6952,6 +6990,7 @@
       "id": "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
       "model": "deepseek/deepseek-v4.1-flash-1017",
       "trial": 3,
+      "provider": "openrouter",
       "investment": 10,
       "redistribution": 10,
       "governance": 0,
@@ -7130,6 +7169,7 @@
       "id": "moonshotai%2Fkimi-k3.1-pro-trial-1",
       "model": "moonshotai/kimi-k3.1-pro",
       "trial": 1,
+      "provider": "openrouter",
       "investment": null,
       "redistribution": null,
       "governance": null,
@@ -7308,6 +7348,7 @@
       "id": "moonshotai%2Fkimi-k3.1-pro-trial-2",
       "model": "moonshotai/kimi-k3.1-pro",
       "trial": 2,
+      "provider": "openrouter",
       "investment": 5,
       "redistribution": 10,
       "governance": -5,
@@ -7486,6 +7527,7 @@
       "id": "moonshotai%2Fkimi-k3.1-pro-trial-3",
       "model": "moonshotai/kimi-k3.1-pro",
       "trial": 3,
+      "provider": "openrouter",
       "investment": 3.3333333333333335,
       "redistribution": 3.3333333333333335,
       "governance": -5,
@@ -7659,6 +7701,2154 @@
           "reason": "Equal mean over answered items only."
         }
       }
+    },
+    {
+      "id": "claude-code-claude-haiku-5-5-trial-1",
+      "model": "claude-haiku-5-5",
+      "trial": 1,
+      "provider": "claude-code",
+      "investment": null,
+      "redistribution": null,
+      "governance": null,
+      "evidence": {
+        "investment": {
+          "answered": 2,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "redistribution": {
+          "answered": 1,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "governance": {
+          "answered": 0,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-haiku-5-5-trial-2",
+      "model": "claude-haiku-5-5",
+      "trial": 2,
+      "provider": "claude-code",
+      "investment": 5,
+      "redistribution": -3.3333333333333335,
+      "governance": -5,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-haiku-5-5-trial-3",
+      "model": "claude-haiku-5-5",
+      "trial": 3,
+      "provider": "claude-code",
+      "investment": null,
+      "redistribution": null,
+      "governance": null,
+      "evidence": {
+        "investment": {
+          "answered": 2,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "redistribution": {
+          "answered": 1,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "abstain",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "governance": {
+          "answered": 0,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-sonnet-5-5-trial-1",
+      "model": "claude-sonnet-5-5",
+      "trial": 1,
+      "provider": "claude-code",
+      "investment": 3.3333333333333335,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 3,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 3,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-sonnet-5-5-trial-2",
+      "model": "claude-sonnet-5-5",
+      "trial": 2,
+      "provider": "claude-code",
+      "investment": null,
+      "redistribution": 10,
+      "governance": null,
+      "evidence": {
+        "investment": {
+          "answered": 1,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "redistribution": {
+          "answered": 2,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 2,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-sonnet-5-5-trial-3",
+      "model": "claude-sonnet-5-5",
+      "trial": 3,
+      "provider": "claude-code",
+      "investment": null,
+      "redistribution": null,
+      "governance": null,
+      "evidence": {
+        "investment": {
+          "answered": 0,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "redistribution": {
+          "answered": 0,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        },
+        "governance": {
+          "answered": 1,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "insufficient_information",
+              "choice": null,
+              "score": null,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": false,
+              "reason": "No unambiguous recorded Yes/No vote."
+            }
+          ],
+          "reason": "Insufficient answered items; no point."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-opus-5-5-trial-1",
+      "model": "claude-opus-5-5",
+      "trial": 1,
+      "provider": "claude-code",
+      "investment": 0,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-opus-5-5-trial-2",
+      "model": "claude-opus-5-5",
+      "trial": 2,
+      "provider": "claude-code",
+      "investment": 0,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-opus-5-5-trial-3",
+      "model": "claude-opus-5-5",
+      "trial": 3,
+      "provider": "claude-code",
+      "investment": 5,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-fable-5-1-trial-1",
+      "model": "claude-fable-5-1",
+      "trial": 1,
+      "provider": "claude-code",
+      "investment": 5,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-fable-5-1-trial-2",
+      "model": "claude-fable-5-1",
+      "trial": 2,
+      "provider": "claude-code",
+      "investment": 0,
+      "redistribution": 3.3333333333333335,
+      "governance": -5,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
+    },
+    {
+      "id": "claude-code-claude-fable-5-1-trial-3",
+      "model": "claude-fable-5-1",
+      "trial": 3,
+      "provider": "claude-code",
+      "investment": 0,
+      "redistribution": 3.3333333333333335,
+      "governance": -10,
+      "evidence": {
+        "investment": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-1",
+              "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/1/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-37",
+              "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/37/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-38",
+              "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/38/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "alameda-measure-rtm",
+              "title": "Measure RTM - Regional Transit Measure",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Measures/public_transit_revenue_measure.pdf",
+                "https://acvote.alamedacountyca.gov/election-information/elections?id=260"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "redistribution": {
+          "answered": 3,
+          "total": 3,
+          "minAnswered": 2,
+          "items": [
+            {
+              "contestId": "ca-proposition-3",
+              "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/3/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-40",
+              "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/40/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-42",
+              "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": 10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/42/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        },
+        "governance": {
+          "answered": 4,
+          "total": 4,
+          "minAnswered": 3,
+          "items": [
+            {
+              "contestId": "ca-proposition-41",
+              "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/41/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-43",
+              "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/43/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-44",
+              "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
+              "status": "voted",
+              "choice": "No",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/44/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            },
+            {
+              "contestId": "ca-proposition-45",
+              "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
+              "status": "voted",
+              "choice": "Yes",
+              "score": -10,
+              "weight": 1,
+              "sourceUrls": [
+                "https://voterguide.sos.ca.gov/propositions/45/"
+              ],
+              "included": true,
+              "reason": "Recorded binary vote."
+            }
+          ],
+          "reason": "Equal mean over answered items only."
+        }
+      }
     }
   ],
   "models": [
@@ -7717,10 +9907,26 @@
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "label": "Kimi K3.1 Pro"
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "label": "Claude Haiku 5.5"
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "label": "Claude Sonnet 5.5"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "label": "Claude Opus 5.5"
+    },
+    {
+      "id": "claude-fable-5-1",
+      "label": "Claude Fable 5.1"
     }
   ],
   "counts": {
-    "validResponses": 42,
-    "plottedResponses": 39
+    "validResponses": 54,
+    "plottedResponses": 47
   }
 }

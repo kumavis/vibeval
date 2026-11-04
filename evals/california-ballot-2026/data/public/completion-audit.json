@@ -1,14 +1,14 @@
 {
-  "attempts": 48,
-  "models": 16,
+  "attempts": 60,
+  "models": 20,
   "trialsPerModel": 3,
   "statuses": {
-    "completed": 42,
+    "completed": 54,
     "invalid": 5,
     "failed": 1
   },
-  "axes": 12,
-  "validContestEntries": 2058,
+  "axes": 15,
+  "validContestEntries": 2646,
   "originalCodexRecordsPreserved": true,
   "anthropicOpenRouterRequests": 0,
   "knownOpenRouterBatchCostUsd": 10.9715394447,
@@ -16,5 +16,21 @@
   "pilotCostUsd": 0.891632,
   "knownCostIncludingPilotUsd": 11.863171444699999,
   "continuationPreservedPriorRecords": true,
-  "webMetricNote": "Codex web actions and OpenRouter reported search requests are different units."
+  "webMetricNote": "Codex completed web actions, Claude Code non-error tool results, and OpenRouter reported requests are distinct units.",
+  "originalOpenRouterRecordsPreserved": true,
+  "claude": {
+    "attempts": 12,
+    "valid": 12,
+    "collectionDateLocal": "2026-11-03",
+    "timezone": "America/Los_Angeles",
+    "completedWebActions": 416,
+    "apiEquivalentEstimateUsd": 14.38246955,
+    "unknownEstimates": 0,
+    "note": "CLI list-price estimate, not verified incremental subscription charges; excludes the integration probe."
+  },
+  "researchActivity": {
+    "observed": 59,
+    "none-recorded": 0,
+    "unknown": 1
+  }
 }

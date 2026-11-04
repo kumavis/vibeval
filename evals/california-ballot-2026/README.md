@@ -1,6 +1,6 @@
 # San Leandro ballot comparison — November 3, 2026
 
-Three independent fresh-conversation attempts per model, using live web research and one identical frozen ballot prompt. The initial cohort contains eight selectable Codex models; an additional cohort uses eight OpenRouter models, including two Grok versions. The experiment compares simulated ballot judgments, evidence, uncertainty, and each response's subjective economic/social self-placement. It is not a validated Political Compass test, an accuracy benchmark, or a claim about a model's persistent political identity.
+Three independent fresh-conversation attempts per model, using live web research and one identical frozen ballot prompt. The initial cohort contains eight selectable Codex models; an additional cohort uses eight OpenRouter models, including two Grok versions, and a later cohort uses four Anthropic models through Claude Code. The experiment compares simulated ballot judgments, evidence, uncertainty, and each response's subjective economic/social self-placement. It is not a validated Political Compass test, an accuracy benchmark, or a claim about a model's persistent political identity.
 
 The selected printed sample is **BT11, precinct 454510 (0301)** from PDF pages 64–75 of the [official Alameda County composite voter guide](https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/PDFs/20261103/Voter%20Information%20Guide/vig_nov2026_eng.pdf). It contains **49 contests**: 20 candidate races, 13 judicial retentions, 14 state propositions, and regional Measure RTM and San Lorenzo USD Measure J. It is one representative San Leandro ballot, not a countywide composite, City Hall's ballot, or a personalized residential ballot. District labels and the complete candidate inventory are in `ballot.json`.
 
@@ -45,9 +45,9 @@ node evals/california-ballot-2026/src/axes.mjs
 
 ## OpenRouter cohort
 
-The OpenRouter cohort is finished: **24 scheduled attempts, 18 valid, five invalid, and one HTTP 429 failure**. Grok 4.7, Grok 4.3, GLM, Gemini, DeepSeek, and Kimi each produced three valid responses. Qwen produced three invalid responses (one missing required source references, one truncated output, and one without a complete terminal JSON object); Mistral produced two truncated invalid outputs and one rate-limit failure. All remain visible and none was silently retried or plotted as zero. Together with Codex, the comparison contains **48 attempts, 42 valid responses, and 2,058 valid contest entries** across 16 models.
+The OpenRouter cohort is finished: **24 scheduled attempts, 18 valid, five invalid, and one HTTP 429 failure**. Grok 4.7, Grok 4.3, GLM, Gemini, DeepSeek, and Kimi each produced three valid responses. Qwen produced three invalid responses (one missing required source references, one truncated output, and one without a complete terminal JSON object); Mistral produced two truncated invalid outputs and one rate-limit failure. All remain visible and none was silently retried or plotted as zero. Before the later Claude cohort, Codex and OpenRouter together supplied **48 attempts, 42 valid responses, and 2,058 valid contest entries** across 16 models.
 
-Reported OpenRouter charges total **$10.9715394447 for the scheduled batch**, plus **$0.891632 for the excluded integration pilot**: **$11.8631714447 known charges**. The HTTP 429 attempt has no reported cost and remains unknown; the $3 budget reservation is not a measured charge. These totals exclude Codex subscription usage. The final [completion audit](data/public/completion-audit.json) verifies three attempts per model, no pending runs, preservation of all original Codex records, ballot coverage, research activity, axis bounds, and no Anthropic requests.
+Reported OpenRouter charges total **$10.9715394447 for the scheduled batch**, plus **$0.891632 for the excluded integration pilot**: **$11.8631714447 known charges**. The HTTP 429 attempt has no reported cost and remains unknown; the $3 budget reservation is not a measured charge. These totals exclude Codex subscription usage. The final [completion audit](data/public/completion-audit.json) verifies three attempts per model, no pending runs, preservation of all original Codex records, ballot coverage, research activity, axis bounds, and no Anthropic requests through OpenRouter.
 
 The selected models are Grok 4.7, Grok 4.3, GLM 5.3, Gemini 4 Argon, DeepSeek V4.1 Flash (1017), Qwen 3.8 Max (0902), Kimi K3.1 Pro, and Mistral Large 4.0. The live catalog and selected IDs/pricing are retained in `research/openrouter-catalog.json` and `openrouter-models.json`. **No Anthropic models are sent through OpenRouter**, per the user's instruction.
 
@@ -65,6 +65,25 @@ node evals/california-ballot-2026/src/merge-results.mjs evals/california-ballot-
 ```
 
 The OpenRouter export is separate. The combined export preserves both batch configurations, continuation and budget-accounting provenance, and per-run provider metadata. The merge refuses different base prompts or ballot inventories. After a continuation, use `openrouter-resume.mjs --batch <path> --export-only` to rebuild the OpenRouter export without API calls while preserving continuation metadata. It refuses export while the batch is locked.
+
+## Claude Code cohort
+
+The cohort is complete: **12 attempts, 12 valid responses, 588 contest entries and 416 non-error web-tool results**, with no retries. The combined comparison now contains **60 attempts across 20 models, 54 valid responses, five invalid attempts and one failed attempt**. All original 48 records are preserved unchanged. The CLI reported **$14.38246955 in API-equivalent usage estimates** for this cohort; these are not verified incremental subscription charges.
+
+Haiku 5.5 (`claude-haiku-5-5`), Sonnet 5.5 (`claude-sonnet-5-5`), Opus 5.5 (`claude-opus-5-5`), and Fable 5.1 (`claude-fable-5-1`) each receive three fresh Claude Code CLI attempts. Collection ran **November 3, 2026, from 4:22–4:38 p.m. PST**, using `America/Los_Angeles`. **Election results were not yet available at collection time**, according to the user's timing clarification; this context was not independently verified. The original **October 27 information cutoff** remains unchanged in the prompt, and compliance with that cutoff is not independently verified. This later live-retrieval cohort is identified separately throughout the report.
+
+The CLI uses the existing first-party Claude login, never OpenRouter. All models receive identical frozen prompt, inventory and response-schema bytes, with medium effort, a 1,200-second timeout and a $5 CLI API-equivalent cap per attempt. Each fresh process runs in an empty temporary directory, with only WebSearch and WebFetch enabled (plus the CLI's structured-output mechanism). Safe mode disables local instructions, hooks, skills and plugins; custom MCP servers, file/shell tools and session persistence are disabled. There are no automatic retries or ballot repairs. Primary assistant model IDs, complete local event traces and validation failures are retained. Different provider tools and collection times prevent treating these as perfectly matched experimental conditions.
+
+Research counts pair tool calls with non-error tool results, deduplicated by call ID. They establish tool activity, **not successful retrieval or adequate research**: a non-error response can contain an empty page or unusable content. The report preserves separate search/fetch counts and the models' limitations. CLI-reported dollar totals are API-equivalent estimates, not verified incremental subscription charges. The excluded integration probe cost estimate was $0.01334579.
+
+The separate public export is [`data/public/claude-results.json`](data/public/claude-results.json). The refresh command verifies that the original 48 records remain unchanged, merges the three cohorts, and rebuilds deterministic axes, analysis, the 3D data export and completion audit:
+
+```sh
+node evals/california-ballot-2026/src/claude-run.mjs --batch evals/california-ballot-2026/runs/claude-san-leandro-2026-11-04
+node evals/california-ballot-2026/src/refresh-claude.mjs evals/california-ballot-2026/runs/claude-san-leandro-2026-11-04
+```
+
+The batch directory's UTC date is November 4; report dates use California's November 3. `refresh-claude.mjs` makes no model calls and refuses unfinished batches unless explicitly passed `--allow-pending` for a progress preview. Resuming the runner preserves every existing attempt, including failures. Do not resume while another process owns its lock.
 
 ## Run, resume, and inspect
 
@@ -101,7 +120,7 @@ The subsequently supplied photos show BT87, while all existing runs used the rep
 
 The primary report now defaults to public investment versus rules/discretion. Redistributive taxation is the third dimension in the revised 3D view. These scores use only recorded choices, not the models’ self-assessments. Public investment uses Props. 1, 37, 38 and RTM (minimum 3); redistributive taxation uses Props. 3, 40 and 42 (minimum 2; Prop. 42 reversed); rules/discretion uses Props. 41, 43, 44 and 45 (minimum 3; Prop. 45 reversed). All 11 measures are confirmed shared with photographed BT87, although the responses were elicited on BT11.
 
-Each item contributes +10 or −10 according to the explicit rubric. Scores are equal means over answered items. Missing answers are excluded; below-minimum axes are null. The 3D view plots 39 of 42 valid responses and computes model means only from those jointly eligible rounds, displaying the denominator. Its extract is `data/public/political-traits-3d.json`; `data/public/highlights-3d.json` retains the earlier, superseded coverage-based analysis. The three primary axes use disjoint items but are not necessarily independent. Taxing power is an imperfect proxy for redistribution, and environmental-review votes bundle procedural changes; these are post hoc descriptive indices, not validated broad personality measurements.
+Each item contributes +10 or −10 according to the explicit rubric. Scores are equal means over answered items. Missing answers are excluded; below-minimum axes are null. The original 3D extract plotted 39 of 42 valid responses. The refreshed extract includes eligible Claude responses and records current totals in its `counts` field. Model means use only jointly eligible rounds, displaying the denominator. Its extract is `data/public/political-traits-3d.json`; `data/public/highlights-3d.json` retains the earlier, superseded coverage-based analysis. The three primary axes use disjoint items but are not necessarily independent. Taxing power is an imperfect proxy for redistribution, and environmental-review votes bundle procedural changes; these are post hoc descriptive indices, not validated broad personality measurements.
 
 The original self-score prompt remains unchanged in `prompt.txt`, the public results, and the report’s “Exact base prompt.” It also appears separately under “Exact self-assessment instruction (supplementary)” with anchor `#self-score-prompt`. Individual self-assessments are collapsed under a supplementary disclosure.
 
@@ -112,9 +131,9 @@ The report orders ballot items and the jump menu by disagreement within the sele
 
 Yes/No items show one labeled brand marker per model on a −1 to +1 line, with explicit abstention or insufficient information scored as zero for that display only. Candidate races use a line for two candidates, a barycentric triangle for three, and per-candidate vote-share bars for four or more. Single-candidate races also use bars. Candidate shares exclude non-votes, which appear separately. Coincident triangle icons fan out with connectors to their exact positions. Clicking a model reveals its round choices and rationales, with links to the full response and sources; raw tables remain available in disclosures.
 
-Brand icons and model colors are shared with the political compass. OpenAI colors run from Luna through Terra and Sol to Astra, a product-tier proxy rather than a measured parameter scale. Other brands remain neutral where size order is unavailable. Icons are vendored with their license in `viewer/brand-icons/`.
+Brand icons and model colors are shared with the political compass. OpenAI colors run from Luna through Terra and Sol to Astra, a product-tier proxy rather than a measured parameter scale. Claude uses the same cool-to-warm palette for Haiku, Sonnet, Opus and Fable, also a product-tier proxy rather than a measured parameter scale. Other brands remain neutral where size order is unavailable. Icons are vendored with their license in `viewer/brand-icons/`.
 
-The research section separates recorded web activity from ballot validity and distinguishes Codex completed web actions from OpenRouter API-reported requests. Unknown activity is not shown as zero, and citations alone do not count as evidence of tool use.
+The research section separates recorded web activity from ballot validity and distinguishes Codex completed web actions, Claude Code non-error tool results and OpenRouter API-reported requests. Unknown activity is not shown as zero, and citations alone do not count as evidence of tool use.
 
 Offline validation (no paid model calls):
 

@@ -3,8 +3,8 @@
   "interpretation": "Response self-assessment, not a calibrated ideology test. Means/ranges use completed runs with both coordinates. Three trials do not establish model-wide political identity.",
   "batchId": "san-leandro-2026-10-27-comparison",
   "scope": "Representative San Leandro printed ballot BT11, precinct 454510 (0301), November 3, 2026; official county composite PDF pages 64–75. This is a specific sample ballot, not a personalized ballot.",
-  "totalRuns": 48,
-  "completedRuns": 42,
+  "totalRuns": 60,
+  "completedRuns": 54,
   "contestCount": 49,
   "models": [
     {
@@ -28,6 +28,7 @@
       "insufficientInformation": 5,
       "webCalls": 102,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 15678543,
       "outputTokens": 45413
@@ -53,6 +54,7 @@
       "insufficientInformation": 28,
       "webCalls": 76,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 9695811,
       "outputTokens": 37406
@@ -78,6 +80,7 @@
       "insufficientInformation": 91,
       "webCalls": 14,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 740943,
       "outputTokens": 16860
@@ -103,6 +106,7 @@
       "insufficientInformation": 35,
       "webCalls": 55,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 4506514,
       "outputTokens": 25331
@@ -128,6 +132,7 @@
       "insufficientInformation": 88,
       "webCalls": 12,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 618103,
       "outputTokens": 15442
@@ -153,6 +158,7 @@
       "insufficientInformation": 7,
       "webCalls": 34,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 2479012,
       "outputTokens": 25219
@@ -178,6 +184,7 @@
       "insufficientInformation": 54,
       "webCalls": 12,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 620581,
       "outputTokens": 16569
@@ -203,6 +210,7 @@
       "insufficientInformation": 40,
       "webCalls": 17,
       "reportedCostUsd": null,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 893611,
       "outputTokens": 19045
@@ -228,6 +236,7 @@
       "insufficientInformation": 37,
       "webCalls": 43,
       "reportedCostUsd": 2.495074,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 2492126,
       "outputTokens": 43041
@@ -253,6 +262,7 @@
       "insufficientInformation": 37,
       "webCalls": 6,
       "reportedCostUsd": 0.1747678,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 86680,
       "outputTokens": 14498
@@ -278,6 +288,7 @@
       "insufficientInformation": 2,
       "webCalls": 30,
       "reportedCostUsd": 0.2607403952,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 362528,
       "outputTokens": 18367
@@ -303,6 +314,7 @@
       "insufficientInformation": 2,
       "webCalls": 47,
       "reportedCostUsd": 1.7533034,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 1678220,
       "outputTokens": 29879
@@ -328,6 +340,7 @@
       "insufficientInformation": 61,
       "webCalls": 50,
       "reportedCostUsd": 0.4577047095000001,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 2489856,
       "outputTokens": 89625
@@ -347,6 +360,7 @@
       "insufficientInformation": 0,
       "webCalls": 44,
       "reportedCostUsd": 2.477248,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 4462958,
       "outputTokens": 79382
@@ -372,6 +386,7 @@
       "insufficientInformation": 56,
       "webCalls": 53,
       "reportedCostUsd": 2.00937,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": true,
       "inputTokens": 2002524,
       "outputTokens": 58837
@@ -391,9 +406,114 @@
       "insufficientInformation": 0,
       "webCalls": 36,
       "reportedCostUsd": 1.3433311399999999,
+      "costBasis": "Provider-reported usage cost",
       "costComplete": false,
       "inputTokens": 2754027,
       "outputTokens": 71549
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "provider": "claude-code",
+      "attempts": 3,
+      "completed": 3,
+      "plotted": 2,
+      "economicMean": -2,
+      "socialMean": -2,
+      "economicRange": [
+        -2,
+        -2
+      ],
+      "socialRange": [
+        -2,
+        -2
+      ],
+      "votes": 49,
+      "abstentions": 47,
+      "insufficientInformation": 51,
+      "webCalls": 95,
+      "reportedCostUsd": 0.50258415,
+      "costBasis": "CLI API-equivalent estimate; not a verified subscription charge",
+      "costComplete": true,
+      "inputTokens": 898455,
+      "outputTokens": 80950
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "provider": "claude-code",
+      "attempts": 3,
+      "completed": 3,
+      "plotted": 3,
+      "economicMean": -2.3333333333333335,
+      "socialMean": -3.6666666666666665,
+      "economicRange": [
+        -3,
+        -2
+      ],
+      "socialRange": [
+        -4,
+        -3
+      ],
+      "votes": 91,
+      "abstentions": 3,
+      "insufficientInformation": 53,
+      "webCalls": 11,
+      "reportedCostUsd": 0.3551595,
+      "costBasis": "CLI API-equivalent estimate; not a verified subscription charge",
+      "costComplete": true,
+      "inputTokens": 169291,
+      "outputTokens": 18157
+    },
+    {
+      "model": "claude-opus-5-5",
+      "provider": "claude-code",
+      "attempts": 3,
+      "completed": 3,
+      "plotted": 3,
+      "economicMean": -3.1666666666666665,
+      "socialMean": -5,
+      "economicRange": [
+        -3.5,
+        -3
+      ],
+      "socialRange": [
+        -5,
+        -5
+      ],
+      "votes": 141,
+      "abstentions": 0,
+      "insufficientInformation": 6,
+      "webCalls": 124,
+      "reportedCostUsd": 3.8970601000000005,
+      "costBasis": "CLI API-equivalent estimate; not a verified subscription charge",
+      "costComplete": true,
+      "inputTokens": 2434146,
+      "outputTokens": 58279
+    },
+    {
+      "model": "claude-fable-5-1",
+      "provider": "claude-code",
+      "attempts": 3,
+      "completed": 3,
+      "plotted": 3,
+      "economicMean": -2.6666666666666665,
+      "socialMean": -4.666666666666667,
+      "economicRange": [
+        -3,
+        -2
+      ],
+      "socialRange": [
+        -5,
+        -4
+      ],
+      "votes": 147,
+      "abstentions": 0,
+      "insufficientInformation": 0,
+      "webCalls": 186,
+      "reportedCostUsd": 9.6276658,
+      "costBasis": "CLI API-equivalent estimate; not a verified subscription charge",
+      "costComplete": true,
+      "inputTokens": 1453654,
+      "outputTokens": 68886
     }
   ],
   "contests": [
@@ -401,14 +521,14 @@
       "id": "governor",
       "title": "Governor",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "XAVIER BECERRA"
           ],
           "status": "voted",
-          "count": 40,
+          "count": 49,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -449,7 +569,26 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 3,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
           ]
         },
         {
@@ -462,21 +601,21 @@
           ]
         }
       ],
-      "modalShare": 0.9523809523809523,
+      "modalShare": 0.9074074074074074,
       "unanimous": false
     },
     {
       "id": "lieutenant-governor",
       "title": "Lieutenant Governor",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "FIONA MA"
           ],
           "status": "voted",
-          "count": 33,
+          "count": 42,
           "runs": [
             "gpt-6.1-sol-trial-2",
             "gpt-6.1-sol-trial-3",
@@ -510,150 +649,16 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 7,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "abstain",
-          "count": 2,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6-astra-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.7857142857142857,
-      "unanimous": false
-    },
-    {
-      "id": "secretary-of-state",
-      "title": "Secretary Of State",
-      "type": "candidate",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "SHIRLEY N. WEBER"
-          ],
-          "status": "voted",
-          "count": 36,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 6,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
-          ]
-        }
-      ],
-      "modalShare": 0.8571428571428571,
-      "unanimous": false
-    },
-    {
-      "id": "controller",
-      "title": "Controller",
-      "type": "candidate",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "MALIA M. COHEN"
-          ],
-          "status": "voted",
-          "count": 33,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -661,6 +666,180 @@
           "status": "insufficient_information",
           "count": 9,
           "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 3,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6-astra-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.7777777777777778,
+      "unanimous": false
+    },
+    {
+      "id": "secretary-of-state",
+      "title": "Secretary Of State",
+      "type": "candidate",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "SHIRLEY N. WEBER"
+          ],
+          "status": "voted",
+          "count": 45,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 8,
+          "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.8333333333333334,
+      "unanimous": false
+    },
+    {
+      "id": "controller",
+      "title": "Controller",
+      "type": "candidate",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "MALIA M. COHEN"
+          ],
+          "status": "voted",
+          "count": 42,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 11,
+          "runs": [
             "gpt-6-astra-trial-1",
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -669,25 +848,35 @@
             "gpt-6-luna-trial-2",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.7857142857142857,
+      "modalShare": 0.7777777777777778,
       "unanimous": false
     },
     {
       "id": "treasurer",
       "title": "Treasurer",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "ELENI KOUNALAKIS"
           ],
           "status": "voted",
-          "count": 34,
+          "count": 43,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -722,13 +911,22 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 8,
+          "count": 10,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -737,25 +935,35 @@
             "gpt-6-luna-trial-2",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.8095238095238095,
+      "modalShare": 0.7962962962962963,
       "unanimous": false
     },
     {
       "id": "attorney-general",
       "title": "Attorney General",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "ROB BONTA"
           ],
           "status": "voted",
-          "count": 34,
+          "count": 43,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -790,13 +998,22 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 8,
+          "count": 10,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -805,25 +1022,35 @@
             "gpt-5.6-sol-trial-3",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.8095238095238095,
+      "modalShare": 0.7962962962962963,
       "unanimous": false
     },
     {
       "id": "insurance-commissioner",
       "title": "Insurance Commissioner",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "BEN ALLEN"
           ],
           "status": "voted",
-          "count": 32,
+          "count": 39,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -856,13 +1083,20 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 7,
+          "count": 10,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6-luna-trial-1",
@@ -870,7 +1104,10 @@
             "gpt-5.6-luna-trial-3",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
@@ -884,23 +1121,32 @@
             "gpt-5.6-terra-trial-3",
             "x-ai%2Fgrok-4.7-trial-3"
           ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 2,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
         }
       ],
-      "modalShare": 0.7619047619047619,
+      "modalShare": 0.7222222222222222,
       "unanimous": false
     },
     {
       "id": "member-state-board-of-equalization-2nd-district",
       "title": "Member, State Board Of Equalization, 2nd District",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "SALLY J. LIEBER"
           ],
           "status": "voted",
-          "count": 30,
+          "count": 35,
           "runs": [
             "gpt-6-astra-trial-1",
             "gpt-6-astra-trial-2",
@@ -931,13 +1177,18 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 9,
+          "count": 14,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -947,7 +1198,12 @@
             "gpt-5.6-luna-trial-1",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-2"
           ]
         },
         {
@@ -955,29 +1211,38 @@
             "JOHN PIMENTEL"
           ],
           "status": "voted",
-          "count": 3,
+          "count": 4,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3"
+            "gpt-6.1-sol-trial-3",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.7142857142857143,
+      "modalShare": 0.6481481481481481,
       "unanimous": false
     },
     {
       "id": "10th-congressional-district",
       "title": "10th Congressional District",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "MARK DESAULNIER"
           ],
           "status": "voted",
-          "count": 32,
+          "count": 41,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1010,73 +1275,16 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 10,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
-          ]
-        }
-      ],
-      "modalShare": 0.7619047619047619,
-      "unanimous": false
-    },
-    {
-      "id": "20th-assembly-district",
-      "title": "20th Assembly District",
-      "type": "candidate",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "LIZ ORTEGA"
-          ],
-          "status": "voted",
-          "count": 30,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -1084,6 +1292,91 @@
           "status": "insufficient_information",
           "count": 12,
           "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.7592592592592593,
+      "unanimous": false
+    },
+    {
+      "id": "20th-assembly-district",
+      "title": "20th Assembly District",
+      "type": "candidate",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "LIZ ORTEGA"
+          ],
+          "status": "voted",
+          "count": 39,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 14,
+          "runs": [
             "gpt-6-astra-trial-1",
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -1095,25 +1388,35 @@
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.7142857142857143,
+      "modalShare": 0.7222222222222222,
       "unanimous": false
     },
     {
       "id": "state-superintendent-of-public-instruction",
       "title": "State Superintendent Of Public Instruction",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "RICHARD BARRERA"
           ],
           "status": "voted",
-          "count": 36,
+          "count": 44,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1150,36 +1453,55 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 6,
+          "count": 9,
           "runs": [
             "gpt-6.1-terra-trial-2",
             "gpt-6-luna-trial-1",
             "gpt-6-luna-trial-2",
             "x-ai%2Fgrok-4.7-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.8571428571428571,
+      "modalShare": 0.8148148148148148,
       "unanimous": false
     },
     {
       "id": "chabot-las-positas-community-college-district-trustee-area-2",
       "title": "Chabot - Las Positas Community College District Trustee, Area 2",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 29,
+          "count": 37,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-3",
@@ -1209,7 +1531,15 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3"
           ]
         },
         {
@@ -1217,7 +1547,7 @@
             "LINDA GRANGER"
           ],
           "status": "voted",
-          "count": 12,
+          "count": 15,
           "runs": [
             "gpt-6.1-sol-trial-2",
             "gpt-6-sol-trial-1",
@@ -1230,7 +1560,10 @@
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -1242,21 +1575,63 @@
           "runs": [
             "x-ai%2Fgrok-4.3-trial-1"
           ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
         }
       ],
-      "modalShare": 0.6904761904761905,
+      "modalShare": 0.6851851851851852,
       "unanimous": false
     },
     {
       "id": "for-mayor-san-leandro",
       "title": "For Mayor, San Leandro",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
+        {
+          "choices": [
+            "JUAN GONZÁLEZ III"
+          ],
+          "status": "voted",
+          "count": 25,
+          "runs": [
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 19,
+          "count": 24,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-terra-trial-1",
@@ -1276,34 +1651,12 @@
             "x-ai%2Fgrok-4.3-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [
-            "JUAN GONZÁLEZ III"
-          ],
-          "status": "voted",
-          "count": 18,
-          "runs": [
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
@@ -1321,21 +1674,21 @@
           ]
         }
       ],
-      "modalShare": 0.4523809523809524,
+      "modalShare": 0.46296296296296297,
       "unanimous": false
     },
     {
       "id": "for-member-of-city-council-1-san-leandro",
       "title": "For Member Of City Council #1, San Leandro",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "SBEYDEH VIVEROS-WALTON"
           ],
           "status": "voted",
-          "count": 23,
+          "count": 29,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1359,13 +1712,19 @@
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 16,
+          "count": 21,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -1382,35 +1741,41 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2"
           ]
         },
         {
           "choices": [],
           "status": "abstain",
-          "count": 3,
+          "count": 4,
           "runs": [
             "gpt-6-sol-trial-3",
             "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-2"
+            "gpt-5.6-terra-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.5476190476190477,
+      "modalShare": 0.5370370370370371,
       "unanimous": false
     },
     {
       "id": "for-member-of-city-council-2-san-leandro-short-term",
       "title": "For Member Of City Council #2, San Leandro - Short Term",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "JAMES AGUILAR"
           ],
           "status": "voted",
-          "count": 20,
+          "count": 26,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1431,13 +1796,19 @@
             "z-ai%2Fglm-5.3-trial-3",
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 19,
+          "count": 24,
           "runs": [
             "gpt-6-astra-trial-3",
             "gpt-6.1-terra-trial-1",
@@ -1457,33 +1828,39 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2"
           ]
         },
         {
           "choices": [],
           "status": "abstain",
-          "count": 3,
+          "count": 4,
           "runs": [
             "gpt-6-sol-trial-3",
             "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-2"
+            "gpt-5.6-terra-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.47619047619047616,
+      "modalShare": 0.48148148148148145,
       "unanimous": false
     },
     {
       "id": "for-member-of-city-council-3-san-leandro",
       "title": "For Member Of City Council #3, San Leandro",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 27,
+          "count": 34,
           "runs": [
             "gpt-6.1-sol-trial-2",
             "gpt-6.1-terra-trial-1",
@@ -1511,7 +1888,14 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3"
           ]
         },
         {
@@ -1519,7 +1903,7 @@
             "LEE THOMAS"
           ],
           "status": "voted",
-          "count": 8,
+          "count": 12,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-3",
@@ -1528,7 +1912,11 @@
             "gpt-5.6-sol-trial-3",
             "x-ai%2Fgrok-4.3-trial-1",
             "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-2"
+            "z-ai%2Fglm-5.3-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -1549,27 +1937,28 @@
         {
           "choices": [],
           "status": "abstain",
-          "count": 1,
+          "count": 2,
           "runs": [
-            "gpt-6-astra-trial-1"
+            "gpt-6-astra-trial-1",
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.6428571428571429,
+      "modalShare": 0.6296296296296297,
       "unanimous": false
     },
     {
       "id": "for-member-of-city-council-5-san-leandro",
       "title": "For Member Of City Council #5, San Leandro",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "XOUHOA BOWEN"
           ],
           "status": "voted",
-          "count": 23,
+          "count": 29,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1593,13 +1982,19 @@
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 16,
+          "count": 20,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -1616,35 +2011,41 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2"
           ]
         },
         {
           "choices": [],
           "status": "abstain",
-          "count": 3,
+          "count": 5,
           "runs": [
             "gpt-6-sol-trial-3",
             "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-2"
+            "gpt-5.6-terra-trial-2",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.5476190476190477,
+      "modalShare": 0.5370370370370371,
       "unanimous": false
     },
     {
       "id": "ac-transit-district-director-ward-5",
       "title": "AC Transit District Director, Ward 5",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "MURPHY MCCALLEY"
           ],
           "status": "voted",
-          "count": 24,
+          "count": 30,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1669,13 +2070,19 @@
             "google%2Fgemini-4-argon-trial-1",
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 17,
+          "count": 22,
           "runs": [
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
@@ -1693,7 +2100,12 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
@@ -1705,23 +2117,31 @@
           "runs": [
             "gpt-5.6-terra-trial-3"
           ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
         }
       ],
-      "modalShare": 0.5714285714285714,
+      "modalShare": 0.5555555555555556,
       "unanimous": false
     },
     {
       "id": "bart-director-district-4",
       "title": "BART Director, District 4",
       "type": "candidate",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "ROBERT RABURN"
           ],
           "status": "voted",
-          "count": 28,
+          "count": 34,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1750,49 +2170,15 @@
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 13,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [
-            "LUIS REYNOSO"
-          ],
-          "status": "voted",
-          "count": 1,
-          "runs": [
-            "gpt-5.6-terra-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.6666666666666666,
-      "unanimous": false
-    },
-    {
-      "id": "ebmud-director-ward-7",
-      "title": "EBMUD Director, Ward 7",
-      "type": "candidate",
-      "total": 42,
-      "outcomes": [
         {
           "choices": [],
           "status": "insufficient_information",
@@ -1805,6 +2191,59 @@
             "gpt-6-luna-trial-2",
             "gpt-6-luna-trial-3",
             "gpt-5.6-terra-trial-1",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [
+            "LUIS REYNOSO"
+          ],
+          "status": "voted",
+          "count": 1,
+          "runs": [
+            "gpt-5.6-terra-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6296296296296297,
+      "unanimous": false
+    },
+    {
+      "id": "ebmud-director-ward-7",
+      "title": "EBMUD Director, Ward 7",
+      "type": "candidate",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 23,
+          "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
             "gpt-5.6-terra-trial-2",
             "gpt-5.6-luna-trial-1",
             "gpt-5.6-luna-trial-2",
@@ -1815,7 +2254,12 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
@@ -1823,7 +2267,7 @@
             "APRIL CHAN"
           ],
           "status": "voted",
-          "count": 15,
+          "count": 20,
           "runs": [
             "gpt-6-astra-trial-2",
             "gpt-6-sol-trial-1",
@@ -1839,7 +2283,12 @@
             "z-ai%2Fglm-5.3-trial-3",
             "google%2Fgemini-4-argon-trial-1",
             "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3"
+            "google%2Fgemini-4-argon-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -1847,7 +2296,7 @@
             "GARY WOLFF"
           ],
           "status": "voted",
-          "count": 9,
+          "count": 10,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -1857,1085 +2306,27 @@
             "gpt-5.6-sol-trial-3",
             "z-ai%2Fglm-5.3-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-fable-5-1-trial-2"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.42857142857142855,
+      "modalShare": 0.42592592592592593,
       "unanimous": false
     },
     {
       "id": "retention-kelli-m-evans",
       "title": "Associate Justice of the Supreme Court: Kelli M. Evans",
       "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 28,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 14,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.6666666666666666,
-      "unanimous": false
-    },
-    {
-      "id": "retention-joshua-groban",
-      "title": "Associate Justice of the Supreme Court: Joshua Groban",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 28,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 14,
-          "runs": [
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.6666666666666666,
-      "unanimous": false
-    },
-    {
-      "id": "retention-charles-a-smiley",
-      "title": "Associate Justice, Court of Appeal, First District, Division One: Charles A. Smiley",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-kathleen-m-banke",
-      "title": "Associate Justice, Court of Appeal, First District, Division One: Kathleen M. Banke",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-monique-langhorne-wilson",
-      "title": "Associate Justice, Court of Appeal, First District, Division One: Monique Langhorne Wilson",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-therese-m-stewart",
-      "title": "Presiding Justice, Court of Appeal, First District, Division Two: Therese M. Stewart",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-tara-m-desautels",
-      "title": "Associate Justice, Court of Appeal, First District, Division Two: Tara M. Desautels",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 21,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 21,
-          "runs": [
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5,
-      "unanimous": false
-    },
-    {
-      "id": "retention-ioana-petrou",
-      "title": "Associate Justice, Court of Appeal, First District, Division Three: Ioana Petrou",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-victor-a-rodriguez",
-      "title": "Associate Justice, Court of Appeal, First District, Division Three: Victor A. Rodriguez",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-tracie-l-brown",
-      "title": "Presiding Justice, Court of Appeal, First District, Division Four: Tracie L. Brown",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-mark-simons",
-      "title": "Associate Justice, Court of Appeal, First District, Division Five: Mark Simons",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-danny-y-chou",
-      "title": "Associate Justice, Court of Appeal, First District, Division Five: Danny Y. Chou",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "retention-gordon-burns",
-      "title": "Associate Justice, Court of Appeal, First District, Division Five: Gordon Burns",
-      "type": "retention",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 22,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-3",
-            "gpt-6-sol-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 20,
-          "runs": [
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 0.5238095238095238,
-      "unanimous": false
-    },
-    {
-      "id": "ca-proposition-1",
-      "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
-      "type": "measure",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 42,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 1,
-      "unanimous": true
-    },
-    {
-      "id": "ca-proposition-2",
-      "title": "Proposition 2 Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
-      "type": "measure",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 42,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 1,
-      "unanimous": true
-    },
-    {
-      "id": "ca-proposition-3",
-      "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
-      "type": "measure",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 42,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6.1-sol-trial-2",
-            "gpt-6.1-sol-trial-3",
-            "gpt-6-astra-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-astra-trial-3",
-            "gpt-6.1-terra-trial-1",
-            "gpt-6.1-terra-trial-2",
-            "gpt-6.1-terra-trial-3",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-2",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-terra-trial-2",
-            "gpt-5.6-terra-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-1",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.7-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        }
-      ],
-      "modalShare": 1,
-      "unanimous": true
-    },
-    {
-      "id": "ca-proposition-4",
-      "title": "Proposition 4 Repeals Prohibition Against Public Funding of Election Campaigns. Legislative Statute.",
-      "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
@@ -2950,6 +2341,1370 @@
             "gpt-6-astra-trial-1",
             "gpt-6-astra-trial-2",
             "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 14,
+          "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.7222222222222222,
+      "unanimous": false
+    },
+    {
+      "id": "retention-joshua-groban",
+      "title": "Associate Justice of the Supreme Court: Joshua Groban",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 39,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 14,
+          "runs": [
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.7222222222222222,
+      "unanimous": false
+    },
+    {
+      "id": "retention-charles-a-smiley",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Charles A. Smiley",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-kathleen-m-banke",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Kathleen M. Banke",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-monique-langhorne-wilson",
+      "title": "Associate Justice, Court of Appeal, First District, Division One: Monique Langhorne Wilson",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-therese-m-stewart",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Two: Therese M. Stewart",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-tara-m-desautels",
+      "title": "Associate Justice, Court of Appeal, First District, Division Two: Tara M. Desautels",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 32,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 21,
+          "runs": [
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.5925925925925926,
+      "unanimous": false
+    },
+    {
+      "id": "retention-ioana-petrou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Ioana Petrou",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-victor-a-rodriguez",
+      "title": "Associate Justice, Court of Appeal, First District, Division Three: Victor A. Rodriguez",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 32,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 21,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.5925925925925926,
+      "unanimous": false
+    },
+    {
+      "id": "retention-tracie-l-brown",
+      "title": "Presiding Justice, Court of Appeal, First District, Division Four: Tracie L. Brown",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 32,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 21,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.5925925925925926,
+      "unanimous": false
+    },
+    {
+      "id": "retention-mark-simons",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Mark Simons",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-danny-y-chou",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Danny Y. Chou",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "retention-gordon-burns",
+      "title": "Associate Justice, Court of Appeal, First District, Division Five: Gordon Burns",
+      "type": "retention",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 33,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-3",
+            "gpt-6-sol-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 20,
+          "runs": [
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        }
+      ],
+      "modalShare": 0.6111111111111112,
+      "unanimous": false
+    },
+    {
+      "id": "ca-proposition-1",
+      "title": "Proposition 1 Authorizes Bonds for Housing Affordability Programs. Legislative Statute.",
+      "type": "measure",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 53,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        }
+      ],
+      "modalShare": 0.9814814814814815,
+      "unanimous": false
+    },
+    {
+      "id": "ca-proposition-2",
+      "title": "Proposition 2 Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+      "type": "measure",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 54,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        }
+      ],
+      "modalShare": 1,
+      "unanimous": true
+    },
+    {
+      "id": "ca-proposition-3",
+      "title": "Proposition 3 Provides Permanent Funding for Schools and Health Care by Extending Existing Tax on High Incomes. Initiative Constitutional Amendment.",
+      "type": "measure",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 53,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
+            "gpt-6.1-terra-trial-1",
+            "gpt-6.1-terra-trial-2",
+            "gpt-6.1-terra-trial-3",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-2",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-terra-trial-2",
+            "gpt-5.6-terra-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-1",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.7-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        }
+      ],
+      "modalShare": 0.9814814814814815,
+      "unanimous": false
+    },
+    {
+      "id": "ca-proposition-4",
+      "title": "Proposition 4 Repeals Prohibition Against Public Funding of Election Campaigns. Legislative Statute.",
+      "type": "measure",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 49,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6.1-sol-trial-2",
+            "gpt-6.1-sol-trial-3",
+            "gpt-6-astra-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-astra-trial-3",
             "gpt-6.1-terra-trial-1",
             "gpt-6.1-terra-trial-2",
             "gpt-6.1-terra-trial-3",
@@ -2982,7 +3737,17 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -2999,27 +3764,36 @@
         {
           "choices": [],
           "status": "insufficient_information",
+          "count": 2,
+          "runs": [
+            "x-ai%2Fgrok-4.3-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
           "count": 1,
           "runs": [
-            "x-ai%2Fgrok-4.3-trial-3"
+            "claude-code-claude-haiku-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.9285714285714286,
+      "modalShare": 0.9074074074074074,
       "unanimous": false
     },
     {
       "id": "ca-proposition-5",
       "title": "Proposition 5 Changes Recall Election Process for Statewide Officers. Legislative Constitutional Amendment.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "Yes"
           ],
           "status": "voted",
-          "count": 26,
+          "count": 32,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3046,84 +3820,13 @@
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
-          ]
-        },
-        {
-          "choices": [
-            "No"
-          ],
-          "status": "voted",
-          "count": 13,
-          "runs": [
-            "gpt-6-astra-trial-2",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-6-luna-trial-3",
-            "gpt-5.6-terra-trial-1",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "insufficient_information",
-          "count": 3,
-          "runs": [
-            "x-ai%2Fgrok-4.3-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        }
-      ],
-      "modalShare": 0.6190476190476191,
-      "unanimous": false
-    },
-    {
-      "id": "ca-proposition-37",
-      "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
-      "type": "measure",
-      "total": 42,
-      "outcomes": [
-        {
-          "choices": [
-            "Yes"
-          ],
-          "status": "voted",
-          "count": 26,
-          "runs": [
-            "gpt-6.1-sol-trial-1",
-            "gpt-6-astra-trial-2",
-            "gpt-6-sol-trial-1",
-            "gpt-6-sol-trial-3",
-            "gpt-6-luna-trial-1",
-            "gpt-6-luna-trial-2",
-            "gpt-5.6-sol-trial-1",
-            "gpt-5.6-sol-trial-2",
-            "gpt-5.6-sol-trial-3",
-            "gpt-5.6-luna-trial-1",
-            "gpt-5.6-luna-trial-2",
-            "gpt-5.6-luna-trial-3",
-            "x-ai%2Fgrok-4.7-trial-2",
-            "x-ai%2Fgrok-4.3-trial-1",
-            "x-ai%2Fgrok-4.3-trial-2",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "z-ai%2Fglm-5.3-trial-1",
-            "z-ai%2Fglm-5.3-trial-2",
-            "z-ai%2Fglm-5.3-trial-3",
-            "google%2Fgemini-4-argon-trial-1",
-            "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -3133,6 +3836,100 @@
           "status": "voted",
           "count": 14,
           "runs": [
+            "gpt-6-astra-trial-2",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-6-luna-trial-3",
+            "gpt-5.6-terra-trial-1",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "claude-code-claude-haiku-5-5-trial-2"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 6,
+          "runs": [
+            "x-ai%2Fgrok-4.3-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 2,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3"
+          ]
+        }
+      ],
+      "modalShare": 0.5925925925925926,
+      "unanimous": false
+    },
+    {
+      "id": "ca-proposition-37",
+      "title": "Proposition 37 Creates Loan Program for Middle-Income Buyers of Qualified New Homes. Initiative Statute.",
+      "type": "measure",
+      "total": 54,
+      "outcomes": [
+        {
+          "choices": [
+            "Yes"
+          ],
+          "status": "voted",
+          "count": 30,
+          "runs": [
+            "gpt-6.1-sol-trial-1",
+            "gpt-6-astra-trial-2",
+            "gpt-6-sol-trial-1",
+            "gpt-6-sol-trial-3",
+            "gpt-6-luna-trial-1",
+            "gpt-6-luna-trial-2",
+            "gpt-5.6-sol-trial-1",
+            "gpt-5.6-sol-trial-2",
+            "gpt-5.6-sol-trial-3",
+            "gpt-5.6-luna-trial-1",
+            "gpt-5.6-luna-trial-2",
+            "gpt-5.6-luna-trial-3",
+            "x-ai%2Fgrok-4.7-trial-2",
+            "x-ai%2Fgrok-4.3-trial-1",
+            "x-ai%2Fgrok-4.3-trial-2",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "z-ai%2Fglm-5.3-trial-1",
+            "z-ai%2Fglm-5.3-trial-2",
+            "z-ai%2Fglm-5.3-trial-3",
+            "google%2Fgemini-4-argon-trial-1",
+            "google%2Fgemini-4-argon-trial-2",
+            "google%2Fgemini-4-argon-trial-3",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1"
+          ]
+        },
+        {
+          "choices": [
+            "No"
+          ],
+          "status": "voted",
+          "count": 18,
+          "runs": [
             "gpt-6.1-sol-trial-2",
             "gpt-6.1-sol-trial-3",
             "gpt-6-astra-trial-1",
@@ -3146,41 +3943,49 @@
             "gpt-5.6-terra-trial-3",
             "x-ai%2Fgrok-4.7-trial-1",
             "x-ai%2Fgrok-4.7-trial-3",
-            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1"
-          ]
-        },
-        {
-          "choices": [],
-          "status": "abstain",
-          "count": 1,
-          "runs": [
-            "gpt-6.1-terra-trial-1"
+            "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 1,
+          "count": 4,
           "runs": [
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 2,
+          "runs": [
+            "gpt-6.1-terra-trial-1",
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.6190476190476191,
+      "modalShare": 0.5555555555555556,
       "unanimous": false
     },
     {
       "id": "ca-proposition-38",
       "title": "Proposition 38 Authorizes Bonds for Immunology Medical Research. Initiative Statute.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 32,
+          "count": 40,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3213,7 +4018,15 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -3235,29 +4048,40 @@
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 3,
+          "count": 5,
           "runs": [
             "gpt-5.6-luna-trial-1",
             "x-ai%2Fgrok-4.3-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 2,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.7619047619047619,
+      "modalShare": 0.7407407407407407,
       "unanimous": false
     },
     {
       "id": "ca-proposition-39",
       "title": "Proposition 39 Prohibits Citizens from Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 42,
+          "count": 53,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3300,25 +4124,44 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 1,
-      "unanimous": true
+      "modalShare": 0.9814814814814815,
+      "unanimous": false
     },
     {
       "id": "ca-proposition-40",
       "title": "Proposition 40 Imposes One-Time Tax on Certain Taxpayers. Initiative Constitutional Amendment and Statute.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 26,
+          "count": 34,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3345,7 +4188,15 @@
             "google%2Fgemini-4-argon-trial-1",
             "google%2Fgemini-4-argon-trial-2",
             "google%2Fgemini-4-argon-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -3370,39 +4221,43 @@
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 5,
+          "count": 7,
           "runs": [
             "gpt-6-luna-trial-2",
             "gpt-5.6-luna-trial-3",
             "x-ai%2Fgrok-4.3-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "abstain",
-          "count": 1,
+          "count": 3,
           "runs": [
-            "gpt-6.1-terra-trial-1"
+            "gpt-6.1-terra-trial-1",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.6190476190476191,
+      "modalShare": 0.6296296296296297,
       "unanimous": false
     },
     {
       "id": "ca-proposition-41",
       "title": "Proposition 41 Prohibits New State Taxes That Exclude Revenues from State Spending Limit. Requires Audits for New State Special Taxes. Initiative Constitutional Amendment.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 39,
+          "count": 48,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3442,7 +4297,16 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -3456,23 +4320,40 @@
             "x-ai%2Fgrok-4.3-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1"
           ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 2,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
         }
       ],
-      "modalShare": 0.9285714285714286,
+      "modalShare": 0.8888888888888888,
       "unanimous": false
     },
     {
       "id": "ca-proposition-42",
       "title": "Proposition 42 Prohibits New State Personal Property Taxes and Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 38,
+          "count": 46,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3511,7 +4392,15 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
@@ -3519,37 +4408,48 @@
             "Yes"
           ],
           "status": "voted",
-          "count": 3,
+          "count": 4,
           "runs": [
             "x-ai%2Fgrok-4.3-trial-2",
             "x-ai%2Fgrok-4.3-trial-3",
-            "google%2Fgemini-4-argon-trial-2"
+            "google%2Fgemini-4-argon-trial-2",
+            "claude-code-claude-haiku-5-5-trial-2"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
+          "count": 3,
+          "runs": [
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
           "count": 1,
           "runs": [
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.9047619047619048,
+      "modalShare": 0.8518518518518519,
       "unanimous": false
     },
     {
       "id": "ca-proposition-43",
       "title": "Proposition 43 Limit's Voters' Ability to Raise Revenues for Local Government Services. Legislative Constitutional Amendment.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 42,
+          "count": 52,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3592,25 +4492,51 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "abstain",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-1"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 1,
+          "runs": [
+            "claude-code-claude-haiku-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 1,
-      "unanimous": true
+      "modalShare": 0.9629629629629629,
+      "unanimous": false
     },
     {
       "id": "ca-proposition-44",
       "title": "Proposition 44 Requires Community Health Clinics Spend 90% of Revenue on Program Services. Initiative Statute.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 33,
+          "count": 40,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3644,7 +4570,28 @@
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
+          ]
+        },
+        {
+          "choices": [],
+          "status": "insufficient_information",
+          "count": 7,
+          "runs": [
+            "gpt-5.6-luna-trial-1",
+            "x-ai%2Fgrok-4.3-trial-3",
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
@@ -3663,38 +4610,29 @@
         },
         {
           "choices": [],
-          "status": "insufficient_information",
-          "count": 3,
-          "runs": [
-            "gpt-5.6-luna-trial-1",
-            "x-ai%2Fgrok-4.3-trial-3",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
-          ]
-        },
-        {
-          "choices": [],
           "status": "abstain",
-          "count": 1,
+          "count": 2,
           "runs": [
-            "z-ai%2Fglm-5.3-trial-3"
+            "z-ai%2Fglm-5.3-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.7857142857142857,
+      "modalShare": 0.7407407407407407,
       "unanimous": false
     },
     {
       "id": "ca-proposition-45",
       "title": "Proposition 45 Modifies Environmental Review for Certain Projects. Initiative Statute.",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "No"
           ],
           "status": "voted",
-          "count": 24,
+          "count": 26,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3719,7 +4657,9 @@
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-fable-5-1-trial-2"
           ]
         },
         {
@@ -3727,7 +4667,7 @@
             "Yes"
           ],
           "status": "voted",
-          "count": 14,
+          "count": 20,
           "runs": [
             "gpt-6.1-terra-trial-3",
             "gpt-6-sol-trial-1",
@@ -3742,43 +4682,53 @@
             "z-ai%2Fglm-5.3-trial-3",
             "google%2Fgemini-4-argon-trial-1",
             "google%2Fgemini-4-argon-trial-2",
-            "google%2Fgemini-4-argon-trial-3"
+            "google%2Fgemini-4-argon-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 3,
+          "count": 6,
           "runs": [
             "gpt-5.6-luna-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-1"
+            "moonshotai%2Fkimi-k3.1-pro-trial-1",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "abstain",
-          "count": 1,
+          "count": 2,
           "runs": [
-            "gpt-6.1-terra-trial-1"
+            "gpt-6.1-terra-trial-1",
+            "claude-code-claude-haiku-5-5-trial-1"
           ]
         }
       ],
-      "modalShare": 0.5714285714285714,
+      "modalShare": 0.48148148148148145,
       "unanimous": false
     },
     {
       "id": "alameda-measure-rtm",
       "title": "Measure RTM - Regional Transit Measure",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "Yes"
           ],
           "status": "voted",
-          "count": 35,
+          "count": 44,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3814,13 +4764,22 @@
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 7,
+          "count": 10,
           "runs": [
             "gpt-6-luna-trial-2",
             "gpt-5.6-terra-trial-2",
@@ -3828,25 +4787,28 @@
             "x-ai%2Fgrok-4.3-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.8333333333333334,
+      "modalShare": 0.8148148148148148,
       "unanimous": false
     },
     {
       "id": "alameda-measure-j",
       "title": "Measure J - San Lorenzo USD - Education Parcel Tax",
       "type": "measure",
-      "total": 42,
+      "total": 54,
       "outcomes": [
         {
           "choices": [
             "Yes"
           ],
           "status": "voted",
-          "count": 33,
+          "count": 39,
           "runs": [
             "gpt-6.1-sol-trial-1",
             "gpt-6.1-sol-trial-2",
@@ -3880,13 +4842,19 @@
             "google%2Fgemini-4-argon-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-1",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-2",
-            "moonshotai%2Fkimi-k3.1-pro-trial-2"
+            "moonshotai%2Fkimi-k3.1-pro-trial-2",
+            "claude-code-claude-opus-5-5-trial-1",
+            "claude-code-claude-opus-5-5-trial-2",
+            "claude-code-claude-opus-5-5-trial-3",
+            "claude-code-claude-fable-5-1-trial-1",
+            "claude-code-claude-fable-5-1-trial-2",
+            "claude-code-claude-fable-5-1-trial-3"
           ]
         },
         {
           "choices": [],
           "status": "insufficient_information",
-          "count": 9,
+          "count": 15,
           "runs": [
             "gpt-6.1-terra-trial-2",
             "gpt-6-luna-trial-1",
@@ -3896,11 +4864,17 @@
             "x-ai%2Fgrok-4.3-trial-3",
             "deepseek%2Fdeepseek-v4.1-flash-1017-trial-3",
             "moonshotai%2Fkimi-k3.1-pro-trial-1",
-            "moonshotai%2Fkimi-k3.1-pro-trial-3"
+            "moonshotai%2Fkimi-k3.1-pro-trial-3",
+            "claude-code-claude-haiku-5-5-trial-1",
+            "claude-code-claude-haiku-5-5-trial-2",
+            "claude-code-claude-haiku-5-5-trial-3",
+            "claude-code-claude-sonnet-5-5-trial-1",
+            "claude-code-claude-sonnet-5-5-trial-2",
+            "claude-code-claude-sonnet-5-5-trial-3"
           ]
         }
       ],
-      "modalShare": 0.7857142857142857,
+      "modalShare": 0.7222222222222222,
       "unanimous": false
     }
   ],
@@ -3908,14 +4882,14 @@
     "ebmud-director-ward-7",
     "for-mayor-san-leandro",
     "for-member-of-city-council-2-san-leandro-short-term",
+    "ca-proposition-45",
+    "for-member-of-city-council-1-san-leandro",
+    "for-member-of-city-council-5-san-leandro",
+    "ac-transit-district-director-ward-5",
+    "ca-proposition-37",
     "retention-tara-m-desautels",
-    "retention-charles-a-smiley",
-    "retention-kathleen-m-banke",
-    "retention-monique-langhorne-wilson",
-    "retention-therese-m-stewart",
-    "retention-ioana-petrou",
     "retention-victor-a-rodriguez",
     "retention-tracie-l-brown",
-    "retention-mark-simons"
+    "ca-proposition-5"
   ]
 }
