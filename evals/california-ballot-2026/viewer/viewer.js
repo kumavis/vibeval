@@ -290,7 +290,7 @@ function renderRun() {
       const d = decisions.get(contest.id), article = el('article', undefined, 'contest-card'); article.id = `ballot-contest-${index}`;
       article.dataset.search = `${contest.title} ${contest.jurisdiction} ${(d?.choices || []).join(' ')}`.toLowerCase();
       article.append(el('h4', contest.title), el('p', `${contest.jurisdiction} · ${contest.ranked ? 'ranked choice' : `select up to ${contest.maxSelections}`}`, 'jurisdiction'), choices(d, contest));
-      if (d) article.append(el('p', d.rationale, 'rationale'), sourceLinks(d.sources, response)); list.append(article);
+      if (d) article.append(el('blockquote', d.rationale, 'rationale'), sourceLinks(d.sources, response)); list.append(article);
     });
     filter.addEventListener('input', () => { const q = filter.value.trim().toLowerCase(); for (const article of list.children) article.hidden = !article.dataset.search.includes(q); }); root.append(list);
     const sources = el('ol', undefined, 'source-list'); for (const s of response.sources || []) { const li = el('li'); li.append(link(`${s.id} · ${s.title}`, s.url)); sources.append(li); } root.append(disclosure(`All cited sources (${response.sources?.length || 0})`, sources));
@@ -510,7 +510,7 @@ async function load() {
     $('scope').textContent = typeof scope === 'string' ? scope : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
     $('run-select').disabled = !runs.length; $('contest-select').disabled = !contests.length;
     selected = runs.find(r => r.status === 'completed') || runs[0]; if (selected) $('run-select').value = selected.id;
-    heroMap=rotatingMap($('rotating-map'),{axes,runs:visibleRuns(),axisValue,name,color,onInspect:id=>{chooseRun(id);$('inspect-title').scrollIntoView({block:'start'});}});
+    heroMap=rotatingMap($('rotating-map'),{axes,runs:visibleRuns(),axisValue,name,color});
     renderCohort(); renderAxisDescriptions(); renderMethod();
     const collection=data.batches?.find(b=>b.provider==='claude-code');if(collection){const notice=el('p',`Claude collection began ${new Date(collection.createdAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'short'})}. Election results were not yet available at collection time (user-provided timing context). The original October 27 cutoff remains in every prompt; live retrieval differs from the earlier cohorts.`,'provider-note');$('provider-note').after(notice);}
     $('comparison-filter').addEventListener('input',filterComparison);

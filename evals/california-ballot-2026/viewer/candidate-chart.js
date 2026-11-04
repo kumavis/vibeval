@@ -22,7 +22,7 @@ export function candidateChart(contest, models, runs, ui) {
       const card=node('div',undefined,'candidate-round');
       card.append(node('strong',`Round ${run.trial} · ${kind==='excluded'?'Excluded':kind==='voted'?'Candidate vote':kind==='abstain'?'Abstained':'Insufficient information'}`));
       card.append(node('p',ui.choice(run)));
-      const rationale=ui.rationale(run);if(rationale)card.append(node('p',rationale,'candidate-rationale'));
+      const rationale=ui.rationale(run);if(rationale)card.append(node('blockquote',rationale,'candidate-rationale'));
       const inspect=node('button','Full response and sources ↗','vote-choice');inspect.type='button';inspect.addEventListener('click',()=>ui.inspect(run));card.append(inspect);rounds.append(card);
     }
     detail.append(rounds);
