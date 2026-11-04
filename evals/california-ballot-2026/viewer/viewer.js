@@ -507,12 +507,12 @@ async function load() {
     }
     models = [...new Set([...(data.batch?.models || []), ...runs.map(r => r.model)])];
     const scope = data.ballot?.scope ?? data.batch?.scope;
-    $('scope').textContent = typeof scope === 'string' ? scope : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
+    $('scope').textContent = typeof scope === 'string' ? scope.replace('This is a specific sample ballot, not a personalized ballot.', "This is a randomly selected district's ballot.") : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
     $('run-select').disabled = !runs.length; $('contest-select').disabled = !contests.length;
     selected = runs.find(r => r.status === 'completed') || runs[0]; if (selected) $('run-select').value = selected.id;
     heroMap=rotatingMap($('rotating-map'),{axes,runs:visibleRuns(),axisValue,name,color});
     renderCohort(); renderAxisDescriptions(); renderMethod();
-    const collection=data.batches?.find(b=>b.provider==='claude-code');if(collection){const notice=el('p',`Claude collection began ${new Date(collection.createdAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'short'})}. Election results were not yet available at collection time (user-provided timing context). The original October 27 cutoff remains in every prompt; live retrieval differs from the earlier cohorts.`,'provider-note');$('provider-note').after(notice);}
+    const collection=data.batches?.find(b=>b.provider==='claude-code');if(collection){const notice=el('p',`Claude collection began ${new Date(collection.createdAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'short'})}. Election results were not yet available at collection time. The original October 27 cutoff remains in every prompt; live retrieval differs from the earlier cohorts.`,'provider-note');$('provider-note').after(notice);}
     $('comparison-filter').addEventListener('input',filterComparison);
     $('run-select').addEventListener('change', e => chooseRun(e.target.value)); $('contest-select').addEventListener('change', jumpToContest); $('spread-mode').addEventListener('change', renderCompass);
     $('cohort-select').addEventListener('change', e => { cohort = e.target.value; renderCohort(); });

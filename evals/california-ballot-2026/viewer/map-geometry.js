@@ -26,3 +26,32 @@ export function nextAxes(current, pool, cursor, vertical=false) {
   }
   return {axes:[...visible,current[vertical?1:0]],cursor};
 }
+
+// Two-axis motion follows one smooth path. Pitch is zero at aligned faces,
+// allowing invisible dimension swaps without resetting either rotation.
+export function projectHero([h,v,d], angle) {
+  const c=Math.cos(angle),s=Math.sin(angle),pitch=.38*Math.sin(2*angle),roll=.18;
+  const x=h*c+d*s,z=d*c-h*s;
+  const y=v*Math.cos(pitch)-z*Math.sin(pitch),depth=v*Math.sin(pitch)+z*Math.cos(pitch);
+  return [x*Math.cos(roll)-y*Math.sin(roll),x*Math.sin(roll)+y*Math.cos(roll),depth];
+}
+// Peak yaw speed matches a 4.5-second quarter-turn. Reversals ease through
+// zero velocity every 36 seconds, independently of political-axis swaps.
+export function heroAngle(milliseconds) {
+  return .35+4*Math.sin(milliseconds*Math.PI/36000);
+}
+export function heroWallOpacity(normal,angle) {
+  // Negative outward-normal depth identifies a far wall whose inside faces us.
+  return Math.min(1,Math.max(0,-projectHero(normal,angle)[2]*4));
+}
+export function nextHeroAxes(current,pool,cursor,quarter) {
+  const hidden=Math.abs(quarter)%2===1?0:2;
+  for(let n=0;n<pool.length;n++){
+    const index=(cursor+n)%pool.length,id=pool[index];
+    if(!current.includes(id)){
+      const axes=[...current];axes[hidden]=id;
+      return {axes,cursor:(index+1)%pool.length};
+    }
+  }
+  return {axes:[...current],cursor};
+}
