@@ -141,3 +141,11 @@ Offline validation (no paid model calls):
 node --test evals/california-ballot-2026/test/*.test.mjs
 npm run build
 ```
+
+## Rotating hero and observed spread
+
+The article opens with an orthographic 3D tour through seven multi-measure, ballot-derived indices. It alternates horizontal and vertical quarter-turns, replacing the departing dimension only when it points directly into the viewing direction. The tour uses a fixed sample with scores on all seven dimensions (45 of the current 54 valid rounds), so changing a hidden dimension does not change the visible model means. The detailed 2D map still uses the eligible rounds for its selected pair. Cohort filtering applies to both maps and the rest of the report. Self-assessments and single-proposition indicators are excluded from the automatic tour.
+
+The hero supports pause/resume, manual next projections, model highlighting and ballot inspection. Rotation stops on hover, keyboard focus, an offscreen chart or a hidden page; reduced-motion preferences start it paused. Its scoring disclosure lists the current dimensions' items and eligibility rules. Projections between aligned faces are animation, not additional scores.
+
+The 2D observed-spread dropdown offers the convex area between actual rounds (default), mean-to-round lines, per-axis ranges and points only. Duplicate locations collapse, collinear rounds produce a line and coincident rounds produce no invented area. These envelopes describe the observed sample, not uncertainty estimates or confidence regions.

@@ -1,3 +1,5 @@
+import {envelope} from './map-geometry.js';
+import {rotatingMap} from './rotating-map.js';
 import {candidateChart, disconnectCandidateCharts} from './candidate-chart.js';
 import {brand, modelColor, brandSvg} from './model-identity.js';
 import {averageBinaryVotes, researchEvidence, rankBallotItems} from './ballot-summary.js';
@@ -16,7 +18,7 @@ const status = r => String(r.status || 'unknown').replaceAll('_', ' ');
 const coordinate = n => Number.isFinite(n) && n >= -10 && n <= 10;
 const plotted = r => r.status === 'completed' && coordinate(axisValue(r, horizontalAxis)) && coordinate(axisValue(r, verticalAxis));
 const pretty = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-let data, runs = [], models = [], contests = [], selected, cohort = 'all';
+let data, runs = [], models = [], contests = [], selected, cohort = 'all', heroMap;
 const defaultAxes = [
   {id:'public-investment',label:'Public investment',description:'Choice-derived public financing preferences; requires the scoring export.',lowLabel:'Reject public financing',highLabel:'Expand public financing',min:-10,max:10,kind:'ballot-index'},
   {id:'redistributive-taxation',label:'Redistributive taxation',description:'Choice-derived high-income and wealth-tax preferences; requires the scoring export.',lowLabel:'Restrict high-income / wealth taxes',highLabel:'Enable high-income / wealth taxes',min:-10,max:10,kind:'ballot-index'},
@@ -197,10 +199,21 @@ function renderCompass() {
     row.append(el('span', finalRuns.length ? `n=${finalRuns.length} · ${format(mean(finalRuns, horizontalAxis))}, ${format(mean(finalRuns, verticalAxis))}` : 'no scores for this pair', 'legend-number')); $('legend').append(row);
     if (!modelPoints.length) continue;
     const mx = x(pointMean(modelPoints, 'x')), my = y(pointMean(modelPoints, 'y'));
-    if ($('show-spread').checked && modelPoints.length > 1) {
-      const ex = modelPoints.map(p => p.x), sy = modelPoints.map(p => p.y);
-      marks.append(svgEl('line', { x1: x(Math.min(...ex)), x2: x(Math.max(...ex)), y1: my, y2: my, stroke: color(model), class: 'spread' }), svgEl('line', { x1: mx, x2: mx, y1: y(Math.min(...sy)), y2: y(Math.max(...sy)), stroke: color(model), class: 'spread' }));
+    const spreadMode=$('spread-mode').value;
+    const spread=svgEl('g',{'data-model':model,class:'observed-spread','aria-hidden':'true'});
+    if(modelPoints.length>1 && spreadMode!=='none'){
+      if(spreadMode==='area'){
+        const hull=envelope(modelPoints);
+        if(hull.length>=3)spread.append(svgEl('polygon',{points:hull.map(p=>`${x(p.x)},${y(p.y)}`).join(' '),fill:color(model),'fill-opacity':selected?.model===model?0.2:0.08,stroke:color(model),'stroke-opacity':0.5,'stroke-width':1.5}));
+        else if(hull.length===2)spread.append(svgEl('line',{x1:x(hull[0].x),y1:y(hull[0].y),x2:x(hull[1].x),y2:y(hull[1].y),stroke:color(model),class:'spread'}));
+      } else if(spreadMode==='connections'){
+        for(const p of modelPoints)spread.append(svgEl('line',{x1:mx,y1:my,x2:x(p.x),y2:y(p.y),stroke:color(model),class:'spread'}));
+      } else {
+        const ex=modelPoints.map(p=>p.x),sy=modelPoints.map(p=>p.y);
+        spread.append(svgEl('line',{x1:x(Math.min(...ex)),x2:x(Math.max(...ex)),y1:my,y2:my,stroke:color(model),class:'spread'}),svgEl('line',{x1:mx,x2:mx,y1:y(Math.min(...sy)),y2:y(Math.max(...sy)),stroke:color(model),class:'spread'}));
+      }
     }
+    marks.append(spread);
     const meanMark=svgEl('g',{transform:`translate(${mx},${my})`,class:'compass-brand-mean',role:'button',tabindex:axisTransition?-1:0,'aria-label':`${name(model)} mean: ${horizontal.label} ${format(pointMean(modelPoints,'x'))}; ${vertical.label} ${format(pointMean(modelPoints,'y'))}; ${modelPoints.length} plotted runs`,'aria-pressed':String(selected?.model===model),style:`color:${color(model)}`});
     const radius=selected?.model===model?14:11;
     meanMark.append(svgEl('circle',{r:radius,fill:'var(--panel)',stroke:color(model),'stroke-width':selected?.model===model?2.5:1}));
@@ -455,7 +468,7 @@ function renderMethod() {
   const root = $('method'), b = data.batch || {};
   root.append(el('p', `${b.models?.length || models.length} requested models × ${b.trials || 3} independent rounds. Each attempt starts a fresh context using the shared frozen ballot and base research instructions. Model interfaces, reasoning settings, search services, tool budgets, and timing can differ between Codex, Claude Code, and OpenRouter cohorts; the configuration and provenance below record those differences.`));
   root.append(el('p', 'The harness checks ballot coverage, choices, response structure, citation format, and recorded completed web activity. These checks do not establish that sources are true, current, or support the claims. A completed run is not an endorsement or an accuracy score.'));
-  root.append(el('p', 'The plot uses only completed attempts with both coordinates supported. Means are arithmetic means of those plotted runs. Observed spread is the minimum to maximum along each axis, and three runs cannot establish statistical reliability.'));
+  root.append(el('p', 'The plot uses only completed attempts with both coordinates supported. Means are arithmetic means of those plotted runs. Spread modes show the observed envelope, mean-to-round connections, or per-axis ranges. None is a confidence region, and three runs cannot establish statistical reliability.'));
   root.append(el('p', 'Primary dimensions apply the published rubric to recorded ballot selections. Economic and social self-assessments remain supplementary and are not used in primary scores. Tap an axis label to choose a pair; the other coordinate stays fixed during the illustrative quarter-turn. Scores with missing evidence remain unplotted, including while switching axes. Intermediate projected positions are clipped to the fixed −10 to +10 chart domain.'));
   const selfStart = (data.prompt || '').indexOf('After completing the ballot');
   const selfEnd = (data.prompt || '').indexOf('\nReturn only', selfStart);
@@ -478,7 +491,7 @@ function renderCohort() {
   $('run-select').disabled = !shown.length;
   if (!shown.some(r => r.id === selected?.id)) selected = shown.find(r => r.status === 'completed') || shown[0];
   $('run-select').value = selected?.id || '';
-  renderCompass(); renderAttempts(); renderRun(); renderComparison(); renderResearch();
+  renderCompass(); renderAttempts(); renderRun(); renderComparison(); renderResearch(); heroMap?.update(visibleRuns());
 }
 
 async function load() {
@@ -497,10 +510,11 @@ async function load() {
     $('scope').textContent = typeof scope === 'string' ? scope : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
     $('run-select').disabled = !runs.length; $('contest-select').disabled = !contests.length;
     selected = runs.find(r => r.status === 'completed') || runs[0]; if (selected) $('run-select').value = selected.id;
+    heroMap=rotatingMap($('rotating-map'),{axes,runs:visibleRuns(),axisValue,name,color,onInspect:id=>{chooseRun(id);$('inspect-title').scrollIntoView({block:'start'});}});
     renderCohort(); renderAxisDescriptions(); renderMethod();
     const collection=data.batches?.find(b=>b.provider==='claude-code');if(collection){const notice=el('p',`Claude collection began ${new Date(collection.createdAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'short'})}. Election results were not yet available at collection time (user-provided timing context). The original October 27 cutoff remains in every prompt; live retrieval differs from the earlier cohorts.`,'provider-note');$('provider-note').after(notice);}
     $('comparison-filter').addEventListener('input',filterComparison);
-    $('run-select').addEventListener('change', e => chooseRun(e.target.value)); $('contest-select').addEventListener('change', jumpToContest); $('show-spread').addEventListener('change', renderCompass);
+    $('run-select').addEventListener('change', e => chooseRun(e.target.value)); $('contest-select').addEventListener('change', jumpToContest); $('spread-mode').addEventListener('change', renderCompass);
     $('cohort-select').addEventListener('change', e => { cohort = e.target.value; renderCohort(); });
     $('axis-select').addEventListener('change', e => { if (pickerDimension) changeAxis(pickerDimension, e.target.value); });
     $('axis-picker-close').addEventListener('click', closeAxisPicker);
