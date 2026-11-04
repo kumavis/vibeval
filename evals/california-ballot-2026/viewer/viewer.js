@@ -1,3 +1,5 @@
+import {envelope} from './map-geometry.js';
+import {rotatingMap} from './rotating-map.js';
 import {candidateChart, disconnectCandidateCharts} from './candidate-chart.js';
 import {brand, modelColor, brandSvg} from './model-identity.js';
 import {averageBinaryVotes, researchEvidence, rankBallotItems} from './ballot-summary.js';
@@ -7,16 +9,16 @@ const svgEl = (tag, attrs = {}, text) => { const n = document.createElementNS('h
 const compactName = model => name(model).replace(/-(sol|terra|luna|astra)$/, (_,tier)=>' '+tier[0].toUpperCase()+tier.slice(1)).replace(' (1017)','').replace(' (0902)','');
 function brandIcon(model) { const icon=el('span',undefined,'model-brand-icon'); icon.style.setProperty('--brand-icon',`url("brand-icons/${brand(model)}.svg")`); icon.setAttribute('aria-hidden','true'); return icon; }
 const format = n => Number.isFinite(n) ? n.toFixed(1) : '—';
-const modelNames = { 'x-ai/grok-4.7': 'Grok 4.7', 'x-ai/grok-4.3': 'Grok 4.3', 'z-ai/glm-5.3': 'GLM 5.3', 'google/gemini-4-argon': 'Gemini 4 Argon', 'deepseek/deepseek-v4.1-flash-1017': 'DeepSeek V4.1 Flash (1017)', 'qwen/qwen3.8-max-0902': 'Qwen 3.8 Max (0902)', 'moonshotai/kimi-k3.1-pro': 'Kimi K3.1 Pro', 'mistralai/mistral-large-4-0': 'Mistral Large 4.0' };
+const modelNames = { 'claude-haiku-5-5':'Claude Haiku 5.5', 'claude-sonnet-5-5':'Claude Sonnet 5.5', 'claude-opus-5-5':'Claude Opus 5.5', 'claude-fable-5-1':'Claude Fable 5.1', 'x-ai/grok-4.7': 'Grok 4.7', 'x-ai/grok-4.3': 'Grok 4.3', 'z-ai/glm-5.3': 'GLM 5.3', 'google/gemini-4-argon': 'Gemini 4 Argon', 'deepseek/deepseek-v4.1-flash-1017': 'DeepSeek V4.1 Flash (1017)', 'qwen/qwen3.8-max-0902': 'Qwen 3.8 Max (0902)', 'moonshotai/kimi-k3.1-pro': 'Kimi K3.1 Pro', 'mistralai/mistral-large-4-0': 'Mistral Large 4.0' };
 const name = model => modelNames[model] || String(model ?? 'Unknown model').replace(/^gpt-/, 'GPT-');
-const provider = r => r.provider === 'openrouter' || (!r.provider && String(r.model).includes('/')) ? 'openrouter' : 'codex';
-const providerName = r => provider(r) === 'openrouter' ? 'OpenRouter' : 'Codex';
+const provider = r => r.provider === 'claude-code' || String(r.model).startsWith('claude-') ? 'claude' : r.provider === 'openrouter' || (!r.provider && String(r.model).includes('/')) ? 'openrouter' : 'codex';
+const providerName = r => ({claude:'Claude Code',openrouter:'OpenRouter',codex:'Codex'}[provider(r)]);
 const label = r => `${name(r.model)} · ${providerName(r)} · round ${r.trial ?? '—'}`;
 const status = r => String(r.status || 'unknown').replaceAll('_', ' ');
 const coordinate = n => Number.isFinite(n) && n >= -10 && n <= 10;
 const plotted = r => r.status === 'completed' && coordinate(axisValue(r, horizontalAxis)) && coordinate(axisValue(r, verticalAxis));
 const pretty = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-let data, runs = [], models = [], contests = [], selected, cohort = 'all';
+let data, runs = [], models = [], contests = [], selected, cohort = 'all', heroMap;
 const defaultAxes = [
   {id:'public-investment',label:'Public investment',description:'Choice-derived public financing preferences; requires the scoring export.',lowLabel:'Reject public financing',highLabel:'Expand public financing',min:-10,max:10,kind:'ballot-index'},
   {id:'redistributive-taxation',label:'Redistributive taxation',description:'Choice-derived high-income and wealth-tax preferences; requires the scoring export.',lowLabel:'Restrict high-income / wealth taxes',highLabel:'Enable high-income / wealth taxes',min:-10,max:10,kind:'ballot-index'},
@@ -55,9 +57,9 @@ function researchMetrics(run) {
 }
 function researchSummary(run) {
   const m = researchMetrics(run), parts = [];
-  if (m.search !== undefined) parts.push(`${m.search} search requests`);
+  if (m.search !== undefined) parts.push(`${m.search} ${provider(run)==='claude'?'completed searches':'search requests'}`);
   else if (provider(run) === 'openrouter') parts.push('search count unreported');
-  if (m.fetch !== undefined) parts.push(`${m.fetch} fetch requests`);
+  if (m.fetch !== undefined) parts.push(`${m.fetch} ${provider(run)==='claude'?'completed fetches':'fetch requests'}`);
   else if (provider(run) === 'openrouter') parts.push('fetch count unreported');
   if (m.actions !== undefined) parts.push(`${m.actions} recorded web actions`);
   return parts.length ? parts.join(' · ') : 'Research activity not reported';
@@ -197,10 +199,21 @@ function renderCompass() {
     row.append(el('span', finalRuns.length ? `n=${finalRuns.length} · ${format(mean(finalRuns, horizontalAxis))}, ${format(mean(finalRuns, verticalAxis))}` : 'no scores for this pair', 'legend-number')); $('legend').append(row);
     if (!modelPoints.length) continue;
     const mx = x(pointMean(modelPoints, 'x')), my = y(pointMean(modelPoints, 'y'));
-    if ($('show-spread').checked && modelPoints.length > 1) {
-      const ex = modelPoints.map(p => p.x), sy = modelPoints.map(p => p.y);
-      marks.append(svgEl('line', { x1: x(Math.min(...ex)), x2: x(Math.max(...ex)), y1: my, y2: my, stroke: color(model), class: 'spread' }), svgEl('line', { x1: mx, x2: mx, y1: y(Math.min(...sy)), y2: y(Math.max(...sy)), stroke: color(model), class: 'spread' }));
+    const spreadMode=$('spread-mode').value;
+    const spread=svgEl('g',{'data-model':model,class:'observed-spread','aria-hidden':'true'});
+    if(modelPoints.length>1 && spreadMode!=='none'){
+      if(spreadMode==='area'){
+        const hull=envelope(modelPoints);
+        if(hull.length>=3)spread.append(svgEl('polygon',{points:hull.map(p=>`${x(p.x)},${y(p.y)}`).join(' '),fill:color(model),'fill-opacity':selected?.model===model?0.2:0.08,stroke:color(model),'stroke-opacity':0.5,'stroke-width':1.5}));
+        else if(hull.length===2)spread.append(svgEl('line',{x1:x(hull[0].x),y1:y(hull[0].y),x2:x(hull[1].x),y2:y(hull[1].y),stroke:color(model),class:'spread'}));
+      } else if(spreadMode==='connections'){
+        for(const p of modelPoints)spread.append(svgEl('line',{x1:mx,y1:my,x2:x(p.x),y2:y(p.y),stroke:color(model),class:'spread'}));
+      } else {
+        const ex=modelPoints.map(p=>p.x),sy=modelPoints.map(p=>p.y);
+        spread.append(svgEl('line',{x1:x(Math.min(...ex)),x2:x(Math.max(...ex)),y1:my,y2:my,stroke:color(model),class:'spread'}),svgEl('line',{x1:mx,x2:mx,y1:y(Math.min(...sy)),y2:y(Math.max(...sy)),stroke:color(model),class:'spread'}));
+      }
     }
+    marks.append(spread);
     const meanMark=svgEl('g',{transform:`translate(${mx},${my})`,class:'compass-brand-mean',role:'button',tabindex:axisTransition?-1:0,'aria-label':`${name(model)} mean: ${horizontal.label} ${format(pointMean(modelPoints,'x'))}; ${vertical.label} ${format(pointMean(modelPoints,'y'))}; ${modelPoints.length} plotted runs`,'aria-pressed':String(selected?.model===model),style:`color:${color(model)}`});
     const radius=selected?.model===model?14:11;
     meanMark.append(svgEl('circle',{r:radius,fill:'var(--panel)',stroke:color(model),'stroke-width':selected?.model===model?2.5:1}));
@@ -239,8 +252,8 @@ function renderRun() {
   const time = Number.isFinite(run.wallMs) ? `${(run.wallMs / 1000).toFixed(1)} seconds` : 'duration unavailable';
   root.append(el('p', `${providerName(run)} · ${run.effort || 'unspecified'} reasoning · ${time} · ${researchSummary(run)}`, 'run-meta'));
   const cost = firstNumber(run.usage?.costUsd, run.costUsd, run.usageCost);
-  if (cost !== undefined) root.append(el('p', `Reported API usage cost: $${cost.toFixed(4)} USD${run.usage?.costSource ? ` (${run.usage.costSource})` : ''}.`, 'run-meta'));
-  root.append(el('p', provider(run) === 'openrouter' ? 'OpenRouter delivery. Search and fetch counts are API-reported requests, not verified successful actions. Unreported metrics remain unknown. These counts are not directly equivalent to Codex web-action counts.' : 'Codex delivery with its native web tools. Recorded web actions can include different action types; this total is not a count of independent sources or necessarily a count of search queries.', 'run-meta'));
+  if (cost !== undefined) root.append(el('p', `${provider(run)==='claude'?'CLI API-equivalent usage estimate':'Reported API usage cost'}: $${cost.toFixed(4)} USD${run.usage?.costSource ? ` (${run.usage.costSource})` : ''}.`, 'run-meta'));
+  root.append(el('p', provider(run) === 'claude' ? 'Claude Code delivery through Anthropic. Web actions pair tool calls with non-error results; counts do not establish retrieval quality. CLI cost is an API-equivalent estimate, not a verified subscription charge.' : provider(run) === 'openrouter' ? 'OpenRouter delivery. Search and fetch counts are API-reported requests, not verified successful actions. Unreported metrics remain unknown. These counts are not directly equivalent to Codex web-action counts.' : 'Codex delivery with its native web tools. Recorded web actions can include different action types; this total is not a count of independent sources or necessarily a count of search queries.', 'run-meta'));
   const webAudit = run.webAudit || run.researchAudit || run.searchAudit || run.audit || {};
   if (webAudit.searchEngineRequested || webAudit.fetchEngineRequested) root.append(el('p', `Requested search engine: ${webAudit.searchEngineRequested || 'unreported'} · requested fetch engine: ${webAudit.fetchEngineRequested || 'unreported'}.`, 'run-meta'));
   if (run.error) root.append(el('p', run.error, 'warning'));
@@ -277,12 +290,12 @@ function renderRun() {
       const d = decisions.get(contest.id), article = el('article', undefined, 'contest-card'); article.id = `ballot-contest-${index}`;
       article.dataset.search = `${contest.title} ${contest.jurisdiction} ${(d?.choices || []).join(' ')}`.toLowerCase();
       article.append(el('h4', contest.title), el('p', `${contest.jurisdiction} · ${contest.ranked ? 'ranked choice' : `select up to ${contest.maxSelections}`}`, 'jurisdiction'), choices(d, contest));
-      if (d) article.append(el('p', d.rationale, 'rationale'), sourceLinks(d.sources, response)); list.append(article);
+      if (d) article.append(el('blockquote', d.rationale, 'rationale'), sourceLinks(d.sources, response)); list.append(article);
     });
     filter.addEventListener('input', () => { const q = filter.value.trim().toLowerCase(); for (const article of list.children) article.hidden = !article.dataset.search.includes(q); }); root.append(list);
     const sources = el('ol', undefined, 'source-list'); for (const s of response.sources || []) { const li = el('li'); li.append(link(`${s.id} · ${s.title}`, s.url)); sources.append(li); } root.append(disclosure(`All cited sources (${response.sources?.length || 0})`, sources));
   } else root.append(el('p', run.status === 'pending' || run.status === 'running' ? 'No final response recorded yet.' : 'No structured ballot response was recorded.', 'empty'));
-  const audit = { provider: provider(run), batchId: run.batchId, requestedModel: run.requestedModel || run.model, resolvedModel: run.resolvedModel ?? null, servingProvider: run.servingProvider, effort: run.effort, cliVersion: run.cliVersion, startedAt: run.startedAt, finishedAt: run.finishedAt, usage: run.usage, costUsd: run.costUsd, usageCost: run.usageCost, usageMayBeIncomplete: run.usageMayBeIncomplete, webSearchCalls: run.webSearchCalls, webFetchCalls: run.webFetchCalls, searchCalls: run.searchCalls, fetchCalls: run.fetchCalls, searchConfig: run.searchConfig, search: run.search, webAudit: run.webAudit, researchAudit: run.researchAudit, searchAudit: run.searchAudit, audit: run.audit, hashes: run.hashes, responseSha256: run.responseSha256, validation: run.validation };
+  const audit = { provider: provider(run), batchId: run.batchId, requestedModel: run.requestedModel || run.model, resolvedModel: run.resolvedModel ?? null, servingProvider: run.servingProvider, effort: run.effort, cliVersion: run.cliVersion, startedAt: run.startedAt, finishedAt: run.finishedAt, usage: run.usage, modelUsage: run.modelUsage, primaryModels: run.primaryModels, costUsd: run.costUsd, usageCost: run.usageCost, usageMayBeIncomplete: run.usageMayBeIncomplete, webSearchCalls: run.webSearchCalls, webFetchCalls: run.webFetchCalls, searchCalls: run.searchCalls, fetchCalls: run.fetchCalls, searchConfig: run.searchConfig, search: run.search, webAudit: run.webAudit, researchAudit: run.researchAudit, searchAudit: run.searchAudit, audit: run.audit, hashes: run.hashes, responseSha256: run.responseSha256, validation: run.validation };
   root.append(disclosure('Usage, provenance, and validation', el('pre', JSON.stringify(audit, null, 2))));
   if (run.response !== null && run.response !== undefined) root.append(disclosure('Exact recorded structured response', el('pre', JSON.stringify(run.response, null, 2))));
 }
@@ -399,10 +412,10 @@ function renderResearch(){
   const root=$('research-content');root.replaceChildren();const shown=visibleRuns(),ev=shown.map(run=>({run,...researchEvidence(run)}));
   const observed=ev.filter(e=>e.state==='observed').length,none=ev.filter(e=>e.state==='none-recorded').length,unknown=ev.filter(e=>e.state==='unknown').length;
   root.append(el('p',`${observed}/${shown.length} attempts have recorded web activity · ${none} with explicit zero activity · ${unknown} unknown.`,'research-summary'));
-  root.append(el('p','Activity is independent of ballot validity. Codex counts completed web actions; OpenRouter counts API-reported search/fetch requests. These units are not directly comparable. Citations alone do not prove tool use, and tool counts do not establish research quality or that every ballot item was researched.','chart-note'));
-  for(const group of ['codex','openrouter']){
+  root.append(el('p','Activity is independent of ballot validity. Codex counts completed web actions; Claude Code counts web calls paired with non-error results; OpenRouter counts API-reported search/fetch requests. These units are not directly comparable. Citations alone do not prove tool use, and tool counts do not establish research quality or that every ballot item was researched.','chart-note'));
+  for(const group of ['codex','openrouter','claude']){
     const groupModels=visibleModels().filter(model=>provider(shown.find(r=>r.model===model)||{model})===group);if(!groupModels.length)continue;
-    root.append(el('h3',group==='codex'?'Codex · recorded completed web actions':'OpenRouter · API-reported search requests'));
+    root.append(el('h3',group==='codex'?'Codex · recorded completed web actions':group==='claude'?'Claude Code · completed search/fetch tool results':'OpenRouter · API-reported search requests'));
     const table=el('table',undefined,'votes-table research-table'),head=el('thead'),header=el('tr');for(const title of ['Model','Round 1','Round 2','Round 3']){const th=el('th',title);th.scope='col';header.append(th);}head.append(header);table.append(head);const body=el('tbody');
     for(const model of groupModels){const row=el('tr'),th=el('th',name(model));th.scope='row';row.append(th);for(const trial of [1,2,3]){const cell=el('td'),e=ev.find(e=>e.run.model===model&&e.run.trial===trial);if(!e){cell.textContent='Not attempted';row.append(cell);continue;}const b=el('button',e.state==='observed'?'Activity recorded':e.state==='none-recorded'?'No activity recorded':'Unknown','vote-choice');b.type='button';b.addEventListener('click',()=>{chooseRun(e.run.id);$('inspect-title').scrollIntoView({block:'start'});});cell.append(b);cell.append(el('div',group==='codex'?`${e.actions??'Unreported'} web actions`:`${e.searches??'Unreported'} searches · ${e.fetches??'unreported'} fetches`,'run-meta'));cell.append(el('div',`Ballot: ${status(e.run)}`,'run-meta'));if(e.run.status!=='completed'){const reasons=array(e.run.validation?.errors);cell.append(el('div',reasons.length?reasons.join('; '):'No valid final ballot; inspect attempt for details.','research-error'));}row.append(cell);}body.append(row);}table.append(body);root.append(table);
   }
@@ -453,9 +466,9 @@ function jumpToContest(){
 
 function renderMethod() {
   const root = $('method'), b = data.batch || {};
-  root.append(el('p', `${b.models?.length || models.length} requested models × ${b.trials || 3} independent rounds. Each attempt starts a fresh context using the shared frozen ballot and base research instructions. Model interfaces, reasoning settings, search services, tool budgets, and timing can differ between Codex and OpenRouter cohorts; the configuration and provenance below record those differences.`));
+  root.append(el('p', `${b.models?.length || models.length} requested models × ${b.trials || 3} independent rounds. Each attempt starts a fresh context using the shared frozen ballot and base research instructions. Model interfaces, reasoning settings, search services, tool budgets, and timing can differ between Codex, Claude Code, and OpenRouter cohorts; the configuration and provenance below record those differences.`));
   root.append(el('p', 'The harness checks ballot coverage, choices, response structure, citation format, and recorded completed web activity. These checks do not establish that sources are true, current, or support the claims. A completed run is not an endorsement or an accuracy score.'));
-  root.append(el('p', 'The plot uses only completed attempts with both coordinates supported. Means are arithmetic means of those plotted runs. Observed spread is the minimum to maximum along each axis, and three runs cannot establish statistical reliability.'));
+  root.append(el('p', 'The plot uses only completed attempts with both coordinates supported. Means are arithmetic means of those plotted runs. Spread modes show the observed envelope, mean-to-round connections, or per-axis ranges. None is a confidence region, and three runs cannot establish statistical reliability.'));
   root.append(el('p', 'Primary dimensions apply the published rubric to recorded ballot selections. Economic and social self-assessments remain supplementary and are not used in primary scores. Tap an axis label to choose a pair; the other coordinate stays fixed during the illustrative quarter-turn. Scores with missing evidence remain unplotted, including while switching axes. Intermediate projected positions are clipped to the fixed −10 to +10 chart domain.'));
   const selfStart = (data.prompt || '').indexOf('After completing the ballot');
   const selfEnd = (data.prompt || '').indexOf('\nReturn only', selfStart);
@@ -478,7 +491,7 @@ function renderCohort() {
   $('run-select').disabled = !shown.length;
   if (!shown.some(r => r.id === selected?.id)) selected = shown.find(r => r.status === 'completed') || shown[0];
   $('run-select').value = selected?.id || '';
-  renderCompass(); renderAttempts(); renderRun(); renderComparison(); renderResearch();
+  renderCompass(); renderAttempts(); renderRun(); renderComparison(); renderResearch(); heroMap?.update(visibleRuns());
 }
 
 async function load() {
@@ -494,12 +507,14 @@ async function load() {
     }
     models = [...new Set([...(data.batch?.models || []), ...runs.map(r => r.model)])];
     const scope = data.ballot?.scope ?? data.batch?.scope;
-    $('scope').textContent = typeof scope === 'string' ? scope : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
+    $('scope').textContent = typeof scope === 'string' ? scope.replace('This is a specific sample ballot, not a personalized ballot.', "This is a randomly selected district's ballot.") : scope ? pretty(scope) : 'Scope has not been exported. Alameda County contains multiple district-specific ballots; this inventory must not be assumed to match any one voter.';
     $('run-select').disabled = !runs.length; $('contest-select').disabled = !contests.length;
     selected = runs.find(r => r.status === 'completed') || runs[0]; if (selected) $('run-select').value = selected.id;
+    heroMap=rotatingMap($('rotating-map'),{axes,runs:visibleRuns(),axisValue,name,color});
     renderCohort(); renderAxisDescriptions(); renderMethod();
+    const collection=data.batches?.find(b=>b.provider==='claude-code');if(collection){const notice=el('p',`Claude collection began ${new Date(collection.createdAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'short'})}. Election results were not yet available at collection time. The original October 27 cutoff remains in every prompt; live retrieval differs from the earlier cohorts.`,'provider-note');$('provider-note').after(notice);}
     $('comparison-filter').addEventListener('input',filterComparison);
-    $('run-select').addEventListener('change', e => chooseRun(e.target.value)); $('contest-select').addEventListener('change', jumpToContest); $('show-spread').addEventListener('change', renderCompass);
+    $('run-select').addEventListener('change', e => chooseRun(e.target.value)); $('contest-select').addEventListener('change', jumpToContest); $('spread-mode').addEventListener('change', renderCompass);
     $('cohort-select').addEventListener('change', e => { cohort = e.target.value; renderCohort(); });
     $('axis-select').addEventListener('change', e => { if (pickerDimension) changeAxis(pickerDimension, e.target.value); });
     $('axis-picker-close').addEventListener('click', closeAxisPicker);

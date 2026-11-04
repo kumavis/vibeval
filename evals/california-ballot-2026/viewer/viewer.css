@@ -19,3 +19,13 @@
 
 .vote-disagreement{display:inline-block;margin:7px 9px 3px 0;padding:3px 7px;border:1px solid var(--line);border-radius:4px;font:500 12px ui-monospace,monospace;color:var(--ink)}.vote-evidence{font-size:.73rem;color:var(--muted);font-weight:400}.disagreement-method{margin:12px 0}.disagreement-method p{max-width:95ch;font-size:.82rem}
 .vote-disagreement{margin-left:8px}.compare>.section-heading>label{min-width:0;max-width:56%;flex:1}.compare #contest-select{width:100%;min-width:0;max-width:100%}@media(max-width:760px){.compare>.section-heading>label{max-width:100%;width:100%}.vote-disagreement{margin-left:0;margin-right:9px}.vote-contest-title{display:block}}
+
+/* Decorative article hero; detailed controls and scoring stay in the map below. */
+.rotating-map{max-width:740px;margin:0 auto 28px;padding:0;text-align:center}.rotation-scene{width:100%;outline-offset:4px;touch-action:pan-y}.rotation-scene>svg{display:block;width:100%;height:auto;overflow:hidden}.rotation-edge{stroke:var(--line);stroke-width:1;fill:none}.rotation-model{pointer-events:none}.observed-spread{pointer-events:none}.observed-spread .spread{opacity:.65;stroke-width:2}
+blockquote.rationale,blockquote.candidate-rationale{border-left:2px solid var(--line);padding:5px 0 5px 16px;margin:12px 0 16px;font-style:italic;overflow-wrap:anywhere}blockquote.rationale::before,blockquote.candidate-rationale::before{content:"“"}blockquote.rationale::after,blockquote.candidate-rationale::after{content:"”"}
+@media(max-width:550px){.rotating-map{margin-bottom:20px}}
+
+.rotation-grid-line{stroke:var(--line);stroke-width:.7;opacity:.55;fill:none}.rotation-wall-grid{pointer-events:none}
+
+.rotation-axis-labels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:660px;margin:0 auto 16px;color:var(--muted);font:10px/1.5 ui-monospace,monospace;text-align:left}.rotation-axis-item{display:grid;grid-template-columns:12px minmax(0,1fr);gap:8px;align-items:baseline}.rotation-axis-letter{color:var(--ink);opacity:.65}.rotation-axis-name{display:block;min-height:3em;overflow-wrap:anywhere}
+@media(max-width:550px){.rotation-axis-labels{gap:10px;font-size:9px}.rotation-axis-item{grid-template-columns:10px minmax(0,1fr);gap:4px}.rotation-axis-name{min-height:4.5em}}

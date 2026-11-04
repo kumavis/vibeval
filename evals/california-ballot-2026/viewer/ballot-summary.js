@@ -71,7 +71,7 @@ export function researchEvidence(run) {
   if (!openrouter) {
     const actions = count(run.webSearchCalls, audit.webToolCalls, audit.webSearchCalls);
     return {state: actions === undefined ? 'unknown' : actions > 0 ? 'observed' : 'none-recorded',
-      actions, basis: 'Recorded completed Codex web actions'};
+      actions, searches:run.provider==='claude-code'?count(run.searchCalls,audit.searchCalls):undefined, fetches:run.provider==='claude-code'?count(run.fetchCalls,audit.fetchCalls):undefined, basis: run.provider === 'claude-code' ? 'Claude Code web calls paired with non-error tool results' : 'Recorded completed Codex web actions'};
   }
   const searches = audit.searchUsageReported === false ? undefined : count(run.searchCalls, run.webSearchCount, audit.searchCalls, audit.searchCount, audit.webSearchCalls, run.webSearchCalls);
   const fetches = audit.fetchUsageReported === false ? undefined : count(run.fetchCalls, run.webFetchCalls, audit.webFetchCalls, audit.fetchCalls, audit.fetchCount);

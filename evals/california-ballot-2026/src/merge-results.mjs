@@ -18,11 +18,11 @@ export function mergeResults(cohorts) {
   return {schemaVersion: 1, batch: {
     id: 'san-leandro-2026-10-27-comparison', models, trials: 3, effort: 'per-model recorded',
     scope: first.ballot.scope, electionDate: first.ballot.electionDate,
-    comparison: 'Same frozen ballot and base prompt; different research harnesses. Codex CLI live web and OpenRouter server tools are distinct cohorts. Self-assessments are not calibrated across models.',
+    comparison: 'Same frozen ballot and base prompt; different research harnesses. Codex CLI, Claude Code native web tools, and OpenRouter server tools are distinct cohorts with separately recorded collection times. Self-assessments are not calibrated across models.',
   }, batches, cohortProvenance: cohorts.map(c=>({batchId:c.batch.id, progress:c.progress??null,
     originalRunnerProgress:c.originalRunnerProgress??null, continuation:c.continuation??null})), ballot: first.ballot, prompt: first.prompt,
   runs: cohorts.flatMap(c => c.runs.map(r => ({...r, id: r.id ?? `${encodeURIComponent(r.model)}-trial-${r.trial}`, batchId: c.batch.id,
-    provider: r.provider ?? (c.batch.provider === 'openrouter' ? 'openrouter' : 'codex-cli')}))),
+    provider: r.provider ?? c.batch.provider ?? 'codex-cli'}))),
   exportedAt: new Date().toISOString()};
 }
 
