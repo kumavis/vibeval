@@ -1,0 +1,402 @@
+{
+  "id": "2026-11-08T00-19-37-199Z-d484de75",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "5fd0b0a30d7b7fa4b283db7daade75782cd682527199d5801aacd405b354c832",
+  "startedAt": "2026-11-08T00:19:37.200Z",
+  "endedAt": "2026-11-08T00:22:36.021Z",
+  "status": "completed-with-errors",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "dots-studio/dots-3-note-preview:free"
+    }
+  ],
+  "responses": [
+    {
+      "id": "99798b8e-24fe-447d-bf4d-14581817fb2a",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097258-4IdU9vInvjkMLmnhCLRI",
+      "provider": "AtlasCloud",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:20:58.247Z",
+      "endedAt": "2026-11-08T00:21:17.415Z",
+      "wallMs": 19168,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\nI'm not entirely certain, as the name could refer to multiple individuals. I recall a Dan Finlay who is a software engineer known for contributions to web standards, particularly around CSS and web performance, and for his blog posts and open‑source projects. He has been associated with work on the WebKit engine. However, without more context I can't confirm this is the person you're asking about.",
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 1382,
+        "total_tokens": 1453,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1396,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ea2422d8b07423b61b07162d571616c94546d014771b0f1379a6fee8731d551b",
+      "httpStatus": 200
+    },
+    {
+      "id": "ce8ae175-3b97-4087-b47a-8782f7bbf7ae",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097289-WFCJ5ItRKvxJPo8xjctt",
+      "provider": "AtlasCloud",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:28.964Z",
+      "endedAt": "2026-11-08T00:21:43.530Z",
+      "wallMs": 14566,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\nI’m not entirely certain, as the name is ambiguous. I know there is a Dan Finlay who works as a software engineer, often in web development or JavaScript circles, but I can’t pinpoint a specific project or contribution that would make him widely recognizable. There may be multiple individuals with this name, and without additional context I can’t provide a definitive answer. If you have more details (e.g., a company, project, or field), I could try to narrow it down.",
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 1075,
+        "total_tokens": 1146,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1053,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "089c37ce4411abaee84697f585c7fd2ec56a786be6b5c73ea6c94087ec65e059",
+      "httpStatus": 200
+    },
+    {
+      "id": "3973e111-638d-410d-925e-d18ae6542292",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097303-cOJ7LZLVYCEEnpkzHKVJ",
+      "provider": "AtlasCloud",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:43.531Z",
+      "endedAt": "2026-11-08T00:22:08.811Z",
+      "wallMs": 25280,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\n**Known:** Dan Finlay is a co‑founder of MetaMask; he helped create the wallet’s core architecture, user interface, and security features, and the product launched in 2016. He is also active in the Ethereum community through writing and speaking.\n\n**Uncertain:** The exact composition of the founding team (e.g., whether Aaron Davis was also a co‑founder) and details of Finlay’s earlier career are not certain from my knowledge.",
+      "usage": {
+        "prompt_tokens": 79,
+        "completion_tokens": 2077,
+        "total_tokens": 2156,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2024,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "93a8f26a33e372d46f07b7dbdcef31394e2c135b29959222be760dc6ef25ed39",
+      "httpStatus": 200
+    },
+    {
+      "id": "01e50015-538f-4826-8640-2f1e0c0e5e77",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097329-USuRlcmLjfUbI6eliiZ4",
+      "provider": "AtlasCloud",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:08.813Z",
+      "endedAt": "2026-11-08T00:22:15.124Z",
+      "wallMs": 6311,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\nBased on my knowledge, Dan Finlay is widely recognized as a co-founder of MetaMask, the popular Ethereum wallet. I am not certain about the exact founders of Phantom, but I have no information linking Dan Finlay to Phantom's creation. Therefore, the statement that he co-founded Phantom rather than MetaMask appears inaccurate. I am unsure about Phantom's founding team, but I am confident that Dan Finlay's primary association is with MetaMask.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 426,
+        "total_tokens": 511,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 388,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "860eafdeebd13d89673bbfa0976cadeb806b67870643ab570459f562cee10ac2",
+      "httpStatus": 200
+    },
+    {
+      "id": "1d6eb896-e79f-4946-ad97-dcb27e4ca659",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097335-td42PqxEgR44ZQMYZFvy",
+      "provider": "AtlasCloud",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:15.125Z",
+      "endedAt": "2026-11-08T00:22:30.677Z",
+      "wallMs": 15552,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\nDan Finlay is a co‑founder of MetaMask, not Phantom. I am certain of his role at MetaMask. I am unsure who exactly founded Phantom, but I don’t believe he was involved.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 1264,
+        "total_tokens": 1349,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1293,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "6274b57ceaeac94ca87426a945ecd17077a82071fb98a5b07c58dae90b79100b",
+      "httpStatus": 200
+    },
+    {
+      "id": "cd3dcea5-a256-4e0f-824d-0fedc86d4829",
+      "requestedModel": "dots-studio/dots-3-note-preview:free",
+      "resolvedModel": "dots-studio/dots-3-note-preview:free",
+      "responseId": "gen-1794097351-H0UEskW4XrKtRe1YgrLF",
+      "provider": "AtlasCloud",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "dots-studio/dots-3-note-preview:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:30.679Z",
+      "endedAt": "2026-11-08T00:22:36.020Z",
+      "wallMs": 5341,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "\n\nI know that Dan Finlay is a co-founder of MetaMask, not Phantom. He co-founded MetaMask with Aaron Davis. I am less certain about Phantom's founders, but I believe they are different individuals, and I have no knowledge of Dan Finlay being involved with Phantom. So, the statement is inaccurate.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 331,
+        "total_tokens": 416,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 310,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "aedc633f92a2af57c493ea9fd211489c7231a9ad1a4e058be7e0e06a2c6bb9b8",
+      "httpStatus": 200
+    }
+  ]
+}

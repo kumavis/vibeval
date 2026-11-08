@@ -1,0 +1,16 @@
+{
+  "version": "in-the-weights-v1",
+  "subject": "Dan Finlay",
+  "association": "MetaMask",
+  "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+  "probes": [
+    { "id": "name-only", "label": "Name only", "description": "The prompt supplies no organization or occupation.", "prompt": "Who is Dan Finlay, and what is he known for?" },
+    { "id": "cued", "label": "MetaMask cue", "description": "The association is supplied; this cannot establish unaided recall.", "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know." },
+    { "id": "false-premise", "label": "False premise", "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.", "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure." }
+  ],
+  "references": [
+    { "title": "Consensys: MetaMask's sixth anniversary (2022)", "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market", "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis." },
+    { "title": "MetaMask: the origin story (2022)", "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed", "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016." }
+  ],
+  "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+}

@@ -1,0 +1,573 @@
+{
+  "id": "2026-11-08T19-09-46-740Z-d8f3a4e5",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T19:09:46.742Z",
+  "endedAt": "2026-11-08T19:10:23.117Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "openai/gpt-5.6-luna"
+    }
+  ],
+  "responses": [
+    {
+      "id": "e3301bfc-4aec-47f4-8d72-8cf983dbdae5",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794164987-W3gRIc8p6webqojgzzNW",
+      "provider": "OpenAI",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:09:46.742Z",
+      "endedAt": "2026-11-08T19:09:50.140Z",
+      "wallMs": 3398,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer and prominent figure in the Ethereum ecosystem. He is best known as a co-founder of **MetaMask**, the widely used Ethereum wallet and browser extension, which he helped create with Aaron Davis while working at ConsenSys.\n\nFinlay has also been involved in Ethereum and decentralized-web advocacy, speaking publicly about wallet technology, user ownership, open-source software, and cryptocurrency regulation.",
+      "usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 196,
+        "total_tokens": 268,
+        "cost": 0.0002496,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002496,
+          "upstream_inference_prompt_cost": 0.0000144,
+          "upstream_inference_completions_cost": 0.0002352
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "1860d1022c1f67c251d2e870c85d853b74973b5710a024ae17c7e6d27c024f42",
+      "httpStatus": 200
+    },
+    {
+      "id": "b6bad907-6c96-4a26-a42e-10f37a20154b",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794164990-5hlSaSl05ns0mlkDZGcV",
+      "provider": "OpenAI",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:09:50.141Z",
+      "endedAt": "2026-11-08T19:09:53.529Z",
+      "wallMs": 3388,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer and prominent figure in the Ethereum ecosystem. He is best known as the co-founder of **MetaMask**, the widely used Ethereum wallet and browser extension, which he created with Aaron Davis while working with ConsenSys.\n\nHe is also known for advocating decentralized applications, user-controlled wallets, and privacy in cryptocurrency. Finlay has spoken publicly about Ethereum governance, crypto regulation, and the importance of preserving privacy-enhancing technologies.",
+      "usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 236,
+        "total_tokens": 308,
+        "cost": 0.0002976,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002976,
+          "upstream_inference_prompt_cost": 0.0000144,
+          "upstream_inference_completions_cost": 0.0002832
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 140,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ad9c9e3abb78fb6aa24ed3a5c08c7a061ab8cfe6a9e8452b319d3ff95dfbfc3f",
+      "httpStatus": 200
+    },
+    {
+      "id": "308d9672-baec-4e13-bbc0-1747bb9baf94",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794164993-7k9pkTSoHU8ui6mYHLkM",
+      "provider": "OpenAI",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:09:53.531Z",
+      "endedAt": "2026-11-08T19:09:56.855Z",
+      "wallMs": 3324,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer and prominent figure in the Ethereum ecosystem. He is best known as a co-founder of **MetaMask**, the widely used Ethereum wallet and browser extension, which he developed with Aaron Davis while at ConsenSys.\n\nHe is also known for advocating for decentralized applications, self-custody of digital assets, and user rights in blockchain ecosystems. Finlay has spoken publicly about issues such as wallet interoperability, decentralization, privacy, and the relationship between crypto products and large technology platforms.",
+      "usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 228,
+        "total_tokens": 300,
+        "cost": 0.000288,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000288,
+          "upstream_inference_prompt_cost": 0.0000144,
+          "upstream_inference_completions_cost": 0.0002736
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 120,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "64529ab9d66ffc9ddeea547d70d2e95504be5ca948f4c5ce2ee0c4d4090db9e3",
+      "httpStatus": 200
+    },
+    {
+      "id": "9eb91532-45f3-4779-8194-df7b804700a5",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794164997-EHaN7t0NThWh51CDLmVX",
+      "provider": "OpenAI",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:09:56.856Z",
+      "endedAt": "2026-11-08T19:10:01.996Z",
+      "wallMs": 5140,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, the Ethereum wallet and decentralized-application browser interface developed within ConsenSys. He created it with Aaron Davis (also known as “ kumavis ”), with the first public version released around 2016.\n\nFinlay’s major contribution was helping turn Ethereum from a developer-oriented protocol into something ordinary users could access through a browser: MetaMask injected Ethereum functionality into web pages, managed user keys, and let users interact with smart contracts and dApps without running a full node.\n\nHe has also been a prominent advocate for open wallet standards, user control, privacy, and decentralization, and has commented publicly on crypto regulation and platform censorship. MetaMask’s development involved a broader ConsenSys team, so it would be inaccurate to attribute the entire product to Finlay alone.",
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 408,
+        "total_tokens": 488,
+        "cost": 0.0005056,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005056,
+          "upstream_inference_prompt_cost": 0.000016,
+          "upstream_inference_completions_cost": 0.0004896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 238,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "b12851bfcfbe92ba7d187d71a9be33b2011e30deebba0083c36e166e1266d7d5",
+      "httpStatus": 200
+    },
+    {
+      "id": "450dcd70-0129-4d3d-aba7-f0133c05f2b0",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794165002-5KmieBrHibbZi3nplyz8",
+      "provider": "OpenAI",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:01.997Z",
+      "endedAt": "2026-11-08T19:10:07.609Z",
+      "wallMs": 5612,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of **MetaMask**, the Ethereum wallet and browser interface, alongside Aaron Davis. MetaMask was developed within ConsenSys and publicly launched as a browser extension around **2016**.\n\nFinlay’s contribution was primarily technical and product-oriented: he helped design and build the wallet’s interface, Ethereum account and transaction handling, and its connection between ordinary websites and decentralized applications. This helped make Ethereum usable without running a full node or interacting directly with command-line tools.\n\nHistorically, he was an early participant in the Ethereum ecosystem and became a prominent voice on wallet design, user sovereignty, decentralization, and censorship resistance. He has often represented MetaMask and ConsenSys in discussions about Ethereum infrastructure and regulation. Exact titles and dates in accounts of MetaMask’s early history vary, but his status as a principal co-founder and early builder is well established.",
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 485,
+        "total_tokens": 565,
+        "cost": 0.000598,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000598,
+          "upstream_inference_prompt_cost": 0.000016,
+          "upstream_inference_completions_cost": 0.000582
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 302,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "7ce58a64fbb2d7f671feb89a80b0e849a6a4e297d269a9a232c729f66eea5e04",
+      "httpStatus": 200
+    },
+    {
+      "id": "da58b7c1-584a-4409-9bb0-5fafc69b7b5b",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794165007-5hwdtuj4Rtxq6yFWzGuO",
+      "provider": "OpenAI",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:07.611Z",
+      "endedAt": "2026-11-08T19:10:12.980Z",
+      "wallMs": 5369,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask and an early Ethereum developer. He built MetaMask at ConsenSys with Aaron Davis (known as “Kumavis”), helping turn it from an early browser extension into a widely used Ethereum wallet and dapp interface.\n\nHis contribution was both technical and product-focused: making it possible for ordinary users to manage Ethereum accounts, sign transactions, and connect websites to decentralized applications without running a full node. He also became a prominent advocate for self-custody, open-source software, user privacy, and decentralized wallet infrastructure.\n\nMetaMask emerged around 2016, initially as a browser extension and later expanding to mobile and other platforms. Finlay has often represented MetaMask publicly in discussions about Ethereum standards, wallet security, and regulation. Exact divisions of credit among the early MetaMask team are difficult to state, but he is consistently recognized as one of its principal founders and early builders.",
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 421,
+        "total_tokens": 501,
+        "cost": 0.0005212,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005212,
+          "upstream_inference_prompt_cost": 0.000016,
+          "upstream_inference_completions_cost": 0.0005052
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 230,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "a502a923fa6cb2421b0173bc8a0454025aac62ae8d4831daf170787f9b01b9d3",
+      "httpStatus": 200
+    },
+    {
+      "id": "f237a80c-9005-4fa6-ab89-dd1a2485849d",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794165013-OYJxUB63k7kRzokZFZiz",
+      "provider": "OpenAI",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:12.981Z",
+      "endedAt": "2026-11-08T19:10:16.611Z",
+      "wallMs": 3630,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "No. Dan Finlay is known as a co-founder of **MetaMask**, alongside Aaron Davis, within ConsenSys—not Phantom.\n\n**Phantom** was founded by Brandon Millman, Chris Kalani, and Francesco Agosti. The confusion may come from Dan Finlay’s involvement in the broader crypto-wallet ecosystem.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 147,
+        "total_tokens": 233,
+        "cost": 0.0001936,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001936,
+          "upstream_inference_prompt_cost": 0.0000172,
+          "upstream_inference_completions_cost": 0.0001764
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 77,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ce5d12d4b7627b7fc36c04ff0cd137e1aeaa1d46f6ffe5e70df7739af25ad463",
+      "httpStatus": 200
+    },
+    {
+      "id": "8d58cf46-f1a4-4bb1-b6b3-637f5e256d6d",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794165016-RNSAG3x259itT7mjZleW",
+      "provider": "OpenAI",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:16.612Z",
+      "endedAt": "2026-11-08T19:10:19.089Z",
+      "wallMs": 2477,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "No. Dan Finlay is widely known as a co-founder of **MetaMask**, alongside Aaron Davis, within ConsenSys. He was not a co-founder of Phantom.\n\n**Phantom** was founded by Brandon Millman, Francesco Agosti, and Chris Kalani. I’m confident about the MetaMask attribution; specific descriptions of founding roles can vary slightly by source.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 155,
+        "total_tokens": 241,
+        "cost": 0.0002032,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002032,
+          "upstream_inference_prompt_cost": 0.0000172,
+          "upstream_inference_completions_cost": 0.000186
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 74,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ea71af8e0387abadfd2db61097a17616a7ccd6ffaec1b9a5079b5e1a479303ef",
+      "httpStatus": 200
+    },
+    {
+      "id": "f792cafd-08fc-4cd7-857f-5cbfb24662b8",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "resolvedModel": "openai/gpt-5.6-luna",
+      "responseId": "gen-1794165019-c8z00ugbY6eNzt8Bjay9",
+      "provider": "OpenAI",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "openai/gpt-5.6-luna",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:19.091Z",
+      "endedAt": "2026-11-08T19:10:23.116Z",
+      "wallMs": 4025,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "No. Dan Finlay is known as a co-founder of **MetaMask**, alongside Aaron Davis, and has been associated with Consensys.\n\n**Phantom** was founded by Brandon Millman, Francesco Agosti, and Chris Kalani. Dan Finlay is not generally credited as a Phantom co-founder. I’m confident about this distinction.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 147,
+        "total_tokens": 233,
+        "cost": 0.0001936,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001936,
+          "upstream_inference_prompt_cost": 0.0000172,
+          "upstream_inference_completions_cost": 0.0001764
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "60fb31c997becf2a304405391393a7458ecdb9e62ba322028fa2afb3a942a86c",
+      "httpStatus": 200
+    }
+  ]
+}

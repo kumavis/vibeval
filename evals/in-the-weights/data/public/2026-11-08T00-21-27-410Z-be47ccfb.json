@@ -1,0 +1,402 @@
+{
+  "id": "2026-11-08T00-21-27-410Z-be47ccfb",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "5fd0b0a30d7b7fa4b283db7daade75782cd682527199d5801aacd405b354c832",
+  "startedAt": "2026-11-08T00:21:27.411Z",
+  "endedAt": "2026-11-08T00:25:16.509Z",
+  "status": "completed-with-errors",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "xingchen-agi/xing4.0-29b-a4b:free"
+    }
+  ],
+  "responses": [
+    {
+      "id": "9812fe29-4e72-4b14-a1aa-372152d54834",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097287-F9LxioCU44utk6IS6Hz5",
+      "provider": "Phala",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:27.412Z",
+      "endedAt": "2026-11-08T00:21:52.516Z",
+      "wallMs": 25104,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is an American actor best known for portraying the character \"Doc\" in the 2005 science fiction thriller *The Astronaut's Wife*. He has also appeared in various independent films and television shows. \n\n*Uncertainty note:* While the actor is the most prominent figure by this exact name, there are likely other individuals named Dan Finlay in different fields (such as sports or local politics) who lack widespread public recognition.",
+      "usage": {
+        "prompt_tokens": 70,
+        "completion_tokens": 968,
+        "total_tokens": 1038,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 871,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "1f20ec445cdd51053ed32035007f56f5ca16e746f0655caee9162cc90ca971b9",
+      "httpStatus": 200
+    },
+    {
+      "id": "ede92ac1-770d-4569-bd44-747fd38d1125",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097312-ebVImgOB54vJ5Mwe18Dp",
+      "provider": "Phala",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:52.519Z",
+      "endedAt": "2026-11-08T00:22:16.593Z",
+      "wallMs": 24074,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "**What I know:** Dan Finlay is most notably recognized as a session guitarist who played on the debut album *Black Sabbath* (1970) and its follow-up *Paranoid* (1970). He briefly served as the band's guitarist during the recording sessions for these early Black Sabbath recordings.\n\n**Uncertainty:** The name \"Dan Finlay\" is ambiguous, as it could refer to other individuals across various fields (such as sports or academia). My knowledge is limited strictly to his musical contributions. Uncertainty also remains regarding his later career or personal life, as well as whether other notable Dan Finlays exist in different domains.",
+      "usage": {
+        "prompt_tokens": 70,
+        "completion_tokens": 1046,
+        "total_tokens": 1116,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 904,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "238e4b7d4a9f93f305495011ddf9a8afa8d4b95b9ebf40e4418718ba5d205cdd",
+      "httpStatus": 200
+    },
+    {
+      "id": "38fd6bc2-90b3-4dec-a76d-34e32fd7426b",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097351-RxK0dxuw9yvkG1hVXAJb",
+      "provider": "Phala",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:30.785Z",
+      "endedAt": "2026-11-08T00:22:58.590Z",
+      "wallMs": 27805,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a British video game programmer and designer. He is best known for his early career working at the video game publisher Ocean Software in the 1980s. He is particularly recognized for programming several notable titles for the company, including *Space Panic* (1982), *Spyhunter* (1984), and *The Count*. Through his work on these games, he played a significant role in shaping the early home computer and arcade gaming landscape.",
+      "usage": {
+        "prompt_tokens": 70,
+        "completion_tokens": 1166,
+        "total_tokens": 1236,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1064,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "96806dfeafe822b398df0a916e745feb7553fb07a32c46f2f60138534417ce89",
+      "httpStatus": 200
+    },
+    {
+      "id": "04dfae1d-54f5-4f68-a6d2-fffbce101456",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097378-6o9cEr0vwbwSnu0kSHlC",
+      "provider": "Phala",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:58.591Z",
+      "endedAt": "2026-11-08T00:23:28.490Z",
+      "wallMs": 29899,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, working alongside his brother Jordan Finlay. His historical contribution primarily involved helping to build the initial version of the MetaMask browser extension. Finlay played a key role in developing the foundational technology that enabled users to interact with Ethereum smart contracts directly within their web browsers. His early engineering work was crucial in transitioning MetaMask from a concept into a functional product. Additionally, Finlay contributed to the project's early community building and growth during its formative years.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 1001,
+        "total_tokens": 1079,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 898,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "af1906b1ca4c05af9703f867fababc88c005438c2fc9f1f2fa1179b755a66124",
+      "httpStatus": 200
+    },
+    {
+      "id": "59bb30ae-f591-4cb0-86f7-9b9048ef2d37",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097408-j9Shw9XB3VRHmxBEizUP",
+      "provider": "Phala",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:23:28.491Z",
+      "endedAt": "2026-11-08T00:23:51.711Z",
+      "wallMs": 23220,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "**Known:** Dan Finlay is a software engineer who co-founded MetaMask. He played a foundational role by developing the original MetaMask JavaScript library, which enabled users to interact with Ethereum directly in their web browsers prior to the standalone browser extension. He was part of the early engineering team that transformed this initial script into a robust, secure wallet solution, laying the groundwork for the extension's architecture, user interface, and security protocols.\n\n**Uncertainty:** Precise dates of his tenure at MetaMask or specific code contributions beyond the core library are not fully documented in my knowledge base.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 1063,
+        "total_tokens": 1141,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 940,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "e2da78cf8fd4472b041e88019ddb240c85401e459d18eafaea613c2fd5b1c1a9",
+      "httpStatus": 200
+    },
+    {
+      "id": "6da4ec7d-f6c1-416b-b330-28b8257b4437",
+      "requestedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "resolvedModel": "xingchen-agi/xing4.0-29b-a4b:free",
+      "responseId": "gen-1794097463-okI9bGVBATttKz2OhV8L",
+      "provider": "Phala",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "xingchen-agi/xing4.0-29b-a4b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:24:23.403Z",
+      "endedAt": "2026-11-08T00:24:43.873Z",
+      "wallMs": 20470,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software engineer closely associated with MetaMask. His primary contribution was developing the initial mobile application for MetaMask using React Native, which brought the wallet experience to iOS and Android devices. He joined MetaMask during its early stages and played a crucial role in its mobile evolution. \n\nWhile his specific tenure dates and prior professional background are less extensively documented publicly, his technical legacy is well-recognized.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 980,
+        "total_tokens": 1058,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 895,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "39e1eea901541f19a06485aafecb56bc1cc66c3152e96de01c559d1973a6b7e8",
+      "httpStatus": 200
+    }
+  ]
+}

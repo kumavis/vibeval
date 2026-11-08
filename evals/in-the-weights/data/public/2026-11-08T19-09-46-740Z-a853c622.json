@@ -1,0 +1,538 @@
+{
+  "id": "2026-11-08T19-09-46-740Z-a853c622",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T19:09:46.742Z",
+  "endedAt": "2026-11-08T19:11:03.305Z",
+  "status": "completed",
+  "transport": "claude",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": null,
+    "identityContext": "Empty per-call home and configuration, Claude Code bare mode via OpenRouter Messages API"
+  },
+  "inventory": [
+    {
+      "id": "anthropic/claude-opus-4.8"
+    }
+  ],
+  "responses": [
+    {
+      "id": "e9682791-e784-43c5-bd30-57e049944095",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:09:46.742Z",
+      "endedAt": "2026-11-08T19:09:54.952Z",
+      "wallMs": 8210,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer best known as a co-founder of MetaMask, the popular Ethereum wallet and browser extension. He co-created MetaMask with Aaron Davis (also known as Kumavis) around 2016, and it became one of the most widely used tools for interacting with Ethereum-based decentralized applications. Finlay has been active in the Ethereum and broader cryptocurrency development community.\n\nI should note that \"Dan Finlay\" could potentially refer to other individuals, and my knowledge of specific details about his career and background is limited. If you're asking about a different Dan Finlay, please provide more context.",
+      "usage": {
+        "input_tokens": 127,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 203,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "f252daec51320e492a580cf281b8f748f2735de741394b9f66d49e4d35a558f3"
+    },
+    {
+      "id": "c00f863c-0103-493a-80ed-6d45ba80aa8f",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:09:54.953Z",
+      "endedAt": "2026-11-08T19:10:02.734Z",
+      "wallMs": 7781,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer best known as a co-founder and lead developer of MetaMask, the popular Ethereum wallet and browser extension. MetaMask, developed under ConsenSys, became one of the most widely used tools for interacting with Ethereum and decentralized applications (dApps). Finlay is recognized in the Ethereum and broader cryptocurrency community for his contributions to making blockchain technology more accessible to everyday users.\n\nI should note that \"Dan Finlay\" is a reasonably common name, so there may be other people with this name in different fields. If you're asking about someone in a different context, I don't have enough information to identify them with confidence. The details I've provided apply specifically to the MetaMask co-founder.",
+      "usage": {
+        "input_tokens": 127,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 237,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "559805b3b8f5fd6d2a2156bb20f577301cedea37663f33333b3390a492d4d43c"
+    },
+    {
+      "id": "3ed0ad1d-2b0a-40ca-a9a5-364f5970d71c",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:02.735Z",
+      "endedAt": "2026-11-08T19:10:10.734Z",
+      "wallMs": 7999,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer best known as a co-founder of MetaMask, the popular cryptocurrency wallet and browser extension for interacting with the Ethereum blockchain. He co-created MetaMask with Aaron Davis (Kumavis) around 2016, and it became one of the most widely used tools in the Ethereum ecosystem, operating under ConsenSys.\n\nFinlay has been an active contributor in the Ethereum developer community, involved in work related to web3, decentralized applications (dapps), and self-sovereign identity concepts.\n\nI should note that \"Dan Finlay\" is a fairly common name, so there may be other people with this name in different fields. If you're asking about someone in a different context (for example, a different profession), I'm not certain which person you mean, so please clarify.",
+      "usage": {
+        "input_tokens": 127,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 258,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "e8fc7199110e46d08a34598574e2163e1e581ede0df8c482ace2716dac575f39"
+    },
+    {
+      "id": "a0da1fdb-1ecd-47de-bf61-59c6add7147e",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:10.735Z",
+      "endedAt": "2026-11-08T19:10:19.441Z",
+      "wallMs": 8706,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer known as a co-founder of MetaMask, the popular Ethereum wallet browser extension. He co-created MetaMask along with Aaron Davis (also known as Kumavis), and the project was developed within ConsenSys, the Ethereum-focused company founded by Joseph Lubin.\n\nMetaMask, which launched around 2016, became widely used as a bridge between web browsers and the Ethereum blockchain, allowing users to manage accounts and interact with decentralized applications (dApps) without running a full node.\n\nDan Finlay has been active in the Ethereum developer community and has contributed to discussions on wallet design, user experience, and security in the crypto space.\n\nI'm confident about his co-founder role and the general MetaMask history, but I'm less certain about specific dates and the precise details of his individual technical contributions versus his co-founder's. I'd recommend verifying specifics independently.",
+      "usage": {
+        "input_tokens": 144,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 302,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "7e5363b73897d533ca33747925a2ef781cc8f95c223d369c391edfbe87645fd4"
+    },
+    {
+      "id": "b9e77475-1b4a-4433-b2a4-df8b3da8c5e6",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:19.441Z",
+      "endedAt": "2026-11-08T19:10:28.078Z",
+      "wallMs": 8637,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer known as a co-founder of MetaMask, the popular Ethereum wallet browser extension. He developed MetaMask alongside Aaron Davis (also known as Kumavis), and the project was created under ConsenSys, the Ethereum-focused software company founded by Joseph Lubin.\n\nMetaMask, launched around 2016, became one of the most widely used tools for interacting with the Ethereum blockchain and decentralized applications (dApps), allowing users to manage accounts and sign transactions directly from their web browsers.\n\nDan Finlay has been active in the Ethereum developer community and has written and spoken about topics related to web3, wallet design, and user security.\n\nBeyond these general points, I'm uncertain about more specific biographical details, exact dates, or his current role, so I'd recommend verifying those from authoritative sources.",
+      "usage": {
+        "input_tokens": 144,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 283,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "4a4032e2a73fbe235d44e71bade49c9a533fb1d86dfa78247c02ff32f5e06a5e"
+    },
+    {
+      "id": "aecb19db-2e7b-48c8-adb1-cf91cc80c5df",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:28.078Z",
+      "endedAt": "2026-11-08T19:10:36.835Z",
+      "wallMs": 8757,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "Dan Finlay is a software developer known as a co-founder of MetaMask, the popular Ethereum cryptocurrency wallet. He co-created MetaMask along with Aaron Davis (also known as Kumavis) around 2016. MetaMask was developed under ConsenSys, the Ethereum-focused software company.\n\nMetaMask functions as a browser extension and wallet that allows users to interact with the Ethereum blockchain and decentralized applications (dApps), making it a significant tool for Web3 accessibility.\n\nFinlay has been an active contributor to the Ethereum developer ecosystem and has engaged in discussions around wallet security, user experience, and self-custody.\n\nI'm confident about his co-founder role with MetaMask, but I'm less certain about specific technical details of his individual contributions versus his collaborators, or precise dates. If you need exact specifics about his engineering work or timeline, I'd recommend verifying through authoritative sources.",
+      "usage": {
+        "input_tokens": 144,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 314,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "bf2cac82c43899fad5046d111247171727eae9d80cd428d64012954a5aed1fdd"
+    },
+    {
+      "id": "6f702abd-c177-4401-a80c-58334d84d2a9",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:36.835Z",
+      "endedAt": "2026-11-08T19:10:45.893Z",
+      "wallMs": 9058,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "That's not accurate, to my knowledge. Dan Finlay is known as a co-founder of **MetaMask** (the Ethereum wallet), which he started with Aaron Davis. \n\n**Phantom**, by contrast, is a separate wallet best known for the Solana ecosystem, and it was founded by a different team (my recollection is Brandon Millman and others), not Dan Finlay.\n\nSo the claim appears to reverse the facts: Finlay is linked to MetaMask, not Phantom.\n\nI'm fairly confident about Finlay's association with MetaMask. I'm somewhat less certain about the exact full founding roster of Phantom, so I'd suggest verifying those specific names independently.",
+      "usage": {
+        "input_tokens": 159,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 321,
+        "output_tokens_details": {
+          "thinking_tokens": 91
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "fa8ad43d5e04e427475be99fcef4b18284d88315cc386587fc7ecc00dee27803"
+    },
+    {
+      "id": "42cbac28-fff1-47b2-a06e-25b7fbe0fa34",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:45.893Z",
+      "endedAt": "2026-11-08T19:10:54.738Z",
+      "wallMs": 8845,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "That's not accurate, based on what I know. Dan Finlay is known as a co-founder of **MetaMask** (the Ethereum wallet), which he started with Aaron Davis.\n\n**Phantom** is a separate wallet, most associated with the Solana ecosystem. It was co-founded by people like Brandon Millman, Francesco Agosti, and Chris Kalani—not Dan Finlay.\n\nSo the two are different projects with different founders. I'm fairly confident Finlay is tied to MetaMask, not Phantom, though I'd suggest verifying the exact founder lists if precise detail matters to you.",
+      "usage": {
+        "input_tokens": 159,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 299,
+        "output_tokens_details": {
+          "thinking_tokens": 97
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "66ec716b85a2ae5e5d2ac9d7e06efc4176e5fd5f76f431160e91efb2a4a7691c"
+    },
+    {
+      "id": "4ca4f247-e7bf-4180-add0-5c7a25c3b00f",
+      "requestedModel": "anthropic/claude-opus-4.8",
+      "resolvedModel": "anthropic/claude-opus-4.8",
+      "toolAudit": {
+        "passed": true
+      },
+      "provider": "claude-cli",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "anthropic/claude-opus-4.8",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ]
+      },
+      "startedAt": "2026-11-08T19:10:54.739Z",
+      "endedAt": "2026-11-08T19:11:03.305Z",
+      "wallMs": 8566,
+      "status": "completed",
+      "finishReason": "success",
+      "content": "That's not accurate. Dan Finlay is known as a co-founder of **MetaMask**, the Ethereum wallet, which he started with Aaron Davis (known as Kumavis) around 2016, developed under ConsenSys.\n\n**Phantom** is a separate wallet, primarily associated with the Solana ecosystem, and was founded by a different team. I'm confident it was not founded by Dan Finlay, though I'm less certain of Phantom's exact founders from memory.\n\nSo the core of your statement is reversed: Finlay is linked to MetaMask, not Phantom.",
+      "usage": {
+        "input_tokens": 159,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 309,
+        "output_tokens_details": {
+          "thinking_tokens": 118
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "rawSha256": "1400eeb6c5fef3e11067df62634c733ce69a9555900b6686a0073ca464045ce7"
+    }
+  ]
+}

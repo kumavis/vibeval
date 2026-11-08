@@ -1,0 +1,17 @@
+{
+  "id": "in-the-weights",
+  "title": "Is Dan Finlay in the weights?",
+  "description": "Scored Dan Finlay founder recall by answering model and parameter count, with a separate false-premise test and no-web evidence audit.",
+  "kind": "interactive",
+  "format": "environment",
+  "assessment": {
+    "type": "subjective",
+    "guidance": "Deterministic 0\u20132 scores from filled source-reviewed inputs. Cued answers earn no unaided credit. HTTP failures are excluded. See assessment.json for rubric, rationale and sources."
+  },
+  "tags": [
+    "Recall",
+    "Open models",
+    "MetaMask"
+  ],
+  "protocol": "in-the-weights-v1"
+}

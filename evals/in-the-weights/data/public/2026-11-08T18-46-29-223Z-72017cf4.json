@@ -1,0 +1,573 @@
+{
+  "id": "2026-11-08T18-46-29-223Z-72017cf4",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T18:46:29.224Z",
+  "endedAt": "2026-11-08T18:46:56.915Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "nousresearch/hermes-4-405b"
+    }
+  ],
+  "responses": [
+    {
+      "id": "324e3d2a-e858-4e7b-b475-40e4c2a6f22a",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163589-1npANCMet74dOcqU03nd",
+      "provider": "Nebius",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:29.224Z",
+      "endedAt": "2026-11-08T18:46:32.683Z",
+      "wallMs": 3459,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer known for his work on MetaMask. MetaMask is a popular cryptocurrency wallet that allows users to interact with the Ethereum blockchain through their web browser. As a key contributor to MetaMask, Finlay has played a significant role in developing and maintaining the wallet, which has become a widely used tool in the Ethereum ecosystem. While I know he is associated with MetaMask, I am not certain about the specific details of his role or contributions beyond that.",
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 97,
+        "total_tokens": 174,
+        "cost": 0.000368,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000368,
+          "upstream_inference_prompt_cost": 0.000077,
+          "upstream_inference_completions_cost": 0.000291
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "1941ddba3c4a3721f3d6294cf49321b0be7322318c7422eb6e1ed5fbf10266f1",
+      "httpStatus": 200
+    },
+    {
+      "id": "be79d479-e97e-47bb-9c86-f03238ca18d9",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163592-Z4KGnxGNCEWpwlD49pwR",
+      "provider": "Nebius",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:32.684Z",
+      "endedAt": "2026-11-08T18:46:35.965Z",
+      "wallMs": 3281,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer known primarily for his work on MetaMask, a popular cryptocurrency wallet that allows users to interact with the Ethereum blockchain. He has been involved in the development and promotion of MetaMask, which has become a key tool for accessing decentralized applications (dApps) and managing digital assets. Beyond his technical contributions, Finlay is also recognized for his insights on blockchain technology, user experience design, and the broader implications of decentralized systems. While he is a prominent figure in the cryptocurrency space, I do not have detailed information on other aspects of his career or personal background.",
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 119,
+        "total_tokens": 196,
+        "cost": 0.0003828,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003828,
+          "upstream_inference_prompt_cost": 0.0000258,
+          "upstream_inference_completions_cost": 0.000357
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "7b8ad4459fb9da3aa61d8d965877f875a7a37d606999e5cb39a59ba869edfded",
+      "httpStatus": 200
+    },
+    {
+      "id": "9a392241-dedc-4a05-bfc0-5c11d884a7fe",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163596-3JUR1eWFyKfy4c8wkBHy",
+      "provider": "Nebius",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:35.966Z",
+      "endedAt": "2026-11-08T18:46:39.267Z",
+      "wallMs": 3301,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a software developer known primarily for his contributions to the Ethereum ecosystem. He is one of the main developers behind MetaMask, a popular cryptocurrency wallet that allows users to interact with the Ethereum blockchain through their web browser. Finlay has been involved in the development and maintenance of MetaMask since its early days, helping to shape it into a widely-used tool for managing Ethereum-based assets and interacting with decentralized applications (dApps). His work has been instrumental in making Ethereum more accessible to a broader audience. However, beyond his role at MetaMask, I do not have detailed information about his other projects or contributions.",
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 125,
+        "total_tokens": 202,
+        "cost": 0.0004008,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004008,
+          "upstream_inference_prompt_cost": 0.0000258,
+          "upstream_inference_completions_cost": 0.000375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ea30224424702f47d5ddc50a1816dd64bbb50f4f6985dbb734d3594620c848e3",
+      "httpStatus": 200
+    },
+    {
+      "id": "6a3edc8e-a5f0-47db-9150-5b99b7c0d971",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163599-CaG9jhMmRsOeAco21V2L",
+      "provider": "Nebius",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:39.268Z",
+      "endedAt": "2026-11-08T18:46:42.674Z",
+      "wallMs": 3406,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder and lead developer of MetaMask, a popular Ethereum wallet and browser extension. He played a crucial role in the creation and development of MetaMask, which has become an essential tool for interacting with the Ethereum blockchain and decentralized applications (dApps). Finlay's contributions include designing the user interface, implementing key features, and overseeing the overall development of the project. He has been involved with MetaMask since its early days, helping to grow it from a small project into a widely-used platform in the cryptocurrency and blockchain space.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 111,
+        "total_tokens": 196,
+        "cost": 0.0003668,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003668,
+          "upstream_inference_prompt_cost": 0.0000338,
+          "upstream_inference_completions_cost": 0.000333
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "343f0db30025bc651fedba2827d20d8598fc1c263239fa6527529f53b23dd28d",
+      "httpStatus": 200
+    },
+    {
+      "id": "54607f33-ecc9-41bf-8414-717391c8cef0",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163602-6G09z7FsvaKL7jytze7Z",
+      "provider": "Nebius",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:42.675Z",
+      "endedAt": "2026-11-08T18:46:45.498Z",
+      "wallMs": 2823,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder and lead developer of MetaMask. He played a crucial role in the development and launch of the browser extension, which allows users to interact with the Ethereum blockchain. Finlay's contributions include designing the user interface and experience, as well as implementing key features like secure wallet management and transaction signing. He has been involved with MetaMask since its inception in 2016 and has helped grow it into one of the most popular Ethereum wallets, with millions of users worldwide.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 100,
+        "total_tokens": 185,
+        "cost": 0.000385,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000385,
+          "upstream_inference_prompt_cost": 0.000085,
+          "upstream_inference_completions_cost": 0.0003
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "4960696531852caa1a60b61d975c02d057ea78d0bddc5cac5de9858138e51668",
+      "httpStatus": 200
+    },
+    {
+      "id": "49be215e-83e4-45a1-a325-f6b29a008bb0",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163605-cK9AtL9bYySWSozEZGzD",
+      "provider": "Nebius",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:45.500Z",
+      "endedAt": "2026-11-08T18:46:48.707Z",
+      "wallMs": 3207,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder and lead developer of MetaMask, a popular cryptocurrency wallet that allows users to interact with the Ethereum blockchain through a browser extension. Finlay played a crucial role in the creation and development of MetaMask, contributing to its user interface, security features, and overall functionality. He has been involved with the project since its early days, helping to establish it as one of the most widely used tools in the Ethereum ecosystem. Finlay's work on MetaMask has made it easier for users to manage their Ethereum-based assets and interact with decentralized applications (dApps) directly from their web browsers.",
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 124,
+        "total_tokens": 209,
+        "cost": 0.000393,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 80,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000393,
+          "upstream_inference_prompt_cost": 0.000021,
+          "upstream_inference_completions_cost": 0.000372
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "a1bdaabf85e6b8a4cce683e02b2aaf456bf8bf8023a935334f28bb04b3afbb57",
+      "httpStatus": 200
+    },
+    {
+      "id": "78b198c9-23bb-4cd1-bec2-982721661a4f",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163608-Xy5IzasPJOvdmNk2DM9y",
+      "provider": "Nebius",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:48.709Z",
+      "endedAt": "2026-11-08T18:46:51.651Z",
+      "wallMs": 2942,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am unsure about the specifics of Dan Finlay's involvement with Phantom. I know that Dan Finlay is a well-known figure in the cryptocurrency space and is associated with MetaMask, a popular Ethereum wallet. However, I do not have enough information to confirm whether he co-founded Phantom, another cryptocurrency wallet, or if that information is accurate. It's possible that there may be confusion or mix-up between his work with MetaMask and any potential involvement with Phantom. For a definitive answer, it would be best to consult official sources or Dan Finlay's professional profile.",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 115,
+        "total_tokens": 206,
+        "cost": 0.0003976,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 48,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003976,
+          "upstream_inference_prompt_cost": 0.0000526,
+          "upstream_inference_completions_cost": 0.000345
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "fef5c56fefabb5578dcb2ea3f6423be3dc6d0afac72b4b886ec20d78dc8cb3f7",
+      "httpStatus": 200
+    },
+    {
+      "id": "bb43cfd5-d0f8-438c-87cc-5f9c5581cdb6",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163611-21AmCStCja5Gb4U1xiG3",
+      "provider": "Nebius",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:51.653Z",
+      "endedAt": "2026-11-08T18:46:54.378Z",
+      "wallMs": 2725,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am unsure about the specific details of Dan Finlay's involvement with Phantom. I know that Dan Finlay is one of the co-founders of MetaMask, a popular Ethereum wallet. However, I do not have enough information to confirm or deny his involvement in founding Phantom, which is a Solana wallet. It's possible there may be some confusion or mix-up between the two projects, but I do not want to state anything definitively without being more certain of the facts.",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 98,
+        "total_tokens": 189,
+        "cost": 0.000321,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 80,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000321,
+          "upstream_inference_prompt_cost": 0.000027,
+          "upstream_inference_completions_cost": 0.000294
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "99df0e7214ab8a80765d0cc7d4d81e66424b3ea1e12cc8c93a50aa8a0d2486f0",
+      "httpStatus": 200
+    },
+    {
+      "id": "217ce96d-3424-4ed0-b81d-8bbb5f0504b4",
+      "requestedModel": "nousresearch/hermes-4-405b",
+      "resolvedModel": "nousresearch/hermes-4-405b",
+      "responseId": "gen-1794163614-AzDJg54h19bb9NrQWkE6",
+      "provider": "Nebius",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "nousresearch/hermes-4-405b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:54.378Z",
+      "endedAt": "2026-11-08T18:46:56.915Z",
+      "wallMs": 2537,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is known as a co-founder of MetaMask, a popular cryptocurrency wallet. I am not aware of him co-founding a project called Phantom. It's possible there is some confusion or mix-up with the names. However, I do not have enough information to say for certain whether Dan Finlay was involved with a project called Phantom or not. My knowledge about Dan Finlay is primarily limited to his association with MetaMask.",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 89,
+        "total_tokens": 180,
+        "cost": 0.000294,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 80,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000294,
+          "upstream_inference_prompt_cost": 0.000027,
+          "upstream_inference_completions_cost": 0.000267
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "60637a56828bd343e6288ebcdaca2d41ffd43a09554d11663cc0afdf858955c3",
+      "httpStatus": 200
+    }
+  ]
+}

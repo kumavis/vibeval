@@ -1,0 +1,573 @@
+{
+  "id": "2026-11-08T18-46-04-059Z-fd29e964",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T18:46:04.061Z",
+  "endedAt": "2026-11-08T18:46:53.530Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "meta-llama/llama-3.3-70b-instruct"
+    }
+  ],
+  "responses": [
+    {
+      "id": "e30648b8-34d9-454c-9c32-333ce2349f1d",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163564-0f3boAxbgDCV7FAxhaiB",
+      "provider": "AkashML",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:04.082Z",
+      "endedAt": "2026-11-08T18:46:08.429Z",
+      "wallMs": 4347,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is known for being a Canadian professional ice hockey player, but I couldn't find more specific information about him. There may be multiple individuals with the name Dan Finlay, and without more context, it's difficult to determine which one you are referring to. If you have more information or details about Dan Finlay, I may be able to provide more accurate information.",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 77,
+        "total_tokens": 174,
+        "cost": 0.00005784,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005784,
+          "upstream_inference_prompt_cost": 0.0000178,
+          "upstream_inference_completions_cost": 0.00004004
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "0b4d3508647531383309a29c6ff9f7a98faa8f381d720893aef764bdab749231",
+      "httpStatus": 200
+    },
+    {
+      "id": "772cad22-78f6-4f13-87ae-910e08bf8707",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163568-bl5V1HUgRMmDshisTIui",
+      "provider": "AkashML",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:08.430Z",
+      "endedAt": "2026-11-08T18:46:31.812Z",
+      "wallMs": 23382,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is known for being a Canadian professional wrestler. He is best known for his time in All Elite Wrestling (AEW) under the ring name Danhausen. He is a comedian and wrestler who has gained popularity for his humorous and entertaining character, often incorporating comedy into his wrestling performances.",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 60,
+        "total_tokens": 157,
+        "cost": 0.000041,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 96,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000041,
+          "upstream_inference_prompt_cost": 0.0000098,
+          "upstream_inference_completions_cost": 0.0000312
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "9b5c255cce6ae354c2bab3c949b6d4e150afd1c2bc4ebf89501a07d6e4a4da6f",
+      "httpStatus": 200
+    },
+    {
+      "id": "4417ade0-ee15-456b-96ba-a3fbbcf63336",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163591-T82XS0GQKYIWjZQ8hawa",
+      "provider": "CoreWeave",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:31.813Z",
+      "endedAt": "2026-11-08T18:46:38.013Z",
+      "wallMs": 6200,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is known for being a Canadian professional wrestler. He is currently signed to All Elite Wrestling (AEW) under the ring name Danhausen. I'm not certain about his life outside of wrestling or any other notable accomplishments. As Danhausen, he is known for his comedic character and entertaining performances in the ring.",
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 66,
+        "total_tokens": 143,
+        "cost": 0.00010153,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010153,
+          "upstream_inference_prompt_cost": 0.00005467,
+          "upstream_inference_completions_cost": 0.00004686
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "23c16ab2ff9b7b38137546bb0f75827a6576bc6d60f66defc6e5363dc001e01d",
+      "httpStatus": 200
+    },
+    {
+      "id": "9035e0cd-6015-4bfb-b21a-63e7eb4511b2",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163598-CZ39xfD6MyN5pdGB63pX",
+      "provider": "Parasail",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:38.014Z",
+      "endedAt": "2026-11-08T18:46:40.672Z",
+      "wallMs": 2658,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, a popular cryptocurrency wallet and browser extension. He, along with Aaron Davis, founded MetaMask in 2016. Finlay's contribution to MetaMask includes developing the initial prototype and driving the project's early growth. He played a crucial role in shaping the product's user interface and user experience. Before MetaMask, Finlay worked on other cryptocurrency-related projects. His work on MetaMask helped make interacting with blockchain applications more accessible to a broader audience. I don't have more specific historical details about his work beyond his role in co-founding MetaMask.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 123,
+        "total_tokens": 209,
+        "cost": 0.00008042,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00008042,
+          "upstream_inference_prompt_cost": 0.00001892,
+          "upstream_inference_completions_cost": 0.0000615
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "6d83fca337bf943aada2792a03b50df0aab2d51468f813244be7b147a069f6e6",
+      "httpStatus": 200
+    },
+    {
+      "id": "4abed30e-b35b-4fbe-afee-e8c236dead55",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163600-EDU3aNlyn8nxNGNrQbKv",
+      "provider": "AkashML",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:40.673Z",
+      "endedAt": "2026-11-08T18:46:45.179Z",
+      "wallMs": 4506,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, a popular cryptocurrency wallet and browser extension. He, along with Aaron Davis, founded MetaMask in 2016. Finlay's contribution to MetaMask includes developing the initial prototype and driving the project's early growth. Under his guidance, MetaMask became a leading tool for interacting with decentralized applications (dApps) on the Ethereum blockchain. Finlay's work on MetaMask helped make it easier for users to access and use dApps, contributing to the growth of the Ethereum ecosystem.",
+      "usage": {
+        "prompt_tokens": 105,
+        "completion_tokens": 108,
+        "total_tokens": 213,
+        "cost": 0.00006916,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 80,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00006916,
+          "upstream_inference_prompt_cost": 0.000013,
+          "upstream_inference_completions_cost": 0.00005616
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "81c9e33d08f9a289a129c343c63641fb73780eb99be3482d09e658ea8db11cdc",
+      "httpStatus": 200
+    },
+    {
+      "id": "787066c5-dbc9-48a3-9510-11a21c91f12d",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163605-vBo5fI4qAwDWozEvThHk",
+      "provider": "Parasail",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:45.181Z",
+      "endedAt": "2026-11-08T18:46:47.074Z",
+      "wallMs": 1893,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a developer and the founder of MetaMask, a popular browser extension and mobile app for interacting with the Ethereum blockchain. He is credited with creating the initial version of MetaMask in 2016. Finlay's contribution to MetaMask has been instrumental in making it a widely-used tool for accessing and interacting with decentralized applications (dApps) on the Ethereum network. I'm not aware of any other specific historical details about Dan Finlay beyond his role in creating MetaMask.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 99,
+        "total_tokens": 185,
+        "cost": 0.00006138,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00006138,
+          "upstream_inference_prompt_cost": 0.00001188,
+          "upstream_inference_completions_cost": 0.0000495
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "a1506c6397a6e7eeb8a2c1081b3f80cf56f6d7831ed1dda3267cba18d15704c5",
+      "httpStatus": 200
+    },
+    {
+      "id": "7d3e79d6-53e6-4efa-8cbc-85e2e55f37a4",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163607-nX6BJHtAiP78msYMM0EI",
+      "provider": "Parasail",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:47.075Z",
+      "endedAt": "2026-11-08T18:46:49.301Z",
+      "wallMs": 2226,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am unsure about Dan Finlay's involvement with Phantom. I know that Dan Finlay co-founded MetaMask, but I don't have information about him co-founding Phantom. It's possible that he was involved with Phantom, but I don't have enough knowledge to confirm this. I can only confirm his association with MetaMask.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 68,
+        "total_tokens": 160,
+        "cost": 0.00005424,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005424,
+          "upstream_inference_prompt_cost": 0.00002024,
+          "upstream_inference_completions_cost": 0.000034
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "da545c83ec959ac74a184e16ab030537617df16535cf0b85beb89d1150be5aaf",
+      "httpStatus": 200
+    },
+    {
+      "id": "09464ffb-5fbb-42bb-81d3-de163dd7cccf",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163609-q4wWjO5z31iuOMFxikPz",
+      "provider": "CoreWeave",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:49.303Z",
+      "endedAt": "2026-11-08T18:46:50.709Z",
+      "wallMs": 1406,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is indeed a co-founder of MetaMask, not Phantom. I am fairly certain of this as MetaMask is a well-known Ethereum wallet and browser extension, and Dan Finlay is often credited as one of its co-founders. Phantom, on the other hand, is a Solana wallet. I am unsure if Dan Finlay was involved with Phantom in any way, but I am confident he co-founded MetaMask.",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 88,
+        "total_tokens": 179,
+        "cost": 0.00012709,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012709,
+          "upstream_inference_prompt_cost": 0.00006461,
+          "upstream_inference_completions_cost": 0.00006248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "5b4c4ce086bac5ae4dcaeb5703f968c0bc97435d574fdeac8298d321aeacde42",
+      "httpStatus": 200
+    },
+    {
+      "id": "27bc817f-004f-40da-b706-4162b1ec2b2d",
+      "requestedModel": "meta-llama/llama-3.3-70b-instruct",
+      "resolvedModel": "meta-llama/llama-3.3-70b-instruct",
+      "responseId": "gen-1794163610-KToOGCs3uXUK2s9OzvGi",
+      "provider": "AkashML",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:50.711Z",
+      "endedAt": "2026-11-08T18:46:53.529Z",
+      "wallMs": 2818,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am unsure about Dan Finlay's involvement with Phantom. However, I do know that Dan Finlay co-founded MetaMask, a popular Ethereum wallet. I don't have information about his involvement with Phantom, which is a Solana wallet. If Dan Finlay is indeed associated with Phantom, it's not within my knowledge.",
+      "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 67,
+        "total_tokens": 178,
+        "cost": 0.00005064,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005064,
+          "upstream_inference_prompt_cost": 0.0000158,
+          "upstream_inference_completions_cost": 0.00003484
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "a80e16174edbaddfdae53e256e1d6c232e9960775d1dac7849e883c153ccbf28",
+      "httpStatus": 200
+    }
+  ]
+}

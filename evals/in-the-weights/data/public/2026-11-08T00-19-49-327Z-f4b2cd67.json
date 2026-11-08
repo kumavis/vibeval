@@ -1,0 +1,186 @@
+{
+  "id": "2026-11-08T00-19-49-327Z-f4b2cd67",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "5fd0b0a30d7b7fa4b283db7daade75782cd682527199d5801aacd405b354c832",
+  "startedAt": "2026-11-08T00:19:49.328Z",
+  "endedAt": "2026-11-08T00:22:11.084Z",
+  "status": "completed",
+  "transport": "tailscale",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "step-3.7-flash"
+    }
+  ],
+  "responses": [
+    {
+      "id": "7e988613-f3a5-43ae-be44-627d30ce1119",
+      "requestedModel": "step-3.7-flash",
+      "resolvedModel": "step-3.7-flash",
+      "responseId": "chatcmpl-rluedeSbhsUTNzy4QqrDUu7K6dUkxrL2",
+      "provider": null,
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "step-3.7-flash",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:19:49.329Z",
+      "endedAt": "2026-11-08T00:20:36.942Z",
+      "wallMs": 47613,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a core early engineer and long-serving lead maintainer of MetaMask, the dominant Ethereum browser wallet. He joined the ConsenSys-backed project shortly after its 2016 public launch, building foundational features including secure key management, transaction signing, and dApp integration. He was a lead author of EIP-1193, the standardized Ethereum Provider API that underpins MetaMask's interoperability with decentralized applications, now an ecosystem-wide standard. He stepped down from his MetaMask lead role in 2022, and has since contributed to Ethereum privacy and identity-focused tools.",
+      "usage": {
+        "completion_tokens": 1219,
+        "prompt_tokens": 87,
+        "total_tokens": 1306,
+        "prompt_tokens_details": {
+          "cached_tokens": 54
+        }
+      },
+      "rawSha256": "91b55c791df821d273549b3c5890b646792080508003189844ffcbb5521222f4",
+      "httpStatus": 200
+    },
+    {
+      "id": "da14be47-8f0a-474a-abfe-7dbb6b93f96d",
+      "requestedModel": "step-3.7-flash",
+      "resolvedModel": "step-3.7-flash",
+      "responseId": "chatcmpl-URTQspht9F45f5oIOQmaaLH3INW2zb17",
+      "provider": null,
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "step-3.7-flash",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:20:36.943Z",
+      "endedAt": "2026-11-08T00:21:43.481Z",
+      "wallMs": 66538,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a prominent Ethereum ecosystem developer best known as the long-time lead maintainer and core contributor to MetaMask, Consensys' flagship self-custody crypto wallet. He joined the MetaMask team shortly after its 2016 launch as a Chrome extension, and led core development for years. His key contributions include overseeing integration of the EIP-1559 Ethereum fee standard, and spearheading the launch of MetaMask Snaps, the wallet's third-party extension framework. He was also a vocal advocate for user privacy, self-custody, and decentralized Web3 identity. He departed Consensys in 2022, and later co-founded ZK Pass, a zero-knowledge proof-based identity tool.",
+      "usage": {
+        "completion_tokens": 1711,
+        "prompt_tokens": 87,
+        "total_tokens": 1798,
+        "prompt_tokens_details": {
+          "cached_tokens": 82
+        }
+      },
+      "rawSha256": "be72b3ffd83e3ea501b830a0c18b0d097b19a8d08d9aba1a52ab4552125f8696",
+      "httpStatus": 200
+    },
+    {
+      "id": "ef9d2d5f-01aa-4787-bfe2-d743bc2cc5ae",
+      "requestedModel": "step-3.7-flash",
+      "resolvedModel": "step-3.7-flash",
+      "responseId": "chatcmpl-1WUU4AbmlkzKdZnw1RcOHZKxNMx7s0xP",
+      "provider": null,
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "step-3.7-flash",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:43.482Z",
+      "endedAt": "2026-11-08T00:22:11.082Z",
+      "wallMs": 27600,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "That claim is inaccurate. Dan Finlay is a well-documented co-founder and long-time lead maintainer of MetaMask, the original Ethereum-focused browser extension wallet. Phantom is a separate wallet built for the Solana ecosystem, founded by a distinct team with no public record of Finlay being a co-founder. There is no credible, widely reported information linking Finlay to Phantom's founding, so I am confident this claim is incorrect.",
+      "usage": {
+        "completion_tokens": 697,
+        "prompt_tokens": 93,
+        "total_tokens": 790,
+        "prompt_tokens_details": {
+          "cached_tokens": 54
+        }
+      },
+      "rawSha256": "fb889898052cd2397a26acc0db98d225b19031daab47af5ead7dd24c2b7bf888",
+      "httpStatus": 200
+    }
+  ]
+}

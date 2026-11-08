@@ -1,0 +1,573 @@
+{
+  "id": "2026-11-08T19-10-42-913Z-6be7147c",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T19:10:42.914Z",
+  "endedAt": "2026-11-08T19:10:48.131Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "meta-llama/llama-3.2-1b-instruct"
+    }
+  ],
+  "responses": [
+    {
+      "id": "85b01d8b-6f6a-4818-ac99-db43c04c564d",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165043-481grgnY1lr65jRtt5fW",
+      "provider": "Cloudflare",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:42.914Z",
+      "endedAt": "2026-11-08T19:10:43.503Z",
+      "wallMs": 589,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I do not have any information on a person named Dan Finlay.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 15,
+        "total_tokens": 93,
+        "cost": 0.000005121,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000005121,
+          "upstream_inference_prompt_cost": 0.000002106,
+          "upstream_inference_completions_cost": 0.000003015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "f3beb990caca0ed8fa59963009ea7155be5ce0f14add619c3c17f54a39ae204e",
+      "httpStatus": 200
+    },
+    {
+      "id": "c40c8f1a-79e3-411e-b613-e66676924106",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165043-yxdj0Ftd6WysjbALBD21",
+      "provider": "Cloudflare",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:43.505Z",
+      "endedAt": "2026-11-08T19:10:44.147Z",
+      "wallMs": 642,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I do not have any information on a person named Dan Finlay.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 15,
+        "total_tokens": 93,
+        "cost": 0.000005121,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000005121,
+          "upstream_inference_prompt_cost": 0.000002106,
+          "upstream_inference_completions_cost": 0.000003015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "13f02b3207f7f6c6706afa04e251a0bb0eef7d7fca2bce3536a65534ba5388b1",
+      "httpStatus": 200
+    },
+    {
+      "id": "521f3e65-3010-4ea9-b5ea-26016ccba4c3",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165044-h1xgPFzGHVJwQHvjYhFc",
+      "provider": "Cloudflare",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:44.149Z",
+      "endedAt": "2026-11-08T19:10:44.538Z",
+      "wallMs": 389,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am not aware of any notable person named Dan Finlay.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 14,
+        "total_tokens": 92,
+        "cost": 0.00000492,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00000492,
+          "upstream_inference_prompt_cost": 0.000002106,
+          "upstream_inference_completions_cost": 0.000002814
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "39489862fbb6837da10e4d95eb6d2d8ebcd5cd76a5f8a7778cd76333f92d4f90",
+      "httpStatus": 200
+    },
+    {
+      "id": "58050f14-80a5-473f-a880-e5cdd2bb6870",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165044-DRYLjb9ap5suSLh5EaFd",
+      "provider": "Cloudflare",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:44.539Z",
+      "endedAt": "2026-11-08T19:10:45.245Z",
+      "wallMs": 706,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a well-known figure in the cryptocurrency space. He is a co-founder of the decentralized application (dapp) platform that allows users to interact with smart contracts on the Ethereum blockchain.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 41,
+        "total_tokens": 127,
+        "cost": 0.000010563,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000010563,
+          "upstream_inference_prompt_cost": 0.000002322,
+          "upstream_inference_completions_cost": 0.000008241
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "76a2aa1a24d43828839f008a45322c964b37a18cea401362625e7b6351be92ed",
+      "httpStatus": 200
+    },
+    {
+      "id": "4f3deff6-a66d-4187-a1f9-4dc5489fd293",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165045-SWtOgoMjBNkGhl7MlfWW",
+      "provider": "Cloudflare",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:45.246Z",
+      "endedAt": "2026-11-08T19:10:45.858Z",
+      "wallMs": 612,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I do not have specific information on a person named Dan Finlay in connection with MetaMask.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 20,
+        "total_tokens": 106,
+        "cost": 0.000006342,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000006342,
+          "upstream_inference_prompt_cost": 0.000002322,
+          "upstream_inference_completions_cost": 0.00000402
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "97e945757d523ba98a262f6b8f34987685d94f5c948db85587e76770dc370e92",
+      "httpStatus": 200
+    },
+    {
+      "id": "67eb5e29-4d89-4ef5-b0dd-1fcef58bdb08",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165046-2bFKcPBSpphMxjqUvbOt",
+      "provider": "Cloudflare",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:45.860Z",
+      "endedAt": "2026-11-08T19:10:46.281Z",
+      "wallMs": 421,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am not aware of any information about a person named Dan Finlay in connection with MetaMask.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 21,
+        "total_tokens": 107,
+        "cost": 0.000006543,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000006543,
+          "upstream_inference_prompt_cost": 0.000002322,
+          "upstream_inference_completions_cost": 0.000004221
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "143057367f1a824e12d8723f704eb847cf7f9d946f80e5e32a9729a706260839",
+      "httpStatus": 200
+    },
+    {
+      "id": "2921bbc3-62eb-4591-ae06-673bd9d955d8",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165046-ARvihSszlIrw27EFHQln",
+      "provider": "Cloudflare",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:46.282Z",
+      "endedAt": "2026-11-08T19:10:47.151Z",
+      "wallMs": 869,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Yes.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 3,
+        "total_tokens": 95,
+        "cost": 0.000003087,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000003087,
+          "upstream_inference_prompt_cost": 0.000002484,
+          "upstream_inference_completions_cost": 6.03e-7
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "045bdc5d833e0d2bc05c65872306b83d9e12222a57445f7a18dde5f0b1004f56",
+      "httpStatus": 200
+    },
+    {
+      "id": "6116cd1f-28d4-4f55-9a92-4d9685684749",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165047-f4HQ7ZN6Uo1kGHwiEaFY",
+      "provider": "Cloudflare",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:47.151Z",
+      "endedAt": "2026-11-08T19:10:47.742Z",
+      "wallMs": 591,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I do not have information that confirms Dan Finlay co-founded Phantom.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 15,
+        "total_tokens": 107,
+        "cost": 0.000005499,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000005499,
+          "upstream_inference_prompt_cost": 0.000002484,
+          "upstream_inference_completions_cost": 0.000003015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "788369f50e02b156bf040d7d1f55e558e46e8bdb27354187d437bb9289e45f2c",
+      "httpStatus": 200
+    },
+    {
+      "id": "6ab409be-96b6-4090-97b1-a8a450b4c9b6",
+      "requestedModel": "meta-llama/llama-3.2-1b-instruct",
+      "resolvedModel": "meta-llama/llama-3.2-1b-instruct",
+      "responseId": "gen-1794165047-8gyjVsaiGaWLjnawwzHR",
+      "provider": "Cloudflare",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:10:47.742Z",
+      "endedAt": "2026-11-08T19:10:48.130Z",
+      "wallMs": 388,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I am unsure.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 5,
+        "total_tokens": 97,
+        "cost": 0.000003489,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000003489,
+          "upstream_inference_prompt_cost": 0.000002484,
+          "upstream_inference_completions_cost": 0.000001005
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "309220683fc3986eac81df0ef26005a176bc7159d75a65f407836f64e63bb5ea",
+      "httpStatus": 200
+    }
+  ]
+}
