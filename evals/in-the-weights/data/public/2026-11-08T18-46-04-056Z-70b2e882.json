@@ -1,0 +1,573 @@
+{
+  "id": "2026-11-08T18-46-04-056Z-70b2e882",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "aa8936f1ea626213fa30dd7a73953cdc9eff40c80a32dbb90d4ea3abc863d5d3",
+  "startedAt": "2026-11-08T18:46:04.061Z",
+  "endedAt": "2026-11-08T18:47:30.015Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "qwen/qwen3-14b"
+    }
+  ],
+  "responses": [
+    {
+      "id": "f6871caf-d794-46db-996f-4543d2c076b8",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163564-q2gxTj7bggEnihkZVGFx",
+      "provider": "DeepInfra",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:04.061Z",
+      "endedAt": "2026-11-08T18:46:15.472Z",
+      "wallMs": 11411,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a former professional wrestler best known for his tenure in the 1980s as part of the tag team **The Rock 'n' Roll Express** alongside Ricky Steamboat. The duo was prominent in the NWA and later WWE, celebrated for their high-flying, acrobatic style. Finlay's career also included stints in various wrestling promotions, though his partnership with Steamboat remains his most notable legacy. There is no widely recognized ambiguity about his identity in this context.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 450,
+        "total_tokens": 528,
+        "cost": 0.00011736,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011736,
+          "upstream_inference_prompt_cost": 0.00000936,
+          "upstream_inference_completions_cost": 0.000108
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 348,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "a037d2d9001b4daf7ee2a6f7c71179e02e5a003bbbcca67346a2e5a9a1ba9086",
+      "httpStatus": 200
+    },
+    {
+      "id": "a4e81228-460e-4812-b71f-cac50995df1f",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163575-NehOzLOpllqEUaOABOXT",
+      "provider": "DeepInfra",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:15.472Z",
+      "endedAt": "2026-11-08T18:46:24.071Z",
+      "wallMs": 8599,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a former professional wrestler and referee, best known for his career in the World Wrestling Federation (WWF, now WWE). He gained prominence in the 1980s and 1990s as a referee and later as a manager, notably for teams like The Hart Foundation (Bret Hart and Jim Neidhart) and The British Bulldog (Davey Boy Smith). Finlay's tenure as a referee was marked by his authoritative presence, and his managerial role helped elevate several wrestlers. He also wrestled briefly in the late 1980s. While his name is sometimes associated with wrestling, there is no widely recognized figure named Dan Finlay in other fields.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 370,
+        "total_tokens": 448,
+        "cost": 0.00009816,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00009816,
+          "upstream_inference_prompt_cost": 0.00000936,
+          "upstream_inference_completions_cost": 0.0000888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 239,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "1813004b2bde702ef67e0bcc1ce8ccb8f0deff2248a240f7453b04748f976507",
+      "httpStatus": 200
+    },
+    {
+      "id": "0156304d-088f-4099-aa01-5130a67e10e8",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163584-68PokURWQJjzM7q8MrEX",
+      "provider": "NextBit",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:24.072Z",
+      "endedAt": "2026-11-08T18:46:35.463Z",
+      "wallMs": 11391,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is primarily known as a professional wrestler, best recognized as part of the tag team \"The Hart Foundation\" alongside his brother Bret Hart. The duo dominated WWE (then WWF) in the late 1980s and 1990s, winning multiple tag team championships. He is also a politician from New Zealand, having served as a Member of Parliament for the National Party. However, the wrestler Dan Finlay is more prominently recognized in sports entertainment. There may be ambiguity if referring to other individuals with the same name.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 400,
+        "total_tokens": 478,
+        "cost": 0.0000958,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000958,
+          "upstream_inference_prompt_cost": 0.0000078,
+          "upstream_inference_completions_cost": 0.000088
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 328,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "3abf51d06cec2ecbd329456d8919eae5e95c38b60f362945e60c23f5df651204",
+      "httpStatus": 200
+    },
+    {
+      "id": "e5cf8ccd-7113-4409-880c-059f47e364e4",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163595-ZcQ0EdbHxtv39KL0Sro9",
+      "provider": "NextBit",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:35.465Z",
+      "endedAt": "2026-11-08T18:46:43.031Z",
+      "wallMs": 7566,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is not a widely recognized figure directly associated with MetaMask, and there is no prominent historical record of his specific contributions to the project. MetaMask, developed by ConsenSys, was primarily shaped by its core team, including co-founders like Daniel Buehrle and others. If Dan Finlay has any connection, it may be indirect or through lesser-known contributions, but no definitive details are publicly documented. The name might be ambiguous or refer to someone outside the project's core development history.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 364,
+        "total_tokens": 450,
+        "cost": 0.00008868,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00008868,
+          "upstream_inference_prompt_cost": 0.0000086,
+          "upstream_inference_completions_cost": 0.00008008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 292,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "d2f14d3daf635a0afe306c66601537b5f9377f58929f3b1cffa3b70fd6cf9d6b",
+      "httpStatus": 200
+    },
+    {
+      "id": "851b1bec-28f8-4bcd-ba9d-02c0e1262117",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163603-LblpfhOl2FiOgEdfC2Xp",
+      "provider": "DeepInfra",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:43.033Z",
+      "endedAt": "2026-11-08T18:46:51.303Z",
+      "wallMs": 8270,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is associated with MetaMask as one of its co-founders. He was involved in the early development of the project, which began as an open-source browser extension for interacting with Ethereum. Finlay contributed to MetaMask's initial design and functionality, though he left the project before its acquisition by Infura (a ConsenSys subsidiary) in 2019. His role is less prominently documented compared to other key figures like Christian Reitwiessner, who later became a lead developer. Finlay's specific technical contributions remain somewhat ambiguous in public records, and his later career details are unclear.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 386,
+        "total_tokens": 472,
+        "cost": 0.00010296,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010296,
+          "upstream_inference_prompt_cost": 0.00001032,
+          "upstream_inference_completions_cost": 0.00009264
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 275,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "3cb89c46579e28b05ca797ec5d245f7560e5c6cb28e564ac80c2a8c3e76a85c3",
+      "httpStatus": 200
+    },
+    {
+      "id": "d0caad56-f181-48fb-9620-77d1a7edef2d",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163611-kKPEFQtDkjNR7VhmGn46",
+      "provider": "DeepInfra",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:51.304Z",
+      "endedAt": "2026-11-08T18:46:57.968Z",
+      "wallMs": 6664,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is associated with MetaMask through his role as a co-founder of ConsenSys, the company behind MetaMask. He contributed to Ethereum's early development and was involved in building tools for decentralized applications. However, specific details about his direct involvement with MetaMask's creation or ongoing contributions are not widely documented in public sources. His work at ConsenSys likely influenced MetaMask's development, but exact historical roles remain unclear.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 274,
+        "total_tokens": 360,
+        "cost": 0.00007608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007608,
+          "upstream_inference_prompt_cost": 0.00001032,
+          "upstream_inference_completions_cost": 0.00006576
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 207,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ae8204d4c3e046a17bd4a7b354578e4b8b634bea94b5151bee1db36c3a891dbe",
+      "httpStatus": 200
+    },
+    {
+      "id": "9a81fa70-e0ee-42d8-8fbe-2ac7ff17d8da",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163618-B8Ky034zwW3bggHeJvYB",
+      "provider": "DeepInfra",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:46:57.968Z",
+      "endedAt": "2026-11-08T18:47:14.649Z",
+      "wallMs": 16681,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, a popular Ethereum wallet. He is not associated with Phantom, a Solana-based wallet co-founded by Tyler Ward and Stephen Tse. The confusion may arise from similar names or roles in blockchain projects, but there is no evidence linking Dan Finlay to Phantom. I am confident in this distinction.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 331,
+        "total_tokens": 423,
+        "cost": 0.00009048,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00009048,
+          "upstream_inference_prompt_cost": 0.00001104,
+          "upstream_inference_completions_cost": 0.00007944
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 274,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "44dc13a9378d4e198645d983f2291dc355e2bdb9791249544d9862ac55081b9b",
+      "httpStatus": 200
+    },
+    {
+      "id": "ed801332-79bc-4b15-8200-d15674d94068",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163634-E6ltz5gegkPAkglzOsp8",
+      "provider": "NextBit",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:47:14.651Z",
+      "endedAt": "2026-11-08T18:47:21.913Z",
+      "wallMs": 7262,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay (also known as Daniel Finlay) is a co-founder of MetaMask, a popular Ethereum wallet. He is not associated with Phantom, a Solana-based wallet co-founded by Stephen Cao and others. The confusion may arise from similar names or roles in blockchain projects. I am confident in this distinction based on public records of these projects' founding teams.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 284,
+        "total_tokens": 376,
+        "cost": 0.00007168,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007168,
+          "upstream_inference_prompt_cost": 0.0000092,
+          "upstream_inference_completions_cost": 0.00006248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 228,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "b5d0393500b3381374be8936b3179502e5001b62e78d8340ec1208b490d1fb6a",
+      "httpStatus": 200
+    },
+    {
+      "id": "dcf48d4a-7414-4a47-b5d0-bd9dfcf389c1",
+      "requestedModel": "qwen/qwen3-14b",
+      "resolvedModel": "qwen/qwen3-14b",
+      "responseId": "gen-1794163642-pjgFPO9diMdsBMllxqUv",
+      "provider": "DeepInfra",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T18:47:21.914Z",
+      "endedAt": "2026-11-08T18:47:30.014Z",
+      "wallMs": 8100,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is not known to have co-founded Phantom. Phantom is a Solana-based wallet co-founded by Tyler Crumpton and others. Dan Finlay is a prominent Ethereum developer and co-founder of the Ethereum Foundation, but he is not associated with Phantom's founding. MetaMask was developed by ConsenSys, not co-founded by Dan Finlay. I am unsure if Dan Finlay has any direct involvement with Phantom, as his primary contributions are in Ethereum infrastructure.",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 307,
+        "total_tokens": 399,
+        "cost": 0.00008472,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00008472,
+          "upstream_inference_prompt_cost": 0.00001104,
+          "upstream_inference_completions_cost": 0.00007368
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 235,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "524d2663bbb32663d25d5416c3963d7f783b0e95ce252c9a2854130891bc0767",
+      "httpStatus": 200
+    }
+  ]
+}

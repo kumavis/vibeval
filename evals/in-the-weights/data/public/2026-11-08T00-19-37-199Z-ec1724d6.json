@@ -1,0 +1,345 @@
+{
+  "id": "2026-11-08T00-19-37-199Z-ec1724d6",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "5fd0b0a30d7b7fa4b283db7daade75782cd682527199d5801aacd405b354c832",
+  "startedAt": "2026-11-08T00:19:37.200Z",
+  "endedAt": "2026-11-08T00:20:07.087Z",
+  "status": "completed-with-errors",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "liquid/lfm-2.5-2.6b:free"
+    }
+  ],
+  "responses": [
+    {
+      "id": "367b8491-3760-44bf-91ba-88119e59a83d",
+      "requestedModel": "liquid/lfm-2.5-2.6b:free",
+      "resolvedModel": "liquid/lfm-2.5-2.6b:free",
+      "responseId": "gen-1794097177-Ub7PqVJgsiQLcLX1LZl4",
+      "provider": "Liquid",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "liquid/lfm-2.5-2.6b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:19:37.200Z",
+      "endedAt": "2026-11-08T00:19:41.227Z",
+      "wallMs": 4027,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I don't have reliable, well-established knowledge about a specific individual named \"Dan Finlay\" in my training data. There are multiple people with this name across different fields (e.g., academics, professionals, public figures), but I cannot confidently identify which one you're referring to without more context.\n\nIf you can provide additional details such as their field of work, nationality, or notable achievements, I'd be happy to help you find accurate information. Without specific context, I cannot provide a verified answer about who Dan Finlay is or what he is known for.",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 393,
+        "total_tokens": 471,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 344,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "3d35b902d3a0767cde321e8f05ec288b118a5e85f7a9aa1ad263c21e4578d750",
+      "httpStatus": 200
+    },
+    {
+      "id": "26dcf2e2-c7b7-4419-b17d-64451b95985e",
+      "requestedModel": "liquid/lfm-2.5-2.6b:free",
+      "resolvedModel": "liquid/lfm-2.5-2.6b:free",
+      "responseId": "gen-1794097182-FZmksHhfNFEqzDXUTAcZ",
+      "provider": "Liquid",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "liquid/lfm-2.5-2.6b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:19:42.643Z",
+      "endedAt": "2026-11-08T00:19:49.991Z",
+      "wallMs": 7348,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay was a principal engineer at MetaMask (now part of ConsenSys) who played a key role in architecting the MetaMask protocol. He was deeply involved in the development of the core protocol that powers the popular MetaMask wallet, which is one of the most widely used cryptocurrency wallets. Finlay contributed significantly to the security, interface design, and overall architecture of MetaMask, helping establish it as the leading non-custodial wallet for Ethereum and EVM-compatible blockchains. His work helped shape the MetaMask specification and implementation, influencing how many users interact with smart contracts and decentralized applications. He was also involved in broader web3 ecosystem development, including contributions to ethers.js and other foundational projects. I am confident in his role at MetaMask and his contributions to the protocol, but specific historical timelines or exact project details may require verification from primary sources. (149 words)",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 544,
+        "total_tokens": 630,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 426,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "4554b360271d2039d48764af4596748d5bdd2f521177b4efad9b95d7095d0d38",
+      "httpStatus": 200
+    },
+    {
+      "id": "49b7924b-3603-4fbe-9fa1-935106171022",
+      "requestedModel": "liquid/lfm-2.5-2.6b:free",
+      "resolvedModel": "liquid/lfm-2.5-2.6b:free",
+      "responseId": "gen-1794097190-i40js70CUfTNC1QT1I4o",
+      "provider": "Liquid",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "liquid/lfm-2.5-2.6b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:19:49.992Z",
+      "endedAt": "2026-11-08T00:19:57.560Z",
+      "wallMs": 7568,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay was an early developer and key figure in the creation of MetaMask, the browser extension that became one of the most popular decentralized wallet interfaces for Ethereum and other blockchain applications. He contributed to the initial development of MetaMask's core functionality, particularly around the browser extension and the Ethereum wallet interface. Finlay was involved in the early stages of MetaMask's development and helped shape its architecture. He was part of the founding team and played a significant role in establishing MetaMask as a user-friendly wallet solution for Ethereum. However, I should note that while I know he was an early contributor, specific historical details about his exact timeline of involvement or particular notable contributions are not something I can verify with certainty. His work was foundational to MetaMask's rapid adoption and success in the decentralized finance (DeFi) space. I recommend checking MetaMask's official documentation or the original open-source repositories for the most accurate and complete account of his contributions.",
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 527,
+        "total_tokens": 613,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 399,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "dfcc15ac04a233699c932da2a78d9862c92b5107e6c93ba2507c06829d34d41a",
+      "httpStatus": 200
+    },
+    {
+      "id": "c927e4cf-efcd-425a-99bd-898e442799e9",
+      "requestedModel": "liquid/lfm-2.5-2.6b:free",
+      "resolvedModel": "liquid/lfm-2.5-2.6b:free",
+      "responseId": "gen-1794097198-kzhw6O8oOLA4vqkIlgV2",
+      "provider": "Liquid",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "liquid/lfm-2.5-2.6b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:19:58.640Z",
+      "endedAt": "2026-11-08T00:20:02.164Z",
+      "wallMs": 3524,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is the co-founder of Phantom, a popular DeFi wallet and browser extension. He is not a co-founder of MetaMask. MetaMask was co-founded by Braham Cole and Emin Gökçen (along with others). The claim that Dan Finlay co-founded MetaMask is inaccurate.\n\n**Answer:** Dan Finlay co-founded Phantom, not MetaMask. MetaMask's founders are Braham Cole and Emin Gökçen. (Source: My knowledge base - I am confident in this information.)",
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 404,
+        "total_tokens": 498,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 301,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "418d4a196c0a142d07ddcc284caa6788ad156870a891ef0eb9dd105e6e19c31d",
+      "httpStatus": 200
+    },
+    {
+      "id": "47b31661-7821-4186-87be-c8e089eeb159",
+      "requestedModel": "liquid/lfm-2.5-2.6b:free",
+      "resolvedModel": "liquid/lfm-2.5-2.6b:free",
+      "responseId": "gen-1794097202-5ImJkJ1U6sjcSV3b1Q1e",
+      "provider": "Liquid",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "liquid/lfm-2.5-2.6b:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:20:02.164Z",
+      "endedAt": "2026-11-08T00:20:07.086Z",
+      "wallMs": 4922,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I'm unsure about this specific claim. I don't have verified information confirming that Dan Finlay co-founded Phantom. MetaMask was co-founded by Brad Feld and Gabriel Weinberg (along with others), and Dan Finlay is not a widely recognized co-founder of that project. Phantom is a DeFi wallet/platform that was indeed co-founded by someone named Dan Finlay (I believe he is the technical lead), but I cannot confirm whether he was a co-founder in the traditional sense or if the claim about \"rather than MetaMask\" is accurate. This could be a confusion with another person or a recent development I'm not certain about.\n\nI cannot confidently verify this specific claim. If you have additional context or sources, I'd be happy to help clarify. (Word count: ~120)",
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 450,
+        "total_tokens": 544,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 325,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "e344c8c75f7ebedb7746e2e443a435ed09d824c7bbdd93f538e7445009efc620",
+      "httpStatus": 200
+    }
+  ]
+}

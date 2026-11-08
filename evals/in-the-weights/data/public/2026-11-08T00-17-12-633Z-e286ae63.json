@@ -1,0 +1,448 @@
+{
+  "id": "2026-11-08T00-17-12-633Z-e286ae63",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "fac05a7ed254dfb0e3ed61eaa87998f88ad7b8c5017e5533d61d89d86a6d489f",
+  "nodeVersion": "v22.23.4",
+  "startedAt": "2026-11-08T00:17:12.639Z",
+  "endedAt": "2026-11-08T00:18:31.452Z",
+  "status": "completed",
+  "transport": "Codex CLI; fresh ephemeral conversation; tools and web search disabled",
+  "settings": {
+    "trials": 3,
+    "effort": "medium",
+    "temperature": null,
+    "seedBase": null,
+    "maxTokens": null,
+    "timeoutMs": 180000,
+    "reasoning": "medium",
+    "retries": 0,
+    "cliVersion": "codex-cli 0.163.0",
+    "limitations": "Codex adds its native instructions. Temperature, seed, and output token limit are provider defaults, unlike the API runs. Resolved serving model is unreported."
+  },
+  "inventory": [
+    {
+      "id": "gpt-6.1-terra",
+      "ownedBy": "OpenAI",
+      "weightsFile": null
+    }
+  ],
+  "responses": [
+    {
+      "id": "5f86514d-4aac-4332-b34b-00bcc977ef0b",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:12.652Z",
+      "endedAt": "2026-11-08T00:17:22.556Z",
+      "wallMs": 9902,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a software developer and entrepreneur best known as a **co-founder of MetaMask**, a cryptocurrency wallet and gateway to Ethereum-based applications. He helped build MetaMask to make it easier for people to manage digital assets and interact with decentralized applications through a browser extension and mobile app.",
+      "usage": {
+        "input_tokens": 11469,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 62,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "8d8017542061669859648191ba410f49a4fa93d919922e12a2f86b554bf36d69"
+    },
+    {
+      "id": "11d735ea-7b1d-4e17-8bd2-bb9077214c2e",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:22.558Z",
+      "endedAt": "2026-11-08T00:17:31.534Z",
+      "wallMs": 8974,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a **co-founder of MetaMask**, the cryptocurrency wallet and browser extension used to interact with Ethereum and other compatible blockchains. He co-founded it with Aaron Davis in 2016.\n\nFinlay helped build MetaMask as a way for people to manage their Ethereum accounts and use decentralized applications through a web browser. The extension also helped establish a common interface for websites to request access to a user’s wallet and submit transactions for approval.\n\nI’m less certain about the precise division of work between the two founders or the sequence of early releases.",
+      "usage": {
+        "input_tokens": 10633,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 115,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "bfb7f99daf3eb5e59d07eb888f153e2d8c9083d7c4164722b0bfb9b57a1b33d2"
+    },
+    {
+      "id": "ce3dfcd5-a468-4030-a8d8-51e716fce75f",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:31.535Z",
+      "endedAt": "2026-11-08T00:17:40.450Z",
+      "wallMs": 8914,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "No. Dan Finlay co-founded **MetaMask** with Aaron Davis. Phantom was co-founded by Brandon Millman, Chris Kalani, and Francesco Agosti.",
+      "usage": {
+        "input_tokens": 11485,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 37,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "799e942f3c467fea0ae2e1d70d21dd9c77cb78d316436c619357f44505c668e0"
+    },
+    {
+      "id": "f6d64618-49ad-4e83-8533-8c08b6b3a991",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:40.452Z",
+      "endedAt": "2026-11-08T00:17:49.395Z",
+      "wallMs": 8941,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a software developer and entrepreneur best known as a **co-founder of MetaMask**, the cryptocurrency wallet and browser extension commonly used to interact with Ethereum and decentralized applications. He has also been a prominent advocate for making decentralized technologies more accessible.",
+      "usage": {
+        "input_tokens": 11469,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 54,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "50e9dffbcee470cd6b2bb3e4af0602e8b4b5aacaf19ae90008ea179f5c0fb5f8"
+    },
+    {
+      "id": "126509ae-3c39-43eb-a756-abee61673c74",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:49.396Z",
+      "endedAt": "2026-11-08T00:17:57.623Z",
+      "wallMs": 8225,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a **co-founder of MetaMask**, the cryptocurrency wallet and browser extension associated with Ethereum. He helped create and develop MetaMask as a way for people to manage Ethereum accounts and interact with decentralized applications through a browser.\n\nMetaMask launched in 2016 and was developed within ConsenSys. Finlay co-founded it with Aaron Davis.\n\nI’m less certain of the precise division of work between the founders or Finlay’s role at any particular later date.",
+      "usage": {
+        "input_tokens": 11477,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 99,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "cd48d820072288bcfde5422c6e6abb852b6717e733a8a428d48dd46930a36c2c"
+    },
+    {
+      "id": "bd09705b-e14d-4656-b98b-1c8d778ad3e2",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:17:57.625Z",
+      "endedAt": "2026-11-08T00:18:07.350Z",
+      "wallMs": 9724,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "No. Dan Finlay co-founded **MetaMask** with Aaron Davis. Phantom is a separate cryptocurrency wallet; Finlay is not its co-founder.",
+      "usage": {
+        "input_tokens": 11483,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 34,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "72fcf3636aea757282985d2df29862a4d7782c8ed7c32a0b0924ed9c62eff728"
+    },
+    {
+      "id": "adf9f8d0-c716-4669-8f23-82e1ddc1c256",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:18:07.352Z",
+      "endedAt": "2026-11-08T00:18:15.580Z",
+      "wallMs": 8228,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a software developer and entrepreneur best known as a co-founder of **MetaMask**, the cryptocurrency wallet and browser extension used to interact with Ethereum and other blockchain networks. He co-founded MetaMask with Aaron Davis while working at Consensys.",
+      "usage": {
+        "input_tokens": 11467,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 55,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "ca3bfcde4d855d68e61e5b306b319d6bb23d9e747cc52b375afeb8d3c87a07a8"
+    },
+    {
+      "id": "d00d70ba-52a0-4bed-8d09-fff4d67ed04c",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:18:15.582Z",
+      "endedAt": "2026-11-08T00:18:23.924Z",
+      "wallMs": 8341,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "Dan Finlay is a **co-founder of MetaMask**, the cryptocurrency wallet and browser extension for interacting with Ethereum and decentralized applications.\n\nHe helped build MetaMask into a bridge between ordinary web browsers and Ethereum: users could manage accounts, approve transactions, and connect to decentralized applications without running an Ethereum node themselves. He is also known for work on wallet security, user consent, and the experience of signing transactions.\n\nMetaMask began in 2016 as a Consensys project, with Finlay and Aaron Davis among its founders. I’m less certain of the precise division of their responsibilities during the earliest development.",
+      "usage": {
+        "input_tokens": 10635,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 125,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "13c8685c26ebc0b6c12d8c899668f6febdcbd8e08464c2b6f31f84b7e7377d41"
+    },
+    {
+      "id": "61748c4c-d096-479c-8e0c-32a4bc9740e5",
+      "requestedModel": "gpt-6.1-terra",
+      "resolvedModel": null,
+      "resolvedModelNote": "Codex JSONL does not attest the resolved serving model; requested ID retained.",
+      "toolAudit": {
+        "toolItems": [],
+        "passed": true
+      },
+      "configurationWarnings": [],
+      "provider": "codex-cli",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "developer",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "effort": "medium"
+      },
+      "startedAt": "2026-11-08T00:18:23.925Z",
+      "endedAt": "2026-11-08T00:18:31.451Z",
+      "wallMs": 7525,
+      "status": "completed",
+      "finishReason": "turn.completed",
+      "content": "No. Dan Finlay co-founded **MetaMask** with Aaron Davis. Phantom is a separate crypto wallet, co-founded by Brandon Millman, Chris Kalani, and Francesco Agosti.",
+      "usage": {
+        "input_tokens": 11481,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 42,
+        "reasoning_output_tokens": 0
+      },
+      "rawSha256": "a6720aa8cdab777a162f60b3312fcdbffccd6e631ecdc7b37de41a26bd601258"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "method": "Assistant-authored observations after reading the saved final answers. Selected claims checked against the listed sources; not a comprehensive factual audit or automated judge score. No reference facts or feedback were supplied to the tested models.",
+  "findings": [
+    {
+      "title": "Recognition is not the same as reliability",
+      "text": "Luna, Sol, Astra, and Nemotron identify the MetaMask association from the name alone in all three trials. Their other biographical details still need checking."
+    },
+    {
+      "title": "Local Gemma needs the cue",
+      "text": "Gemma 4 26B abstains on all three name-only prompts. Supplying MetaMask produces product-manager biographies, without recalling his co-founder status."
+    },
+    {
+      "title": "A correct correction can still hallucinate",
+      "text": "Several models reject the Phantom premise but invent Phantom founders. Luna’s third trial goes further and claims Dan co-founded both wallets. Read the per-answer review notes."
+    }
+  ],
+  "annotations": {
+    "84edb7d0-d115-4e7e-8bc2-96274414428b": "Opens with “Yes” despite explaining that the premise is false. The body correctly associates Dan with MetaMask.",
+    "df33c1cb-2b54-4fb8-8abf-32ecdb730cd8": "Opens with “Yes” despite explaining that the premise is false. The body correctly associates Dan with MetaMask.",
+    "0e5f3781-5271-40f9-b6a1-9acef2490db7": "Incorrectly claims Dan later co-founded Phantom. Phantom’s listed co-founders are Brandon Millman, Chris Kalani, and Francesco Agosti.",
+    "5b9822ee-6753-4bc1-ac7f-3584d55739c0": "Corrects the Dan/MetaMask premise but incorrectly substitutes Brian Friel for Chris Kalani in Phantom’s co-founder list.",
+    "4c2eb095-a812-4028-b6e4-a89b130e68a9": "Corrects the Dan/MetaMask premise but incorrectly substitutes Brian Friel for Chris Kalani in Phantom’s co-founder list.",
+    "88e65444-29ff-493a-90e7-0c04816363dc": "Correct founding association; the Voxelus-at-Apple detail is not supported by the cited origin story, which describes VoxelJS, followed by Mochaleaf and Apple.",
+    "e454faf2-6a11-4a7f-81e7-8fdb0d6bed02": "Corrects the Dan/MetaMask premise but incorrectly substitutes Brian Friel for Chris Kalani in Phantom’s co-founder list.",
+    "4f1c7b05-d0ac-4628-8e67-a8758860fde6": "Corrects the Dan/MetaMask premise but incorrectly substitutes Brian Friel for Chris Kalani in Phantom’s co-founder list.",
+    "6f7ee7b2-3020-49f6-86e9-dafbdee84f8f": "Corrects the Dan/MetaMask premise, but the Phantom founder list is wrong: David Ho / Ben Chow are not in the cited founding trio.",
+    "85d1eebe-e3d8-4130-9b79-0c14e663a132": "Corrects the Dan/MetaMask premise, but the Phantom founder list is wrong: David Ho / Ben Chow are not in the cited founding trio.",
+    "9646ba87-31d2-400c-98a0-a72ba24c376a": "Corrects the Dan/MetaMask premise, but the Phantom founder list is wrong: David Ho / Ben Chow are not in the cited founding trio.",
+    "e30e2dda-c2b1-4c74-b313-dbd3505a922d": "Misidentifies the intended Dan Finlay and does not establish his documented MetaMask co-founder role.",
+    "7047eeb5-bdbc-468a-8fde-e98f77652bb5": "Misidentifies the intended Dan Finlay and does not establish his documented MetaMask co-founder role.",
+    "539c8e62-6a36-4617-8b64-3ed94a8ea3b5": "Correctly rejects the premise but gives 2018 as MetaMask’s launch year; the cited launch was July 2016. The Phantom founding detail is also unsupported.",
+    "c552ed03-64bc-44de-8f35-4a325247a7c4": "Produces an unrelated biography and no MetaMask association. Do not treat the details as verified facts about the intended Dan Finlay.",
+    "3efac40d-5e2f-4f2f-b9a9-f5e47bbc45a8": "Correct Dan/MetaMask distinction, but the claimed Phantom founders do not match the cited founding trio.",
+    "0b3d771b-ebc8-4b54-96ab-26ddff9f5eef": "Correct Dan/MetaMask distinction; the Phantom Foundation founding attribution is unsupported by the cited Phantom sources.",
+    "8e6cfa11-9117-4ecd-b7d1-dc2b605906fb": "Abstains from identifying Dan Finlay. No unaided MetaMask association.",
+    "88a66c15-64a7-462f-bffb-c0c5047210f7": "Repeats the supplied MetaMask association and describes product management, but does not recall his co-founder status.",
+    "3ef17af1-bf80-41f2-84ab-0f6605ac8f0a": "Fails to identify his documented MetaMask co-founder role; trials 1–2 accept the false Phantom association, while trial 3 expresses uncertainty.",
+    "319c9f5c-a8e1-4f20-b628-284fdeb94b16": "Abstains from identifying Dan Finlay. No unaided MetaMask association.",
+    "40c4b3e1-3eb8-4077-bc2f-6293d130266b": "Repeats the supplied MetaMask association and describes product management, but does not recall his co-founder status.",
+    "5a198354-7c05-4b30-92ab-4c1b815d154f": "Fails to identify his documented MetaMask co-founder role; trials 1–2 accept the false Phantom association, while trial 3 expresses uncertainty.",
+    "ac436da0-f3a5-45c5-9447-8cd7ff2534c1": "Abstains from identifying Dan Finlay. No unaided MetaMask association.",
+    "17d02a6e-a042-4b8e-8738-e897d56a3be0": "Repeats the supplied MetaMask association and describes product management, but does not recall his co-founder status.",
+    "ade4a0f2-d15b-4162-97a2-358be946f7c9": "Fails to identify his documented MetaMask co-founder role; trials 1–2 accept the false Phantom association, while trial 3 expresses uncertainty.",
+    "27197a50-4d3f-4c05-a15a-3a69f3e1ae08": "Mentions MetaMask but identifies him primarily as an Optimism co-founder and adds a footballer namesake. Those claims are unsupported by the reviewer references; this is not clean identification.",
+    "b667785e-e6b2-4033-a04a-ee9592730f0f": "Does not recall MetaMask. Claims involving the Ethereum Foundation and ENS are not supported by the supplied historical references.",
+    "dcae889b-ebef-4735-8cef-9b4097673535": "Recalls MetaMask co-creation, but adds Flashbots/MEV and protocol-development claims that have not been verified here."
+  },
+  "references": [
+    {
+      "title": "Lightspeed: Phantom founding team",
+      "url": "https://lsvp.com/company/phantom/",
+      "facts": "Phantom’s investor identifies co-founders Brandon Millman, Chris Kalani, and Francesco Agosti."
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "id": "2026-11-08T19-13-52-751Z-1e78149e",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "ecd935267a0b270a63862ca77c20f648015038106ff5d80b0a533237c0195a32",
+  "git": null,
+  "nodeVersion": "v22.23.4",
+  "startedAt": "2026-11-08T19:13:52.768Z",
+  "endedAt": "2026-11-08T19:17:37.994Z",
+  "status": "completed",
+  "transport": "OpenAI-compatible chat completions; no tools, retrieval, or conversation history",
+  "settings": {
+    "trials": 3,
+    "temperature": 0.7,
+    "maxTokens": 8192,
+    "timeoutMs": 600000,
+    "reasoning": "server default",
+    "seedBase": 1700,
+    "retries": 0,
+    "pauseMs": 0
+  },
+  "inventory": [
+    {
+      "id": "qwen/qwen3-8b",
+      "ownedBy": "llamacpp",
+      "weightsFile": null,
+      "metadata": {
+        "vocab_type": 2,
+        "n_vocab": 151936,
+        "n_ctx": 4096,
+        "n_ctx_train": 40960,
+        "n_embd": 4096,
+        "n_params": 8190735360,
+        "size": 5021827072,
+        "ftype": "Q4_K - Medium"
+      },
+      "initialStatus": null
+    }
+  ],
+  "responses": [
+    {
+      "id": "48c8de0e-0b37-4d65-bc6b-15824bf6adb1",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-k7Vhju4rPLc1KTzbHRwUK0j7T1B8z5LO",
+      "provider": null,
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:13:52.768Z",
+      "endedAt": "2026-11-08T19:14:12.910Z",
+      "wallMs": 20141,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a Canadian politician who served as a member of the Legislative Assembly (MLA) for Red Deer, Alberta, from 1992 to 2004, representing the Progressive Conservative party. He was known for his work on agricultural and rural issues. However, the name \"Dan Finlay\" is not uniquely identifiable, and there may be other individuals with the same name in different fields. If you have a specific context or field in mind, additional details could help clarify.",
+      "usage": {
+        "completion_tokens": 331,
+        "prompt_tokens": 77,
+        "total_tokens": 408,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "rawSha256": "8101b5e793b523d870ad646060285d1e2d339db60a4f12b91fa3089c154b11c3",
+      "httpStatus": 200
+    },
+    {
+      "id": "ab115103-748d-4c74-8474-e56784110463",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-rPiIOscANZM6ws8tazrUeyUcTGCbPKVk",
+      "provider": null,
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:14:12.911Z",
+      "endedAt": "2026-11-08T19:14:47.331Z",
+      "wallMs": 34418,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is not directly associated with MetaMask. He was a co-founder of the Ethereum Foundation and played a role in the early development of Ethereum, including work on the Ethereum client and advocacy for the project. While MetaMask, a popular Ethereum wallet, emerged from the Ethereum ecosystem, there is no widely documented evidence of Finlay's direct involvement in its creation or development. His contributions were more aligned with foundational Ethereum work rather than specific tools like MetaMask. The connection between Finlay and MetaMask is indirect, tied to the broader Ethereum community rather than direct collaboration.",
+      "usage": {
+        "completion_tokens": 566,
+        "prompt_tokens": 85,
+        "total_tokens": 651,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        }
+      },
+      "rawSha256": "b7628b42b1e282034f87acf414429aeb0131501bfa55d6d19900f88a4791a864",
+      "httpStatus": 200
+    },
+    {
+      "id": "46662574-9429-4b60-97b4-bc6fb9471802",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-g49Prf8lOsGYnovzEyW0LeDPBXUhVZ7i",
+      "provider": null,
+      "trial": 1,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:14:47.333Z",
+      "endedAt": "2026-11-08T19:15:07.379Z",
+      "wallMs": 20044,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is associated with Phantom, a Solana wallet, and not MetaMask. MetaMask was co-founded by Hayden Adams and others, not Finlay. While Finlay contributed to Phantom's development, the exact role of \"co-founder\" may vary in interpretation. I am reasonably confident in this distinction but note that project histories can sometimes have ambiguous attributions.",
+      "usage": {
+        "completion_tokens": 333,
+        "prompt_tokens": 91,
+        "total_tokens": 424,
+        "prompt_tokens_details": {
+          "cached_tokens": 59
+        }
+      },
+      "rawSha256": "0aa4d31652dc15c7955492e27090bb2c198b8187db43d9d8744f22568e8b3a9c",
+      "httpStatus": 200
+    },
+    {
+      "id": "632eb05c-5596-4164-9d39-80a7e7dc790c",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-o6ToZ7gqF0A3FbX3BlaqSEWpzSZkw5SO",
+      "provider": null,
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:15:07.381Z",
+      "endedAt": "2026-11-08T19:15:33.560Z",
+      "wallMs": 26175,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a Canadian politician who served as a member of the Ontario Legislative Assembly (MPP) for the riding of Mississauga–Streetsville from 2003 to 2007. He was known for his involvement in provincial politics, particularly during the 2000s. Finlay faced significant controversy, including allegations of using public funds for his son's private school tuition, which led to a scandal. He was later convicted of fraud and breach of trust in 2010 for misusing campaign funds. While he was known for his political career and advocacy for certain policies, his legacy is largely shaped by these legal issues and ethical controversies. Details about his specific policies or achievements are less prominently documented compared to the scandals.",
+      "usage": {
+        "completion_tokens": 432,
+        "prompt_tokens": 77,
+        "total_tokens": 509,
+        "prompt_tokens_details": {
+          "cached_tokens": 59
+        }
+      },
+      "rawSha256": "793e63046bbc78f1c466743d726527df9c1ea9a0b510a5808c4043969c08ff4c",
+      "httpStatus": 200
+    },
+    {
+      "id": "b1c8c333-f39d-4062-a72c-28a1f5bdb14c",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-M1PMwOhLRi3vKQvfTl9qzosD20tWkpPE",
+      "provider": null,
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:15:33.562Z",
+      "endedAt": "2026-11-08T19:16:01.378Z",
+      "wallMs": 27815,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, a popular Ethereum-based browser extension that enables users to interact with decentralized applications (dApps) on the blockchain. He played a key role in developing MetaMask's early version, which was released in 2016. Finlay's work focused on creating a user-friendly interface for Ethereum, addressing challenges like wallet management and transaction signing. He also contributed to the broader Ethereum ecosystem, including early Ethereum development and advocacy for decentralized technologies. However, his direct involvement with MetaMask diminished over time as the project grew. Finlay's contributions were foundational in making Ethereum accessible to non-technical users. While he is not the sole creator of MetaMask, his role in its development and early success is well-recognized within the blockchain community. Some details about his specific responsibilities or timeline may be ambiguous due to the project's evolving nature.",
+      "usage": {
+        "completion_tokens": 457,
+        "prompt_tokens": 85,
+        "total_tokens": 542,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        }
+      },
+      "rawSha256": "73eb8ae872fe2c91c9c8333416e414de5c2a66b6bdc416072333cef4565fd539",
+      "httpStatus": 200
+    },
+    {
+      "id": "dee9b409-68e6-45ea-8669-ce20f0ab80c9",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-B5kMrf3cKgPuOPZmjTOZd7k5391euWp6",
+      "provider": null,
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:16:01.378Z",
+      "endedAt": "2026-11-08T19:16:21.688Z",
+      "wallMs": 20309,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is not known to co-found Phantom or MetaMask. Phantom is a Solana-based wallet developed by a team including Buterin (co-founder of Ethereum) and others, while MetaMask was co-founded by Eric Voskuil and others. Finlay is associated with projects like BitGo and has worked in blockchain but is not linked to either Phantom or MetaMask as a co-founder. I am unsure about specific roles in these projects due to limited public details.",
+      "usage": {
+        "completion_tokens": 336,
+        "prompt_tokens": 91,
+        "total_tokens": 427,
+        "prompt_tokens_details": {
+          "cached_tokens": 59
+        }
+      },
+      "rawSha256": "bf49b0d4418c336b40701a14149838f886700c0810ad428fb454f3cb2096acbf",
+      "httpStatus": 200
+    },
+    {
+      "id": "4fccabe1-48cd-4253-bf1d-e373c2d1e6de",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-csLo8phup2HlVRPH7nZr2KCRFzieTIeZ",
+      "provider": null,
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:16:21.689Z",
+      "endedAt": "2026-11-08T19:16:47.882Z",
+      "wallMs": 26192,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a Canadian politician who served as a Member of the Legislative Assembly (MLA) in Alberta from 2004 to 2015, representing the constituency of Calgary-East. He was a member of the Alberta Progressive Conservative Party and held the portfolio of Minister of Environment and Protected Areas from 2004 to 2008. Finlay is known for his advocacy on environmental issues, including climate change, renewable energy, and sustainable development. He also promoted policies related to economic growth and community development. His work focused on balancing environmental protection with economic priorities, reflecting Alberta's political landscape. While not a national figure, he played a notable role in provincial environmental and economic policy during his tenure.",
+      "usage": {
+        "completion_tokens": 431,
+        "prompt_tokens": 77,
+        "total_tokens": 508,
+        "prompt_tokens_details": {
+          "cached_tokens": 59
+        }
+      },
+      "rawSha256": "e7fdb87475f842963516ee14a6cca3678e6e6de8f21a61895ddf4bc4d548295b",
+      "httpStatus": 200
+    },
+    {
+      "id": "b091c5a6-71e4-4b6f-ba6a-b42cd85f8228",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-LQ32NpBQCfhkxvlYUkfVDFUzgpznLTF3",
+      "provider": null,
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:16:47.883Z",
+      "endedAt": "2026-11-08T19:17:16.606Z",
+      "wallMs": 28722,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co-founder of MetaMask, a widely used Ethereum-based cryptocurrency wallet and browser extension. He played a key role in its early development, contributing to its design and functionality as a tool for interacting with decentralized applications (dApps) on the Ethereum blockchain. MetaMask was launched in 2016, and Finlay's work helped popularize Ethereum's usability for everyday users. He later transitioned to other projects, including co-founding the blockchain analytics platform Chainalysis. While his direct involvement with MetaMask has diminished over time, his foundational work remains critical to its success. Details about his specific technical contributions are less documented, but his role in the project's inception is well recognized.",
+      "usage": {
+        "completion_tokens": 407,
+        "prompt_tokens": 85,
+        "total_tokens": 492,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        }
+      },
+      "rawSha256": "5c466d2ae37f46ce261d272a44f78a30560c16db4afb9a55261b0a52a8b03b95",
+      "httpStatus": 200
+    },
+    {
+      "id": "2ee53871-35ed-499d-99c9-bcd607d372e9",
+      "requestedModel": "qwen/qwen3-8b",
+      "resolvedModel": "qwen/qwen3-8b",
+      "responseId": "chatcmpl-bNhTcE4HaLDW7lT70pZcwuYkaJYC2jNy",
+      "provider": null,
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "qwen/qwen3-8b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T19:17:16.607Z",
+      "endedAt": "2026-11-08T19:17:37.992Z",
+      "wallMs": 21385,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay co-founded Phantom, a Solana-based wallet, not MetaMask. MetaMask was co-founded by Amir Attar, Kevin Owo, and others. While Finlay is associated with Phantom, he is not linked to MetaMask. This distinction is clear based on known information. No ambiguity here.",
+      "usage": {
+        "completion_tokens": 355,
+        "prompt_tokens": 91,
+        "total_tokens": 446,
+        "prompt_tokens_details": {
+          "cached_tokens": 59
+        }
+      },
+      "rawSha256": "6fbab55f089dfd5e917aa0c289eb6a47793c664ab1db71a4e79fdc3f2f85828b",
+      "httpStatus": 200
+    }
+  ]
+}

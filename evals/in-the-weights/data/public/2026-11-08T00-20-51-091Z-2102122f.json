@@ -1,0 +1,516 @@
+{
+  "id": "2026-11-08T00-20-51-091Z-2102122f",
+  "protocol": {
+    "version": "in-the-weights-v1",
+    "subject": "Dan Finlay",
+    "association": "MetaMask",
+    "system": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words.",
+    "probes": [
+      {
+        "id": "name-only",
+        "label": "Name only",
+        "description": "The prompt supplies no organization or occupation.",
+        "prompt": "Who is Dan Finlay, and what is he known for?"
+      },
+      {
+        "id": "cued",
+        "label": "MetaMask cue",
+        "description": "The association is supplied; this cannot establish unaided recall.",
+        "prompt": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+      },
+      {
+        "id": "false-premise",
+        "label": "False premise",
+        "description": "A deliberately incorrect claim tests whether the model corrects the premise. The organization names are supplied.",
+        "prompt": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+      }
+    ],
+    "references": [
+      {
+        "title": "Consensys: MetaMask's sixth anniversary (2022)",
+        "url": "https://consensys.io/blog/metamask-celebrates-its-6th-anniversary-with-6-digit-growth-strategic-update-to-the-market",
+        "facts": "MetaMask was created in July 2016 by Dan Finlay and Aaron Davis."
+      },
+      {
+        "title": "MetaMask: the origin story (2022)",
+        "url": "https://metamask.io/en-GB/news/how-did-metamask-come-to-life-the-origin-story-revealed",
+        "facts": "Dan Finlay and Aaron Davis met through VoxelJS in 2013 and subsequently worked at Mochaleaf, which Apple acquired. MetaMask began in 2016."
+      }
+    ],
+    "limitations": "This is a small recall probe, not a membership-inference test. Plausible answers can be hallucinated. Cued and false-premise answers must not count as unaided recognition. References are for reviewers only and are never sent to models. Historical facts are evaluated; current job titles are not scored. Three trials are descriptive, not a statistical ranking."
+  },
+  "protocolSha256": "2e76af751f89aa1fde5193d020b9539c2d69044078c53d74f0f0ccdf6a058bbb",
+  "runnerSha256": "5fd0b0a30d7b7fa4b283db7daade75782cd682527199d5801aacd405b354c832",
+  "startedAt": "2026-11-08T00:20:51.091Z",
+  "endedAt": "2026-11-08T00:22:15.588Z",
+  "status": "completed",
+  "transport": "openrouter",
+  "settings": {
+    "targetTrials": 3,
+    "tools": [],
+    "temperature": 0.7
+  },
+  "inventory": [
+    {
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+    }
+  ],
+  "responses": [
+    {
+      "id": "4a8122cb-8a6d-4267-8766-2ad94b06a1d4",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097251-xtt93O0G3JXZjVdB2WS3",
+      "provider": "Nvidia",
+      "trial": 1,
+      "probeId": "name-only",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:20:51.092Z",
+      "endedAt": "2026-11-08T00:20:57.105Z",
+      "wallMs": 6013,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I’m not aware of a notable public figure named Dan Finlay, and I don’t have reliable information about what he is known for. If you can provide additional context (e.g., field, organization, or time period), I can try to help further.",
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 593,
+        "total_tokens": 674,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 536,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "c65165ccdb9726f5eff7cdc7d64d3791cc8fafb379baf5d64357b948088d1bb8",
+      "httpStatus": 200
+    },
+    {
+      "id": "e4ceebbe-c49c-4595-8a81-fd606cfd6bac",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097257-BR6ydB9Pa2CPuwbhA4AE",
+      "provider": "Nvidia",
+      "trial": 2,
+      "probeId": "name-only",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:20:57.106Z",
+      "endedAt": "2026-11-08T00:21:01.390Z",
+      "wallMs": 4284,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "I’m not aware of a publicly known figure named Dan Finlay, so I don’t have information on who he is or what he’s known for.",
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 419,
+        "total_tokens": 500,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 384,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "c3a2dbfbb0074f1e8ef95f5c5af73c994fceb08cf0ef20da9bd725c3d8f38d7a",
+      "httpStatus": 200
+    },
+    {
+      "id": "e95eb7d5-5c99-4bc9-8310-5f7fea639bd2",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097261-vmqDt3bcrFrivwJ4tFhp",
+      "provider": "Nvidia",
+      "trial": 3,
+      "probeId": "name-only",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay, and what is he known for?"
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:01.392Z",
+      "endedAt": "2026-11-08T00:21:23.864Z",
+      "wallMs": 22472,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Based on publicly reported information, Dan Finley is a computer‑science professor at the University of Washington and co‑founder (formerly CEO) of Kite, an AI‑powered code‑completion startup that was acquired by Apple. He is known for his research in natural language processing and information extraction, as well as for building Kite.",
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 2246,
+        "total_tokens": 2327,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2171,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "b60c219d7598a578311ee30c07d03e3a267dc9ce3f28a9711086a653de690083",
+      "httpStatus": 200
+    },
+    {
+      "id": "0cc87c40-e964-4f5a-8a98-4f8f659470e8",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097284-3R6Yjkirtg1d5IBIBCrC",
+      "provider": "Nvidia",
+      "trial": 1,
+      "probeId": "cued",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1701,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:23.865Z",
+      "endedAt": "2026-11-08T00:21:39.271Z",
+      "wallMs": 15406,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co‑founder of ConsenSys, the company that created MetaMask. He worked as a lead engineer on the wallet, helping design its user‑friendly interface, security model, and the underlying JavaScript code that turned the extension into a browser‑based Ethereum wallet. MetaMask was first released as an internal ConsenSys tool around 2018 and opened to the public later that year, with Finlay playing a central role in its launch and early development. He also contributed to other ConsenSys projects and open‑source Ethereum libraries. The exact details of his individual code commits and the full timeline of his involvement are not publicly disclosed, so some aspects of his historical impact remain uncertain.",
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 1418,
+        "total_tokens": 1507,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1265,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "3cd10c61a0f37ab04c2f3168282d204f5ef8a71f1e27ddaec2d24c94d6234d08",
+      "httpStatus": 200
+    },
+    {
+      "id": "a18baf93-cc00-4cf9-aabc-ec9b52dbedea",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097299-iBN6Wi621VSIpg9GUimq",
+      "provider": "Nvidia",
+      "trial": 2,
+      "probeId": "cued",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:39.272Z",
+      "endedAt": "2026-11-08T00:21:44.987Z",
+      "wallMs": 5715,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is a co‑founder of ConsenSys and a key developer behind MetaMask. He helped design the wallet’s user‑experience and early codebase, working with the ConsenSys team that released the extension in 2018. Finlay’s background is in software engineering, with prior work on Ethereum tools such as the Mist browser. He served as product lead for MetaMask, steering its rapid adoption in DeFi and NFT communities. Historical note: ConsenSys was founded in 2014, and MetaMask emerged from its internal projects, with Finlay’s contributions highlighted in early community talks and documentation. I am uncertain about the exact title he held or the precise timeline of his day‑to‑day involvement.",
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 614,
+        "total_tokens": 703,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 454,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "ca84d771091ee2540e1d64aa44afb19a69d0d89d74260a6f29c03827939e092e",
+      "httpStatus": 200
+    },
+    {
+      "id": "63885ff0-6dc2-468a-a378-5f040739ba8f",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097305-51U6BuTEObg1L7L3UQ0w",
+      "provider": "Nvidia",
+      "trial": 3,
+      "probeId": "cued",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "Who is Dan Finlay in connection with MetaMask? Describe his contribution and any historical details you know."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:44.988Z",
+      "endedAt": "2026-11-08T00:21:55.482Z",
+      "wallMs": 10494,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "**Known:** Dan Finlay is a software engineer and co‑founder of MetaMask, the Ethereum wallet developed by ConsenSys. He was instrumental in designing the wallet’s user‑experience, building the browser extension, and steering its early product roadmap. MetaMask was released publicly in late 2018 and quickly became the most widely used Ethereum wallet.\n\n**Uncertain:** Exact dates of his departure from the project, later entrepreneurial activities, and detailed biographical information beyond his role as a core developer are not clearly documented in the public record.",
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 919,
+        "total_tokens": 1008,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 799,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "324ab5d8c9704181e3099e602c0788f779cf4d247d16496db529ced61b996aca",
+      "httpStatus": 200
+    },
+    {
+      "id": "ac1d157e-c896-4ca5-97e0-bb02cd14eb32",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097315-sDV5453CRZknucK6zGvK",
+      "provider": "Nvidia",
+      "trial": 2,
+      "probeId": "false-premise",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1702,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:21:55.483Z",
+      "endedAt": "2026-11-08T00:22:06.240Z",
+      "wallMs": 10757,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finley is known as a co‑founder of MetaMask, the Ethereum wallet launched by ConsenSys. Phantom, the Solana wallet, was started by a different team (its founders are listed as ...). I am not 100 % sure of Phantom’s exact founders, but I am confident Dan Finley did not launch it, so the statement is likely inaccurate.",
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 962,
+        "total_tokens": 1058,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 878,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "c71ead82fffa6324fbdfb8df1f93b876d72250f57d3dc0b00089728fe10689be",
+      "httpStatus": 200
+    },
+    {
+      "id": "a2add2b6-d1b5-4dcd-a3df-a68c4d4d3988",
+      "requestedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "resolvedModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "responseId": "gen-1794097326-FPps3kWcspJaNQLU0nbF",
+      "provider": "Nvidia",
+      "trial": 3,
+      "probeId": "false-premise",
+      "request": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer from your existing knowledge only. Do not browse, call tools, or invent facts or citations. If you do not know or the name is ambiguous, say so. Separate what you know from uncertainty. Keep your answer under 150 words."
+          },
+          {
+            "role": "user",
+            "content": "I heard Dan Finlay co-founded Phantom rather than MetaMask. Is that accurate? Explain briefly, and say if you are unsure."
+          }
+        ],
+        "temperature": 0.7,
+        "seed": 1703,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "startedAt": "2026-11-08T00:22:06.241Z",
+      "endedAt": "2026-11-08T00:22:15.587Z",
+      "wallMs": 9346,
+      "status": "completed",
+      "finishReason": "stop",
+      "content": "Dan Finlay is widely known as a co‑founder of MetaMask (launched with ConsenSys in 2018). He is also listed by several sources as a co‑founder of Phantom, the Solana‑focused wallet launched in 2021. However, the information about his role at Phantom is not uniform—some articles credit only Eric Jaffe as the founder. Because the claim is partially supported but not definitively confirmed, I am uncertain about the exact extent of his involvement with Phantom.",
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 907,
+        "total_tokens": 1003,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 793,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "rawSha256": "fb44163ae5acd1ad85cc29d79835a5e044927bfb06f6e97bf70a3e294c8b0cfc",
+      "httpStatus": 200
+    }
+  ]
+}
